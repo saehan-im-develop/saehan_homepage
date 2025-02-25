@@ -1,13 +1,13 @@
 import Header from "./component/Header";
+import MainSection from "./component/MainSection";
+import "./App.css";
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
-      <main className="mt-16 p-4">
-        <h2>메인 콘텐츠</h2>
-      </main>
-    </>
+      <MainSection />
+    </div>
   );
 }
 
