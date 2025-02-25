@@ -39,11 +39,11 @@
 
   <build>
     <plugins>
-      <!-- Spring Boot Maven Plugin 추가 -->
+      
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>3.1.2</version> <!-- 최신 버전 확인 가능 -->
+        <version>3.1.2</version> 
       </plugin>
     </plugins>
   </build>
