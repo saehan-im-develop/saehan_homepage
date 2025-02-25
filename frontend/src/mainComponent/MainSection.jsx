@@ -31,8 +31,10 @@ const MainSection = () => {
       </section>
 
       <section className="sub-section" id="section1" data-scroll>
-        <img src={section1Image} alt="사업 부문" className="section-image" />
+        <div>
         <h2>새한그룹. <br />사업 부문을 소개합니다.</h2>
+        </div>
+        <img src={section1Image} alt="사업 부문" className="section-image" />
       </section>
 
       <section className="sub-section" id="section2" data-scroll>
