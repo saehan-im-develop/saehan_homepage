@@ -1,0 +1,13 @@
+.footer {
+    background-color: #3056d3;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: auto;
+  }
+  

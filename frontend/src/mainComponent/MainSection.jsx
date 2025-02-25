@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "../mainCssFile/MainSection.css";
+import ContactSection from "./ContactSection";  // 문의 섹션 추가
+import Footer from "./Footer"; // 푸터 추가
 import mainImage from "../assets/mainImage.png"; // 메인 이미지
 import section1Image from "../assets/001.png"
 import section2Image from "../assets/002.png"
@@ -41,6 +43,10 @@ const MainSection = () => {
         <img src={section2Image} alt="제조 산업" className="section-image" />
         <h2>제조 산업의 미래를 <br />선도하는 리더</h2>
       </section>
+
+      <ContactSection />
+
+      <Footer />
     </div>
   );
 };
