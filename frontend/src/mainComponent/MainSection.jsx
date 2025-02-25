@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
-import "../cssFile/MainSection.css";
+import "../mainCssFile/MainSection.css";
 import mainImage from "../assets/mainImage.png"; // 메인 이미지
 import section1Image from "../assets/001.png"
 import section2Image from "../assets/002.png"
