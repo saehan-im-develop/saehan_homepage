@@ -6,6 +6,7 @@ import SaehanPlus from "./Affiliate/plusComponent/SaehanPlus"
 import Hightech from "./Affiliate/HightechComponent/SaehanHightech"
 import SaehanIM from "./Affiliate/IMComponent/SaehanIM";
 import SaehanGlobal from "./Affiliate/GlobalComponent/SaehanGlobal";
+import CEOMain from "./Introduce/CEO/CEOMain";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/hightech" element={<Hightech />} />
         <Route path="/im" element={<SaehanIM />} />
         <Route path="/global" element={<SaehanGlobal/>} />
+        <Route path="ceo" element={<CEOMain />} />
       </Routes>
       <Footer />
     </Router>
