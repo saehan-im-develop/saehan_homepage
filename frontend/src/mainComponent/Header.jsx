@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "../mainCssFile/Header.css"
-import DropdownMenu from "../dropDownComponent/AffDropdownMenu";
+import AffDropdownMenu from "../dropDownComponent/AffDropdownMenu";
 import IntroDropdownMenu from "../dropDownComponent/IntroDropdownMenu";
 import BizDropdownMenu from "../dropDownComponent/BizDropdownMenu";
 import DataDropdownMenu from "../dropDownComponent/DataDropdownMenu";
@@ -15,7 +15,7 @@ const Header = () => {
         <nav>
           <ul className="nav-links">
             <IntroDropdownMenu />
-            <DropdownMenu />
+            <AffDropdownMenu />
             <BizDropdownMenu />
             <DataDropdownMenu />
 

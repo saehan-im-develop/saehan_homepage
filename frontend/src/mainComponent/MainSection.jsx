@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "../mainCssFile/MainSection.css";
 import ContactSection from "./ContactSection";  // 문의 섹션 추가
-import Footer from "./Footer"; // 푸터 추가
 import mainImage from "../assets/mainImage.png"; // 메인 이미지
 import section1Image from "../assets/001.png"
 import section2Image from "../assets/002.png"
@@ -33,11 +32,20 @@ const MainSection = () => {
       </section>
 
       <section className="sub-section" id="section1" data-scroll>
-        <div>
         <h2>새한그룹. <br />사업 부문을 소개합니다.</h2>
+        
+        {/* 🔹 동그라미 컨테이너 */}
+        <div className="circle-container">
+          <div className="circle center">새한그룹</div>
+          <div className="circle top-left">(유) 새한하이테크</div>
+          <div className="circle top-right">(유) 새한아이엠</div>
+          <div className="circle bottom-left">(유) 새한글로벌</div>
+          <div className="circle bottom-right">(유) 새한플러스</div>
         </div>
+
         <img src={section1Image} alt="사업 부문" className="section-image" />
       </section>
+
 
       <section className="sub-section" id="section2" data-scroll>
         <img src={section2Image} alt="제조 산업" className="section-image" />
@@ -46,7 +54,6 @@ const MainSection = () => {
 
       <ContactSection />
 
-      <Footer />
     </div>
   );
 };

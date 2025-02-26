@@ -1,8 +1,10 @@
 import { useState } from "react";
-import "../dropDownCssFile/AffDropdownMenu.css"
+import { useNavigate } from "react-router-dom";
+import "../dropDownCssFile/AffDropdownMenu.css";
 
-const DropdownMenu = () => {
+const AffDropdownMenu = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate(); // ✅ 페이지 이동을 위한 useNavigate 추가
 
   const handleMouseEnter = () => setIsDropdownOpen(true);
   const handleMouseLeave = () => setIsDropdownOpen(false);
@@ -12,15 +14,15 @@ const DropdownMenu = () => {
       <a href="#section2">계열사 소개</a>
       {isDropdownOpen && (
         <ul className="dropdown-menu">
-          <li><a href="#sub1">새한하이테크</a></li>
-          <li><a href="#sub2">새한플러스(본점)</a></li>
-          <li><a href="#sub3">새한플러스(지점)</a></li>
-          <li><a href="#sub4">새한글로벌</a></li>
-          <li><a href="#sub5">새한아이엠</a></li>
+          <li><a onClick={() => navigate("/hightech")} style={{ cursor: "pointer" }}>새한하이테크</a></li> {/* ✅ 페이지 이동 추가 */}
+          <li><a onClick={() => navigate("/plus")} style={{ cursor: "pointer" }}>새한플러스</a></li> {/* ✅ 페이지 이동 추가 */}
+          <li><a onClick={() => navigate("/global")} style={{ cursor: "pointer" }}>새한글로벌</a></li> {/* ✅ 페이지 이동 추가 */}
+          <li><a onClick={() => navigate("/im")} style={{ cursor: "pointer" }}>새한아이엠</a></li> {/* ✅ 페이지 이동 추가 */}
         </ul>
       )}
     </li>
   );
 };
 
-export default DropdownMenu;
+
+export default AffDropdownMenu;
