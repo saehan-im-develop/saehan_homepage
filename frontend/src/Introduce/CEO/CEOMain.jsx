@@ -1,12 +1,14 @@
 import React from "react";
 import "../CEO/CEOMain.css";
+import image from "../../assets/kim.png"
+
 
 function CEOMain() {
   return (
     <div className="ceo-container">
       <h1 className="ceo-title">CEO 말씀</h1>
       <div className="ceo-content">
-        <img src="/assets/ceo_image.png" alt="새한그룹 회장 김원만" className="ceo-image" />
+        <img src={image} alt="새한그룹 회장 김원만" className="ceo-image" />
         <div className="ceo-text">
           <h2>새한 그룹 - 혁신과 기술의 선도 기업</h2>
           <p>

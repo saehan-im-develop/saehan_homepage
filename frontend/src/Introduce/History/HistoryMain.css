@@ -1,0 +1,50 @@
+.history-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.history-section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.history-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.history-header {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.history-content {
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.history-year {
+  font-weight: bold;
+  color: #d32f2f;
+  margin-right: 10px;
+}
