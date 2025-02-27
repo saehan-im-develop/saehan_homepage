@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../GlobalCssFile/GlobalProduct.css";
+import "../CommonCSS/CommonProduct.css"
 
 function GlobalProduct() {
   const products = [
@@ -51,7 +51,7 @@ function GlobalProduct() {
   }, []);
 
   return (
-    <div ref={ref} className={`global-product ${isVisible ? "fade-in" : ""}`}>
+    <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
       <h2 className="product-title">제품 설명</h2>
       {products.map((product, index) => (
         <div key={index} className="product-card">

@@ -26,7 +26,6 @@ function App() {
         <Route path="history" element={<HistoryContainer />} />
         <Route path="network" element={<Network />} />
         <Route path="vision" element={<VisionMain />} />
-
       </Routes>
       <Footer />
     </Router>

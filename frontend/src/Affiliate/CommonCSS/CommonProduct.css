@@ -1,23 +1,26 @@
-
-.im-product {
+/* 🌐 공통 계열사 프로덕트 스타일 */
+.product {
     padding: 40px 20px;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  
-  .im-product.fade-in {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.product.fade-in {
     opacity: 1;
     transform: translateY(0);
-  }
-  
-  .product-title {
+}
+
+.product-title {
     text-align: center;
     font-size: 24px;
     margin-bottom: 30px;
-  }
-  
-  .product-card {
+}
+
+/* 🏷️ 공통 카드 디자인 */
+.product-card {
     display: flex;
     align-items: center;
     background-color: white;
@@ -26,25 +29,26 @@
     padding: 20px;
     margin-bottom: 30px;
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .product-card:hover {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.product-card:hover {
     transform: translateY(-5px);
-  }
-  
-  .product-image {
+}
+
+.product-image {
     width: 200px;
     height: auto;
     border-radius: 10px;
     margin-right: 20px;
-  }
-  
-  .product-info {
+}
+
+.product-info {
     flex: 1;
-  }
-  
-  .product-eng-name {
+}
+
+.product-eng-name {
     font-style: italic;
     color: #555;
-  }
-  
+}

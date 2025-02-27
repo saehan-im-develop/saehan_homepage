@@ -1,26 +1,27 @@
-.global-main {
+.common-main {
     text-align: center;
+    margin-top: 80px;
     padding: 40px 20px;
   }
   
-  .global-header {
+  .common-header {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
   }
   
-  .global-logo {
+  .common-logo {
     width: 80px;
     height: auto;
   }
   
-  .global-description {
+  .common-description {
     max-width: 800px;
     margin: 20px auto;
   }
   
-  .global-main-image {
+  .common-main-image {
     width: 100%;
     max-width: 900px;
     border-radius: 10px;

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../HightechCssFile/HightechProduct.css";
+import "../CommonCSS/CommonProduct.css"
 
 function HightechProduct() {
     const products = [
@@ -75,7 +75,7 @@ function HightechProduct() {
     }, []);
   
     return (
-      <div ref={ref} className={`hightech-product ${isVisible ? "fade-in" : ""}`}>
+      <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
         <h2 className="product-title">제품 설명</h2>
         {products.map((product, index) => (
           <div key={index} className="product-card">

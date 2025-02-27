@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../IMCssFile/IMProduct.css";
+import "../CommonCSS/CommonProduct.css"
 
 function IMProduct() {
   const products = [
@@ -70,7 +70,7 @@ function IMProduct() {
   }, []);
 
   return (
-    <div ref={ref} className={`im-product ${isVisible ? "fade-in" : ""}`}>
+    <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
       <h2 className="product-title">제품 설명</h2>
       {products.map((product, index) => (
         <div key={index} className="product-card">
