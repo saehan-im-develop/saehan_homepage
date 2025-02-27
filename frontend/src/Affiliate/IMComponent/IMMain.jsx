@@ -6,7 +6,7 @@ function IMMain() {
     <div className="common-main">
       <div className="common-header">
         <img src="/assets/temp_logo.png" alt="Saehan IM Logo" className="common-logo" />
-        <h1>SAEHAN IM</h1>
+        <h1 id="main-h1">SAEHAN IM</h1>
       </div>
       <div className="common-description">
         <p>

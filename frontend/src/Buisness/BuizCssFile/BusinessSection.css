@@ -1,0 +1,44 @@
+/* src/Business/BuizCssFile/BusinessSection.css */
+.business-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 10%;
+  }
+  
+  .business-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .business-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .business-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .business-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .business-card h3 {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+  
+  .business-card p {
+    font-size: 14px;
+    color: #666;
+  }
+  

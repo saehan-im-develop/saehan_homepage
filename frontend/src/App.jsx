@@ -10,6 +10,7 @@ import CEOMain from "./Introduce/CEO/CEOMain";
 import HistoryContainer from "./Introduce/History/History";
 import Network from "./Introduce/Network/Network";
 import VisionMain from "./Vision/VisionComponent/VisionMain"
+import BusinessSection from "./Buisness/BizComponent/BusinessSection";
 import "./App.css";
 
 function App() {
@@ -22,10 +23,11 @@ function App() {
         <Route path="/hightech" element={<Hightech />} />
         <Route path="/im" element={<SaehanIM />} />
         <Route path="/global" element={<SaehanGlobal/>} />
-        <Route path="ceo" element={<CEOMain />} />
-        <Route path="history" element={<HistoryContainer />} />
-        <Route path="network" element={<Network />} />
-        <Route path="vision" element={<VisionMain />} />
+        <Route path="/ceo" element={<CEOMain />} />
+        <Route path="/history" element={<HistoryContainer />} />
+        <Route path="/network" element={<Network />} />
+        <Route path="/vision" element={<VisionMain />} />
+        <Route path="/biz-area" element={<BusinessSection />} />
       </Routes>
       <Footer />
     </Router>

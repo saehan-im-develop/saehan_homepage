@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "../mainCssFile/MainSection.css";
+import Footer from "./Footer"
 import ContactSection from "./ContactSection";  // 문의 섹션 추가
 import mainImage from "../assets/mainImage.png"; // 메인 이미지
 import section1Image from "../assets/001.png"
@@ -9,16 +10,16 @@ import section3Image from "../assets/003.png"
 
 const MainSection = () => {
   const scrollRef = useRef(null);
-
+/*  */
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current,
-      smooth: true,  // 부드러운 스크롤
+      smooth: true, 
       lerp: 0.1, // 스크롤 속도 조절 (0~1 사이 값, 낮을수록 부드러움)
     });
 
     return () => {
-      scroll.destroy(); // 컴포넌트 언마운트 시 메모리 해제
+      scroll.destroy();
     };
   }, []);
 
@@ -53,6 +54,7 @@ const MainSection = () => {
       </section>
 
       <ContactSection />
+      <Footer />
 
     </div>
   );
