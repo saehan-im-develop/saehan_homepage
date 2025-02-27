@@ -10,7 +10,9 @@ import CEOMain from "./Introduce/CEO/CEOMain";
 import HistoryContainer from "./Introduce/History/History";
 import Network from "./Introduce/Network/Network";
 import VisionMain from "./Vision/VisionComponent/VisionMain"
-import BusinessSection from "./Buisness/BizComponent/BusinessSection";
+import BusinessSection from "./Buisness/BizPart/BusinessSection";
+import TechMain from "./Buisness/TechPart/TechMain";
+import SolutionsMain from "./Buisness/SolutionsPart/SolutionsMain";
 import "./App.css";
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
         <Route path="/network" element={<Network />} />
         <Route path="/vision" element={<VisionMain />} />
         <Route path="/biz-area" element={<BusinessSection />} />
+        <Route path="/tech" element={<TechMain />} />
+        <Route path="/solutions" element={<SolutionsMain />} /> 
       </Routes>
       <Footer />
     </Router>

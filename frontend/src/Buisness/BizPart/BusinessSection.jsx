@@ -1,13 +1,13 @@
 // src/Business/BizComponent/BusinessSection.jsx
 import React from 'react';
 import { useState } from "react";
-import '../BuizCssFile/BusinessSection.css';
-import biz1 from '../../assets/biz1.png';
-import biz2 from '../../assets/biz2.png';
-import biz3 from '../../assets/biz3.png';
-import biz4 from '../../assets/biz4.png';
-import biz5 from '../../assets/biz5.png';
-import biz6 from '../../assets/biz6.png';
+import './BusinessSection.css';
+import biz1 from '../../assets/biz/biz1.png';
+import biz2 from '../../assets/biz/biz2.png';
+import biz3 from '../../assets/biz/biz3.png';
+import biz4 from '../../assets/biz/biz4.png';
+import biz5 from '../../assets/biz/biz5.png';
+import biz6 from '../../assets/biz/biz6.png';
 
 const businessAreas = [
   {

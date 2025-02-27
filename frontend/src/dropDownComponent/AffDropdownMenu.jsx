@@ -11,7 +11,7 @@ const AffDropdownMenu = () => {
 
   return (
     <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <a href="#section2">계열사 소개</a>
+      <a>계열사 소개</a>
       {isDropdownOpen && (
         <ul className="dropdown-menu">
           <li><a onClick={() => navigate("/hightech")} style={{ cursor: "pointer" }}>새한하이테크</a></li> 
