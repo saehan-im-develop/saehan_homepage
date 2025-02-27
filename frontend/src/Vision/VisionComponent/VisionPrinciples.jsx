@@ -16,10 +16,10 @@ const VisionPrinciples = () => {
         <PrinciplesCircle />
 
         {/* 텍스트 라벨 */}
-        <PrincipleLabel position="top-left" text="최상의 제품과 서비스 제공" />
+        {/* <PrincipleLabel position="top-left" text="최상의 제품과 서비스 제공" />
         <PrincipleLabel position="top-right" text="지속적인 기술 개발과 연구" />
         <PrincipleLabel position="bottom-left" text="고객 및 협력사와의 신뢰 구축" />
-        <PrincipleLabel position="bottom-right" text="신속하고 효율적인 생산 및 대응" />
+        <PrincipleLabel position="bottom-right" text="신속하고 효율적인 생산 및 대응" /> */}
 
         {/* 연결 선 */}
         <PrincipleLine from="left-mid" to="top-left" />
