@@ -9,7 +9,7 @@ import SaehanGlobal from "./Affiliate/GlobalComponent/SaehanGlobal";
 import CEOMain from "./Introduce/CEO/CEOMain";
 import HistoryContainer from "./Introduce/History/History";
 import Network from "./Introduce/Network/Network";
-import VisionMain from "./Vision/VisionMain";
+import VisionMain from "./Vision/VisionComponent/VisionMain"
 import "./App.css";
 
 function App() {

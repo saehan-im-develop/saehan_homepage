@@ -1,5 +1,5 @@
 import React from "react";
-import "./VisionMain.css";
+import "../VisionCSSFiile/VisionMain.css";
 
 const PrinciplesCircle = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./VisionMain.css";
+import "../VisionCSSFiile/VisionMain.css"
 import PrinciplesCircle from "./PrinciplesCircle";
 import PrincipleLabel from "./PrincipleLabel";
 import PrincipleLine from "./PrincipleLine";
