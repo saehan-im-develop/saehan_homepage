@@ -12,6 +12,11 @@
   z-index: 1000;
 }
 
+.saehan-group{
+
+  font-size: 55px;
+}
+
 /* ✅ 컨테이너 스타일 */
 .container {
   display: flex;

@@ -13,6 +13,7 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <Link to="/">
+        <h1 id="saehan-group">새한그룹</h1>
           <img src={logo} alt="SAEHAN GROUP" className="logo" />
         </Link>
         <nav>

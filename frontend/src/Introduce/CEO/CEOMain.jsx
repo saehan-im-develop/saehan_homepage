@@ -1,6 +1,6 @@
 import React from "react";
 import "../CEO/CEOMain.css";
-import image from "../../assets/kim.png"
+import image from "../../assets/kim2.png"
 
 
 function CEOMain() {

@@ -2,6 +2,7 @@
 import React from 'react';
 import './Solutions.css';
 import StepComponent from './StepComponent';
+import ContactSection from "../../mainComponent/ContactSection"
 import temp from "../../assets/temp_logo.png"
 
 const stepsData = [
@@ -69,12 +70,7 @@ const SolutionsMain = () => {
         />
       ))}
 
-      <div className="business-contact">
-        <h3>비즈니스 문의</h3>
-        <p>E-MAIL : bwm6659@naver.com</p>
-        <p>TEL : 010-9995-3841</p>
-        <p>FAX : 112-4840-4547</p>
-      </div>
+      <ContactSection />
     </div>
   );
 };
