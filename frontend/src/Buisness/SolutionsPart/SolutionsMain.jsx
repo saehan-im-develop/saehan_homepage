@@ -3,6 +3,7 @@ import React from 'react';
 import './Solutions.css';
 import StepComponent from './StepComponent';
 import ContactSection from "../../mainComponent/ContactSection"
+import SolutionsIntro from './SolutionIntro';
 import temp from "../../assets/temp_logo.png"
 
 const stepsData = [
@@ -53,21 +54,10 @@ const stepsData = [
 const SolutionsMain = () => {
   return (
     <div className="solutions-main">
-      <h2>고객 맞춤형 솔루션</h2>
-
-      <div className="solutions-intro">
-        {/* <div className="circle">새한</div>
-        <div className="circle">고객</div>
-        <div className="circle">컨설팅</div> */}
-      </div>
+      <SolutionsIntro />
 
       {stepsData.map((step, index) => (
-        <StepComponent 
-          key={index}
-          title={step.title}
-          image={step.image}
-          points={step.points}
-        />
+        <StepComponent key={index} title={step.title} points={step.points} />
       ))}
 
       <ContactSection />

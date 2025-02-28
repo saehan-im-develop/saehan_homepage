@@ -3,25 +3,49 @@
     text-align: center;
     padding: 50px 20px;
     margin-top: 10%;
+    background-color: white;
   }
   
   .solutions-intro {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .intro-circles {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin: 30px 0;
   }
   
-  .circle {
-    width: 120px;
-    height: 120px;
+  .circle_sol {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    text-align: center;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #f0f0f0;
-    border-radius: 50%;
-    font-size: 18px;
-    font-weight: bold;
+  }
+
+  .circle_sol img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .circle_sol h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .circle_sol ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
   }
   
   .step-section {
@@ -29,7 +53,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background: #f9f9f9;
+    background: white;
     padding: 30px;
     border-radius: 10px;
     margin-bottom: 40px;

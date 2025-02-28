@@ -1,12 +1,10 @@
 import { useEffect, useRef } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "../mainCssFile/MainSection.css";
-import Footer from "./Footer"
 import ContactSection from "./ContactSection";  // 문의 섹션 추가
 import mainImage from "../assets/mainImage.png"; // 메인 이미지
 import section1Image from "../assets/001.png"
 import section2Image from "../assets/002.png"
-import section3Image from "../assets/003.png"
 
 const MainSection = () => {
   const scrollRef = useRef(null);
@@ -27,7 +25,7 @@ const MainSection = () => {
     <div ref={scrollRef}>
       <section className="main-section">
         <div className="overlay">
-          <h1>확실한 기술력<br />철저한 품질관리<br />새한그룹</h1>
+          <h1 id="main-intro">확실한 기술력<br />철저한 품질관리<br />새한그룹</h1>
         </div>
         <img src={mainImage} alt="메인 이미지" className="main-image" />
       </section>
@@ -54,8 +52,6 @@ const MainSection = () => {
       </section>
 
       <ContactSection />
-      <Footer />
-
     </div>
   );
 };

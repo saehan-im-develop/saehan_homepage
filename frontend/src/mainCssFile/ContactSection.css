@@ -1,6 +1,7 @@
 .contact-section {
-    padding: 50px 10%;
+    padding: 30px;
     background-color: #ffffff;
+    margin-bottom: 5%; 
   }
   
   .section-title {
@@ -19,6 +20,7 @@
     border: 1px solid #ddd;
     padding: 20px;
     margin-top: 20px;
+    margin-bottom: 0px;
   }
   
   .contact-image {

@@ -1,20 +1,29 @@
-import { useEffect, useRef } from "react";
-import LocomotiveScroll from "locomotive-scroll";
-import "../mainCssFile/Header.css"
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "../mainCssFile/Header.css";
 import AffDropdownMenu from "../dropDownComponent/AffDropdownMenu";
 import IntroDropdownMenu from "../dropDownComponent/IntroDropdownMenu";
 import BizDropdownMenu from "../dropDownComponent/BizDropdownMenu";
 import DataDropdownMenu from "../dropDownComponent/DataDropdownMenu";
 import logo from "../assets/temp_logo.png";
-import { Link } from "react-router-dom"; 
 
 const Header = () => {
+  const location = useLocation();
+
+  const handleLogoClick = (e) => {
+    if (location.pathname === "/") {
+      e.preventDefault(); // 기본 이동 방지
+      window.location.reload(); // 페이지 새로고침
+    }
+  };
+
   return (
     <header className="header">
       <div className="container">
-        <Link to="/">
-        <h1 id="saehan-group">새한그룹</h1>
+        {/* 로고 클릭 시 handleLogoClick 실행 */}
+        <Link to="/" className="logo-container" onClick={handleLogoClick}>
           <img src={logo} alt="SAEHAN GROUP" className="logo" />
+          <h1 id="saehan-group">새한그룹</h1>
         </Link>
         <nav>
           <ul className="nav-links">

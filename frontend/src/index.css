@@ -22,14 +22,29 @@ html, body {
   min-width: 320px;
   min-height: 100vh;
   height: 100%;
-  overflow-x: hidden; /* ✅ 가로 스크롤 방지 */
+  /* overflow-x: hidden; /* ✅ 가로 스크롤 방지 */
+  overflow-y: auto; 
+}
+
+#main-intro{
+  font-size: 2em;
+  line-height: 1.5;
+  position: inherit;
+  text-align: left; /* ✅ 왼쪽 정렬 유지 */
+  top: 5%;
+  left: 5%;
+  width: auto; /* ✅ 너비 자동 조정 */
+  white-space: nowrap; /* ✅ 텍스트 줄 바꿈 방지 */
+  color: white;
+  margin-top: 100px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* ✅ 텍스트 그림자 추가 */
 }
 
 h1 {
   font-size: 2em;
   line-height: 1.5;
   text-align: left; /* ✅ 왼쪽 정렬 유지 */
-  position: fixed;
+  /* position: fixed; */
   top: 5%;
   left: 5%;
   width: auto; /* ✅ 너비 자동 조정 */

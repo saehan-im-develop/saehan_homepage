@@ -17,7 +17,7 @@ const BizDropdownMenu = () => {
           <li><a onClick={() => navigate("/biz-area")} style={{ cursor: "pointer" }}>사업 영역</a></li>  
           <li><a onClick={() => navigate("/tech")} style={{ cursor: "pointer" }}>기술 & 혁신</a></li> 
           <li><a onClick={() => navigate("/solutions")} style={{ cursor: "pointer" }}>고객 맞춤형 솔루션</a></li> 
-          <li><a onClick={() => navigate("/investment")} style={{ cursor: "pointer" }}>투자 & 글로벌</a></li> 
+          {/* <li><a onClick={() => navigate("/investment")} style={{ cursor: "pointer" }}>투자 & 글로벌</a></li>  */}
         </ul>
       )}
     </li>
