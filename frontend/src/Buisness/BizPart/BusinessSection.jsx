@@ -1,6 +1,4 @@
-// src/Business/BizComponent/BusinessSection.jsx
-import React from 'react';
-import { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './BusinessSection.css';
 import biz1 from '../../assets/biz/biz1.png';
 import biz2 from '../../assets/biz/biz2.png';
@@ -43,8 +41,32 @@ const businessAreas = [
 ];
 
 const BusinessSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="business-section">
+    <div ref={ref} className={`business-section ${isVisible ? "fade-in" : ""}`}>
       <h2>새한그룹 사업 영역</h2>
       <div className="business-grid">
         {businessAreas.map((area, index) => (

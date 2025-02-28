@@ -1,6 +1,5 @@
-// src/Business/TechInnovation/TechInnovation.jsx
-import React from 'react';
-import "./TechMain.css"
+import React, { useEffect, useRef, useState } from "react";
+import "./TechMain.css";
 import tech1 from '../../assets/tech/tech1.png';
 import tech2 from '../../assets/tech/tech2.png';
 import tech3 from '../../assets/tech/tech3.png';
@@ -49,8 +48,32 @@ const techSections = [
 ];
 
 const TechMain = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="tech-innovation">
+    <div ref={ref} className={`tech-innovation ${isVisible ? "fade-in" : ""}`}>
       <h2>기술 & 혁신</h2>
       <p className="tech-intro">
         새한그룹은 최첨단 CNC 가공 및 EDM 기술을 기반으로 초정밀 금형을 제작하며,
@@ -58,7 +81,7 @@ const TechMain = () => {
       </p>
 
       {techSections.map((section, index) => (
-        <div key={index} className="tech-section">
+        <div key={index} className={`tech-section ${isVisible ? "fade-in" : ""}`}>
           <img src={section.image} alt={section.title} className="tech-image" />
           <div className="tech-content">
             <h3>{section.title}</h3>

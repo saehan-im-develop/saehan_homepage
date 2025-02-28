@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import networkData from "./NetworkData";
 import "../Network/Network.css";
 
 const Network = () => {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="network-container">
+    <div ref={ref} className="network-container">
       <h2 className="network-title">새한 그룹 네트워크</h2>
       {networkData.map((company, index) => (
-        <div key={index} className="network-card">
+        <div key={index} className={`network-card ${visible ? "fade-in" : ""}`}>
           <h3>{company.name}</h3>
           
           {/* 일반적인 회사 정보 출력 */}

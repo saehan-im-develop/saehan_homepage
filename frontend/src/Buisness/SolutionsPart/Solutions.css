@@ -1,11 +1,29 @@
-/* src/Business/Solutions/Solutions.css */
-.solutions-main {
-    text-align: center;
-    padding: 50px 20px;
-    margin-top: 10%;
-    background-color: white;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.solutions-main {
+  text-align: center;
+  padding: 50px 20px;
+  margin-top: 10%;
+  background-color: white;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
   .solutions-intro {
     text-align: center;
     margin-bottom: 50px;
@@ -29,6 +47,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .circle_sol:hover {
+    transform: scale(1.05); /* 살짝 확대 */
   }
 
   .circle_sol img {
@@ -57,6 +80,14 @@
     padding: 30px;
     border-radius: 10px;
     margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .step-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .step-image {

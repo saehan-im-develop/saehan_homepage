@@ -1,10 +1,9 @@
-// src/Business/Solutions/SolutionsMain.jsx
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Solutions.css';
 import StepComponent from './StepComponent';
-import ContactSection from "../../mainComponent/ContactSection"
-import SolutionsIntro from './SolutionIntro';
-import temp from "../../assets/temp_logo.png"
+import ContactSection from "../../mainComponent/ContactSection";
+import SolutionsIntro from './SolutionsIntro';
+import temp from "../../assets/temp_logo.png";
 
 const stepsData = [
   {
@@ -52,12 +51,42 @@ const stepsData = [
 ];
 
 const SolutionsMain = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="solutions-main">
+    <div ref={ref} className={`solutions-main ${isVisible ? "fade-in" : ""}`}>
       <SolutionsIntro />
 
       {stepsData.map((step, index) => (
-        <StepComponent key={index} title={step.title} points={step.points} />
+        <StepComponent
+          key={index}
+          title={step.title}
+          image={step.image}
+          points={step.points}
+          isVisible={isVisible} // ✅ 이걸 추가해야 애니메이션 적용됨!
+        />
       ))}
 
       <ContactSection />

@@ -31,7 +31,7 @@ function HistoryMain() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setVisible(true), 500);
+    setTimeout(() => setVisible(true), 200);
   }, []);
 
   return (

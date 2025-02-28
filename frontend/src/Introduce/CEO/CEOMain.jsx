@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../CEO/CEOMain.css";
-import image from "../../assets/kim2.png"
-
+import image from "../../assets/kim2.png";
 
 function CEOMain() {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="ceo-container">
+    <div ref={ref} className={`ceo-container ${isVisible ? "fade-in" : ""}`}>
       <h1 className="ceo-title">CEO 말씀</h1>
       <div className="ceo-content">
         <img src={image} alt="새한그룹 회장 김원만" className="ceo-image" />

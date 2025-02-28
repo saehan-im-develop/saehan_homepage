@@ -2,9 +2,9 @@
 import React from 'react';
 import './Solutions.css';
 
-const StepComponent = ({ title, image, points }) => {
+const StepComponent = ({ title, image, points, isVisible }) => {
   return (
-    <div className="step-section">
+    <div className={`step-section ${isVisible ? "fade-in" : ""}`}>
       <img src={image} alt={title} className="step-image" />
       <div className="step-content">
         <h3>{title}</h3>
