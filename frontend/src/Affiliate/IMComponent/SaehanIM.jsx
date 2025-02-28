@@ -6,6 +6,7 @@ function SaehanIM() {
   return (
     <div>
       <IMMain />
+      <hr></hr>
       <IMProduct />
     </div>
   );

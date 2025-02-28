@@ -6,6 +6,7 @@ function SaehanPlus() {
   return (
     <div>
       <PlusMain />
+      <hr></hr>
       <PlusProduct />
     </div>
   );

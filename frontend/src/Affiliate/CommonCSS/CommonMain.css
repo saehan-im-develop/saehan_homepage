@@ -1,11 +1,11 @@
 .common-main {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 50px;
     padding: 40px 20px;
   }
   
   .common-header {
-    margin-top: 20%;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,15 +18,25 @@
   }
   
   .common-description {
-    max-width: 800px;
-    margin: 20px auto;
+    display: flex;  
+    align-items: center;  /* 텍스트와 이미지를 수직 정렬 */
+    justify-content: space-between;  /* 양쪽으로 정렬 */
+    gap: 40px;  /* 텍스트와 이미지 사이 여백 */
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+  }
+
+  .common-description p {
+    flex: 1; /* 텍스트 영역이 일정 비율을 차지 */
+    font-size: 18px;
+    line-height: 1.6;
   }
   
   .common-main-image {
+    flex: 1; /* 이미지 영역이 일정 비율을 차지 */
     width: 100%;
-    max-width: 900px;
-    border-radius: 10px;
-    margin-top: 20px;
+    max-width: 500px; /* 원하는 크기로 조정 */
   }
   
   #main-h1 {

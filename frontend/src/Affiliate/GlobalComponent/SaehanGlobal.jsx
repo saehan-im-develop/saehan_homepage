@@ -6,6 +6,7 @@ function SaehanGlobal() {
   return (
     <div>
       <GlobalMain />
+      <hr></hr>
       <GlobalProduct />
     </div>
   );

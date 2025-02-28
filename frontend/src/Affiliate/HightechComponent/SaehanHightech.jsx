@@ -6,6 +6,7 @@ function SaehanHightech() {
   return (
     <div>
       <HightechMain />
+      <hr></hr>
       <HightechProduct />
     </div>
   );

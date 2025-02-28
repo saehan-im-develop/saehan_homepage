@@ -1,11 +1,11 @@
 import React from "react";
 import "../CommonCSS/CommonMain.css"
+import tempImg from "../../assets/mainImage.png";
 
 function IMMain() {
   return (
     <div className="common-main">
       <div className="common-header">
-        <img src="/assets/temp_logo.png" alt="Saehan IM Logo" className="common-logo" />
         <h1 id="main-h1">SAEHAN IM</h1>
       </div>
       <div className="common-description">
@@ -14,7 +14,7 @@ function IMMain() {
           최신 기술과 최적화된 개발 프로세스를 바탕으로<br />
           고객이 필요로 하는 최상의 품질과 성능을 구현합니다.
         </p>
-        <img src="/assets/mainImage.png" alt="Saehan IM Company" className="common-main-image" />
+        <img src={tempImg} alt="Saehan IM Company" className="common-main-image" />
       </div>
     </div>
   );

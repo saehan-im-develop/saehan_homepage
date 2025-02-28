@@ -7,6 +7,10 @@
   background-color: #ffffff; /* ✅ 배경 흰색으로 변경 */
 }
 
+hr {
+  width: 1200px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
