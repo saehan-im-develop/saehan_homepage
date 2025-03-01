@@ -3,12 +3,14 @@ import './Solutions.css';
 import StepComponent from './StepComponent';
 import ContactSection from "../../mainComponent/ContactSection";
 import SolutionsIntro from './SolutionsIntro';
-import temp from "../../assets/temp_logo.png";
+import img1 from "../../assets/solutions/sol1.png"
+import img2 from "../../assets/solutions/sol2.png"
+import img3 from "../../assets/solutions/sol3.png"
 
 const stepsData = [
   {
     title: 'STEP 1: 맞춤형 컨설팅 & 설계',
-    image: temp,
+    image: img1,
     points: [
       '3D 프린팅 & 빠른 시제품 제작 (Rapid Prototyping)',
       'FEA(유한 요소 해석) 기반 구조 안정성 분석',
@@ -22,7 +24,7 @@ const stepsData = [
   },
   {
     title: 'STEP 2: 프로토타입 & 테스트',
-    image: temp,
+    image: img2,
     points: [
       '3D 프린팅 & 빠른 시제품 제작 (Rapid Prototyping)',
       'FEA(유한 요소 해석) 기반 구조 안정성 분석',
@@ -36,7 +38,7 @@ const stepsData = [
   },
   {
     title: 'STEP 3: 대량 생산 & 품질 보증',
-    image: temp,
+    image: img3,
     points: [
       'AI & IoT 기반 스마트 팩토리 운영',
       '실시간 품질 검사 (SPC, AOI, CT 스캐닝 활용)',

@@ -91,11 +91,12 @@
   }
   
   .step-image {
-    width: 40%;
-    max-width: 500px;
-    border-radius: 8px;
-  }
-  
+    width: 100%;  /* 부모 요소 기준으로 가득 차도록 설정 */
+    max-width: 400px; /* 최대 너비 제한 */
+    height: 250px; /* 모든 이미지 높이를 동일하게 설정 */
+    object-fit: cover; /* 비율을 유지하면서 넘치는 부분을 잘라 정렬 */
+    display: block;
+}
   .step-content {
     width: 55%;
     text-align: left;
@@ -126,3 +127,4 @@
     border-radius: 8px;
   }
   
+

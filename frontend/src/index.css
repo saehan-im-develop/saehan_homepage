@@ -23,11 +23,12 @@ a:hover {
 html, body {
   margin: 0;
   padding: 0;
-  min-width: 320px;
+  min-width: 100vh;
   min-height: 100vh;
   height: 100%;
   /* overflow-x: hidden; /* ✅ 가로 스크롤 방지 */
   overflow-y: auto; 
+  overflow-x: auto;
 }
 
 #main-intro{
