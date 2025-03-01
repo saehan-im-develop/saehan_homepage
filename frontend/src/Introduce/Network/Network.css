@@ -1,50 +1,44 @@
 .network-container {
-    width: 80%;
-    margin: 80px auto 50px; /* 상단 마진 추가 */
-    padding-top: 50px; /* 내부 여백 추가 */
-  }
-  
-  .network-title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  .network-card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(30px); /* 아래에서 올라오는 효과 */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
+  width: 70%;  /* 기존 80%에서 70%로 줄이기 */
+  max-width: 900px;  /* 최대 너비를 제한하여 카드가 너무 커지지 않도록 */
+  margin: 60px auto 50px; /* 상단 마진 조정 */
+  padding-top: 40px; /* 내부 여백 줄이기 */
+}
 
-  .network-card.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .network-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
-  }
-  
-  .network-phone {
-    text-align: right;
-  }
-  
-  .network-phone p {
-    margin: 5px 0;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .empty {
-    color: #999;
-  }
-  
+.network-card {
+  background: white;
+  padding: 15px 20px; /* 기존 20px에서 상단/하단 패딩 줄이기 */
+  margin-bottom: 15px; /* 카드 간격 줄이기 */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px); /* 아래에서 올라오는 효과를 조금 더 자연스럽게 */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.network-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.network-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px; /* 기존 16px에서 줄여서 내부 요소 간격 조정 */
+  padding: 10px 0; /* 텍스트 위아래 간격 조정 */
+}
+
+.network-phone {
+  text-align: right;
+}
+
+.network-phone p {
+  margin: 3px 0; /* 기존 5px에서 줄여서 줄 간격 조정 */
+  font-weight: bold;
+  color: #333;
+}
+
+.empty {
+  color: #999;
+}

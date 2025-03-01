@@ -1,6 +1,6 @@
 .common-main {
     text-align: center;
-    padding: 40px 0px;
+    padding: 40px 20px;
   }
   
   .common-header {
@@ -18,13 +18,28 @@
   
   .common-description {
     display: flex;  
-    align-items: center;  /* 텍스트와 이미지를 수직 정렬 */
-    justify-content: space-between;  /* 양쪽으로 정렬 */
-    gap: 40px;  /* 텍스트와 이미지 사이 여백 */
+    align-items: center;  
+    justify-content: space-between;  
+    gap: 40px;  
     max-width: 1200px;
     margin: auto;
     padding: 50px 0px;
-  }
+
+    /* ✅ 기본적으로 약간 보이도록 수정 */
+    opacity: 0.1;  
+    transform: translateY(50px);  
+    transition: opacity 1s ease-out, transform 1s ease-out;  
+}
+
+/* ✅ 페이지가 로드되자마자 실행 */
+.common-description.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+  
 
   .common-description p {
     flex: 1; /* 텍스트 영역이 일정 비율을 차지 */

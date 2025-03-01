@@ -1,14 +1,24 @@
-import React from "react";
-import "../CommonCSS/CommonMain.css"
+import React, { useEffect, useState } from "react";
+import "../CommonCSS/CommonMain.css";
 import tempImg from "../../assets/mainImage.png";
 
 function IMMain() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // ✅ 페이지가 로드된 후 0.1초 뒤 페이드인 효과 실행
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+  }, []);
+
   return (
     <div className="common-main">
       <div className="common-header">
         <h1 id="main-h1">SAEHAN IM</h1>
       </div>
-      <div className="common-description">
+      {/* ✅ 페이드인 효과 적용 */}
+      <div className={`common-description ${isLoaded ? "show" : ""}`}>
         <p>
           새한아이엠은 혁신적인 소프트웨어 및 IT 솔루션을 제공합니다.<br />
           최신 기술과 최적화된 개발 프로세스를 바탕으로<br />

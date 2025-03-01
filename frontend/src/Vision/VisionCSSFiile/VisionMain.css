@@ -1,12 +1,11 @@
 .vision-container {
-    padding: 50px;
-    background-color: #f8f9fa;
+    padding: 50px 400px 0; /* 위쪽 50px, 좌우 400px, 아래쪽 0px */
+    background-color: #ffffff;
     margin: 0px auto 50px; /* 상단 마진 추가 */
-    padding-top: 50px; /* 내부 여백 추가 */
     opacity: 0;
     transform: translateY(50px); /* 아래에서 올라오는 효과 */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
+}
   
   .vision-container.fade-in {
     opacity: 1;
@@ -40,8 +39,9 @@
   
   .vision-principles {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 200px;
     position: relative;
+    margin-bottom: 200px;
 }
   
 .principles-circle {

@@ -12,7 +12,7 @@ const MainSection = () => {
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current,
-      smooth: true, 
+      smooth: true,
       lerp: 0.1, // 스크롤 속도 조절 (0~1 사이 값, 낮을수록 부드러움)
     });
 
@@ -23,10 +23,15 @@ const MainSection = () => {
 
   return (
     <div ref={scrollRef}>
+      {/* 메인 섹션 */}
       <section className="main-section">
         <div className="content-container">
           <div className="text-container">
-            <h1 id="main-intro">확실한 기술력<br />철저한 품질관리<br />새한그룹</h1>
+            <h1 id="main-intro">
+              <span className="sehan-title">새한그룹</span>.<br />
+              확실한 기술력<br />
+              철저한 품질관리
+            </h1>
           </div>
           <div className="image-container">
             <img src={mainImage} alt="메인 이미지" className="main-image" />
@@ -34,8 +39,25 @@ const MainSection = () => {
         </div>
       </section>
 
+      {/* 🔹 제조 산업 섹션 (기존 section2를 section1 앞에 배치) */}
+      <section className="sub-section" id="section2" data-scroll>
+        <div className="content-container">
+          <div className="image-container">
+            <img src={section2Image} alt="제조 산업" className="section-image" />
+          </div>
+          <div className="text-container">
+            <h2>제조 산업의 미래를 <br />선도하는 리더</h2>
+          </div>
+        </div>
+      </section>
+
+      {/* 🔹 사업 부문 소개 (기존 section1을 section2 뒤에 배치) */}
       <section className="sub-section" id="section1" data-scroll>
-        <h2>새한그룹. <br />사업 부문을 소개합니다.</h2>
+        <h2>
+          <span className="sehan-title">새한그룹</span>.<br />
+          사업 부문을 소개합니다.
+        </h2>
+
 
         {/* 🔹 동그라미 컨테이너 */}
         <div className="circle-container">
@@ -47,11 +69,6 @@ const MainSection = () => {
         </div>
 
         <img src={section1Image} alt="사업 부문" className="section-image" />
-      </section>
-
-      <section className="sub-section" id="section2" data-scroll>
-        <img src={section2Image} alt="제조 산업" className="section-image" />
-        <h2>제조 산업의 미래를 <br />선도하는 리더</h2>
       </section>
 
       <ContactSection />

@@ -23,26 +23,29 @@ a:hover {
 html, body {
   margin: 0;
   padding: 0;
-  min-width: 100vh;
+  min-width: 100vw; /* ✅ 잘못된 100vh → 100vw로 변경 */
   min-height: 100vh;
-  height: 100%;
-  /* overflow-x: hidden; /* ✅ 가로 스크롤 방지 */
-  overflow-y: auto; 
-  overflow-x: auto;
+  height: auto; /* ✅ height: 100% 제거하고 auto 설정 */
+  overflow-x: hidden; /* ✅ 가로 스크롤 방지 */
+  overflow-y: auto; /* ✅ 세로 스크롤 가능하게 유지 */
 }
 
 #main-intro {
-  font-size: 2em;
+  font-size: 2.5rem; /* 글자 크기 조정 */
   line-height: 1.5;
-  /* position: inherit; → 절대/상대 위치를 위해 absolute로 변경 */
-  position: absolute;
-  text-align: left; 
-  top: 5%;
-  left: 5%;
-  color: white;
-  margin-top: 0; /* ✅ margin-top 제거로 위치를 정확히 잡기 */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  /* white-space: nowrap; → 필요시 제거(줄바꿈 가능) */
+  text-align: left; /* 왼쪽 정렬 유지 */
+  width: auto;
+  white-space: nowrap; /* 줄 바꿈 방지 */
+  color: rgb(0, 0, 0);
+  margin-top: 0px;
+}
+
+.sehan-title {
+  font-size: 2.5rem; /* 폰트 크기 조정 */
+  font-weight: 100;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #3056d3; /* 파란색 밑줄 추가 */
+  display: inline-block;
 }
 
 h1 {
@@ -55,8 +58,6 @@ h1 {
   width: auto; /* ✅ 너비 자동 조정 */
   white-space: nowrap; /* ✅ 텍스트 줄 바꿈 방지 */
   color: white;
-
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* ✅ 텍스트 그림자 추가 */
 }
 
 button {
@@ -79,13 +80,32 @@ button:focus-visible {
 }
 
 #root {
-  /* display: flex;  제거 */
-  /* flex-direction: column; 제거 */
-  /* align-items: center; 제거 */
-  /* justify-content: center; 제거 */
-  width: 100%; /* 전체 화면 너비 사용 */
-  margin: 0 auto;
-  /* max-width: 1200px; 제거 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* ✅ 페이지 내용을 위에서 아래로 쌓이도록 변경 */
+  width: 100%;
+  max-width: none; /* ✅ 기존 max-width: 1200px 제거 */
+  margin: 0;
 }
 
+.text-container h2 {
+  font-weight: normal;
+}
 
+.main-content {
+  flex: 1;
+  min-height: 80vh; /* 📌 최소 높이를 설정하여 본문이 너무 작아지지 않게 함 */
+}
+
+.footer {
+  width: 100%;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  flex-shrink: 0;
+}

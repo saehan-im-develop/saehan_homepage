@@ -16,7 +16,7 @@ const IntroDropdownMenu = () => {
        <ul className="dropdown-menu">
        <li><a onClick={() => navigate("/vision")} style={{ cursor: "pointer" }}>비전 및 이념</a></li> {/* ✅ 페이지 이동 추가 */}
        <li><a onClick={() => navigate("/ceo")} style={{ cursor: "pointer" }}>CEO 인사말</a></li> {/* ✅ 페이지 이동 추가 */}
-       <li><a onClick={() => navigate("/history")} style={{ cursor: "pointer" }}>새한역사</a></li> {/* ✅ 페이지 이동 추가 */}
+       <li><a onClick={() => navigate("/history")} style={{ cursor: "pointer" }}>회사 연혁</a></li> {/* ✅ 페이지 이동 추가 */}
        <li><a onClick={() => navigate("/network")} style={{ cursor: "pointer" }}>네트워크</a></li> {/* ✅ 페이지 이동 추가 */}
      </ul>
       )}

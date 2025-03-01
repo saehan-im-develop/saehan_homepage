@@ -15,13 +15,13 @@ html, body {
 }
 
 .footer {
-  background-color: #777777;
-  color: white;
-  text-align: left;
-  padding: 20px;
-  font-size: 14px;
   width: 100%;
-  max-width: 1280px;
-  margin-top: auto !important;
-
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;  /* 절대 위치로 인한 문제 방지 */
+  bottom: 0;
+  left: 0;
+  flex-shrink: 0;  /* footer가 줄어들지 않도록 설정 */
 }

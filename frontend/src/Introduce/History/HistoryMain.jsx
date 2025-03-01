@@ -44,7 +44,7 @@ function HistoryMain() {
           <div className="history-content">
             {section.events.map((event, i) => (
               <div key={i} className="history-item">
-                <span className="history-year">📌 {event.year}</span>
+                <span className="history-year">✅ {event.year}</span>
                 <p>{event.text}</p>
               </div>
             ))}

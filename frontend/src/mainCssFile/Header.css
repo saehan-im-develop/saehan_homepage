@@ -3,11 +3,10 @@
   font-family: "Noto Sans KR", sans-serif !important;
 }
 
-
 /* ✅ 헤더 스타일 */
 .header {
   background-color: white;
-  padding: 5px 30px; /* ✅ 기존 10px → 5px, 40px → 30px */
+  padding: 5px 30px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -16,14 +15,14 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  height: 65px; /* ✅ 기존보다 줄여서 더 슬림한 헤더 */
+  height: 65px;
 }
 
 /* ✅ 로고 + 텍스트 감싸는 div */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* 로고와 텍스트 간격 */
+  gap: 10px;
 }
 
 /* ✅ 헤더 내부 정렬 수정 */
@@ -31,15 +30,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%; /* ✅ 기존 95% → 100%로 확장 */
-  max-width: 1600px; /* ✅ 기존 1400px → 1600px로 확장 */
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 10px; /* ✅ 좌우 여백 추가 */
+  padding: 0 10px;
 }
 
 /* ✅ 새한그룹 텍스트 스타일 */
 #saehan-group {
-  font-size: 24px; /* ✅ 기존 32px에서 34px로 확대 */
+  font-size: 24px;
   font-weight: 200;
   color: rgb(33, 66, 126);
   margin: 0;
@@ -51,7 +50,7 @@
 
 /* ✅ 로고 크기 */
 .logo {
-  height: 50px; /* ✅ 기존 80px에서 90px로 크기 확대 */
+  height: 50px;
 }
 
 /* ✅ 네비게이션 리스트 */
@@ -62,57 +61,38 @@
   align-items: center;
 }
 
-/* ✅ 네비게이션 항목 스타일 */
-.nav-links li {
-  font-size: 16px; /* ✅ 기존 18px → 16px */
+/* ✅ 네비게이션 항목 & 드롭다운 항목 스타일 공통 적용 */
+.nav-links li,
+.nav-links li a,
+.dropdown-menu li a {
+  font-size: 16px;
   font-weight: bold;
-  padding: 5px 15px; /* ✅ 기존 10px 20px → 5px 15px */
+  padding: 5px 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-
-/* ✅ 드롭다운 스타일 */
-.dropdown {
-  position: relative;
-  list-style: none;
-  cursor: pointer;
-}
-
-
-
-
-
-/* ✅ 네비게이션 링크 스타일 */
-.nav-links li a {
   text-decoration: none;
   color: #222;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 8px 15px;
-  letter-spacing: 0.3px;
-  display: inline-block;
   transition: color 0.3s ease-in-out;
 }
 
+/* ✅ 드롭다운 공통 스타일 */
+.dropdown {
+  position: relative;
+  list-style: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
 
 /* ✅ 네비게이션 활성(active) 상태 */
-.nav-links li a.active {
-  color: #0056b3; /* ✅ 현재 선택된 메뉴 강조 */
-  border-bottom: 3px solid #0056b3; /* ✅ 하단에 강조선 추가 */
+.nav-links li a.active,
+.nav-links li.active a {
+  color: #0056b3;
+  border-bottom: 3px solid #0056b3;
   padding-bottom: 5px;
 }
 
 /* ✅ 드롭다운 메뉴 스타일 */
-.dropdown {
-  position: relative;
-  list-style: none;
-  padding: 10px 20px; /* ✅ 패딩 확장 */
-  cursor: pointer;
-}
-
-/* ✅ 드롭다운 메뉴 내부 스타일 */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -122,17 +102,14 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  padding: 12px; /* ✅ 기존보다 패딩 확대 */
-  width: 220px; /* ✅ 기존 200px에서 220px로 크기 확대 */
+  padding: 12px;
+  width: 220px;
   z-index: 100;
 }
 
 /* ✅ 드롭다운 내부 링크 스타일 */
 .dropdown-menu li a {
-  text-decoration: none;
-  color: black;
-  font-size: 16px; /* ✅ 기존보다 크기 증가 */
-  transition: color 0.3s ease-in-out;
+  font-size: 16px;
 }
 
 /* ✅ 드롭다운 항목 hover 효과 */
@@ -144,4 +121,3 @@
 .dropdown-menu li:hover {
   background-color: #f0f0f0;
 }
-
