@@ -36,10 +36,10 @@ const MainSection = () => {
         {/* 🔹 동그라미 컨테이너 */}
         <div className="circle-container">
           <div className="circle center">새한그룹</div>
-          <div className="circle top-left">(유) 새한하이테크</div>
-          <div className="circle top-right">(유) 새한아이엠</div>
-          <div className="circle bottom-left">(유) 새한글로벌</div>
-          <div className="circle bottom-right">(유) 새한플러스</div>
+          <div className="circle top-left">(주) 새한하이테크</div>
+          <div className="circle top-right">(주) 새한아이엠</div>
+          <div className="circle bottom-left">(주) 새한글로벌</div>
+          <div className="circle bottom-right">(주) 새한플러스</div>
         </div>
 
         <img src={section1Image} alt="사업 부문" className="section-image" />

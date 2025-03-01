@@ -1,7 +1,13 @@
+/* ✅ 모든 텍스트에 폰트 적용 */
+* {
+  font-family: "Noto Sans KR", sans-serif !important;
+}
+
+
 /* ✅ 헤더 스타일 */
 .header {
   background-color: white;
-  padding: 10px 20px;
+  padding: 5px 30px; /* ✅ 기존 10px → 5px, 40px → 30px */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -10,30 +16,31 @@
   width: 100%;
   top: 0;
   z-index: 1000;
+  height: 65px; /* ✅ 기존보다 줄여서 더 슬림한 헤더 */
 }
 
-/* ✅ 로고 + 텍스트 감싸는 div 추가 */
+/* ✅ 로고 + 텍스트 감싸는 div */
 .logo-container {
   display: flex;
-  align-items: center; /* 텍스트와 로고 수직 정렬 */
+  align-items: center;
   gap: 10px; /* 로고와 텍스트 간격 */
 }
-
 
 /* ✅ 헤더 내부 정렬 수정 */
 .header .container {
   display: flex;
-  align-items: center; /* 세로 정렬 */
+  align-items: center;
   justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  width: 100%; /* ✅ 기존 95% → 100%로 확장 */
+  max-width: 1600px; /* ✅ 기존 1400px → 1600px로 확장 */
+  margin: 0 auto;
+  padding: 0 10px; /* ✅ 좌우 여백 추가 */
 }
 
-/* ✅ 새한그룹 글씨 */
+/* ✅ 새한그룹 텍스트 스타일 */
 #saehan-group {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 24px; /* ✅ 기존 32px에서 34px로 확대 */
+  font-weight: 200;
   color: rgb(33, 66, 126);
   margin: 0;
   padding: 0;
@@ -42,46 +49,66 @@
   text-shadow: none;
 }
 
-
 /* ✅ 로고 크기 */
 .logo {
-  height: 80px;
+  height: 50px; /* ✅ 기존 80px에서 90px로 크기 확대 */
 }
 
 /* ✅ 네비게이션 리스트 */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  align-items: center;
 }
 
-/* ✅ 네비게이션 항목 기본 스타일 */
+/* ✅ 네비게이션 항목 스타일 */
 .nav-links li {
-  font-size: 16px;
-  font-weight: normal;
-  padding: 10px 15px;
+  font-size: 16px; /* ✅ 기존 18px → 16px */
+  font-weight: bold;
+  padding: 5px 15px; /* ✅ 기존 10px 20px → 5px 15px */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ✅ 네비게이션 링크 스타일 (중복 제거) */
+
+/* ✅ 드롭다운 스타일 */
+.dropdown {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+
+
+
+
+
+/* ✅ 네비게이션 링크 스타일 */
 .nav-links li a {
   text-decoration: none;
-  color: #333;
+  color: #222;
   font-size: 16px;
-  font-weight: normal;
-  padding: 10px 15px;
+  font-weight: 700;
+  padding: 8px 15px;
+  letter-spacing: 0.3px;
   display: inline-block;
   transition: color 0.3s ease-in-out;
 }
 
 
+/* ✅ 네비게이션 활성(active) 상태 */
+.nav-links li a.active {
+  color: #0056b3; /* ✅ 현재 선택된 메뉴 강조 */
+  border-bottom: 3px solid #0056b3; /* ✅ 하단에 강조선 추가 */
+  padding-bottom: 5px;
+}
+
 /* ✅ 드롭다운 메뉴 스타일 */
 .dropdown {
   position: relative;
   list-style: none;
-  padding: 10px 15px;
+  padding: 10px 20px; /* ✅ 패딩 확장 */
   cursor: pointer;
 }
 
@@ -95,8 +122,8 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  width: 200px;
+  padding: 12px; /* ✅ 기존보다 패딩 확대 */
+  width: 220px; /* ✅ 기존 200px에서 220px로 크기 확대 */
   z-index: 100;
 }
 
@@ -104,15 +131,17 @@
 .dropdown-menu li a {
   text-decoration: none;
   color: black;
+  font-size: 16px; /* ✅ 기존보다 크기 증가 */
   transition: color 0.3s ease-in-out;
 }
 
 /* ✅ 드롭다운 항목 hover 효과 */
 .dropdown-menu li a:hover {
-  color: blue;
+  color: rgb(52, 52, 255);
 }
 
 /* ✅ 드롭다운 메뉴 항목 hover 시 배경색 효과 */
 .dropdown-menu li:hover {
   background-color: #f0f0f0;
 }
+

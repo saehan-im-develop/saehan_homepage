@@ -23,7 +23,7 @@ const Header = () => {
         {/* 로고 클릭 시 handleLogoClick 실행 */}
         <Link to="/" className="logo-container" onClick={handleLogoClick}>
           <img src={logo} alt="SAEHAN GROUP" className="logo" />
-          <h1 id="saehan-group">새한그룹</h1>
+          <h1 id="saehan-group">SEAHAN</h1>
         </Link>
         <nav>
           <ul className="nav-links">
