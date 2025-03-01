@@ -1,7 +1,7 @@
 .vision-container {
     padding: 50px;
     background-color: #f8f9fa;
-    margin: 80px auto 50px; /* 상단 마진 추가 */
+    margin: 0px auto 50px; /* 상단 마진 추가 */
     padding-top: 50px; /* 내부 여백 추가 */
     opacity: 0;
     transform: translateY(50px); /* 아래에서 올라오는 효과 */

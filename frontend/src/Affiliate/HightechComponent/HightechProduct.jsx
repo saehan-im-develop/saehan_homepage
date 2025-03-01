@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import "../CommonCSS/CommonProduct.css";
 import "../CommonCSS/CommonProduct.css"
 import img1 from "../../assets/aff/high1.png"
 import img2 from "../../assets/aff/high2.png"
@@ -56,46 +57,32 @@ function HightechProduct() {
     ];
   
     const [isVisible, setIsVisible] = useState(false);
-    const ref = useRef(null);
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          if (entries[0].isIntersecting) {
-            setIsVisible(true);
-          }
-        },
-        { threshold: 0.3 }
-      );
-  
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-  
-      return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      };
-    }, []);
-  
-    return (
-      <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
-        <h2 className="product-title">제품 설명</h2>
-        {products.map((product, index) => (
-          <div key={index} className="product-card">
-            <img src={product.image} alt={product.name} className="product-image" />
-            <div className="product-info">
-              <h3>{product.name}</h3>
-              <p className="product-eng-name">{product.engName}</p>
-              <p>{product.description}</p>
-              <p><strong>소재:</strong> {product.material}</p>
-              <p><strong>용도:</strong> {product.use}</p>
-            </div>
+  const ref = useRef(null);
+
+  useEffect(() => {
+    // ✅ 페이지가 로드될 때 자동으로 fade-in 효과 적용
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // 0.1초 뒤 자동 페이드인
+  }, []);
+
+  return (
+    <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
+      <h2 className="product-title">제품 설명</h2>
+      {products.map((product, index) => (
+        <div key={index} className="product-card">
+          <img src={product.image} alt={product.name} className="product-image" />
+          <div className="product-info">
+            <h3>{product.name}</h3>
+            <p className="product-eng-name">{product.engName}</p>
+            <p>{product.description}</p>
+            <p><strong>소재:</strong> {product.material}</p>
+            <p><strong>용도:</strong> {product.use}</p>
           </div>
-        ))}
-      </div>
-    );
-  }
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default HightechProduct;
