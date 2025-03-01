@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../CommonCSS/CommonProduct.css"
+import "../CommonCSS/CommonProduct.css";
 
 function PlusProduct() {
   const products = [
@@ -36,24 +36,11 @@ function PlusProduct() {
   const ref = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
+    // ✅ 페이지가 로드되면 자동으로 fade-in 효과 실행
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // 0.1초 후 자동으로 페이드인
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
   }, []);
 
   return (

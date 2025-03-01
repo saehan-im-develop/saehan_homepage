@@ -1,6 +1,6 @@
 import React from "react";
 import "../CommonCSS/CommonMain.css"
-import temp from "../../assets/tech/tech2.png"
+import temp from "../../assets/mainImage.png";
 
 function HightechMain() {
   return (

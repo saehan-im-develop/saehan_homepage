@@ -1,6 +1,6 @@
 .common-main {
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 0px;
   }
   
   .common-header {
@@ -23,7 +23,7 @@
     gap: 40px;  /* 텍스트와 이미지 사이 여백 */
     max-width: 1200px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 50px 0px;
   }
 
   .common-description p {
@@ -39,6 +39,6 @@
   }
   
   #main-h1 {
-    margin-top: 100px;
+    margin-top: 0px;
   }
   
