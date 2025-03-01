@@ -3,12 +3,12 @@ import LocomotiveScroll from "locomotive-scroll";
 import "../mainCssFile/MainSection.css";
 import ContactSection from "./ContactSection";  // 문의 섹션 추가
 import mainImage from "../assets/mainImage.png"; // 메인 이미지
-import section1Image from "../assets/001.png"
-import section2Image from "../assets/002.png"
+import section1Image from "../assets/001.png";
+import section2Image from "../assets/002.png";
 
 const MainSection = () => {
   const scrollRef = useRef(null);
-/*  */
+
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current,
@@ -24,15 +24,19 @@ const MainSection = () => {
   return (
     <div ref={scrollRef}>
       <section className="main-section">
-        <div className="overlay">
-          <h1 id="main-intro">확실한 기술력<br />철저한 품질관리<br />새한그룹</h1>
+        <div className="content-container">
+          <div className="text-container">
+            <h1 id="main-intro">확실한 기술력<br />철저한 품질관리<br />새한그룹</h1>
+          </div>
+          <div className="image-container">
+            <img src={mainImage} alt="메인 이미지" className="main-image" />
+          </div>
         </div>
-        <img src={mainImage} alt="메인 이미지" className="main-image" />
       </section>
 
       <section className="sub-section" id="section1" data-scroll>
         <h2>새한그룹. <br />사업 부문을 소개합니다.</h2>
-        
+
         {/* 🔹 동그라미 컨테이너 */}
         <div className="circle-container">
           <div className="circle center">새한그룹</div>
@@ -44,7 +48,6 @@ const MainSection = () => {
 
         <img src={section1Image} alt="사업 부문" className="section-image" />
       </section>
-
 
       <section className="sub-section" id="section2" data-scroll>
         <img src={section2Image} alt="제조 산업" className="section-image" />

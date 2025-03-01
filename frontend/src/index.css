@@ -30,18 +30,18 @@ html, body {
   overflow-y: auto; 
 }
 
-#main-intro{
+#main-intro {
   font-size: 2em;
   line-height: 1.5;
-  position: inherit;
-  text-align: left; /* ✅ 왼쪽 정렬 유지 */
+  /* position: inherit; → 절대/상대 위치를 위해 absolute로 변경 */
+  position: absolute;
+  text-align: left; 
   top: 5%;
   left: 5%;
-  width: auto; /* ✅ 너비 자동 조정 */
-  white-space: nowrap; /* ✅ 텍스트 줄 바꿈 방지 */
   color: white;
-  margin-top: 100px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* ✅ 텍스트 그림자 추가 */
+  margin-top: 0; /* ✅ margin-top 제거로 위치를 정확히 잡기 */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  /* white-space: nowrap; → 필요시 제거(줄바꿈 가능) */
 }
 
 h1 {
@@ -78,13 +78,13 @@ button:focus-visible {
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* ✅ 내부 요소 중앙 정렬 */
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px; /* ✅ 적절한 최대 너비 설정 */
-  margin: 0 auto; /* ✅ 중앙 정렬 */
+  /* display: flex;  제거 */
+  /* flex-direction: column; 제거 */
+  /* align-items: center; 제거 */
+  /* justify-content: center; 제거 */
+  width: 100%; /* 전체 화면 너비 사용 */
+  margin: 0 auto;
+  /* max-width: 1200px; 제거 */
 }
 
 

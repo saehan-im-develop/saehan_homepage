@@ -3,7 +3,7 @@ import HistoryMain from "./HistoryMain";
 
 const HistoryContainer = () => {
   return (
-    <div style={{ position: "relative", paddingTop: "200px" }}>
+    <div style={{ position: "relative", paddingTop: "0px" }}>
       <HistoryMain />
     </div>
   );

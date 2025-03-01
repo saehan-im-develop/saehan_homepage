@@ -1,12 +1,33 @@
 .main-section {
-  position: relative; 
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  height: 100vh;
+  padding: 0 5%;
 }
 
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.text-container {
+  flex: 1;
+  padding-right: 5%;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
   
   .overlay {
     position: absolute; /* 기존 relative → absolute로 변경 */
@@ -33,12 +54,11 @@
   
 .main-image {
   width: 100%;
-  height: 75vh;
+  height: 50vh; /* 화면 가득 채우기 */
   object-fit: cover;
-  position: absolute;
+  position: relative; /* 부모가 relative */
   z-index: 1;
 }
-
 
   /* 스크롤 컨테이너 */
 html.has-scroll-smooth {
