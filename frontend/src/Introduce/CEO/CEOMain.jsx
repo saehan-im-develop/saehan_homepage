@@ -29,7 +29,8 @@ function CEOMain() {
 
   return (
     <div ref={ref} className={`ceo-container ${isVisible ? "fade-in" : ""}`}>
-      <h1 className="ceo-title">CEO 말씀</h1>
+      {/* ✅ 추가된 상단 CEO 인사말 */}
+      <div className="ceo-header">CEO 인사말</div>
       <div className="ceo-content">
         <img src={image} alt="새한그룹 회장 김원만" className="ceo-image" />
         <div className="ceo-text">
