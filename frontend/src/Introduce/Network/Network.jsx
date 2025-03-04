@@ -29,14 +29,13 @@ const Network = () => {
 
   return (
     <div ref={ref} className="network-container">
-      <h2 className="network-title">새한 그룹 네트워크</h2>
+      {/* ✅ 제목에도 fade-in 클래스 추가 */}
+      <h2 className={`network-title ${visible ? "fade-in" : ""}`}>새한 그룹 네트워크</h2>
+      
       {networkData.map((company, index) => (
         <div key={index} className={`network-card ${visible ? "fade-in" : ""}`}>
           <h3>{company.name}</h3>
-          
-          {/* 일반적인 회사 정보 출력 */}
           {company.locations ? (
-            // locations 배열이 존재할 경우, 여러 개의 위치 정보를 표시
             company.locations.map((location, locIndex) => (
               <div key={locIndex} className="network-info">
                 <span className="network-type">{location.type || "정보 없음"}</span>
@@ -51,7 +50,6 @@ const Network = () => {
               </div>
             ))
           ) : (
-            // 일반적인 단일 회사 정보
             <div className="network-info">
               <span className="network-type">{company.type || "정보 없음"}</span>
               <span className="network-address">{company.address || "주소 없음"}</span>
