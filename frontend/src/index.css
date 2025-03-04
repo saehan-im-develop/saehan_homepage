@@ -9,7 +9,7 @@
 
 /* ✅ 기본적으로 안 보이도록 설정 */
 hr {
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   border: none;
   height: 2px;

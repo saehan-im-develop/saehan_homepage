@@ -6,7 +6,7 @@
 }
 
 .network-card {
-  background: #f9f9f9;  /* 기존 흰색에서 살짝 회색으로 변경하여 박스 구분 */
+  background: #ffffff;  /* 기존 흰색에서 살짝 회색으로 변경하여 박스 구분 */
   padding: 25px; /* 기존보다 여유 있는 패딩 */
   margin-bottom: 20px;
   border-radius: 10px;
