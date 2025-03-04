@@ -1,13 +1,13 @@
 .product {
     padding: 40px 20px;
-    opacity: 0;  /* ✅ 기본적으로 숨김 */
-    transform: translateY(50px);  /* ✅ 아래에서 올라오는 효과 유지 */
-    transition: opacity 1s ease-out, transform 1s ease-out;  /* ✅ 애니메이션 적용 */
+    opacity: 0;  /*  기본적으로 숨김 */
+    transform: translateY(50px);  /*  아래에서 올라오는 효과 유지 */
+    transition: opacity 1s ease-out, transform 1s ease-out;  /*  애니메이션 적용 */
     width: 100%;
     max-width: 1200px;
 }
 
-/* ✅ fade-in 클래스가 추가되면 서서히 나타남 */
+/*  fade-in 클래스가 추가되면 서서히 나타남 */
 .product.fade-in {
     opacity: 1;
     transform: translateY(0);
@@ -20,7 +20,7 @@
     margin-bottom: 30px;
 }
 
-/* 🏷️ 공통 카드 디자인 */
+/*  공통 카드 디자인 */
 .product-card {
     display: flex;
     align-items: center;

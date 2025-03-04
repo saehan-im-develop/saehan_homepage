@@ -30,7 +30,7 @@ const Header = () => {
             <IntroDropdownMenu />
             <AffDropdownMenu />
             <BizDropdownMenu />
-            <DataDropdownMenu />
+            {/* <DataDropdownMenu /> */}
           </ul>
         </nav>
       </div>

@@ -6,7 +6,7 @@ function IMMain() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // ✅ 페이지가 로드된 후 0.1초 뒤 페이드인 효과 실행
+    //  페이지가 로드된 후 0.1초 뒤 페이드인 효과 실행
     setTimeout(() => {
       setIsLoaded(true);
     }, 100);
@@ -14,10 +14,10 @@ function IMMain() {
 
   return (
     <div className="common-main">
-      <div className="common-header">
-        <h1 id="main-h1">SAEHAN IM</h1>
+      <div className={`common-header ${isLoaded ? "show" : ""}`}>
+          <h1 id="main-h1">SAEHAN IM</h1>
       </div>
-      {/* ✅ 페이드인 효과 적용 */}
+      {/*  페이드인 효과 적용 */}
       <div className={`common-description ${isLoaded ? "show" : ""}`}>
         <p>
           새한아이엠은 혁신적인 소프트웨어 및 IT 솔루션을 제공합니다.<br />
