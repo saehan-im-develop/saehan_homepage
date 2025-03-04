@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import "../CommonCSS/CommonProduct.css";
 import "../CommonCSS/CommonProduct.css"
 import img1 from "../../assets/aff/high1.png"
-import img2 from "../../assets/aff/high2.png"
 import img3 from "../../assets/aff/high3.png"
 import img4 from "../../assets/aff/high4.png"
 import img5 from "../../assets/aff/high5.png"
@@ -25,7 +24,7 @@ function HightechProduct() {
           "최신 반도체 기술을 적용하여 고속 데이터 처리와 안정적인 시스템 운영을 지원하는 메모리 모듈입니다.",
         material: "고품질 PCB 및 반도체 집적 회로",
         use: "데이터센터, 클라우드 서버, AI 연산, 금융·기업용 서버 시스템",
-        image: img2,
+        image: img1,
       },
       {
         name: "정밀 플라스틱 산업용 암",

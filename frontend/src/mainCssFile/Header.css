@@ -16,6 +16,7 @@
   top: 0;
   z-index: 1000;
   height: 65px;
+  margin: 0 auto;
 }
 
 /*  로고 + 텍스트 감싸는 div */

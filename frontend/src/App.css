@@ -23,24 +23,31 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 main {
-  flex: 1;
+  flex-grow: 1; /*  남는 공간을 main이 차지하도록 설정 */
   display: flex;
   flex-direction: column;
+  min-height: auto;
+}
+.app-container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*  내부 요소들(헤더, 본문, 푸터) 가운데 정렬 */
+  width: 100%;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: 0 auto; /*  전체를 중앙 정렬 */
 }
 
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* ✅ 내부 콘텐츠가 부족할 때 자동 확장 */
+  flex-grow: 1; /*  내부 콘텐츠가 부족할 때 자동 확장 */
 }
 
 .content {
@@ -48,7 +55,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 65vh;
+  /* min-height: 65vh; */
   flex-grow: 1;
 }
 
