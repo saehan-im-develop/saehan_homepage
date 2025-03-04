@@ -70,8 +70,8 @@ const MainSection = () => {
 
         <img src={section1Image} alt="사업 부문" className="section-image" />
       </section>
-      <div id="main-contact">
       <ContactSection />
+      <div id="main-contact">
       </div>
     </div>
   );

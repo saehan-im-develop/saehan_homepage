@@ -20,8 +20,8 @@ function App() {
   return (
 <Router>
   <ScrollToTop />
-  <div className="app-container">
     <Header />
+  <div className="app-container">
     <main>
       <Routes>
         <Route path="/" element={<MainSection />} />
