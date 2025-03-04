@@ -4,7 +4,7 @@
     background-color: #ffffff;
     padding-bottom: 10px; 
     min-height: 200px;
-    width: 80%;
+    width: 100%;
     min-width: unset;
     max-width: 1200px;
     margin: 0 auto;
@@ -23,6 +23,7 @@
     padding-bottom: 5px;
     border-bottom: 3px solid #3056d3;
     display: inline-block;
+    
   }
   
   .contact-container {
