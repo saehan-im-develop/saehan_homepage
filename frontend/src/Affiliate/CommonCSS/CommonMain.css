@@ -38,9 +38,6 @@
 }
 
 
-
-  
-
   .common-description p {
     flex: 1; /* 텍스트 영역이 일정 비율을 차지 */
     font-size: 18px;

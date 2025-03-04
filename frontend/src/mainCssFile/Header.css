@@ -1,9 +1,9 @@
-/* ✅ 모든 텍스트에 폰트 적용 */
+/*  모든 텍스트에 폰트 적용 */
 * {
   font-family: "Noto Sans KR", sans-serif !important;
 }
 
-/* ✅ 헤더 스타일 */
+/*  헤더 스타일 */
 .header {
   background-color: white;
   padding: 5px 30px;
@@ -18,14 +18,14 @@
   height: 65px;
 }
 
-/* ✅ 로고 + 텍스트 감싸는 div */
+/*  로고 + 텍스트 감싸는 div */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* ✅ 헤더 내부 정렬 수정 */
+/*  헤더 내부 정렬 수정 */
 .header .container {
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@
   padding: 0 10px;
 }
 
-/* ✅ 새한그룹 텍스트 스타일 */
+/*  새한그룹 텍스트 스타일 */
 #saehan-group {
   font-size: 24px;
   font-weight: 200;
@@ -48,12 +48,12 @@
   text-shadow: none;
 }
 
-/* ✅ 로고 크기 */
+/*  로고 크기 */
 .logo {
   height: 50px;
 }
 
-/* ✅ 네비게이션 리스트 */
+/*  네비게이션 리스트 */
 .nav-links {
   list-style: none;
   display: flex;
@@ -61,7 +61,7 @@
   align-items: center;
 }
 
-/* ✅ 네비게이션 항목 & 드롭다운 항목 스타일 공통 적용 */
+/*  네비게이션 항목 & 드롭다운 항목 스타일 공통 적용 */
 .nav-links li,
 .nav-links li a,
 .dropdown-menu li a {
@@ -76,7 +76,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-/* ✅ 드롭다운 공통 스타일 */
+/*  드롭다운 공통 스타일 */
 .dropdown {
   position: relative;
   list-style: none;
@@ -84,7 +84,7 @@
   cursor: pointer;
 }
 
-/* ✅ 네비게이션 활성(active) 상태 */
+/*  네비게이션 활성(active) 상태 */
 .nav-links li a.active,
 .nav-links li.active a {
   color: #0056b3;
@@ -92,7 +92,7 @@
   padding-bottom: 5px;
 }
 
-/* ✅ 드롭다운 메뉴 스타일 */
+/*  드롭다운 메뉴 스타일 */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -107,17 +107,17 @@
   z-index: 100;
 }
 
-/* ✅ 드롭다운 내부 링크 스타일 */
+/*  드롭다운 내부 링크 스타일 */
 .dropdown-menu li a {
   font-size: 16px;
 }
 
-/* ✅ 드롭다운 항목 hover 효과 */
+/*  드롭다운 항목 hover 효과 */
 .dropdown-menu li a:hover {
   color: rgb(52, 52, 255);
 }
 
-/* ✅ 드롭다운 메뉴 항목 hover 시 배경색 효과 */
+/*  드롭다운 메뉴 항목 hover 시 배경색 효과 */
 .dropdown-menu li:hover {
   background-color: #f0f0f0;
 }

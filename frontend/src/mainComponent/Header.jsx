@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../mainCssFile/Header.css";
 import AffDropdownMenu from "../dropDownComponent/AffDropdownMenu";
