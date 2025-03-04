@@ -1,5 +1,5 @@
 import React from "react";
-import "../VisionCSSFiile/VisionValues.css"
+import "../VisionCSSFile/VisionValues.css"
 
 const values = [
   {

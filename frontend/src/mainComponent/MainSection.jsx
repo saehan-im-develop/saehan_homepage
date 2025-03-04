@@ -9,17 +9,17 @@ import section2Image from "../assets/002.png";
 const MainSection = () => {
   const scrollRef = useRef(null);
 
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: scrollRef.current,
-      smooth: true,
-      lerp: 0.1, // 스크롤 속도 조절 (0~1 사이 값, 낮을수록 부드러움)
-    });
+  // useEffect(() => {
+  //   const scroll = new LocomotiveScroll({
+  //     el: scrollRef.current,
+  //     smooth: true,
+  //     lerp: 0.1, // 스크롤 속도 조절 (0~1 사이 값, 낮을수록 부드러움)
+  //   });
 
-    return () => {
-      scroll.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     scroll.destroy();
+  //   };
+  // }, []);
 
   return (
     <div ref={scrollRef}>

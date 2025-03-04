@@ -1,5 +1,5 @@
 import React from "react";
-import "../VisionCSSFiile/VisionMain.css";
+import "../VisionCSSFile/VisionMain.css";
 
 const VisionIntro = () => {
   return (
