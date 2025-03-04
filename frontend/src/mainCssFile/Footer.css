@@ -20,8 +20,17 @@ html, body {
   color: white;
   text-align: center;
   padding: 20px;
-  position: relative;  /* 절대 위치로 인한 문제 방지 */
+  position: relative; 
   bottom: 0;
   left: 0;
-  flex-shrink: 0;  /* footer가 줄어들지 않도록 설정 */
+  flex-shrink: 0; 
+  min-height: 100px;
+  margin-top: 30px;
+}
+
+.footer-content {
+  /* max-width: 1200px; */
+  margin: auto;
+  font-size: 14px;
+  line-height: 1.6;
 }

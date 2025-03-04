@@ -2,8 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 70vh;
   padding: 0 5%;
+  min-height: 70vh;
+  /* flex-direction: column; */
+  justify-content: space-between;
 }
 
 /* 세련된 배치를 위한 추가적인 조정 */
@@ -56,10 +59,11 @@
 .contact-container {
   display: flex;
   justify-content: center;
-  max-width: 1200px; /* 최대 너비 지정 */
+  max-width: 1200px;
   background: #f9f9f9;
   padding: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 
@@ -98,6 +102,13 @@ html.has-scroll-smooth {
   [data-scroll-container] {
     will-change: transform;
   }
+
+  [ref] {
+    min-height: 100vh; /* 최소한 화면 크기만큼 유지 */
+    height: auto;
+    overflow: hidden; /* 불필요한 스크롤 방지 */
+  }
+  
   
   /* 섹션 기본 스타일 */
   .main-section, .sub-section {
@@ -112,7 +123,7 @@ html.has-scroll-smooth {
   .sub-section {
     position: relative;
     width: 100%;
-    min-height: 50vh; /* 기존 100vh에서 80vh로 조정 */
+    min-height: 40vh; 
     display: flex;
     flex-direction: column; /* 요소 세로 정렬 */
     align-items: center;
@@ -120,6 +131,7 @@ html.has-scroll-smooth {
     text-align: center;
     background-color: #ffffff;
     padding: 20px 0; /* 기존 50px에서 20px로 줄임 */
+    padding-bottom: 30px;
   }
   
   

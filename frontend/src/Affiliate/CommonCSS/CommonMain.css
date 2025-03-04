@@ -83,11 +83,18 @@
   /* 원하는 크기로 조정 */
 }
 
-#main-h1 {
-  color: rgb(21, 54, 163);
-  font-weight: bold;
-  font-size: 28px;
-}
+
+
+  
+  #main-h1 {
+    margin-top: 0px;
+    margin-right: 520px;
+    color: rgb(21, 54, 163);
+    font-weight: bold;
+    opacity: 0.1;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
 
 .common-header.show #main-h1 {
   opacity: 1;

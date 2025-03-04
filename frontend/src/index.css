@@ -4,10 +4,10 @@
   font-weight: 400;
   color-scheme: light;
   color: #213547;
-  background-color: #ffffff; /* ✅ 배경 흰색으로 변경 */
+  background-color: #ffffff; /*  배경 흰색으로 변경 */
 }
 
-/* ✅ 기본적으로 안 보이도록 설정 */
+/*  기본적으로 안 보이도록 설정 */
 hr {
   width: 100%;
   max-width: 1200px;
@@ -15,12 +15,12 @@ hr {
   height: 2px;
   background: linear-gradient(to right, #ccc, #333, #ccc);
   margin: 50px auto;
-  opacity: 0;  /* ✅ 처음에는 안 보이도록 */
-  transform: translateY(20px); /* ✅ 아래에서 올라오는 효과 */
+  opacity: 0;  /*  처음에는 안 보이도록 */
+  transform: translateY(20px); /*  아래에서 올라오는 효과 */
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* ✅ 페이드인 효과 적용될 때 */
+/*  페이드인 효과 적용될 때 */
 hr.fade-in {
   opacity: 1;
   transform: translateY(0);
@@ -39,11 +39,11 @@ a:hover {
 html, body {
   margin: 0;
   padding: 0;
-  min-width: 100vw; /* ✅ 잘못된 100vh → 100vw로 변경 */
+  min-width: 100vw; /*  잘못된 100vh → 100vw로 변경 */
   min-height: 100vh;
-  height: auto; /* ✅ height: 100% 제거하고 auto 설정 */
-  overflow-x: hidden; /* ✅ 가로 스크롤 방지 */
-  overflow-y: auto; /* ✅ 세로 스크롤 가능하게 유지 */
+  height: 100vh;
+  overflow-x: hidden; /*  가로 스크롤 방지 */
+  overflow-y: auto; /*  세로 스크롤 가능하게 유지 */
 }
 
 #main-intro {
@@ -67,12 +67,12 @@ html, body {
 h1 {
   font-size: 2em;
   line-height: 1.5;
-  text-align: left; /* ✅ 왼쪽 정렬 유지 */
+  text-align: left; /*  왼쪽 정렬 유지 */
   /* position: fixed; */
   top: 5%;
   left: 5%;
-  width: auto; /* ✅ 너비 자동 조정 */
-  white-space: nowrap; /* ✅ 텍스트 줄 바꿈 방지 */
+  width: auto; /*  너비 자동 조정 */
+  white-space: nowrap; /*  텍스트 줄 바꿈 방지 */
   color: white;
 }
 
@@ -83,7 +83,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #f9f9f9; /* ✅ 버튼 배경색도 흰색에 맞게 수정 */
+  background-color: #f9f9f9; /*  버튼 배경색도 흰색에 맞게 수정 */
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -99,9 +99,9 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* ✅ 페이지 내용을 위에서 아래로 쌓이도록 변경 */
+  justify-content: flex-start; /*  페이지 내용을 위에서 아래로 쌓이도록 변경 */
   width: 100%;
-  max-width: none; /* ✅ 기존 max-width: 1200px 제거 */
+  max-width: none; /*  기존 max-width: 1200px 제거 */
   margin: 0;
 }
 
@@ -111,7 +111,11 @@ button:focus-visible {
 
 .main-content {
   flex: 1;
-  min-height: 80vh; /* 📌 최소 높이를 설정하여 본문이 너무 작아지지 않게 함 */
+  min-height: 65vh; /*  최소 높이를 설정하여 본문이 너무 작아지지 않게 함 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
 }
 
 .footer {

@@ -20,22 +20,26 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Header /> 
-      <Routes>
-        <Route path="/" element={<MainSection />} />
-        <Route path="/plus" element={<SaehanPlus />} />
-        <Route path="/hightech" element={<Hightech />} />
-        <Route path="/im" element={<SaehanIM />} />
-        <Route path="/global" element={<SaehanGlobal/>} />
-        <Route path="/ceo" element={<CEOMain />} />
-        <Route path="/history" element={<HistoryContainer />} />
-        <Route path="/network" element={<Network />} />
-        <Route path="/vision" element={<VisionMain />} />
-        <Route path="/biz-area" element={<BusinessSection />} />
-        <Route path="/tech" element={<TechMain />} />
-        <Route path="/solutions" element={<SolutionsMain />} /> 
-      </Routes>
-      <Footer />
+      <div className="app-container">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<MainSection />} />
+            <Route path="/plus" element={<SaehanPlus />} />
+            <Route path="/hightech" element={<Hightech />} />
+            <Route path="/im" element={<SaehanIM />} />
+            <Route path="/global" element={<SaehanGlobal />} />
+            <Route path="/ceo" element={<CEOMain />} />
+            <Route path="/history" element={<HistoryContainer />} />
+            <Route path="/network" element={<Network />} />
+            <Route path="/vision" element={<VisionMain />} />
+            <Route path="/biz-area" element={<BusinessSection />} />
+            <Route path="/tech" element={<TechMain />} />
+            <Route path="/solutions" element={<SolutionsMain />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }
