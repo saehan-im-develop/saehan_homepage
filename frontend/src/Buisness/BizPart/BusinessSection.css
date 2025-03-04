@@ -1,59 +1,115 @@
-/* src/Business/BuizCssFile/BusinessSection.css */
+/* 🔹 기본 스타일 */
 .business-section {
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 0%;
-    opacity: 0;
-    transform: translateY(50px); /* 아래에서 부드럽게 올라오는 효과 */
-    transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-
-  .business-section.fade-in {
-    opacity: 1;
-    transform: translateY(0);
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 0%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
-  
-  .business-section h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-  
-  .business-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .business-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
-  }
 
-  /* .business-card:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-} */
-  
+.business-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✅ 제목 스타일 */
+.business-section h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* ✅ 그리드 레이아웃 */
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ✅ 개별 카드 스타일 */
+.business-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+/* ✅ 이미지 스타일 */
 .business-card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 8px;
 }
-  
+
+/* ✅ 카드 제목 */
+.business-card h3 {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+/* ✅ 카드 설명 */
+.business-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 🔹 반응형 스타일 적용 */
+
+/* (1) 태블릿 (768px~1024px) */
+@media (max-width: 1024px) {
+  .business-grid {
+      grid-template-columns: 1fr; /* 한 줄 배치 */
+      max-width: 90%;
+      gap: 15px;
+  }
+
+  .business-card {
+      padding: 15px;
+  }
+
+  .business-card img {
+      height: 250px;
+  }
+
   .business-card h3 {
-    font-size: 18px;
-    margin: 15px 0;
+      font-size: 17px;
   }
-  
+
   .business-card p {
-    font-size: 14px;
-    color: #666;
+      font-size: 13px;
   }
-  
+}
+
+/* (2) 모바일 (최대 768px) */
+@media (max-width: 768px) {
+  .business-section {
+      padding: 30px 15px;
+  }
+
+  .business-grid {
+      grid-template-columns: 1fr; /* 1열 정렬 */
+      gap: 10px;
+  }
+
+  .business-card {
+      padding: 12px;
+  }
+
+  .business-card img {
+      height: 200px;
+  }
+
+  .business-card h3 {
+      font-size: 16px;
+  }
+
+  .business-card p {
+      font-size: 12px;
+      line-height: 1.5;
+  }
+}

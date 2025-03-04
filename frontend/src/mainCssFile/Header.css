@@ -1,9 +1,9 @@
-/*  모든 텍스트에 폰트 적용 */
+/* ✅ 모든 텍스트에 폰트 적용 */
 * {
   font-family: "Noto Sans KR", sans-serif !important;
 }
 
-/*  헤더 스타일 */
+/* ✅ 헤더 스타일 */
 .header {
   background-color: white;
   padding: 5px 30px;
@@ -19,14 +19,14 @@
   margin: 0 auto;
 }
 
-/*  로고 + 텍스트 감싸는 div */
+/* ✅ 로고 + 텍스트 감싸는 div */
 .logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/*  헤더 내부 정렬 수정 */
+/* ✅ 헤더 내부 정렬 수정 */
 .header .container {
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@
   padding: 0 10px;
 }
 
-/*  새한그룹 텍스트 스타일 */
+/* ✅ 새한그룹 텍스트 스타일 */
 #saehan-group {
   font-size: 24px;
   font-weight: 200;
@@ -49,12 +49,12 @@
   text-shadow: none;
 }
 
-/*  로고 크기 */
+/* ✅ 로고 크기 */
 .logo {
   height: 50px;
 }
 
-/*  네비게이션 리스트 */
+/* ✅ 네비게이션 리스트 */
 .nav-links {
   list-style: none;
   display: flex;
@@ -62,7 +62,7 @@
   align-items: center;
 }
 
-/*  네비게이션 항목 & 드롭다운 항목 스타일 공통 적용 */
+/* ✅ 네비게이션 항목 & 드롭다운 항목 스타일 공통 적용 */
 .nav-links li,
 .nav-links li a,
 .dropdown-menu li a {
@@ -77,7 +77,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-/*  드롭다운 공통 스타일 */
+/* ✅ 드롭다운 공통 스타일 */
 .dropdown {
   position: relative;
   list-style: none;
@@ -85,7 +85,7 @@
   cursor: pointer;
 }
 
-/*  네비게이션 활성(active) 상태 */
+/* ✅ 네비게이션 활성(active) 상태 */
 .nav-links li a.active,
 .nav-links li.active a {
   color: #0056b3;
@@ -93,7 +93,7 @@
   padding-bottom: 5px;
 }
 
-/*  드롭다운 메뉴 스타일 */
+/* ✅ 드롭다운 메뉴 스타일 */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -108,17 +108,85 @@
   z-index: 100;
 }
 
-/*  드롭다운 내부 링크 스타일 */
+/* ✅ 드롭다운 내부 링크 스타일 */
 .dropdown-menu li a {
   font-size: 16px;
 }
 
-/*  드롭다운 항목 hover 효과 */
+/* ✅ 드롭다운 항목 hover 효과 */
 .dropdown-menu li a:hover {
   color: rgb(52, 52, 255);
 }
 
-/*  드롭다운 메뉴 항목 hover 시 배경색 효과 */
+/* ✅ 드롭다운 메뉴 항목 hover 시 배경색 효과 */
 .dropdown-menu li:hover {
   background-color: #f0f0f0;
+}
+
+/* 🔹 반응형 스타일 적용 */
+
+.menu-toggle {
+  display: none; /* 기본적으로 숨김 */
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* (1) 태블릿 (768px~1024px) */
+@media (max-width: 1024px) {
+  .header {
+    padding: 5px 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+/* (2) 모바일 (최대 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 5px 15px;
+    height: 70px;
+  }
+
+  /* ✅ 햄버거 메뉴 버튼 추가 */
+  .menu-toggle {
+    display: block; /* 화면 작아지면 보이게 */
+  }
+
+  /* ✅ 기본 네비게이션 숨김 */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ✅ 햄버거 버튼 클릭 시 메뉴 표시 */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+  }
 }

@@ -1,3 +1,4 @@
+/* ✅ 기본 설정 */
 html, body {
   height: 100%;
   margin: 0;
@@ -10,26 +11,59 @@ html, body {
   min-height: 100vh;
 }
 
+/* ✅ 본문 영역 */
 .content {
-  flex: 1; /* 본문이 차지할 영역 확보 */
+  flex: 1;
 }
 
+/* ✅ 푸터 스타일 */
 .footer {
-  width: 100vw;
+  width: 100%;
   background-color: #222;
   color: white;
   text-align: left;
   padding: 20px;
-  position: relative; 
+  position: relative;
   bottom: 0;
-  flex-shrink: 0; 
+  flex-shrink: 0;
   min-height: 100px;
   margin-top: 30px;
 }
 
+/*  푸터 내부 콘텐츠 */
 .footer-content {
-  /* max-width: 1200px; */
-  margin: auto auto auto 10px;
+  max-width: 1200px; /* 기존 `max-width` 주석 해제 */
+  margin: auto;
   font-size: 14px;
   line-height: 1.6;
+}
+
+/*  반응형 스타일 적용 */
+
+/* (1) 태블릿 (768px~1024px) */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .footer-content {
+    font-size: 13px;
+    max-width: 90%;
+  }
+}
+
+/* (2) 모바일 (최대 768px) */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .footer-content {
+    font-size: 12px;
+    max-width: 90%;
+    text-align: center;
+    margin: auto;
+  }
 }

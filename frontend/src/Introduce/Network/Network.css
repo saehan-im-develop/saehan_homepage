@@ -1,3 +1,4 @@
+/* 🔹 기본 스타일 */
 .network-container {
   width: 70%;
   max-width: 900px;
@@ -5,6 +6,7 @@
   padding-top: 40px;
 }
 
+/* 타이틀 스타일 */
 .network-title {
   text-align: center;
   font-size: 2rem;
@@ -14,11 +16,13 @@
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+/* 등장 효과 */
 .network-title.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* 네트워크 카드 스타일 */
 .network-card {
   background: #ffffff;
   padding: 25px;
@@ -31,29 +35,86 @@
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* 등장 효과 */
 .network-card.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* 네트워크 정보 */
 .network-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 15px; /* 기존 16px에서 줄여서 내부 요소 간격 조정 */
-  padding: 10px 0; /* 텍스트 위아래 간격 조정 */
+  font-size: 15px;
+  padding: 10px 0;
 }
 
+/* 연락처 정보 */
 .network-phone {
   text-align: right;
 }
 
 .network-phone p {
-  margin: 3px 0; /* 기존 5px에서 줄여서 줄 간격 조정 */
+  margin: 3px 0;
   font-weight: bold;
   color: #333;
 }
 
+/* 빈 값 스타일 */
 .empty {
   color: #999;
+}
+
+/* 🔹 반응형 스타일 적용 */
+
+/* (1) 태블릿 (768px~1024px) */
+@media (max-width: 1024px) {
+  .network-container {
+    width: 85%;
+    padding-top: 30px;
+  }
+
+  .network-title {
+    font-size: 1.8rem;
+  }
+
+  .network-card {
+    padding: 20px;
+  }
+
+  .network-info {
+    font-size: 14px;
+  }
+}
+
+/* (2) 모바일 (최대 768px) */
+@media (max-width: 768px) {
+  .network-container {
+    width: 95%;
+    padding-top: 20px;
+  }
+
+  .network-title {
+    font-size: 1.5rem;
+  }
+
+  .network-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .network-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .network-phone {
+    text-align: center;
+  }
+
+  .network-phone p {
+    font-size: 14px;
+  }
 }

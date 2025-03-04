@@ -1,3 +1,4 @@
+/* ✅ 등장 애니메이션 */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -14,6 +15,7 @@
   transform: translateY(0) !important;
 }
 
+/* ✅ 메인 컨테이너 */
 .solutions-main {
   text-align: center;
   padding: 50px 20%;
@@ -24,111 +26,221 @@
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-  .solutions-intro {
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    margin-right: 10%;
+/* ✅ 인트로 영역 */
+.solutions-intro {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  /* margin-right: 10%; */
+}
+
+/* ✅ 원형 아이콘 컨테이너 */
+.intro-circles {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* ✅ 개별 원 스타일 */
+.circle_sol {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease-in-out;
+  aspect-ratio: 1 / 1;
+}
+
+/* ✅ 아이콘 이미지 */
+.circle_sol img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* ✅ 원 제목 */
+.circle_sol h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* ✅ 원 내부 텍스트 */
+.circle_sol ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* ✅ 단계별 섹션 */
+.step-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  width: 90%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* ✅ 이미지 스타일 */
+.step-image {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ 단계별 설명 */
+.step-content {
+  width: 55%;
+  text-align: left;
+}
+
+/* ✅ 단계별 제목 */
+.step-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* ✅ 단계별 리스트 */
+.step-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.step-content li {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #333;
+}
+
+/* ✅ 비즈니스 연락 섹션 */
+.business-contact {
+  text-align: left;
+  margin-top: 50px;
+  padding: 20px;
+  background: #eee;
+  border-radius: 8px;
+}
+
+/* 🔹 반응형 스타일 적용 */
+
+/* (1) 태블릿 (768px~1024px) */
+@media (max-width: 1024px) {
+  .solutions-main {
+    padding: 40px 10%;
   }
 
   .intro-circles {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    gap: 20px;
   }
-  
+
   .circle_sol {
-    position: relative;
-    width: 230px;
-    height: 230px;
-    border: 2px solid #ddd;
-    border-radius: 50%;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 1s ease-in-out;
-    aspect-ratio: 1 / 1;
-  }
-
-  /* .circle_sol:hover {
-    transform: scale(1.05); /* 살짝 확대 */
-   */
-  
-
-  .circle_sol img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    width: 180px;
+    height: 180px;
+    padding: 15px;
   }
 
   .circle_sol h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 18px;
   }
-  
+
   .circle_sol ul {
-    list-style: none;
-    padding: 0;
-    font-size: 14px;
+    font-size: 13px;
   }
-  
+
   .step-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    flex-direction: column;
+    text-align: center;
   }
 
-  .step-section.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .step-image {
-    width: 100%;  /* 부모 요소 기준으로 가득 차도록 설정 */
-    max-width: 400px; /* 최대 너비 제한 */
-    height: 250px; /* 모든 이미지 높이를 동일하게 설정 */
-    object-fit: cover; /* 비율을 유지하면서 넘치는 부분을 잘라 정렬 */
-    display: block;
-}
   .step-content {
-    width: 55%;
-    text-align: left;
+    width: 100%;
+    text-align: center;
   }
-  
-  
-  .step-content h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  
-  .step-content ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .step-content li {
-    font-size: 14px;
-    margin: 5px 0;
-    color: #333;
-  }
-  
-  .business-contact {
-    text-align: left;
-    margin-top: 50px;
-    padding: 20px;
-    background: #eee;
-    border-radius: 8px;
-  }
-  
 
+  .step-image {
+    max-width: 350px;
+    height: 220px;
+  }
+}
+
+/* (2) 모바일 (최대 768px) */
+@media (max-width: 768px) {
+  .solutions-main {
+    padding: 30px 5%;
+  }
+
+  .solutions-intro {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+
+  .intro-circles {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .circle_sol {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+  }
+
+  .circle_sol img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .circle_sol h3 {
+    font-size: 16px;
+  }
+
+  .circle_sol ul {
+    font-size: 12px;
+  }
+
+  .step-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .step-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .step-content h3 {
+    font-size: 18px;
+  }
+
+  .step-content li {
+    font-size: 12px;
+  }
+
+  .step-image {
+    max-width: 300px;
+    height: 200px;
+  }
+}

@@ -1,33 +1,81 @@
+/* 🔹 기본 스타일 */
 .vision-values {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 100px; 
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 100px;
+}
+
+/* ✅ 개별 박스 스타일 */
+.value-box {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ✅ 제목 스타일 */
+.value-box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ✅ 본문 스타일 */
+.value-box p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  font-weight: 100;
+}
+
+/* 🔹 반응형 스타일 적용 */
+
+/* (1) 태블릿 (768px~1024px) */
+@media (max-width: 1024px) {
+  .vision-values {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
   }
-  
+
   .value-box {
-    background: white; 
-    border-radius: 12px; /* ✅ 더 둥글게 */
-    padding: 25px;  /* ✅ 내부 여백 증가 */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); /* ✅ 그림자 강조 */
-    transition: transform 0.3s ease-in-out; /* ✅ hover 효과 추가 */
+      width: 45%;
+      padding: 20px;
   }
-  
-  /* .value-box:hover {
-    transform: translateY(-5px);
-  } */
-  
+
   .value-box h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
+      font-size: 18px;
   }
-  
+
   .value-box p {
-    font-size: 16px;  /* ✅ 글씨 크기 키움 */
-    color: #333;  /* ✅ 더 짙은 색으로 변경 */
-    line-height: 1.8;  /* ✅ 가독성 증가 */
-    font-weight: 100; /* ✅ 폰트 두께 조정 */
+      font-size: 15px;
   }
-  
+}
+
+/* (2) 모바일 (최대 768px) */
+@media (max-width: 768px) {
+  .vision-values {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .value-box {
+      width: 90%;
+      text-align: center;
+      padding: 15px;
+  }
+
+  .value-box h3 {
+      font-size: 16px;
+  }
+
+  .value-box p {
+      font-size: 14px;
+      line-height: 1.6;
+  }
+}
