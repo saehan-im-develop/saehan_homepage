@@ -14,8 +14,8 @@ function HightechMain() {
 
   return (
     <div className="common-main">
-      <div className="common-header">
-        <h1 id="main-h1">SAEHAN HIGHTECH</h1>
+      <div className={`common-header ${isLoaded ? "show" : ""}`}>
+          <h1 id="main-h1">SAEHAN HIGHTECH</h1>
       </div>
       {/*  페이드인 클래스 적용 */}
       <div className={`common-description ${isLoaded ? "show" : ""}`}>
