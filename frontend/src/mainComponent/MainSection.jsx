@@ -43,7 +43,7 @@ const MainSection = () => {
       <section className="sub-section" id="section2" data-scroll>
         <div className="content-container">
           <div className="image-container">
-            <img src={section2Image} alt="제조 산업" className="section-image" />
+            <img src={section2Image} alt="제조 산업" className="section1-image" />
           </div>
           <div className="text-container">
             <h2>제조 산업의 미래를 <br />선도하는 리더</h2>

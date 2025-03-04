@@ -31,14 +31,14 @@ main {
   display: flex;
   flex-direction: column;
   min-height: auto;
+  width: 100%;
 }
 .app-container {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center; /*  내부 요소들(헤더, 본문, 푸터) 가운데 정렬 */
-  width: 100%;
-  max-width: 1400px;
+  width: 75%;
   min-height: 100vh;
   margin: 0 auto; /*  전체를 중앙 정렬 */
 }
