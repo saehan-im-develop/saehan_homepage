@@ -1,10 +1,12 @@
 .vision-container {
-    padding: 50px 500px 0; /* 위쪽 50px, 좌우 400px, 아래쪽 0px */
+    padding: 50px 20px 0; /* ✅ 좌우 패딩 줄이기 */
     background-color: #ffffff;
-    margin: 0px auto 50px; /* 상단 마진 추가 */
+    margin: 0px auto 50px; /* ✅ 상단 마진 추가 */
     opacity: 0;
-    transform: translateY(50px); /* 아래에서 올라오는 효과 */
+    transform: translateY(50px); /* ✅ 아래에서 올라오는 효과 */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    text-align: center; /* ✅ 제목을 중앙 정렬 */
+    max-width: 1000px; /* ✅ 최대 너비 설정 */
 }
   
   .vision-container.fade-in {
@@ -16,23 +18,37 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
+    border-bottom: 3px solid #1a3d7c; /* ✅ 파란색 밑줄 추가 */
+    display: inline-block;
+    padding-bottom: 5px;
+}
   
-  .vision-intro {
-    text-align: center; /* 텍스트 중앙 정렬 */
-    max-width: 900px; /* ✅ 최대 너비 지정 */
-    margin: 30px auto; /* ✅ 상하 간격 조정 */
-    font-size: 18px; /* ✅ 가독성을 위한 폰트 크기 */
-    line-height: 2; /* ✅ 줄 간격을 넉넉하게 조정 */
-    color: #333; /* ✅ 가독성을 위한 색상 */
+.vision-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 30px auto;
+    font-size: 20px;
+    line-height: 2;
+    color: #333;
+    
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .vision-intro p {
-    max-width: 700px; /* ✅ 가독성을 위해 적절한 너비 설정 */
-    margin: 15px auto; /* ✅ 위아래 여백 추가 */
-    text-align: left; /* ✅ 텍스트 좌측 정렬 */
-    line-height: 2; /* ✅ 줄 간격 조정 */
-    font-size: 18px; /* ✅ 가독성 좋은 크기 유지 */
+    max-width: 750px;  /* ✅ 가독성을 위해 적절한 너비 설정 (기존 700px → 750px) */
+    margin: 0 auto 20px auto;  /* ✅ 문장 간격 추가 */
+    text-align: left;  /* ✅ 텍스트 좌측 정렬 */
+    line-height: 1.8;  /* ✅ 줄 간격 조정 */
+    font-size: 20px;  /* ✅ 가독성 좋은 크기로 조정 */
+
+    /* ✅ 숫자와 텍스트 사이 간격 조정 */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ✅ 숫자와 텍스트 간격 조정 */
 }
 
 
@@ -47,9 +63,9 @@
   
   .vision-principles {
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
   
 .vision-principles p {
@@ -63,7 +79,10 @@
     width: 300px;
     height: 300px;
     margin: 30px auto;
-    background: #2d66d6;
+    
+    /* ✅ 원형 그라데이션 추가 */
+    background: radial-gradient(circle, #4A90E2 30%, #2D66D6 100%);
+    
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -195,3 +214,4 @@
     bottom: -50px;
     right: -50px;
 }
+

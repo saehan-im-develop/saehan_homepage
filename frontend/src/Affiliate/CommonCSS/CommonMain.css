@@ -1,54 +1,90 @@
 .common-main {
-    text-align: center;
-    padding: 40px 20px;
-  }
-  
-  .common-header {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .common-logo {
-    width: 80px;
-    height: auto;
-  }
-  
-  .common-description {
-    display: flex;  
-    align-items: center;  
-    justify-content: space-between;  
-    gap: 40px;  
-    max-width: 1200px;
-    margin: auto;
-    padding: 50px 0px;
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    /* 기본적으로 약간 보이도록 수정 */
-    opacity: 0.1;  
-    transform: translateY(50px);  
-    transition: opacity 1s ease-out, transform 1s ease-out;  
+/* ✅ 제목 스타일 수정 */
+.common-header {
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.common-header.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.common-logo {
+  width: 80px;
+  height: auto;
+}
+
+/* ✅ 박스 스타일 추가 */
+.common-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  
+  /* ✅ 박스 스타일 */
+  background: #fff;  /* 배경색 */
+  border: 0px solid #ddd;  /* 테두리 */
+  border-radius: 10px;  /* 둥근 모서리 */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);  /* 그림자 */
 }
 
 /* 페이지가 로드되자마자 실행 */
 .common-description.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.common-text {
+  flex: 1;
+  text-align: left;  /* 이미 적용되어 있음 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* 세로 중앙 정렬 */
+}
+
+.common-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;  /* ✅ 좌측 정렬 */
+  margin: 0;  /* ✅ 필요하면 마진 제거 */
 }
 
 
-  .common-description p {
-    flex: 1; /* 텍스트 영역이 일정 비율을 차지 */
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  
-  .common-main-image {
-    flex: 1; /* 이미지 영역이 일정 비율을 차지 */
-    width: 100%;
-    max-width: 500px; /* 원하는 크기로 조정 */
-  }
+
+.common-description p {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;  /* ✅ 좌측 정렬 */
+  margin: 0;  /* ✅ 마진이 있으면 제거 */
+}
+
+.common-main-image {
+  flex: 1;
+  /* 이미지 영역이 일정 비율을 차지 */
+  width: 100%;
+  max-width: 500px;
+  /* 원하는 크기로 조정 */
+}
+
+
+
   
   #main-h1 {
     margin-top: 0px;
@@ -60,8 +96,7 @@
     transition: opacity 1s ease-out, transform 1s ease-out;
   }
 
-  .common-header.show #main-h1 {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+.common-header.show #main-h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
