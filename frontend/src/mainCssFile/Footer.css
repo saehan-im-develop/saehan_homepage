@@ -22,7 +22,6 @@ html, body {
   padding: 20px;
   position: relative; 
   bottom: 0;
-  left: 0;
   flex-shrink: 0; 
   min-height: 100px;
   margin-top: 30px;
@@ -30,7 +29,7 @@ html, body {
 
 .footer-content {
   /* max-width: 1200px; */
-  margin: auto;
+  margin: auto auto auto 10px;
   font-size: 14px;
   line-height: 1.6;
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import VisionIntro from "./VisionIntro";
 import VisionValues from "./VisionValues";
 import VisionPrinciples from "./VisionPrinciples";
-import "../VisionCSSFiile/VisionMain.css";
+import "../VisionCSSFile/VisionMain.css";
 
 const VisionMain = () => {
   const [isVisible, setIsVisible] = useState(false);

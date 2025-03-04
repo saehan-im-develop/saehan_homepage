@@ -2,6 +2,7 @@ import React from "react";
 import "../VisionCSSFiile/VisionMain.css";
 import logo from "../../assets/upimage.jpg";  // ✅ 상단 배경 이미지
 
+
 const VisionIntro = () => {
   return (
     <div>
