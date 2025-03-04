@@ -60,7 +60,7 @@ function HightechProduct() {
   const ref = useRef(null);
 
   useEffect(() => {
-    // ✅ 페이지가 로드될 때 자동으로 fade-in 효과 적용
+    //  페이지가 로드될 때 자동으로 fade-in 효과 적용
     setTimeout(() => {
       setIsVisible(true);
     }, 100); // 0.1초 뒤 자동 페이드인

@@ -6,7 +6,7 @@ function HightechMain() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // ✅ 페이지 로드 후 0.1초 뒤 페이드인 효과 실행
+    //  페이지 로드 후 0.1초 뒤 페이드인 효과 실행
     setTimeout(() => {
       setIsLoaded(true);
     }, 100);
@@ -17,7 +17,7 @@ function HightechMain() {
       <div className="common-header">
         <h1 id="main-h1">SAEHAN HIGHTECH</h1>
       </div>
-      {/* ✅ 페이드인 클래스 적용 */}
+      {/*  페이드인 클래스 적용 */}
       <div className={`common-description ${isLoaded ? "show" : ""}`}>
         <p>
           새한하이테크는 반도체 기술의 기준을 만들어갑니다.<br />

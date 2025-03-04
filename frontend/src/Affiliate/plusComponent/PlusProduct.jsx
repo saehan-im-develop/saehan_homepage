@@ -39,7 +39,7 @@ function PlusProduct() {
   const ref = useRef(null);
 
   useEffect(() => {
-    // ✅ 페이지가 로드되면 자동으로 fade-in 효과 실행
+    //  페이지가 로드되면 자동으로 fade-in 효과 실행
     setTimeout(() => {
       setIsVisible(true);
     }, 100); // 0.1초 후 자동으로 페이드인

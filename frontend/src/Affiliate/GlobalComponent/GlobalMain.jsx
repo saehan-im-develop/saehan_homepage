@@ -6,7 +6,7 @@ function GlobalMain() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // ✅ 페이지가 로드된 후 0.1초 뒤 페이드인 효과 실행
+    //  페이지가 로드된 후 0.1초 뒤 페이드인 효과 실행
     setTimeout(() => {
       setIsLoaded(true);
     }, 100);
@@ -17,7 +17,7 @@ function GlobalMain() {
       <div className="common-header">
         <h1 id="main-h1">SAEHAN GLOBAL</h1>
       </div>
-      {/* ✅ 페이드인 효과 적용 */}
+      {/*  페이드인 효과 적용 */}
       <div className={`common-description ${isLoaded ? "show" : ""}`}>
         <p>
           새한글로벌은 글로벌 시장을 대상으로 다양한 사업을 전개하는 종합 무역 및 기술 솔루션 기업입니다.<br />
