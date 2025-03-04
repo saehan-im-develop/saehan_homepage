@@ -15,8 +15,8 @@ hr {
   height: 2px;
   background: linear-gradient(to right, #ccc, #333, #ccc);
   margin: 50px auto;
-  opacity: 0;  /*  처음에는 안 보이도록 */
-  transform: translateY(20px); /*  아래에서 올라오는 효과 */
+  opacity: 0.1;
+  transform: translateY(50px); 
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
