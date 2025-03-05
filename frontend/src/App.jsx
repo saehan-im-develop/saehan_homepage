@@ -14,6 +14,7 @@ import VisionMain from "./Vision/VisionComponent/VisionMain"
 import BusinessSection from "./Buisness/BizPart/BusinessSection";
 import TechMain from "./Buisness/TechPart/TechMain";
 import SolutionsMain from "./Buisness/SolutionsPart/SolutionsMain";
+import ScrollToTopButton from "./mainComponent/ScrollToTopButton";
 import "./App.css";
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/solutions" element={<SolutionsMain />} />
       </Routes>
     </main>
+    <ScrollToTopButton />
     <Footer />
   </div>
 </Router>
