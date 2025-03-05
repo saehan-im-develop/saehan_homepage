@@ -4,6 +4,7 @@ import "../mainCssFile/Header.css";
 import AffDropdownMenu from "../dropDownComponent/AffDropdownMenu";
 import IntroDropdownMenu from "../dropDownComponent/IntroDropdownMenu";
 import BizDropdownMenu from "../dropDownComponent/BizDropdownMenu";
+import DataDropdownMenu from "../dropDownComponent/DataDropdownMenu";
 import logo from "../assets/temp_logo.png";
 
 const Header = () => {
@@ -41,6 +42,7 @@ const Header = () => {
             <IntroDropdownMenu />
             <AffDropdownMenu />
             <BizDropdownMenu />
+            <DataDropdownMenu />
           </ul>
         </nav>
       </div>

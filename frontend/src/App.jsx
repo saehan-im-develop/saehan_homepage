@@ -15,6 +15,8 @@ import BusinessSection from "./Buisness/BizPart/BusinessSection";
 import TechMain from "./Buisness/TechPart/TechMain";
 import SolutionsMain from "./Buisness/SolutionsPart/SolutionsMain";
 import ScrollToTopButton from "./mainComponent/ScrollToTopButton";
+import TechData from "./Dictionary/DicComponent/TechData";
+import Research from "./Dictionary/DicComponent/Research";
 import "./App.css";
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
         <Route path="/biz-area" element={<BusinessSection />} />
         <Route path="/tech" element={<TechMain />} />
         <Route path="/solutions" element={<SolutionsMain />} />
+        <Route path="/tech-data" element={<TechData />} />
+        <Route path="/research" element={<Research />} />
       </Routes>
     </main>
     <ScrollToTopButton />

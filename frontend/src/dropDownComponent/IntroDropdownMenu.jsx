@@ -11,7 +11,7 @@ const IntroDropdownMenu = () => {
 
   return (
     <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      새한 소개
+      <a>새한 소개</a>
       {isDropdownOpen && (
        <ul className="dropdown-menu">
        <li><a onClick={() => navigate("/vision")} style={{ cursor: "pointer" }}>비전 및 이념</a></li> 
