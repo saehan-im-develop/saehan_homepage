@@ -17,17 +17,17 @@ html, body {
 }
 
 #root {
-  max-width: unset;
+  max-width: 100%;
   width: 100%;
-  align-items: center;
+  align-items: stretch;
   align-content: center;
   flex-wrap: wrap;
   height: auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: 30px auto;
+  justify-content: flex-start;
+  margin: 0 auto;
   
 }
 

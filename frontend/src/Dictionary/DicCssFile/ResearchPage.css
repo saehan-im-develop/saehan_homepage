@@ -1,0 +1,78 @@
+/* 🟦 배경 이미지 고정 */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 60vh; /* 배경 높이 */
+    background-image: url("../../assets/aff/ai1.png"); /* 배경 이미지 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-title {
+    position: absolute;
+    top: 20px;   /* 상단 여백 */
+    left: 30px;  /* 왼쪽 여백 */
+    background: none;  /* 배경 없애기 */
+    font-size: 4.5rem;  /* 글씨 크기 */
+    font-weight: bold;
+}
+
+/* 🟦 설명 섹션 */
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 10%;
+    background: #f9f9f9;
+    gap: 20px;
+}
+
+.text-container {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+
+.info-container {
+    flex: 1.2;
+    background: white;
+    padding: 20px;
+    border-left: 5px solid #093064;
+}
+
+.info-container h3 {
+    color: #093064;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-container li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* 🟢 반응형 */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-container {
+        border-left: none;
+        border-top: 5px solid #093064;
+    }
+}
