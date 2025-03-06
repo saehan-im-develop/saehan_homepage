@@ -1,8 +1,10 @@
 /* 🔹 기본 스타일 */
 .network-container {
+  position: relative; /* ✅ 기존 absolute → relative */
+  z-index: 1; /* ✅ 배경보다 위로 배치 */
   width: 70%;
   max-width: 900px;
-  margin: 60px auto 50px;
+  margin: 300px auto 50px; /* ✅ 배경과 겹치지 않도록 위쪽 마진 추가 */
   padding-top: 40px;
 }
 
@@ -117,4 +119,34 @@
   .network-phone p {
     font-size: 14px;
   }
+}
+
+/* ✅ 상단 배경 이미지 컨테이너 */
+.network-header-bg {
+  position: absolute; /* ✅ 기존 relative → absolute 변경 */
+  top: 0;
+  left: 0;
+  width: 100vw; /* 전체 너비 */
+  height: 250px; /* 기존 높이 유지 */
+  overflow: hidden; /* 넘치는 부분 가리기 */
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  opacity: 0; /* 처음에는 투명 */
+  transform: translateY(30px); /* 위에서 아래로 내려오는 효과 */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  z-index: -1; /* ✅ 배경이 콘텐츠 뒤로 가도록 설정 */
+}
+/* ✅ 배경 이미지 수정 */
+.network-header-img {
+  width: 100vw; /* ✅ 가로 전체 너비 채우기 */
+  height: 100%; /* 높이 유지 */
+  object-fit: cover; /* ✅ 비율 유지하면서 가득 채우기 */
+  object-position: center; /* 중앙 정렬 */
+}
+
+/* ✅ 페이드인 효과 적용 */
+.network-header-bg.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }

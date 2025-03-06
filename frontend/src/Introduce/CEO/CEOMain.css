@@ -147,3 +147,31 @@
     font-size: 18px;
   }
 }
+
+/* ✅ 상단 배경 이미지 컨테이너 */
+.ceo-header-bg {
+  position: relative;
+  width: 100vw; /* 전체 너비 */
+  height: 250px; /* 원하는 높이 */
+  overflow: hidden; /* 넘치는 부분 가리기 */
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  opacity: 0; /* 처음에는 투명 */
+  transform: translateY(30px); /* 위에서 아래로 내려오는 효과 */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* ✅ 추가된 상단 배경 이미지 */
+.ceo-header-img {
+  width: 100vw; /* 전체 너비 */
+  height: 100%;
+  object-fit: cover; /* 비율 유지하며 채우기 */
+  object-position: center; /* 중앙 정렬 */
+}
+
+/* ✅ 페이드인 효과 적용 */
+.ceo-header-bg.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

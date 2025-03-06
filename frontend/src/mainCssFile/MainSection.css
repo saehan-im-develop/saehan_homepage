@@ -295,24 +295,26 @@
   margin-bottom: 50px;
 }
 
-/* 🔹 이미지 래퍼 (각 이미지 박스) */
+/* 이미지 래퍼 */
 .image-wrapper {
   position: relative;
-  display: inline-block;
-  width: 23%;
+  display: inline-block; /* ✅ 인라인 블록 요소로 배치 */
+  width: 23%; /* ✅ 각 이미지 크기 조정 */
+  min-width: 250px; /* ✅ 최소 크기 지정 */
+  max-width: 300px;
   border-radius: 10px;
   overflow: hidden;
-  cursor: pointer; /* 클릭 가능 표시 */
+  cursor: pointer;
 }
 
-/* 🔹 이미지 기본 스타일 (어두운 효과 적용) */
+/* 이미지 스타일 */
 .new-future-image {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  filter: brightness(50%); /* 기본적으로 어둡게 설정 */
+  filter: brightness(50%);
 }
 
 /* 🔹 마우스를 올렸을 때 원래 색상 복원 */
@@ -349,14 +351,17 @@
   line-height: 1.4;
 }
 
-/* 이미지 그리드 */
+/* 이미지 그리드 (가로 배열 유지) */
 .image-grid {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap; /* ✅ 가로로 강제 배치 */
+  gap: 20px; /* ✅ 이미지 간격 조정 */
   width: 100%;
   max-width: 1200px;
+  overflow-x: auto; /* ✅ 넘칠 경우 스크롤 가능 */
+  white-space: nowrap; /* ✅ 텍스트 줄바꿈 방지 */
 }
 
 /* 🔹 파란색 선 추가 */
