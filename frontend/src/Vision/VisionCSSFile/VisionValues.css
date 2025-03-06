@@ -3,11 +3,11 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  max-width: 1200px; /* ✅ 최대 너비 제한 */
+  max-width: 1200px; /*  최대 너비 제한 */
   flex-wrap: wrap;
 }
 
-/* ✅ 개별 박스 스타일 */
+/*  개별 박스 스타일 */
 .value-box {
   flex: 1;
   background: white;
@@ -16,15 +16,15 @@
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: center;
-  border: 1px solid #1a3d7c; /* ✅ 테두리 추가 */
+  border: 1px solid #1a3d7c; /* ✅ 테두리 추가 */\
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;
-  max-width: 350px; /* ✅ 박스 크기 제한 */
+  max-width: 350px; /*  박스 크기 제한 */
   min-height: 200px;
 }
 
-/* ✅ 제목 스타일 */
+/*  제목 스타일 */
 .value-box h3 {
   font-size: 20px;
   font-weight: bold;
@@ -37,7 +37,7 @@
   gap: 10px;
 }
 
-/* ✅ 본문 스타일 */
+/*  본문 스타일 */
 .value-box p {
   font-size: 16px;
   color: #333;
@@ -93,7 +93,7 @@
   }
 }
 
-/* ✅ 등장 애니메이션 */
+/*  등장 애니메이션 */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -101,18 +101,18 @@
   }
 }
 
-/* ✅ 비전 박스를 감싸는 컨테이너 */
+/*  비전 박스를 감싸는 컨테이너 */
 .vision-values-container {
-  width: 100vw; /* ✅ 전체 너비로 확장 */
-  background: rgba(0, 0, 0, 0.1); /* ✅ 올바른 배경 색상 형식 */
+  width: 100vw; /*  전체 너비로 확장 */
+  background: #e9f2ff ; /*  올바른 배경 색상 형식 */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px; /* ✅ 불필요한 'sss' 삭제 */
+  padding: 60px 20px; /*  불필요한 'sss' 삭제 */
 }
 
-/* ✅ 아이콘 스타일 */
+/*  아이콘 스타일 */
 .value-box .icon {
   font-size: 24px;
-  color: #28a745; /* ✅ 녹색 체크 아이콘 */
+  color: #28a745; /*  녹색 체크 아이콘 */
 }

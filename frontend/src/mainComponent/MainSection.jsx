@@ -17,21 +17,25 @@ const MainSection = () => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [fadeKey, setFadeKey] = useState(0); // 텍스트 애니메이션을 위한 키
 
-  useEffect(() => {
+    useEffect(() => {
     const interval = setInterval(() => {
       if (currentIndex >= images.length) {
-        setIsTransitioning(false); // 🚨 트랜지션 OFF (순간 이동)
-        setCurrentIndex(0); // 🚀 복제된 1번에서 원래 1번으로 순간 이동
+        setIsTransitioning(false); // 트랜지션 OFF (순간 이동)
+        setCurrentIndex(0);
 
         setTimeout(() => {
-          setIsTransitioning(true); //  다시 트랜지션 ON
-          setCurrentIndex(1); // 1번부터 다시 슬라이드 시작
-        }, 100); // 짧은 시간 후 transition 활성화
+          setIsTransitioning(true);
+          setCurrentIndex(1);
+        }, 100);
       } else {
         setCurrentIndex((prevIndex) => prevIndex + 1);
       }
-    }, 5000); // 3초마다 이동
+
+      // 텍스트 애니메이션을 위해 fadeKey 변경
+      setFadeKey((prevKey) => prevKey + 1);
+    }, 5000); // 5초마다 이동
 
     return () => clearInterval(interval);
   }, [currentIndex]);
@@ -106,26 +110,6 @@ const MainSection = () => {
         </ul>
       </div>
 
-      {/* 🔹 사업 부문 소개 섹션 */}
-      <section className="sub-section" id="section1">
-        <h2 id="business-intro">
-          <span className="sehan-underline">새한그룹</span>.<br />
-          사업 부문을 소개합니다.
-        </h2>
-
-        {/* 🔹 동그라미 컨테이너 */}
-        <div className="circle-container">
-          <div className="circle center">새한그룹</div>
-          <div className="circle top">(주)SM</div>
-          <div className="circle bottom">(주)리그리그</div>
-          <div className="circle top-left">(주) 새한하이테크</div>
-          <div className="circle top-right">(주) 새한아이엠</div>
-          <div className="circle bottom-left">(주) 새한글로벌</div>
-          <div className="circle bottom-right">(주) 새한플러스</div>
-        </div>
-
-        <img src={section1Image} alt="사업 부문" className="section-image" />
-      </section>
 
       <ContactSection />
       <div id="main-contact"></div>
