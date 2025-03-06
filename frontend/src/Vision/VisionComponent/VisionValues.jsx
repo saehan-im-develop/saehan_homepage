@@ -1,5 +1,5 @@
 import React from "react";
-import "../VisionCSSFile/VisionValues.css"
+import "../VisionCSSFile/VisionValues.css";
 
 const values = [
   {
@@ -21,13 +21,18 @@ const values = [
 
 const VisionValues = () => {
   return (
-    <div className="vision-values">
-      {values.map((value, index) => (
-        <div key={index} className="value-box">
-          <h3>{value.title}</h3>
-          <p>{value.description}</p>
-        </div>
-      ))}
+    <div className="vision-values-container">
+      <div className="vision-values">
+        {values.map((value, index) => (
+          <div key={index} className="value-box">
+            <h3>
+              <span className="icon">✅</span>
+              {value.title}
+            </h3>
+            <p>{value.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

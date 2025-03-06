@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../History/HistoryMain.css";
-import img1 from "../../assets/mainImage.png"
-import img2 from "../../assets/plusMainImage.png"
+import img1 from "../../assets/mainImage.png";
+import img2 from "../../assets/plusMainImage.png";
 
 const historyData = [
   {
@@ -41,11 +41,16 @@ function HistoryMain() {
           <div className="history-header" style={{ backgroundImage: `url(${section.image})` }}>
             <h2>{section.period}</h2>
           </div>
-          <div className="history-content">
+
+          {/* ✅ 타임라인 디자인 적용 */}
+          <div className="history-timeline">
             {section.events.map((event, i) => (
-              <div key={i} className="history-item">
-                <span className="history-year">✅ {event.year}</span>
-                <p>{event.text}</p>
+              <div key={i} className={`history-item ${i % 2 === 0 ? "left" : "right"}`}>
+                <div className="history-content-box">
+                  <span className="history-year">{event.year}</span>
+                  <p>{event.text}</p>
+                </div>
+                <div className="history-circle"></div> {/* ✅ 원형 포인트 추가 */}
               </div>
             ))}
           </div>

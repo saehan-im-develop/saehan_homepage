@@ -6,6 +6,10 @@
     transition: opacity 1s ease-out, transform 1s ease-out;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;  /* ✅ 중앙 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ✅ 등장 애니메이션 */
@@ -19,6 +23,20 @@
     text-align: center;
     font-size: 24px;
     margin-bottom: 30px;
+    position: relative; /* ✅ 밑줄을 위한 기준 위치 */
+    display: inline-block; /* ✅ 밑줄이 텍스트 길이에 맞도록 설정 */
+}
+
+/* ✅ 밑줄 추가 */
+.product-title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #1a3d7c; /* ✅ 파란색 밑줄 */
+    position: absolute;
+    bottom: -5px; /* ✅ 글씨 아래 간격 조정 */
+    left: 0;
 }
 
 /* ✅ 공통 카드 디자인 */
@@ -31,21 +49,24 @@
     padding: 20px;
     margin-bottom: 30px;
     transition: transform 1s ease-in-out;
+    max-width: 1200px;  /* ✅ 카드 크기 조정 */
     width: 100%;
-    max-width: 1200px;
+    justify-content: center;  /* ✅ 카드 내부 요소 정렬 */
 }
 
 /* ✅ 이미지 스타일 */
 .product-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;  /* ✅ 크기 조정 */
     height: auto;
     margin-right: 20px;
+    border-radius: 8px;  /* ✅ 둥근 모서리 추가 */
 }
 
 /* ✅ 텍스트 정보 */
 .product-info {
     flex: 1;
+    text-align: left;
 }
 
 /* ✅ 영어 이름 스타일 */

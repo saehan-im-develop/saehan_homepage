@@ -32,16 +32,19 @@ function CEOMain() {
   return (
     <div>
       {/* ✅ 추가된 상단 배경 이미지 */}
-      <div ref={bgRef} className={`ceo-header-bg ${isVisible ? "fade-in" : ""}`}>
-        <img src={backgroundImage} alt="CEO 인사말 배경" className="ceo-header-img" />
+      <div style={{ marginBottom: "-50px" }}> {/* ✅ 여기에 margin 추가 (아래로 이동) */}
+        <div ref={bgRef} className={`ceo-header-bg ${isVisible ? "fade-in" : ""}`}>
+          <img src={backgroundImage} alt="CEO 인사말 배경" className="ceo-header-img" />
+        </div>
       </div>
 
       <div ref={ref} className={`ceo-container ${isVisible ? "fade-in" : ""}`}>
+        {/* ✅ 중앙 정렬 및 밑줄 추가 */}
         <div className="ceo-header">CEO 인사말</div>
         <div className="ceo-content">
           <img src={image} alt="새한그룹 회장 김원만" className="ceo-image" />
           <div className="ceo-text">
-            <h2>새한 그룹 - 혁신과 기술의 선도 기업</h2>
+            <h2 className="ceo-title">새한 그룹 - 혁신과 기술의 선도 기업</h2>
             <p>
               새한 그룹은 사출 금형, 반도체 생산, 인공지능(AI) 개발까지  
               폭넓은 기술력을 보유한 종합 제조·기술 기업입니다.

@@ -1,9 +1,10 @@
 /* 🔹 기본 스타일 */
 .vision-values {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 100px;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px; /* ✅ 최대 너비 제한 */
+  flex-wrap: wrap;
 }
 
 /* ✅ 개별 박스 스타일 */
@@ -11,9 +12,16 @@
   flex: 1;
   background: white;
   border-radius: 12px;
-  padding: 25px;
+  padding: 30px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  border: 2px solid #1a3d7c; /* ✅ 테두리 추가 */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  max-width: 350px; /* ✅ 박스 크기 제한 */
+  min-height: 200px;
 }
 
 /* ✅ 제목 스타일 */
@@ -22,6 +30,11 @@
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
+  color: #1a3d7c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* ✅ 본문 스타일 */
@@ -37,45 +50,69 @@
 /* (1) 태블릿 (768px~1024px) */
 @media (max-width: 1024px) {
   .vision-values {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
   }
 
   .value-box {
-      width: 45%;
-      padding: 20px;
+    width: 45%;
+    padding: 20px;
   }
 
   .value-box h3 {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .value-box p {
-      font-size: 15px;
+    font-size: 15px;
   }
 }
 
 /* (2) 모바일 (최대 768px) */
 @media (max-width: 768px) {
   .vision-values {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   .value-box {
-      width: 90%;
-      text-align: center;
-      padding: 15px;
+    width: 90%;
+    text-align: center;
+    padding: 15px;
   }
 
   .value-box h3 {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .value-box p {
-      font-size: 14px;
-      line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.6;
   }
+}
+
+/* ✅ 등장 애니메이션 */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ 비전 박스를 감싸는 컨테이너 */
+.vision-values-container {
+  width: 100vw; /* ✅ 전체 너비로 확장 */
+  background: rgba(0, 0, 0, 0.1); /* ✅ 올바른 배경 색상 형식 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px; /* ✅ 불필요한 'sss' 삭제 */
+}
+
+/* ✅ 아이콘 스타일 */
+.value-box .icon {
+  font-size: 24px;
+  color: #28a745; /* ✅ 녹색 체크 아이콘 */
 }

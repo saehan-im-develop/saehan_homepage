@@ -34,7 +34,6 @@
 .vision-intro {
     text-align: center;
     max-width: 900px;
-    margin: 30px auto;
     font-size: 20px;
     line-height: 2;
     color: #333;
@@ -153,7 +152,7 @@
 /* 🔵 상단 배경 이미지 */
 .vision-header-bg img {
     width: 100vw; /* ✅ 너비를 화면 전체로 확장 */
-    height: 80%;
+    height: 160%;
     object-fit: cover; /* ✅ 비율 유지하며 확대 */
     transform-origin: center;
 }
