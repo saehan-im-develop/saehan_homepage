@@ -1,8 +1,8 @@
 .main-section {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   height: 100vh; /* 높이를 100vh로 조정 */
   width: 100%;
   overflow: hidden;
@@ -43,10 +43,32 @@
 .image-container {
   position: relative;
   width: 100%;
-  max-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 100vw; /* 전체 화면 너비 */
+  height: 100vh; /* 전체 화면 높이 */
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: calc(100vw * 6); /* 가짜 이미지 포함 (4 + 2) */
+}
+
+.slider.transition {
+  transition: transform 1.8s ease-in-out;
+}
+
+.slide-image {
+  width: 100vw; /* 한 개의 이미지가 화면을 꽉 채우도록 설정 */
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(70%);
 }
   
   .overlay {
@@ -61,37 +83,25 @@
     white-space: normal; /* nowrap 제거하여 줄바꿈 가능 */
 }
 
-/* .contact-container {
-  display: flex;
-  justify-content: center;
-  max-width: 1200px;
-  background: #f9f9f9;
-  padding: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-} */
-
-
   
 .main-image {
   width: 100vw; /* 뷰포트 전체 너비 사용 */
-  height: 80vh; /* 뷰포트 전체 높이 사용 */
+  height: 100vh; /* 뷰포트 전체 높이 사용 */
   object-fit: cover; /* 비율을 유지하면서 화면을 꽉 채움 */
 }
 
 /* 텍스트 오버레이 */
 .text-overlay {
   position: absolute;
-  top: 5%;
-  left: -20%;
-  background: none; /* 배경 없애기 */
-  font-size: 4rem; /* 텍스트 크기 키우기 */
-  font-weight: 700; /* 볼드 스타일 적용 */
-  color: white; /* 텍스트 색상 */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* 가독성을 위한 그림자 */
-  z-index: 2; /* 이미지 위로 배치 */
+  top: 10%;  /* 상단에서 10% 떨어지도록 */
+  left: 5%; /* 왼쪽에서 20px 떨어지도록 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  z-index: 2;
 }
-
 
 /* 텍스트 스타일 */
 .text-overlay h2 {
@@ -112,40 +122,7 @@
   padding: 50px 0;
 }
 
-  /* 스크롤 컨테이너 */
-/* html.has-scroll-smooth {
-    overflow: hidden;
-  }
-  html.has-scroll-dragging {
-    user-select: none;
-  }
-  .has-scroll-smooth body {
-    overflow: hidden;
-    height: auto !important;
-  }
-
-  [data-scroll] {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  }
-  .is-inview {
-    opacity: 1;
-    transform: translateY(0);
-  }  
-   */
-  
-  /* 스크롤 시 부드러운 트랜지션 */ 
-  /* [data-scroll-container] {
-    will-change: transform;
-  }
-
-  [ref] {
-    min-height: 100vh; 
-    height: auto;
-    overflow: hidden; 
-  } */
-  
+ 
   
   /* 섹션 기본 스타일 */
   .main-section, .sub-section {
@@ -298,9 +275,9 @@
 /* 이미지 래퍼 */
 .image-wrapper {
   position: relative;
-  display: inline-block; /* ✅ 인라인 블록 요소로 배치 */
-  width: 23%; /* ✅ 각 이미지 크기 조정 */
-  min-width: 250px; /* ✅ 최소 크기 지정 */
+  display: inline-block; /*  인라인 블록 요소로 배치 */
+  width: 23%; /*  각 이미지 크기 조정 */
+  min-width: 250px; /*  최소 크기 지정 */
   max-width: 300px;
   border-radius: 10px;
   overflow: hidden;
@@ -356,12 +333,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap; /* ✅ 가로로 강제 배치 */
-  gap: 20px; /* ✅ 이미지 간격 조정 */
+  flex-wrap: nowrap; /*  가로로 강제 배치 */
+  gap: 20px; /*  이미지 간격 조정 */
   width: 100%;
   max-width: 1200px;
-  overflow-x: auto; /* ✅ 넘칠 경우 스크롤 가능 */
-  white-space: nowrap; /* ✅ 텍스트 줄바꿈 방지 */
+  overflow-x: auto; /*  넘칠 경우 스크롤 가능 */
+  white-space: nowrap; /*  텍스트 줄바꿈 방지 */
 }
 
 /* 🔹 파란색 선 추가 */
@@ -390,4 +367,113 @@
   color: #222;
   margin-bottom: 30px; /* 기존보다 간격을 늘려 원과 겹치지 않도록 조정 */
   z-index: 2;
+}
+
+/*  기본 스타일 유지 (여기서 반응형 추가) */
+@media (max-width: 1024px) {
+  /* 🔹 전체적인 컨테이너 조정 */
+  .content-container {
+    flex-direction: column; /* 모바일에서는 세로 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    align-items: center;
+  }
+
+  /* 🔹 이미지 컨테이너 (너비 제한) */
+  .image-container {
+    max-width: 100%;
+    width: 80%;
+  }
+
+  /* 🔹 오버레이 텍스트 크기 축소 */
+  .text-overlay {
+    font-size: 2.5rem;
+    top: 10%;
+    left: 10%;
+  }
+
+  /* 🔹 이미지 및 카드 요소 */
+  .new-future-image {
+    width: 100%; /* 모바일에서는 전체 너비 사용 */
+    max-width: 500px;
+    height: auto;
+  }
+
+  /* 🔹 원형 네트워크 배치 */
+  .circle-container {
+    flex-direction: column; /* 모바일에서는 세로 정렬 */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+    margin: 10px 0; /* 간격 조정 */
+  }
+
+  /* 중앙 원 크기 조정 */
+  .circle.center {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  /* 🔹 이미지 그리드 (스크롤 가능하게 변경) */
+  .image-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/*  모바일 화면 (768px 이하) */
+@media (max-width: 768px) {
+  /* 🔹 제목 크기 축소 */
+  h1, h2 {
+    font-size: 2rem;
+  }
+
+  /* 🔹 텍스트 크기 조정 */
+  .text-overlay {
+    font-size: 2rem;
+    top: 5%;
+    left: 5%;
+  }
+
+  /* 🔹 설명 섹션 */
+  .sub-section {
+    min-height: 60vh;
+    padding: 30px 10px;
+  }
+
+  /* 🔹 원형 네트워크 더 작은 크기로 */
+  .circle {
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+  }
+
+  .circle.center {
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+  }
+
+  /* 🔹 새로운 미래 텍스트 */
+  .new-future-text {
+    font-size: 2rem;
+  }
+
+  /* 🔹 사업 부문 소개 텍스트 크기 조정 */
+  #business-intro {
+    font-size: 2rem;
+  }
+
+  /* 🔹 이미지 크기 제한 */
+  .image-wrapper {
+    width: 90%;
+    max-width: 250px;
+  }
 }
