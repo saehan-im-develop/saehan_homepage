@@ -53,7 +53,8 @@
   width: 50%;
   padding: 20px 40px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* 연도 스타일 */
@@ -145,34 +146,19 @@
   transform: scale(1.05);
 }
 
-/* 원형 포인트
-.history-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 14px;
-  height: 14px;
-  background-color: #003366;
-  border-radius: 50%;
-  z-index: 3;
-  border: 3px solid white;
-} */
-
 /* 왼쪽 정렬 */
 .history-item.left {
-  left: -12%;
-  align-items: flex-end;
+  left: 0;
   text-align: right;
+  flex-direction: row-reverse;
 }
 
 /* 오른쪽 정렬 */
 .history-item.right {
-  left: 52%;
-  align-items: flex-start;
+  left: 50%;
   text-align: left;
+  flex-direction: row;
 }
-
 /* 타임라인 중앙 라인 */
 .history-timeline::before {
   content: "";
@@ -183,4 +169,22 @@
   height: 100%;
   background-color: #003366;
   transform: translateX(-50%);
+}
+
+.history-line {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 4px;
+  background-color: #003366;
+}
+
+/* 왼쪽 정렬 시 선 위치 */
+.history-item.left .history-line {
+  right: -30px;
+}
+
+/* 오른쪽 정렬 시 선 위치 */
+.history-item.right .history-line {
+  left: -30px;
 }

@@ -16,7 +16,7 @@
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: center;
-  border: 2px solid #1a3d7c; /* ✅ 테두리 추가 */
+  border: 1px solid #1a3d7c; /* ✅ 테두리 추가 */
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;

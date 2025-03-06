@@ -46,11 +46,11 @@ function HistoryMain() {
           <div className="history-timeline">
             {section.events.map((event, i) => (
               <div key={i} className={`history-item ${i % 2 === 0 ? "left" : "right"}`}>
+                <div className="history-line"></div> {/* ✅ 선 추가 */}
                 <div className="history-content-box">
                   <span className="history-year">{event.year}</span>
                   <p>{event.text}</p>
                 </div>
-                <div className="history-circle"></div> {/* ✅ 원형 포인트 추가 */}
               </div>
             ))}
           </div>
