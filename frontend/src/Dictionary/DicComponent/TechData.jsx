@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../DicCssFile/TechData.css"
 import img1 from "../../assets/docu/tech01.png"
 
@@ -50,6 +50,25 @@ const techDataList = [
 ];
 
 const TechData = () => {
+  useEffect(() => {
+    const items = document.querySelectorAll(".techdata-item");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.1 } // 10% 보일 때 애니메이션 실행
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    return () => items.forEach((item) => observer.unobserve(item));
+  }, []);
+
   return (
     <div className="techdata-container">
       <h2>기술자료</h2>

@@ -77,8 +77,9 @@ const MainSection = () => {
         <div className="content-container">
           <div className="image-container">
             <img src={section2Image} alt="제조 산업" className="section1-image" />
-            <div className="text-overlay">
-              <h2>제조 산업의 미래를 <br /> 선도하는 리더</h2>
+            <div className="text-overlay-sub">
+              <p>제조 산업의 미래를 </p> 
+              <p>선도하는 리더</p>
             </div>
           </div>
         </div>

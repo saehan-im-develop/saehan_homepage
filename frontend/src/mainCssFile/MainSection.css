@@ -107,8 +107,21 @@
 /* 텍스트 오버레이 */
 .text-overlay {
   position: absolute;
-  top: 20%; /* 기본적으로 20% 위쪽 배치 */
+  top: 15%; /* 기본적으로 20% 위쪽 배치 */
   left: 5%;
+  text-align: left;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transition: opacity 1s ease-in-out;
+  z-index: 2;
+}
+
+.text-overlay-sub {
+  position: absolute;
+  top: 10%; /* 기본적으로 20% 위쪽 배치 */
+  left:-5%;
   text-align: left;
   font-size: 4.5rem;
   font-weight: 700;
@@ -154,7 +167,7 @@
 .sub-section {
   position: relative;
   width: 100%;
-  min-height: 40vh;
+  /* min-height: 40vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,7 +175,7 @@
   text-align: center;
   background-color: #ffffff;
   padding: 20px 0;
-  margin-top: 200px;
+  margin-top: 5%;
 }
 
 
@@ -176,11 +189,7 @@
 /* 제조 산업 섹션 이미지 */
 .section1-image {
   width: 100vw;
-  /* 뷰포트 전체 너비 사용 */
-  height: 100vh;
-  /* 뷰포트 전체 높이 사용 */
   object-fit: cover;
-  /* 비율을 유지하면서 화면을 꽉 채움 */
 }
 
 /* 🔹 기존 세로 정렬 스타일 제거 */
@@ -193,84 +202,6 @@
   white-space: nowrap;
   margin-left: 20px;
   text-align: left;
-}
-
-
-/* 원 컨테이너 */
-.circle-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 개별 원 스타일 */
-.circle {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-color: white;
-  border: 2px solid #3056d3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  color: #3056d3;
-}
-
-/* 중앙 원 */
-.circle.center {
-  background-color: #3056d3;
-  color: white;
-  font-size: 16px;
-  width: 140px;
-  height: 140px;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* 🔹 12시 방향 (주)SM */
-.circle.top {
-  top: 27%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* 🔹 6시 방향 (주)리그리그 */
-.circle.bottom {
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* 🔹 9시 방향 */
-.circle.top-left {
-  top: 35%;
-  left: 23%;
-}
-
-/* 🔹 3시 방향 */
-.circle.top-right {
-  top: 35%;
-  right: 23%;
-}
-
-.circle.bottom-left {
-  bottom: 10%;
-  left: 23%;
-}
-
-.circle.bottom-right {
-  bottom: 10%;
-  right: 23%;
 }
 
 
@@ -297,11 +228,8 @@
 .image-wrapper {
   position: relative;
   display: inline-block;
-  /*  인라인 블록 요소로 배치 */
   width: 23%;
-  /*  각 이미지 크기 조정 */
   min-width: 250px;
-  /*  최소 크기 지정 */
   max-width: 300px;
   border-radius: 10px;
   overflow: hidden;
