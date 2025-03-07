@@ -14,8 +14,7 @@ function SaehanIM() {
     <div>
       <IMMain />
 
-      {/*  페이드인 효과 적용된 hr */}
-      <hr className={fadeIn ? "fade-in" : ""} />
+      {/* 🔹 <hr> 태그 제거 */}
 
       <IMProduct />
     </div>

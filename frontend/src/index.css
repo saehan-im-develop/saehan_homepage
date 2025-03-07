@@ -7,26 +7,6 @@
   background-color: #ffffff; /*  배경 흰색으로 변경 */
 }
 
-/*  기본적으로 안 보이도록 설정 */
-hr {
-  width: 100%;
-  max-width: 1200px;
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, #ccc, #333, #ccc);
-  margin: 50px auto;
-  opacity: 0.1;
-  transform: translateY(50px); 
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-/*  페이드인 효과 적용될 때 */
-hr.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 a {
   font-weight: 500;
   color: #646cff;

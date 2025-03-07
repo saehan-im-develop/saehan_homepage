@@ -1,6 +1,6 @@
 /* 🔹 기본 스타일 */
 .product {
-    padding: 40px 20px;
+    padding: 20px 20px;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -21,7 +21,7 @@
 /*  제목 스타일 */
 .product-title {
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 30px;
     position: relative; /*  밑줄을 위한 기준 위치 */
     display: inline-block; /*  밑줄이 텍스트 길이에 맞도록 설정 */
@@ -52,6 +52,7 @@
     max-width: 1200px;  /*  카드 크기 조정 */
     width: 100%;
     justify-content: center;  /*  카드 내부 요소 정렬 */
+    border: 1px solid #969696;
 }
 
 /*  이미지 스타일 */
