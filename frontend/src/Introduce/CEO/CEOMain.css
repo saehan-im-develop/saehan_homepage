@@ -153,17 +153,21 @@
 
 /* ✅ 상단 배경 이미지 컨테이너 */
 .ceo-header-bg {
-  position: relative;
-  width: 100vw; /* 전체 너비 */
-  height: 320px; /* ✅ 기존 250px → 320px로 증가 (높이 조정) */
-  overflow: hidden; /* 넘치는 부분 가리기 */
+  position: absolute; /* ✅ 기존 relative → absolute로 변경 */
+  top: 150px; /* ✅ 기존보다 더 아래로 이동 */
+  left: 0;
+  width: 100vw;
+  height: 400px; /* ✅ 기존 320px → 400px으로 조정 (배경 더 크게) */
+  overflow: hidden;
   display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: flex-end; /* ✅ 기존 center → flex-end로 변경 (이미지를 아래쪽 정렬) */
+  justify-content: center;
+  align-items: flex-end; /* ✅ 기존 center → flex-end로 변경 (배경을 아래쪽으로 배치) */
   opacity: 0;
-  transform: translateY(30px); /* 위에서 아래로 내려오는 효과 */
+  transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  z-index: 0; /* ✅ 배경이 콘텐츠 뒤로 가도록 설정 */
 }
+
 
 /* ✅ 추가된 상단 배경 이미지 */
 .ceo-header-img {
@@ -178,3 +182,4 @@
   opacity: 1;
   transform: translateY(20px); /* ✅ 배경을 자연스럽게 아래쪽으로 이동 */
 }
+

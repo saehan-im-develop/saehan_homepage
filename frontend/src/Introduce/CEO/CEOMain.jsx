@@ -32,7 +32,7 @@ function CEOMain() {
   return (
     <div>
       {/* ✅ 추가된 상단 배경 이미지 */}
-      <div style={{ marginBottom: "-50px" }}> {/* ✅ 여기에 margin 추가 (아래로 이동) */}
+      <div style={{ marginBottom: "50px" }}> {/* ✅ 여기에 margin 수정 (자연스럽게 아래로 이동) */}
         <div ref={bgRef} className={`ceo-header-bg ${isVisible ? "fade-in" : ""}`}>
           <img src={backgroundImage} alt="CEO 인사말 배경" className="ceo-header-img" />
         </div>
