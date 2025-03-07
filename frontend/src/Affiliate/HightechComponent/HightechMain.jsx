@@ -1,29 +1,32 @@
 import React, { useEffect, useState } from "react";
 import "../CommonCSS/CommonMain.css";
-import temp from "../../assets/mainImage.png";
+import bgImage from "../../assets/back1.jpg"; // ✅ 하이테크 페이지 배경
 
 function HightechMain() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // 페이지 로드 후 0.1초 뒤 페이드인 효과 실행
     setTimeout(() => {
       setIsLoaded(true);
     }, 100);
   }, []);
 
   return (
-    <div className="common-main">
-      {/* ✅ 제목을 내부 컨테이너 안으로 이동 */}
+    <div
+      className="common-main"
+      style={{ backgroundImage: `url(${bgImage})` }} // ✅ 개별 배경 이미지 적용
+    >
+
+      <div className="common-overlay"></div> {/* ✅ 배경 위 오버레이 추가 */}
+      
       <div className={`common-description ${isLoaded ? "show" : ""}`}>
-        <div className="common-text">
-          <h1 id="main-h1">SAEHAN HIGHTECH</h1> {/* ✅ 제목을 왼쪽에 위치 */}
+        <div className={`common-text ${isLoaded ? "show" : ""}`}>
+          <h1 id="main-h1">SAEHAN HIGHTECH</h1>
           <p>
             새한하이테크는 반도체 기술의 기준을 만들어갑니다.<br />
             미래 공정과 최적화된 생산 시스템을 통해 최고의 품질과 성능을 제공합니다.
           </p>
         </div>
-        <img src={temp} alt="Saehan Hightech Company" className="common-main-image" />
       </div>
     </div>
   );

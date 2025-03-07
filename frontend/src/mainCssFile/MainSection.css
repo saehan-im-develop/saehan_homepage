@@ -9,7 +9,6 @@
 /* 세련된 배치를 위한 추가적인 조정 */
 .main-section h1 {
   font-size: 2.5rem;
-  /* 글자 크기를 키워 가독성 향상 */
   line-height: 1.4;
   font-weight: 100;
 }

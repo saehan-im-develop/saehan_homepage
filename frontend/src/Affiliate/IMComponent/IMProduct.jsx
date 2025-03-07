@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../CommonCSS/CommonProduct.css"
-import img1 from "../../assets/aff/ai1.png"
+import img1 from "../../assets/aff/ai3.png"
 import img2 from "../../assets/aff/ai2.png"
 import img3 from "../../assets/aff/ai3.png"
 import img4 from "../../assets/aff/ai4.png"
