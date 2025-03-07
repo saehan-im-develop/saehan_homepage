@@ -66,18 +66,25 @@ const BusinessSection = () => {
   }, []);
 
   return (
-    <div ref={ref} className={`business-section ${isVisible ? "fade-in" : ""}`}>
-      <h2>새한그룹 사업 영역</h2>
-      <div className="business-grid">
-        {businessAreas.map((area, index) => (
-          <div key={index} className="business-card">
-            <img src={area.image} alt={area.title} />
-            <h3>{area.title}</h3>
-            <p>{area.description}</p>
-          </div>
-        ))}
+    <>
+      {/* 🔹 상단 배경 추가 */}
+      <div className="business-header">
+        <h2>새한그룹 사업 영역</h2>
       </div>
-    </div>
+
+      {/* 🔹 기존 섹션 */}
+      <div ref={ref} className={`business-section ${isVisible ? "fade-in" : ""}`}>
+        <div className="business-grid">
+          {businessAreas.map((area, index) => (
+            <div key={index} className="business-card">
+              <img src={area.image} alt={area.title} />
+              <h3>{area.title}</h3>
+              <p>{area.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
