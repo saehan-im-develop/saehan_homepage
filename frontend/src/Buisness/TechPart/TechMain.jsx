@@ -73,28 +73,34 @@ const TechMain = () => {
   }, []);
 
   return (
-    <div ref={ref} className={`tech-innovation ${isVisible ? "fade-in" : ""}`}>
-      <h2>기술 & 혁신</h2>
-      <p className="tech-intro">
-        새한그룹은 최첨단 CNC 가공 및 EDM 기술을 기반으로 초정밀 금형을 제작하며,
-        자동화된 사출 성형 공정을 통해 고객 맞춤형 고품질 부품을 제공합니다.
-      </p>
+    <>
+      {/* 🔹 상단 배경 헤더 추가 */}
+      <div className="tech-header">
+        <h2>기술 & 혁신</h2>
+      </div>
 
-      {techSections.map((section, index) => (
-        <div key={index} className={`tech-section ${isVisible ? "fade-in" : ""}`}>
-          <img src={section.image} alt={section.title} className="tech-image" />
-          <div className="tech-content">
-            <h3>{section.title}</h3>
-            <p>{section.description}</p>
-            <ul>
-              {section.points.map((point, i) => (
-                <li key={i}>✔ {point}</li>
-              ))}
-            </ul>
+      <div ref={ref} className={`tech-innovation ${isVisible ? "fade-in" : ""}`}>
+        <p className="tech-intro">
+          새한그룹은 최첨단 CNC 가공 및 EDM 기술을 기반으로 초정밀 금형을 제작하며,
+          자동화된 사출 성형 공정을 통해 고객 맞춤형 고품질 부품을 제공합니다.
+        </p>
+
+        {techSections.map((section, index) => (
+          <div key={index} className={`tech-section ${isVisible ? "fade-in" : ""}`}>
+            <img src={section.image} alt={section.title} className="tech-image" />
+            <div className="tech-content">
+              <h3>{section.title}</h3>
+              <p>{section.description}</p>
+              <ul>
+                {section.points.map((point, i) => (
+                  <li key={i}>✔ {point}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 
