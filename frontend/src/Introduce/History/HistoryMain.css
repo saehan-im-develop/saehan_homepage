@@ -25,16 +25,32 @@
 /* 헤더 스타일 */
 .history-header {
   width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 32px;
   font-weight: bold;
   color: white;
+  background: #003366;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* 🔹 연혁 이미지 컨테이너 */
+.history-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* 🔹 연혁 이미지 스타일 */
+.history-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
 }
 
 /* 콘텐츠 박스 */
@@ -188,3 +204,4 @@
 .history-item.right .history-line {
   left: -30px;
 }
+

@@ -120,8 +120,8 @@
 
 .text-overlay-sub {
   position: absolute;
-  top: 10%; /* 기본적으로 20% 위쪽 배치 */
-  left:-5%;
+  top: 0%; /* 기본적으로 20% 위쪽 배치 */
+  left: -22%;
   text-align: left;
   font-size: 4.5rem;
   font-weight: 700;
@@ -129,6 +129,8 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   transition: opacity 1s ease-in-out;
   z-index: 2;
+  width: auto;
+  white-space: nowrap; /* 줄바꿈 방지 */
 }
 
 /* 텍스트 스타일 */
@@ -427,3 +429,4 @@
     justify-content: center;
   }
 }
+
