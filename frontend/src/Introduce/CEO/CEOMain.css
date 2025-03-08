@@ -20,25 +20,26 @@
 
 /* ✅ CEO 인사말 중앙 정렬 및 밑줄 스타일 */
 .ceo-header {
-  text-align: center; /* ✅ 중앙 정렬 */
-  font-size: 24px;
+  text-align: center;
+  font-size: 26px;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.8);
+  color: black;
   background-color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   display: inline-block;
-  margin: 0 auto;
-  border-bottom: 3px solid #1a3d7c; /* ✅ 파란색 밑줄 추가 */
+  border-bottom: 3px solid #1a3d7c;
+  margin-bottom: 20px;
 }
 
 
 /* CEO 콘텐츠 레이아웃 */
-.ceo-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 50px;
+.ceo-image {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
 /* CEO 이미지 */
@@ -50,61 +51,59 @@
   border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-/* CEO 텍스트 */
+/* ✅ CEO 텍스트 */
 .ceo-text {
-  max-width: 600px;
+  max-width: 550px;
   text-align: left;
-  padding: 25px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+  padding: 10px;
   line-height: 1.7;
   color: #222;
   font-weight: 500;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
-/* 제목 스타일 */
+/* ✅ 제목 스타일 */
 .ceo-text h2 {
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: bold;
   margin-bottom: 12px;
   color: #111;
-  border-bottom: 2px solid #444;
-  padding-bottom: 8px;
 }
 
 /* 본문 스타일 */
 .ceo-text p {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.7;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
-/* CEO 이름 강조 */
+/* ✅ CEO 이름 강조 */
 .ceo-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  margin-top: 20px;
   color: #0056b3;
+  text-align: center;
+  margin-top: 8px; /* ✅ 기존 10px → 8px으로 조정 */
 }
 
 /* 🔹 반응형 스타일링 적용 */
 
 /* (1) 화면 너비가 1024px 이하일 때 (태블릿) */
 @media (max-width: 1024px) {
-  .ceo-container {
+  .ceo-box {
     max-width: 90%;
-    padding: 30px;
+    padding: 25px;
   }
 
   .ceo-content {
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 
   .ceo-image {
-    width: 70%;
-    max-width: 300px;
+    width: 80%;
+    max-width: 280px;
   }
 
   .ceo-text {
@@ -115,21 +114,14 @@
 
 /* (2) 화면 너비가 768px 이하일 때 (모바일) */
 @media (max-width: 768px) {
-  .ceo-container {
+  .ceo-box {
+    max-width: 95%;
     padding: 20px;
-  }
-
-  .ceo-header {
-    font-size: 20px;
-    top: -25px;
-    left: 10px;
-    padding: 8px 15px;
   }
 
   .ceo-content {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
   }
 
   .ceo-image {
@@ -143,29 +135,26 @@
 
   .ceo-text p {
     font-size: 15px;
-    line-height: 1.5;
   }
 
   .ceo-name {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
 /* ✅ 상단 배경 이미지 컨테이너 */
 .ceo-header-bg {
-  position: absolute; /* ✅ 기존 relative → absolute로 변경 */
-  top: 150px; /* ✅ 기존보다 더 아래로 이동 */
-  left: 0;
+  position: relative;
   width: 100vw;
-  height: 400px; /* ✅ 기존 320px → 400px으로 조정 (배경 더 크게) */
+  height: 300px; /* ✅ 기존 450px → 300px으로 축소 */
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* ✅ 기존 center → flex-end로 변경 (배경을 아래쪽으로 배치) */
+  align-items: center;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  z-index: 0; /* ✅ 배경이 콘텐츠 뒤로 가도록 설정 */
+  margin-top: 10px; /* ✅ 기존 20px → 10px으로 조정 */
 }
 
 
@@ -174,7 +163,7 @@
   width: 100vw;
   height: 100%;
   object-fit: cover;
-  object-position: center bottom; /* ✅ 이미지의 하단 부분을 기준으로 정렬 */
+  object-position: center bottom;
 }
 
 /* ✅ 페이드인 효과 적용 */
@@ -183,3 +172,32 @@
   transform: translateY(20px); /* ✅ 배경을 자연스럽게 아래쪽으로 이동 */
 }
 
+/* ✅ CEO 전체 박스 */
+.ceo-box {
+  display: flex;
+  flex-direction: row; /* ✅ 가로 정렬 */
+  align-items: center; /* ✅ 세로 중앙 정렬 */
+  justify-content: flex-start; /* ✅ 좌측 정렬 */
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ CEO 콘텐츠 레이아웃 */
+.ceo-content {
+  display: flex;
+  align-items: center; /* ✅ 세로 중앙 정렬 */
+  justify-content: flex-start; /* ✅ 좌측 정렬 */
+  gap: 30px; /* ✅ 이미지와 텍스트 간격 */
+}
+
+/* ✅ CEO 이미지 */
+.ceo-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,22 +1,38 @@
 /* 🔹 기본 스타일 */
 .network-container {
-  position: relative; /* ✅ 기존 absolute → relative */
-  z-index: 1; /* ✅ 배경보다 위로 배치 */
+  position: relative;
   width: 70%;
   max-width: 900px;
-  margin: 300px auto 50px; /* ✅ 배경과 겹치지 않도록 위쪽 마진 추가 */
-  padding-top: 40px;
+  margin: 50px auto; /* ✅ 기존 300px → 50px으로 변경 */
+  padding-top: 20px;
 }
 
-/* 타이틀 스타일 */
+/* ✅ 네트워크 타이틀 스타일 */
 .network-title {
-  text-align: center;
+  text-align: center; /* ✅ 부모 요소 기준으로 중앙 정렬 */
   font-size: 2rem;
   font-weight: bold;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  margin-top: -30px; /* ✅ 기존 간격 줄이기 */
+  padding-bottom: 8px; /* ✅ 밑줄과 텍스트 간격 */
+  position: relative; /* ✅ 밑줄 위치 조정 */
+  display: flex; /* ✅ flex 사용으로 중앙 정렬 유지 */
+  flex-direction: column;
+  align-items: center; /* ✅ 중앙 정렬 */
+  justify-content: center;
 }
+/* ✅ 가상 요소로 밑줄 추가 */
+.network-title::after {
+  content: "";
+  display: block;
+  width: 30%; /* ✅ 제목 길이에 비례한 밑줄 */
+  height: 3px;
+  background-color: #0056b3; /* ✅ 파란색 밑줄 */
+  margin-top: 5px; /* ✅ 위쪽 여백 조정 */
+}
+
 
 /* 등장 효과 */
 .network-title.fade-in {
@@ -27,8 +43,8 @@
 /* 네트워크 카드 스타일 */
 .network-card {
   background: #ffffff;
-  padding: 25px;
-  margin-bottom: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
   border-radius: 10px;
   border: 1px solid #ddd;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -123,11 +139,9 @@
 
 /* ✅ 상단 배경 이미지 컨테이너 */
 .network-header-bg {
-  position: absolute; /* ✅ 기존 relative → absolute 변경 */
-  top: 0;
-  left: 0;
-  width: 100vw; /* ✅ 전체 너비 유지 */
-  height: 400px; /* ✅ 높이를 더 크게 조정 */
+  position: relative;
+  width: 100vw;
+  height: 250px; /* ✅ 기존 400px → 250px으로 축소 */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -135,7 +149,7 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  z-index: 1;
+  margin-top: 10px; /* ✅ 기존 20px → 10px으로 조정 */
 }
 
 /* ✅ 배경 이미지 수정 */
