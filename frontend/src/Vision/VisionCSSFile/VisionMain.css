@@ -5,9 +5,9 @@
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     text-align: center;
-    max-width: 1000px;
-    width: 80%; /* ✅ 너비를 80%로 설정 (반응형 대응) */
-    margin: 50px auto; /* ✅ 수직 및 수평 중앙 정렬 */
+    max-width: 900px; /* ✅ 전체 크기 맞춤 */
+    width: 80%;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,15 +32,16 @@
 
 /* 소개 섹션 */
 .vision-intro {
-    text-align: center;
-    max-width: 900px;
-    font-size: 20px;
-    line-height: 2;
-    color: #333;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.95); /* ✅ 배경 투명도 조정 */
     padding: 40px;
     border-radius: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc; /* ✅ 테두리 색 더 진하게 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* ✅ 그림자 추가 */
+    text-align: left; /* ✅ 텍스트 왼쪽 정렬 */
+    max-width: 850px; /* ✅ 너비 조정 */
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
 .vision-intro p {
@@ -52,6 +53,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #333;
 }
 
 /* 🔹 비전 원형 구조 */
@@ -106,12 +108,35 @@
     border-radius: 12px;
     border: 1px solid #ddd;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
-    width: 700px;
+    width: 700px; /* ✅ 고정 크기 유지 */
     font-size: 18px;
     text-align: left;
     line-height: 1.8;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
 }
+
+/* ✅ 숫자 스타일 */
+.vision-box-number {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 
 /* ✅ 비전 제목과 로고를 감싸는 컨테이너 */
 .vision-header {
@@ -254,6 +279,13 @@
         padding: 15px;
     }
 
+    .vision-box-number {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        border-width: 2px;
+    }
+
     .vision-header {
         flex-direction: column;
         text-align: center;
@@ -295,3 +327,4 @@
 /* 품질, 속도 → 파란색 */
 .top-left { color: #2d66d6; }
 .bottom-right { color: #2d66d6; }
+

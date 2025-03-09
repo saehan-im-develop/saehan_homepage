@@ -6,14 +6,14 @@ import backgroundImage from "../../assets/010.jpg"; // ✅ 추가된 배경 이�
 const Network = () => {
   const [visible, setVisible] = useState(false);
   const ref = useRef(null);
-  const bgRef = useRef(null); // ✅ 배경 이미지 Ref 추가
+  const bgRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           setVisible(true);
-          observer.disconnect(); // ✅ 한 번 실행 후 옵저버 해제 (성능 최적화)
+          observer.disconnect();
         }
       },
       { threshold: 0.3 }
@@ -23,15 +23,15 @@ const Network = () => {
       observer.observe(ref.current);
     }
     if (bgRef.current) {
-      observer.observe(bgRef.current); // ✅ 배경 이미지도 감지
+      observer.observe(bgRef.current);
     }
 
-    return () => observer.disconnect(); // ✅ 클린업 함수 추가
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div>
-      {/* ✅ 추가된 상단 배경 이미지 */}
+      {/* ✅ 상단 배경 이미지 */}
       <div ref={bgRef} className={`network-header-bg ${visible ? "fade-in" : ""}`}>
         <img src={backgroundImage} alt="네트워크 페이지 배경" className="network-header-img" />
       </div>
@@ -61,7 +61,7 @@ const Network = () => {
               <div className="network-info">
                 <span className="network-type">{company.type || "정보 없음"}</span>
                 <span className="network-address">{company.address || "주소 없음"}</span>
-                <div className="network-phone"> 
+                <div className="network-phone">
                   {Array.isArray(company.phone) && company.phone.length > 0 ? (
                     company.phone.map((num, i) => <p key={i}>📞 {num}</p>)
                   ) : (
