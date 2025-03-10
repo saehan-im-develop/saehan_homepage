@@ -1,33 +1,33 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../CommonCSS/CommonProduct.css"
-import img1 from "../../assets/aff/temp1.png"
-import img2 from "../../assets/aff/temp2.png"
-import img3 from "../../assets/aff/temp3.png"
+import "../CommonCSS/CommonProduct.css";
+import img1 from "../../assets/aff/temp1.png"; // 김치냉장고 부품 이미지
+import img2 from "../../assets/aff/temp2.png"; // 딤채쿡 부품 이미지
+import img3 from "../../assets/aff/temp3.png"; // 냉장고 선반류 이미지
 
 function GlobalProduct() {
   const products = [
     {
-      name: "글로벌 무역 솔루션",
-      engName: "Global Trade Solutions",
+      name: "김치냉장고 부품",
+      engName: "Kimchi Refrigerator Parts",
       description:
-        "새한글로벌의 무역 솔루션은 글로벌 비즈니스 운영을 위한 맞춤형 수출입 관리 및 물류 최적화를 제공합니다.",
-      category: "무역/유통",
+        "새한글로벌은 위니아글로벌과 협력하여 김치냉장고의 핵심 부품을 생산 및 공급합니다.",
+      category: "가전 부품",
       image: img1,
     },
     {
-      name: "해외 시장 진출 컨설팅",
-      engName: "Overseas Market Expansion Consulting",
+      name: "딤채쿡 부품",
+      engName: "Dimchae Cook Components",
       description:
-        "해외 시장 분석, 현지화 전략, 네트워크 구축을 통한 최적의 시장 진입 솔루션을 제공합니다.",
-      category: "컨설팅",
+        "대유중공업과 함께 딤채쿡 전기밥솥의 주요 부품을 제조하여 품질과 신뢰성을 보장합니다.",
+      category: "주방 가전 부품",
       image: img2,
     },
     {
-      name: "산업용 장비 및 기술 솔루션",
-      engName: "Industrial Equipment & Technology Solutions",
+      name: "냉장고 선반 및 내부 부품",
+      engName: "Refrigerator Shelves & Interior Parts",
       description:
-        "새한글로벌의 기술 기반 산업용 장비 공급 및 맞춤형 엔지니어링 솔루션을 제공합니다.",
-      category: "기술/제조",
+        "삼성전자 2차 협력사로서 냉장고 내부 선반 및 필수 부품을 생산하고 있습니다.",
+      category: "가전 내부 부품",
       image: img3,
     },
   ];
@@ -36,7 +36,7 @@ function GlobalProduct() {
   const ref = useRef(null);
 
   useEffect(() => {
-    //  페이지가 로드되면 자동으로 fade-in 효과 실행
+    // 페이지가 로드되면 자동으로 fade-in 효과 실행
     setTimeout(() => {
       setIsVisible(true);
     }, 100); // 0.1초 후 자동으로 페이드인
@@ -45,7 +45,7 @@ function GlobalProduct() {
 
   return (
     <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
-      <h2 className="product-title">제품 설명</h2>
+      <h2 className="product-title">주요 생산 제품</h2>
       {products.map((product, index) => (
         <div key={index} className="product-card">
           <img src={product.image} alt={product.name} className="product-image" />

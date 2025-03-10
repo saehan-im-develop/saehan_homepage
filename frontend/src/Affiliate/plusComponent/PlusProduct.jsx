@@ -1,37 +1,46 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../CommonCSS/CommonProduct.css"
-import img1 from "../../assets/aff/temp1.png"
-import img2 from "../../assets/aff/temp2.png"
-import img3 from "../../assets/aff/temp3.png"
+import "../CommonCSS/CommonProduct.css";
+import img1 from "../../assets/aff/temp1.png"; // 김치냉장고 부품
+import img2 from "../../assets/aff/temp2.png"; // 냉장고 선반류
+import img3 from "../../assets/aff/temp3.png"; // 산업용 부품
 
 function PlusProduct() {
   const products = [
     {
-      name: "고급형 플라스틱 미스트 펌프 용기",
-      engName: "Premium Plastic Mist Pump Bottle",
+      name: "김치냉장고 부품",
+      engName: "Kimchi Refrigerator Components",
       description:
-        "새한플러스에서 개발한 고급형 플라스틱 미스트 펌프 용기는 정밀한 사출 성형 기술을 통해 제작되어 우수한 내구성과 세련된 디자인을 자랑합니다.",
-      material: "PP, PETG",
-      use: "화장품, 미용 제품, 스킨케어, 소독제 등",
+        "새한플러스는 위니아글로벌과 협력하여 김치냉장고의 주요 부품을 생산하며, 최고의 품질과 내구성을 제공합니다.",
+      material: "ABS, PP, PC",
+      use: "김치냉장고 내부 부품",
       image: img1,
     },
     {
-      name: "고강도 플라스틱 필터 커넥터",
-      engName: "High-Strength Plastic Filter Connector",
+      name: "냉장고 선반 및 내부 부품",
+      engName: "Refrigerator Shelves & Interior Parts",
       description:
-        "정밀한 사출 공정을 통해 제작된 고강도 플라스틱 필터 커넥터는 내구성과 밀폐성이 뛰어난 제품입니다.",
-      material: "PP, PEEK, PTFE",
-      use: "정밀 필터 시스템, 반도체 제조, 의료기기",
+        "삼성전자와 협력하여 냉장고 내부 선반 및 핵심 부품을 생산합니다. 고품질의 소재와 정밀한 사출 기술을 적용하여 내구성을 극대화합니다.",
+      material: "PET, PC, 강화유리",
+      use: "냉장고 내부 선반, 도어 포켓, 서랍",
       image: img2,
     },
     {
-      name: "고강도 플라스틱 필터 커넥터",
-      engName: "High-Strength Plastic Filter Connector",
+      name: "산업용 플라스틱 부품",
+      engName: "Industrial Plastic Components",
       description:
-        "산업 환경에서도 안정적인 성능을 유지하며, 정밀한 가공으로 완벽한 밀폐력을 제공합니다.",
-      material: "PP, PEEK, PTFE",
-      use: "정밀 필터 시스템, 반도체 제조, 의료기기",
+        "고강도 플라스틱 소재를 활용하여 정밀한 사출 성형 기술을 적용한 산업용 부품을 생산합니다. 자동차 및 전자 부품에도 활용됩니다.",
+      material: "POM, PBT, PA66",
+      use: "자동차 부품, 전자기기, 산업용 장비",
       image: img3,
+    },
+    {
+      name: "세탁기 부품",
+      engName: "Washing Machine Components",
+      description:
+        "세탁기 내부 주요 부품을 생산하며, 강한 내구성과 정밀한 성형 기술을 통해 고품질 제품을 제공합니다.",
+      material: "PP, ABS",
+      use: "세탁기 내부 부품 및 외장 부품",
+      image: img1, // 추가 이미지 필요
     },
   ];
 
@@ -39,16 +48,15 @@ function PlusProduct() {
   const ref = useRef(null);
 
   useEffect(() => {
-    //  페이지가 로드되면 자동으로 fade-in 효과 실행
+    // 페이지가 로드되면 자동으로 fade-in 효과 실행
     setTimeout(() => {
       setIsVisible(true);
     }, 100); // 0.1초 후 자동으로 페이드인
-
   }, []);
 
   return (
     <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
-      <h2 className="product-title">제품 설명</h2>
+      <h2 className="product-title">주요 생산 제품</h2>
       {products.map((product, index) => (
         <div key={index} className="product-card">
           <img src={product.image} alt={product.name} className="product-image" />
