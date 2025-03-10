@@ -60,6 +60,10 @@
   display: flex;
   gap: 30px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  overflow: visible;
 }
 
 /* ✅ 네비게이션 항목 & 드롭다운 항목 스타일 공통 적용 */
@@ -77,6 +81,8 @@
   transition: color 0.3s ease-in-out;
 }
 
+
+
 /* ✅ 드롭다운 공통 스타일 */
 .dropdown {
   position: relative;
@@ -93,20 +99,33 @@
   padding-bottom: 5px;
 }
 
-/* ✅ 드롭다운 메뉴 스타일 */
+
+/* ✅ 드롭다운 메뉴 스타일 수정 */
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%; /* 🔹 기본적으로 가운데 정렬 */
+  transform: translateX(-50%); /* 🔹 중앙 정렬 유지 */
   background: white;
   border: 1px solid #ddd;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   padding: 12px;
-  width: 220px;
+  width: max-content;
+  min-width: 200px;
+  max-width: 300px;
   z-index: 100;
+  white-space: nowrap;
 }
+
+/* ✅ 특정 드롭다운이 오른쪽 끝에 위치할 경우 조정 */
+.nav-links .dropdown:last-child .dropdown-menu {
+  left: auto;
+  right: 0;
+  transform: none; /* 🔹 우측 끝에서는 정렬 유지 */
+}
+
 
 /* ✅ 드롭다운 내부 링크 스타일 */
 .dropdown-menu li a {

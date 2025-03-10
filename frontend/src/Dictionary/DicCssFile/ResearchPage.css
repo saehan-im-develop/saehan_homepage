@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 /* 🟦 배경 이미지 고정 */
 .hero-section {
     position: relative;
@@ -16,12 +20,12 @@
 }
 
 .hero-title {
-    position: absolute;
     top: 20px;   /* 상단 여백 */
     left: 30px;  /* 왼쪽 여백 */
     background: none;  /* 배경 없애기 */
     font-size: 4.5rem;  /* 글씨 크기 */
     font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* 🟦 설명 섹션 */
@@ -76,3 +80,26 @@
         border-top: 5px solid #093064;
     }
 }
+
+@media (max-width: 1024px) { /* 패드(태블릿) 사이즈 대응 */
+    .content-section {
+        flex-direction: column;
+        align-items: center; /* 내부 요소들을 가운데 정렬 */
+        text-align: center;
+    }
+
+    .info-container {
+        width: 80%; /* 적절한 너비 설정 */
+        max-width: 600px; /* 최대 너비 설정 */
+        margin: 0 auto; /* 좌우 중앙 정렬 */
+        border-left: none;
+        border-top: 5px solid #093064;
+    }
+
+    .text-container {
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+

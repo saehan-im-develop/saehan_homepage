@@ -6,7 +6,6 @@ import mainImage1 from "../assets/back1.jpg";
 import mainImage2 from "../assets/back2.jpg";
 import mainImage3 from "../assets/back3.jpg";
 import mainImage4 from "../assets/back4.jpg";
-import section1Image from "../assets/001.png";
 import section2Image from "../assets/004.jpg";
 import section6Image from "../assets/007.jpg";
 
@@ -17,11 +16,10 @@ const MainSection = () => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(true);
-  const [fadeKey, setFadeKey] = useState(0); // 텍스트 애니메이션을 위한 키
 
     useEffect(() => {
     const interval = setInterval(() => {
-      if (currentIndex >= images.length) {
+      if (currentIndex >= images.length -1) {
         setIsTransitioning(false); // 트랜지션 OFF (순간 이동)
         setCurrentIndex(0);
 
@@ -73,12 +71,12 @@ const MainSection = () => {
 
 
       {/* 🔹 제조 산업 섹션 (수정됨) */}
-      <section className="sub-section manufacturing-section">
+      <section className="sub-section">
         <div className="content-container">
           <div className="image-container">
             <img src={section2Image} alt="제조 산업" className="section1-image" />
             <div className="text-overlay-sub">
-              <p>제조 산업의 미래를 </p> 
+              <p>제조산업의 미래를 </p> 
               <p>선도하는 리더</p>
             </div>
           </div>

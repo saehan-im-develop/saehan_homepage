@@ -48,11 +48,11 @@ const Network = () => {
                 <div key={locIndex} className="network-info">
                   <span className="network-type">{location.type || "정보 없음"}</span>
                   <span className="network-address">{location.address || "주소 없음"}</span>
-                  <div className="network-phone">
-                    {Array.isArray(location.phone) && location.phone.length > 0 ? (
-                      location.phone.map((num, i) => <p key={i}>📞 {num}</p>)
+                  <div className="network-email">
+                    {Array.isArray(location.email) && location.email.length > 0 ? (
+                      location.email.map((mail, i) => <p key={i}>📧 {mail}</p>)
                     ) : (
-                      <p className="empty">연락처 정보 없음</p>
+                      <p className="empty">이메일 정보 없음</p>
                     )}
                   </div>
                 </div>
@@ -61,11 +61,11 @@ const Network = () => {
               <div className="network-info">
                 <span className="network-type">{company.type || "정보 없음"}</span>
                 <span className="network-address">{company.address || "주소 없음"}</span>
-                <div className="network-phone">
-                  {Array.isArray(company.phone) && company.phone.length > 0 ? (
-                    company.phone.map((num, i) => <p key={i}>📞 {num}</p>)
+                <div className="network-email">
+                  {Array.isArray(company.email) && company.email.length > 0 ? (
+                    company.email.map((mail, i) => <p key={i}>📧 {mail}</p>)
                   ) : (
-                    <p className="empty">연락처 정보 없음</p>
+                    <p className="empty">이메일 정보 없음</p>
                   )}
                 </div>
               </div>
