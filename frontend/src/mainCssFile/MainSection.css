@@ -155,6 +155,7 @@
 .section1-image {
   position: relative;
   width: 100vw;
+  max-height: 100vh;
   object-fit: cover;
 }
 
@@ -212,6 +213,7 @@
   align-items: center;
   margin-top: 200px;
   margin-bottom: 50px;
+  padding-bottom: 50px;
   background-color: #e9f2ff;
 }
 
@@ -340,10 +342,30 @@
     height: 95vh;
   }
 
+  .section1-image {
+    width: 100%;
+    height: 100vh;
+    max-height: 80vh; /* 너무 길게 늘어나지 않도록 */
+    object-fit: cover;
+  }
+
   /* 🔹 오버레이 텍스트 크기 축소 */
   .text-overlay {
-    font-size: 3rem; /* 태블릿에서는 중간 크기 */
-    top: 15%;
+    font-size: 3rem;  /* 태블릿에서 글씨 크기 줄이기 */
+    top: 50%;  /* 화면 중앙 정렬 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 가운데 정렬 */
+    width: 80%; /* 텍스트 줄바꿈 방지 */
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  .text-overlay-sub {
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
   }
 
   .new-future-container {

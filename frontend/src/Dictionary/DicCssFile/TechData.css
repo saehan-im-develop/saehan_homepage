@@ -3,13 +3,40 @@ html {
   scroll-behavior: smooth;
 }
 
+.hero-section-tech {
+  position: relative;
+  width: 100vw;
+  height: 60vh; /* 배경 높이 */
+  background-image: url("../../assets/docu/tech02.jpg"); /* 배경 이미지 */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-title-tech {
+  top: 30px;   /* 상단 여백 */
+  left: 40px;  /* 왼쪽 여백 */
+  background: none;  /* 배경 없애기 */
+  font-size: 4.5rem;  /* 글씨 크기 */
+  font-weight: bold;
+}
+
+#tech-intro{
+  font-size: 3.0rem;
+  font-weight: bold;
+}
+
 /* ✅ TechData 섹션 스타일 */
 .techdata-container {
-  width: 80%;
+  width: 100%;
   margin: auto;
-  padding: 20px;
   text-align: center;
-  margin-top: 5%;
 }
 
 /* ✅ 리스트 스타일 */
@@ -17,6 +44,8 @@ html {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* ✅ 개별 항목 스타일 */

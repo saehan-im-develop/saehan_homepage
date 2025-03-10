@@ -71,8 +71,12 @@ const TechData = () => {
 
   return (
     <div className="techdata-container">
-      <h2>기술자료</h2>
-      <p>새한 그룹의 최신 기술 연구 자료를 확인하세요.</p>
+      {/* 🟦 고정 배경 섹션 */}
+      <div className="hero-section-tech">
+        <h1 className="hero-title-tech">기술 자료</h1>
+      </div>
+
+      <p id="tech-intro">새한 그룹의 최신 기술 연구 자료를 확인하세요.</p>
       <div className="techdata-list">
         {techDataList.map((data, index) => (
           <div key={index} className="techdata-item">

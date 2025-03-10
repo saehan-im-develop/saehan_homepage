@@ -38,6 +38,38 @@ html, body {
   line-height: 1.6;
 }
 
+.business-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+/* ✅ 펼쳐진 상태 */
+.business-info.open {
+  max-height: 500px; /* 충분한 높이 설정 */
+  opacity: 1;
+}
+
+/* ✅ "사업자등록번호" 제목 클릭 가능하게 설정 */
+.business-toggle {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 🔽 화살표 스타일 */
+.toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+/* 🔽 펼쳐졌을 때 화살표 회전 */
+.business-info.open + .toggle-icon {
+  transform: rotate(180deg);
+}
+
 /*  반응형 스타일 적용 */
 
 /* (1) 태블릿 (768px~1024px) */
