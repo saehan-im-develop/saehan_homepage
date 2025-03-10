@@ -356,7 +356,7 @@
     left: 50%;
     transform: translate(-50%, -50%); /* 가운데 정렬 */
     width: 80%; /* 텍스트 줄바꿈 방지 */
-    text-align: center; /* 중앙 정렬 */
+    text-align: left; /* 중앙 정렬 */
   }
 
   .text-overlay-sub {

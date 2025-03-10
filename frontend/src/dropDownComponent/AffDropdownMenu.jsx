@@ -18,8 +18,8 @@ const AffDropdownMenu = () => {
           <li><a onClick={() => navigate("/hightech")} style={{ cursor: "pointer" }}>새한 하이테크</a></li> 
           <li><a onClick={() => navigate("/plus")} style={{ cursor: "pointer" }}>새한 플러스</a></li> 
           <li><a onClick={() => navigate("/global")} style={{ cursor: "pointer" }}>새한 글로벌</a></li> 
-          <li><a onClick={() => navigate("/sm")} style={{ cursor: "pointer" }}>SM 케미칼</a></li> 
-          <li><a onClick={() => navigate("/go")} style={{ cursor: "pointer" }}>지오 글로벌</a></li> 
+          {/* <li><a onClick={() => navigate("/sm")} style={{ cursor: "pointer" }}>SM 케미칼</a></li> 
+          <li><a onClick={() => navigate("/go")} style={{ cursor: "pointer" }}>지오 글로벌</a></li>  */}
         </ul>
       )}
     </li>

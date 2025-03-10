@@ -108,7 +108,7 @@
     border-radius: 12px;
     border: 1px solid #ddd;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
-    width: 700px; /* ✅ 고정 크기 유지 */
+    width: 750px; /* ✅ 고정 크기 유지 */
     font-size: 18px;
     text-align: left;
     line-height: 1.8;
