@@ -15,14 +15,12 @@
 
 /* 제조 산업 섹션 내부 컨테이너 */
 .content-container {
+  position: relative;
   display: flex;
   justify-content: center;
   /* 가로 방향 중앙 정렬 */
   align-items: center;
-  /* 세로 방향 중앙 정렬 */
-  max-width: 1200px;
   width: 100%;
-  padding: 0 5%;
   margin: 0 auto;
   /* 컨테이너를 가운데 정렬 */
   text-align: center;
@@ -43,12 +41,13 @@
 
 /* 이미지 컨테이너 */
 .image-container {
-  position: relative;
+  position: relative !important;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* 중앙 정렬 대신 위쪽 정렬 */
 }
+
 
 .slider-container {
   position: relative;
@@ -119,18 +118,18 @@
 
 .text-overlay-sub {
   position: absolute;
-  top: 0%; /* 기본적으로 20% 위쪽 배치 */
-  left: -22%;
-  text-align: left;
+  top: 15%;
+  left: 5%;
+  text-align: left !important; /* 강제 왼쪽 정렬 */
   font-size: 4.5rem;
   font-weight: 700;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   transition: opacity 1s ease-in-out;
   z-index: 2;
-  width: auto;
-  white-space: nowrap; /* 줄바꿈 방지 */
+  display: block; /* 혹시 flex 영향을 받을 경우 대비 */
 }
+
 
 /* 텍스트 스타일 */
 .text-overlay h2 {
@@ -152,16 +151,11 @@
 }
 
 
-
-/* 섹션 기본 스타일 */
-.main-section,
-.sub-section {
-  min-height: 80vh;
-  display: flex;
-  /* align-items: center;
-    justify-content: center; */
-  font-size: 2rem;
-  font-weight: bold;
+/* 제조 산업 섹션 이미지 */
+.section1-image {
+  position: relative;
+  width: 100vw;
+  object-fit: cover;
 }
 
 /* 제조 산업 섹션 조정 */
@@ -180,18 +174,14 @@
 }
 
 
-.section-image {
+/* .section-image {
   width: 80%;
   max-width: 1100px;
   height: auto;
   object-fit: cover;
-}
+} */
 
-/* 제조 산업 섹션 이미지 */
-.section1-image {
-  width: 100vw;
-  object-fit: cover;
-}
+
 
 /* 🔹 기존 세로 정렬 스타일 제거 */
 .vertical-text {

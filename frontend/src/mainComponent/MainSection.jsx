@@ -73,12 +73,12 @@ const MainSection = () => {
 
 
       {/* 🔹 제조 산업 섹션 (수정됨) */}
-      <section className="sub-section manufacturing-section">
+      <section className="sub-section">
         <div className="content-container">
           <div className="image-container">
             <img src={section2Image} alt="제조 산업" className="section1-image" />
             <div className="text-overlay-sub">
-              <p>제조 산업의 미래를 </p> 
+              <p>제조산업의 미래를 </p> 
               <p>선도하는 리더</p>
             </div>
           </div>
