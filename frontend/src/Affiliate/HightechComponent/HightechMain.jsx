@@ -23,8 +23,9 @@ function HightechMain() {
         <div className={`common-text ${isLoaded ? "show" : ""}`}>
           <h1 id="main-h1">SAEHAN HIGHTECH</h1>
           <p>
-            새한하이테크는 반도체 기술의 기준을 만들어갑니다.<br />
-            미래 공정과 최적화된 생산 시스템을 통해 최고의 품질과 성능을 제공합니다.
+            (주)새한하이테크는 첨단 사출 성형 기술과 정밀 제조 시스템을 바탕으로<br />
+            김치냉장고, 냉장고 선반, 산업용 부품을 전문적으로 생산하는 <br />
+            글로벌 가전·산업 부품 제조 기업입니다.
           </p>
         </div>
       </div>
