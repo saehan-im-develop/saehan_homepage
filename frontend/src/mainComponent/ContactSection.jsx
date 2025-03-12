@@ -9,8 +9,6 @@ const ContactSection = () => {
         <img src={contactImage} alt="고객 상담" className="contact-image" />
         <div className="contact-info">
           <p><strong>E-MAIL :</strong> pyh8461@saehangroup.com </p>
-          {/* <p><strong>TEL :</strong> 010-9953-8461</p>
-          <p><strong>FAX :</strong> 112-4840-4547</p> */}
         </div>
       </div>
     </section>

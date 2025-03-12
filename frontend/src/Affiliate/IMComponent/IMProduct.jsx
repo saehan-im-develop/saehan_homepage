@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../CommonCSS/CommonProduct.css";
+import "../IMComponent/IMProduct.css";
 import img1 from "../../assets/aff/ai3.png"; // copygloo 이미지
 
 function IMProduct() {
@@ -29,8 +29,8 @@ function IMProduct() {
   return (
     <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
       <h2 className="product-title">프로젝트 소개</h2>
-      <div className="product-card">
-        <img src={product.image} alt={product.name} className="product-image" />
+      <div className="product-card-im">
+        <img src={product.image} alt={product.name} className="product-image-im" />
         <div className="product-info">
           <h3>{product.name}</h3>
           <p className="product-eng-name">{product.engName}</p>

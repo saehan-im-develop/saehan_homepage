@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HightechMain from "./HightechMain";
 import HightechProduct from "./HightechProduct";
+import HightechAffiliates from "./HightechAffiliates";
 
 function SaehanHightech() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -13,9 +14,7 @@ function SaehanHightech() {
   return (
     <div>
       <HightechMain />
-
-      {/* 🔹 <hr> 태그 제거 */}
-
+      <HightechAffiliates />
       <HightechProduct />
     </div>
   );

@@ -16,6 +16,7 @@ const MainSection = () => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [fadeKey, setFadeKey] = useState(0);  // ✅ state 선언
 
     useEffect(() => {
     const interval = setInterval(() => {
