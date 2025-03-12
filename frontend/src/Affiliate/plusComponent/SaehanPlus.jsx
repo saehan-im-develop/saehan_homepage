@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PlusMain from "./PlusMain";
 import PlusProduct from "./PlusProduct";
+import PlusAffiliate from "./PlusAffiliates";
+
 
 function SaehanPlus() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -13,9 +15,7 @@ function SaehanPlus() {
   return (
     <div>
       <PlusMain />
-
-      {/* 🔹 <hr> 태그 제거 */}
-
+      <PlusAffiliate/>
       <PlusProduct />
     </div>
   );

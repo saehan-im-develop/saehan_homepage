@@ -21,7 +21,7 @@ function GlobalMain() {
         <div className={`common-text ${isLoaded ? "show" : ""}`}>
           <h1 id="main-h1">SAEHAN GLOBAL</h1>
           <p>
-            새한글로벌은 <strong>고객 감동과 품질 혁신</strong>을 최우선으로 하는 <br />
+            (유)새한글로벌은 <strong>고객 감동과 품질 혁신</strong>을 최우선으로 하는 <br />
             종합 제조 및 기술 솔루션 기업입니다.<br />
 
             <br />

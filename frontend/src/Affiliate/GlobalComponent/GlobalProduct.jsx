@@ -1,33 +1,39 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../CommonCSS/CommonProduct.css";
-import img1 from "../../assets/aff/temp1.png"; // 김치냉장고 부품 이미지
-import img2 from "../../assets/aff/temp2.png"; // 딤채쿡 부품 이미지
-import img3 from "../../assets/aff/temp3.png"; // 냉장고 선반류 이미지
+import img1 from "../../assets/Areal/global/gl1.jpg"; // 김치냉장고 부품 이미지
+import img2 from "../../assets/Areal/global/gl2.jpg"; // 김치냉장고 부품 이미지
+import img3 from "../../assets/Areal/global/gl3.jpg"; // 김치냉장고 부품 이미지
 
 function GlobalProduct() {
   const products = [
     {
-      name: "김치냉장고 부품",
-      engName: "Kimchi Refrigerator Parts",
+      name: "",
+      codeNO: "",
       description:
-        "새한글로벌은 위니아글로벌과 협력하여 김치냉장고의 핵심 부품을 생산 및 공급합니다.",
-      category: "가전 부품",
+        "",
+      code: "",
+      category: "",
+      give : "",
       image: img1,
     },
     {
-      name: "딤채쿡 부품",
-      engName: "Dimchae Cook Components",
+      name: "",
+      codeNO: "",
       description:
-        "대유중공업과 함께 딤채쿡 전기밥솥의 주요 부품을 제조하여 품질과 신뢰성을 보장합니다.",
-      category: "주방 가전 부품",
+        "",
+      code: "",
+      category: "",
+      give : "",
       image: img2,
     },
     {
-      name: "냉장고 선반 및 내부 부품",
-      engName: "Refrigerator Shelves & Interior Parts",
+      name: "",
+      codeNO: "",
       description:
-        "삼성전자 2차 협력사로서 냉장고 내부 선반 및 필수 부품을 생산하고 있습니다.",
-      category: "가전 내부 부품",
+        "",
+      code: "",
+      category: "",
+      give : "",
       image: img3,
     },
   ];
@@ -51,9 +57,11 @@ function GlobalProduct() {
           <img src={product.image} alt={product.name} className="product-image" />
           <div className="product-info">
             <h3>{product.name}</h3>
-            <p className="product-eng-name">{product.engName}</p>
+            {/* <p><strong>납품 업체:</strong> {product.give}</p>
+            <p className="product-eng-name">{product.code}</p>
+            <p>{product.codeNO}</p>
             <p>{product.description}</p>
-            <p><strong>카테고리:</strong> {product.category}</p>
+            <p>{product.category}</p> */}
           </div>
         </div>
       ))}

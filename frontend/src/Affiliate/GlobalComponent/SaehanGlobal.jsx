@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GlobalMain from "./GlobalMain";
 import GlobalProduct from "./GlobalProduct";
+import GlobalAffiliate from "./GlobalAffiliates"  ;
 
 function SaehanGlobal() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -13,9 +14,7 @@ function SaehanGlobal() {
   return (
     <div>
       <GlobalMain />
-
-      {/* 🔹 <hr> 태그 제거 */}
-
+      <GlobalAffiliate />
       <GlobalProduct />
     </div>
   );

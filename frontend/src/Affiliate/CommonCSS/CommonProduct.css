@@ -58,8 +58,10 @@
 /*  이미지 스타일 */
 .product-image {
     width: 100%;
-    max-width: 350px;  /*  크기 조정 */
-    height: auto;
+    width: 300px;  /*  크기 조정 */
+    height: 250px;
+    min-width: 300px;
+    min-height: 250px;
     margin-right: 20px;
     border-radius: 8px;  /*  둥근 모서리 추가 */
 }

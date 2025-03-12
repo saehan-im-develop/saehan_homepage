@@ -1,3 +1,11 @@
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .container {
     display: flex;
     width: 100%;
@@ -5,13 +13,14 @@
     box-sizing: border-box;
     height: 80vh;
   }
+
   
   .box {
     flex: 1;
     overflow: hidden;
     min-width: 200px;
     transition: flex 0.4s ease-in-out;
-    margin: 0 2%;
+    margin: 0 1%;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
     line-height: 0;
     position: relative;
@@ -37,12 +46,41 @@
     width: 100%;
   }
   
-  /* ✅ 마우스를 올리면 확대되는 효과 */
+  /*  마우스를 올리면 확대되는 효과 */
   .box:hover {
     flex: 1 1 50%;
   }
   
   .box:hover > img {
-    transform: scale(1.0); /* ✅ 확대 효과를 `width`가 아닌 `scale`로 적용 */
+    transform: scale(1.0); /*  확대 효과를 `width`가 아닌 `scale`로 적용 */
 }
-  
+
+/*  제목 스타일 */
+.introText {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  밑줄 스타일 수정 */
+.introText p {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px; /* 🔹 밑줄과 텍스트 간격 조정 */
+}
+
+.introText p::after {
+    content: "";
+    display: block;
+    width: 100%;  /* 🔹 기존보다 길게 (텍스트보다 넓게) */
+    height: 4px;
+    background-color: #1a3d7c; /* 🔵 파란색 */
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
