@@ -1,4 +1,4 @@
-/* ✅ 공통 스타일 유지 */
+/*  공통 스타일 유지 */
 .common-main {
   text-align: center;
   position: relative;
@@ -9,7 +9,7 @@
   overflow: hidden;
   padding: 0 5%;
   
-  /* ✅ 배경 관련 설정 */
+  /*  배경 관련 설정 */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -19,10 +19,10 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* ✅ 배경 흐리게 (투명한 검정) */
+  background: rgba(0, 0, 0, 0.5); /*  배경 흐리게 (투명한 검정) */
   top: 0;
   left: 0;
-  z-index: 1; /* ✅ 텍스트보다 뒤에 배치 */
+  z-index: 1; /*  텍스트보다 뒤에 배치 */
 }
 
 .common-description {
@@ -30,7 +30,7 @@
   width: 100%;
   height: 90vh;
   text-align: center;
-  z-index: 2; /* ✅ 배경보다 앞에 배치 */
+  z-index: 2; /*  배경보다 앞에 배치 */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,15 +38,15 @@
 }
 
 .common-text {
-  max-width: 80%; /* ✅ 너비 조정 (너무 넓지 않게) */
+  max-width: 80%; /*  너비 조정 (너무 넓지 않게) */
   color: white; 
-  text-align: left; /* ✅ 왼쪽 정렬 */
+  text-align: left; /*  왼쪽 정렬 */
   font-weight: bold;
   z-index: 2;
   position: absolute;
-  left: 5%; /* ✅ 화면 왼쪽에서 5% 떨어진 위치 */
-  top: 5%; /* ✅ 화면의 중앙에 배치 */
-  transform: translateY(-50%); /* ✅ 수직 정렬 조정 */
+  left: 5%; /*  화면 왼쪽에서 5% 떨어진 위치 */
+  top: 5%; /*  화면의 중앙에 배치 */
+  transform: translateY(-50%); /*  수직 정렬 조정 */
 }
 .common-text p {
   font-size: 2rem;
@@ -62,7 +62,7 @@
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* ✅ 기본적으로 숨김 (페이드인 효과) */
+/*  기본적으로 숨김 (페이드인 효과) */
 .common-description,
 .common-text,
 .common-main-image {
@@ -71,7 +71,7 @@
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* ✅ 스크롤 또는 로딩 후 나타나는 효과 */
+/*  스크롤 또는 로딩 후 나타나는 효과 */
 .common-description.show,
 .common-text.show,
 .common-main-image.show {
@@ -97,11 +97,11 @@
 #main-h1 {
   font-size: 4rem;
   font-weight: bold;
-  color: #ffffff; /* ✅ 흰색으로 변경 */
+  color: #ffffff; /*  흰색으로 변경 */
 }
 
 
-/* ✅ 반응형 스타일 적용 */
+/*  반응형 스타일 적용 */
 
 /* (1) 태블릿 (768px~1024px) */
 @media (max-width: 1024px) {
