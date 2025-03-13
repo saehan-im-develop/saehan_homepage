@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "../mainCssFile/NewFuture.module.scss";
-import img1 from "../assets/Areal/highback.png";
-import img2 from "../assets/Areal/plusback.jpg";
-import img3 from "../assets/Areal/plus1.jpg";
+import img1 from "@/assets/Areal/highback.png";
+import img2 from "@/assets/Areal/plusback.jpg";
+import img3 from "@/assets/Areal/plus1.jpg";
 
 const NewFuture = () => {
   const [hovered, setHovered] = useState(null);

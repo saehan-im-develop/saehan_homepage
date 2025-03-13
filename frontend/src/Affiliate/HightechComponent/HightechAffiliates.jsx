@@ -1,9 +1,9 @@
 import styles from "../CommonCSS/HoverEffect.module.scss"; //  SCSS 파일 import
 import React from "react";
-import img1 from "../../assets/Areal/high/h11.jpg";
-import img2 from "../../assets/Areal/high/h22.jpg";
-import img3 from "../../assets/Areal/high/h33.JPG";
-import img4 from "../../assets/Areal/high/h44.JPG";
+import img1 from "@/assets/Areal/high/h11.jpg";
+import img2 from "@/assets/Areal/high/h22.jpg";
+import img3 from "@/assets/Areal/high/h33.JPG";
+import img4 from "@/assets/Areal/high/h44.JPG";
 
 
 function HoverEffect() {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../CEO/CEOMain.css";
-import image from "../../assets/kim2.png";
-import backgroundImage from "../../assets/011.jpg"; // ✅ 추가된 상단 배경 이미지
+import image from "@/assets/kim2.png";
+import backgroundImage from "@/assets/011.jpg"; // ✅ 추가된 상단 배경 이미지
 
 function CEOMain() {
   const [isVisible, setIsVisible] = useState(false);

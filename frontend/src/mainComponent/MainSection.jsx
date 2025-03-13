@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import NewFuture from "./NewFuture";
 import "../mainCssFile/MainSection.css";
 import ContactSection from "./ContactSection";
-import mainImage1 from "../assets/back1.jpg";
-import mainImage2 from "../assets/back2.jpg";
-import mainImage3 from "../assets/back3.jpg";
-import mainImage4 from "../assets/back4.jpg";
-import section2Image from "../assets/004.jpg";
-import section6Image from "../assets/007.jpg";
+import mainImage1 from "@/assets/back1.jpg";
+import mainImage2 from "@/assets/back2.jpg";
+import mainImage3 from "@/assets/back3.jpg";
+import mainImage4 from "@/assets/back4.jpg";
+import section2Image from "@/assets/004.jpg";
+import section6Image from "@/assets/007.jpg";
 
 const images = [mainImage1, mainImage2, mainImage3, mainImage4];
 

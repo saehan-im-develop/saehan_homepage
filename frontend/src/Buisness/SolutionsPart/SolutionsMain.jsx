@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Solutions.css';
 import StepComponent from './StepComponent';
-import ContactSection from "../../mainComponent/ContactSection";
+import ContactSection from "@/mainComponent/ContactSection";
 import SolutionsIntro from './SolutionsIntro';
-import img1 from "../../assets/solutions/sol1.png"
-import img2 from "../../assets/solutions/sol2.png"
-import img3 from "../../assets/solutions/sol3.png"
+import img1 from "@/assets/solutions/sol1.png"
+import img2 from "@/assets/solutions/sol2.png"
+import img3 from "@/assets/solutions/sol3.png"
 
 const stepsData = [
   {

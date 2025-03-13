@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../CommonCSS/CommonMain.css";
-import bgImage from "../../assets/aff/global1.jpg"; // 개별 배경 이미지 추가
+import bgImage from "@/assets/aff/global1.jpg"; // 개별 배경 이미지 추가
 
 function GlobalMain() {
   const [isLoaded, setIsLoaded] = useState(false);

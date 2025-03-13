@@ -5,9 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "../DicCssFile/News.module.scss";
-import news1 from "../../assets/Areal/news/n1.png";
-import news2 from "../../assets/Areal/news/n2.png";
-import news3 from "../../assets/Areal/news/n3.png";
+import news1 from "@/assets/Areal/news/n1.png";
+import news2 from "@/assets/Areal/news/n2.png";
+import news3 from "@/assets/Areal/news/n3.png";
 
 const newsData = [
   {

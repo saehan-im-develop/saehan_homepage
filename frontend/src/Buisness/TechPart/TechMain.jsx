@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./TechMain.css";
-import tech1 from '../../assets/tech/tech1.png';
-import tech2 from '../../assets/tech/tech2.png';
-import tech3 from '../../assets/tech/tech3.png';
-import tech4 from '../../assets/tech/tech4.png';
+import tech1 from '@/assets/tech/tech1.png';
+import tech2 from '@/assets/tech/tech2.png';
+import tech3 from '@/assets/tech/tech3.png';
+import tech4 from '@/assets/tech/tech4.png';
 
 const techSections = [
   {
