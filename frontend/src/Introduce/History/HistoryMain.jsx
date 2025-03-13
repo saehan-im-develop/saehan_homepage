@@ -3,7 +3,7 @@ import "../History/HistoryMain.css";
 import historyImage1 from "@/assets/historyimage1.png";
 import historyImage2 from "@/assets/historyimage2.png";
 import img1 from "@/assets/mainImage.png";
-import img2 from "@/assets/plusMainImage.png";
+import img2 from "@/assets/PlusMainImage.png";
 
 const historyData = [
   {
