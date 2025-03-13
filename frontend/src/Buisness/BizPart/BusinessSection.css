@@ -1,11 +1,4 @@
 /* 🔹 기본 스타일 */
-/* 🔹 배경 이미지 스타일 */
-.business-section {
-  text-align: center;
-  padding: 50px 20px;
-  background: white; /* 기존 배경 유지 */
-}
-
 .business-header {
   position: relative;
   width: 100%;
@@ -20,6 +13,12 @@
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 10px rgba(148, 149, 151, 0.5);
   text-align: center;
+}
+/* 🔹 배경 이미지 스타일 */
+.business-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: white; /* 기존 배경 유지 */
 }
 
 .business-header::before {

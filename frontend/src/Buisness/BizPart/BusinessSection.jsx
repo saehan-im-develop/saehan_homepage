@@ -4,8 +4,6 @@ import biz1 from '../../assets/biz/biz1.png';
 import biz2 from '../../assets/biz/biz2.png';
 import biz3 from '../../assets/biz/biz3.png';
 import biz4 from '../../assets/biz/biz4.png';
-import biz5 from '../../assets/biz/biz5.png';
-import biz6 from '../../assets/biz/biz6.png';
 
 const businessAreas = [
   {
@@ -28,16 +26,7 @@ const businessAreas = [
     description: '각종 부품 생산 및 조립 (전자, 자동차 부품 등)',
     image: biz4,
   },
-  {
-    title: '품질 관리 및 인증 (Quality Control & Certification)',
-    description: 'ISO 및 국제 인증 (정밀 검사, 공정 개선)',
-    image: biz5,
-  },
-  {
-    title: '글로벌 비즈니스 및 고객 지원 (Customer Support)',
-    description: '해외 파트너십 및 고객 지원 서비스',
-    image: biz6,
-  },
+
 ];
 
 const BusinessSection = () => {
