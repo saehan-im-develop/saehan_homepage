@@ -206,17 +206,6 @@
   margin-bottom: 20px;
 }
 
-/* 🔹 새로운 미래 컨테이너 */
-.new-future-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 200px;
-  margin-bottom: 50px;
-  padding-bottom: 50px;
-  background-color: #e9f2ff;
-}
-
 /* 이미지 래퍼 */
 .image-wrapper {
   position: relative;
@@ -229,21 +218,6 @@
   cursor: pointer;
 }
 
-/* 이미지 스타일 */
-.new-future-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  filter: brightness(50%);
-}
-
-/* 🔹 마우스를 올렸을 때 원래 색상 복원 */
-.image-wrapper:hover .new-future-image {
-  filter: brightness(100%);
-  transform: scale(1.05);
-}
 
 
 /* 🔹 이미지 위 텍스트 스타일 */
@@ -257,23 +231,6 @@
   font-weight: bold;
   z-index: 2;
 }
-
-/* 🔹 이미지 호버 효과 */
-.new-future-image:hover {
-  transform: scale(1.05);
-  opacity: 0.8;
-}
-
-/* 새로운 미래 텍스트 */
-.new-future-text {
-  font-size: 3rem;
-  font-weight: 100;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #222;
-  line-height: 1.4;
-}
-
 /* 이미지 그리드 (가로 배열 유지) */
 .image-grid {
   display: flex;
@@ -368,17 +325,6 @@
     text-align: center;
   }
 
-  .new-future-container {
-    margin-top: 150px;
-  }
-  
-  /* 🔹 이미지 및 카드 요소 */
-  .new-future-image {
-    width: 100%;
-    /* 모바일에서는 전체 너비 사용 */
-    max-width: 500px;
-    height: auto;
-  }
 
   /* 🔹 이미지 그리드 (스크롤 가능하게 변경) */
   .image-grid {
@@ -414,14 +360,6 @@
     padding: 30px 10px;
   }
 
-  .new-future-container {
-    margin-top: 100px;
-  }
-
-  /* 🔹 새로운 미래 텍스트 */
-  .new-future-text {
-    font-size: 2rem;
-  }
 
   /* 🔹 사업 부문 소개 텍스트 크기 조정 */
   #business-intro {

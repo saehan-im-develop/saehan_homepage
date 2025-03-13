@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../CommonCSS/CommonProduct.css";
-import img1 from "../../assets/Areal/global/gl1.jpg"; // 김치냉장고 부품 이미지
-import img2 from "../../assets/Areal/global/gl2.jpg"; // 김치냉장고 부품 이미지
-import img3 from "../../assets/Areal/global/gl3.jpg"; // 김치냉장고 부품 이미지
+import img1 from "../../assets/Areal/global/gl1.jpg";
+import img2 from "../../assets/Areal/global/gl2.jpg";
+import img3 from "../../assets/Areal/global/gl3.jpg";
 
 function GlobalProduct() {
   const products = [
@@ -42,10 +42,9 @@ function GlobalProduct() {
   const ref = useRef(null);
 
   useEffect(() => {
-    // 페이지가 로드되면 자동으로 fade-in 효과 실행
     setTimeout(() => {
       setIsVisible(true);
-    }, 100); // 0.1초 후 자동으로 페이드인
+    }, 100); 
 
   }, []);
 

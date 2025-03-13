@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import NewFuture from "./NewFuture";
 import "../mainCssFile/MainSection.css";
 import ContactSection from "./ContactSection";
 import mainImage1 from "../assets/back1.jpg";
@@ -83,34 +84,7 @@ const MainSection = () => {
           </div>
         </div>
       </section>
-
-      {/* 🔹 새로운 미래 이미지 및 텍스트 */}
-      <div className="new-future-container">
-        <h3 className="new-future-text">
-          <span className="sehan-underline">새한그룹</span>.<br />
-          새한에 대해서.
-        </h3>
-        <ul className="image-grid">
-          <li className="image-wrapper" onClick={() => navigate("/vision")}>
-            <img src={section6Image} alt="비전 및 이념" className="new-future-image hover-effect" />
-            <span className="image-text">비전 및 이념</span>
-          </li>
-          <li className="image-wrapper" onClick={() => navigate("/ceo")}>
-            <img src={section6Image} alt="CEO 인사말" className="new-future-image hover-effect" />
-            <span className="image-text">CEO 인사말</span>
-          </li>
-          <li className="image-wrapper" onClick={() => navigate("/history")}>
-            <img src={section6Image} alt="회사 연혁" className="new-future-image hover-effect" />
-            <span className="image-text">회사 연혁</span>
-          </li>
-          <li className="image-wrapper" onClick={() => navigate("/network")}>
-            <img src={section6Image} alt="네트워크" className="new-future-image hover-effect" />
-            <span className="image-text">네트워크</span>
-          </li>
-        </ul>
-      </div>
-
-
+      <NewFuture />
       <ContactSection />
       <div id="main-contact"></div>
     </div>
