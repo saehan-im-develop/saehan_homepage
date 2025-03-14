@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../CommonCSS/CommonMain.css";
-import bgImage from "@/assets/Areal/plusback.png"; // ✅ Plus 페이지 배경
+import bgImage from "@/assets/Areal/plus1.jpg"; // ✅ Plus 페이지 배경
 
 function PlusMain() {
   const [isLoaded, setIsLoaded] = useState(false);
