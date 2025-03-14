@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import NewFuture from "./NewFuture";
 import "../mainCssFile/MainSection.css";
 import ContactSection from "./ContactSection";
-import mainImage1 from "../assets/back1.jpg";
-import mainImage2 from "../assets/back2.jpg";
-import mainImage3 from "../assets/back3.jpg";
-import mainImage4 from "../assets/back4.jpg";
-import section2Image from "../assets/004.jpg";
-import section6Image from "../assets/007.jpg";
+import section2Image from "@/assets/back1.png"
+import mainImage1 from "@/assets/back1.png";
+import mainImage2 from "@/assets/back2.jpg";
+import mainImage3 from "@/assets/back3.jpg";
+import mainImage4 from "@/assets/back4.jpg";
+import AFMain from "./AFMain";
 
 const images = [mainImage1, mainImage2, mainImage3, mainImage4];
 
@@ -65,14 +65,12 @@ const MainSection = () => {
         </div>
 
         <div className="text-overlay">
-          <p>확실한 기술력</p>
-          <p>철저한 품질관리</p>
-          <p>새한그룹</p>
+          <p>확실한 기술력과</p>
+          <p>철저한 품질관리로</p>
+          <p>앞서가는 새한그룹</p>
         </div>
       </section>
 
-
-      {/* 🔹 제조 산업 섹션 (수정됨) */}
       <section className="sub-section">
         <div className="content-container">
           <div className="image-container">
@@ -85,6 +83,7 @@ const MainSection = () => {
         </div>
       </section>
       <NewFuture />
+      <AFMain />
       <ContactSection />
       <div id="main-contact"></div>
     </div>

@@ -19,9 +19,9 @@ function GlobalMain() {
       <div className="common-overlay"></div> {/* 배경 위 오버레이 추가 */}
       <div className={`common-description ${isLoaded ? "show" : ""}`}>
         <div className={`common-text ${isLoaded ? "show" : ""}`}>
-          <h1 id="main-h1">SAEHAN GLOBAL</h1>
+          <h1 id="main-h1">SM 케미칼</h1>
           <p>
-            (유)새한글로벌은 <strong>고객 감동과 품질 혁신</strong>을 최우선으로 하는 <br />
+            (유)SM케미칼은 <strong>고객 감동과 품질 혁신</strong>을 최우선으로 하는 <br />
             종합 제조 및 기술 솔루션 기업입니다.<br />
 
             <br />

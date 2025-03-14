@@ -28,7 +28,7 @@ const Header = () => {
         {/* 로고 클릭 시 handleLogoClick 실행 */}
         <Link to="/" className="logo-container" onClick={handleLogoClick}>
           <img src={logo} alt="SAEHAN GROUP" className="logo" />
-          <h1 id="saehan-group">SAEHAN</h1>
+          <h1 id="saehan-group">SAEHAN GROUP</h1>
         </Link>
 
         {/* ✅ 햄버거 버튼 추가 */}
