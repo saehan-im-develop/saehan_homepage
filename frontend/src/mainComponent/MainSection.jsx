@@ -17,17 +17,17 @@ const MainSection = () => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // 다음 슬라이드 이동 (즉각 변경)
+  // 다음 슬라이드 이동
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // 이전 슬라이드 이동 (즉각 변경)
+  // 이전 슬라이드 이동
   const goToPrevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-  // 네비게이션 도트 클릭 시 이동 (즉각 변경)
+  // 네비게이션 도트 클릭 시 이동
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
@@ -36,19 +36,19 @@ const MainSection = () => {
     <div ref={scrollRef}>
       {/* 🔹 메인 섹션 */}
       <section className="main-section">
+        {/* 🔹 슬라이드 이미지 컨테이너 */}
         <div className="slider-container">
-          {/* 🔹 슬라이드 */}
           <div className="slider" style={{ display: "flex", transform: `translateX(-${currentIndex * 100}vw)`, transition: "none" }}>
             {images.map((img, index) => (
               <img key={index} src={img} alt={`메인 이미지 ${index}`} className="slide-image" />
             ))}
           </div>
+        </div>
 
+        {/* 🔹 버튼 & 네비게이션을 아래쪽에 배치하는 컨테이너 */}
+        <div className="controls-container">
           {/* 🔹 좌우 버튼 */}
-          <button className="slider-button left" onClick={goToPrevSlide}>◀</button>
-          <button className="slider-button right" onClick={goToNextSlide}>▶</button>
-
-          {/* 🔹 네비게이션 바 */}
+          <button className="slider-button" onClick={goToPrevSlide}>◀ 이전</button>
           <div className="slider-nav">
             {images.map((_, index) => (
               <span
@@ -58,6 +58,7 @@ const MainSection = () => {
               ></span>
             ))}
           </div>
+          <button className="slider-button" onClick={goToNextSlide}>다음 ▶</button>
         </div>
 
         {/* 🔹 텍스트 오버레이 */}

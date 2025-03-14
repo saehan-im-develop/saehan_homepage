@@ -9,10 +9,10 @@ const AFMain = () => {
   const [hovered, setHovered] = useState(null);
 
   const data = [
-    { img: img1, name: "IM", text: "새한 아이엠", link: "/im" },
-    { img: img2, name: "HIGH", text: "새한 하이테크", link: "/hightech" },
-    { img: img4, name: "PLUS", text: "새한 플러스", link: "/plus" },
-    { img: img3, name: "GLOBAL", text: "SM 케미칼", link: "/global" }
+    { img: img1, name: "Jason Response", text: "새한 아이엠", link: "/im" },
+    { img: img2, name: "Max Conversion", text: "새한 하이테크", link: "/hightech" },
+    { img: img4, name: "Parsley Montana", text: "새한 플러스", link: "/plus" },
+    { img: img3, name: "plus", text: "SM 케미칼", link: "/global" }
   ];
 
   const handleClick = (link) => {
