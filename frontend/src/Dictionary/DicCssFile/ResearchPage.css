@@ -3,7 +3,7 @@ html {
   }
 
 /* 🟦 배경 이미지 고정 */
-.hero-section {
+.hero-section-re {
     position: relative;
     width: 100vw;
     height: 60vh; /* 배경 높이 */

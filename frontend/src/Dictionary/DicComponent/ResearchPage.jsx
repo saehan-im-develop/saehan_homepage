@@ -53,7 +53,7 @@ const ResearchPage = () => {
   return (
     <div>
       {/* 🟦 고정 배경 섹션 */}
-      <div className="hero-section">
+      <div className="hero-section-re">
         <h1 className="hero-title">연구 개발</h1>
       </div>
 
