@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../CommonCSS/CommonProduct.css";
-import img1 from "../../assets/Areal/plus/pp1.jpg"; // 김치냉장고 부품
-import img2 from "../../assets/Areal/plus/pp2.jpg"; // 냉장고 선반류
-import img3 from "../../assets/Areal/plus/pp3.jpg"; // 산업용 플라스틱 부품
+import img1 from "@/assets/Areal/plus/pp1.jpg"; // 김치냉장고 부품
+import img2 from "@/assets/Areal/plus/pp2.jpg"; // 냉장고 선반류
+import img3 from "@/assets/Areal/plus/pp3.jpg"; // 산업용 플라스틱 부품
 
 function PlusProduct() {
   const products = [

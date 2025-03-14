@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import './BusinessSection.css';
-import biz1 from '../../assets/biz/biz1.png';
-import biz2 from '../../assets/biz/biz2.png';
-import biz3 from '../../assets/biz/biz3.png';
-import biz4 from '../../assets/biz/biz4.png';
+import biz1 from '@/assets/biz/biz1.png';
+import biz2 from '@/assets/biz/biz2.png';
+import biz3 from '@/assets/biz/biz3.png';
+import biz4 from '@/assets/biz/biz4.png';
 
 const businessAreas = [
   {

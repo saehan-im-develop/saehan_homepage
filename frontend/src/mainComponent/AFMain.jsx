@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "../mainCssFile/NewFuture.module.scss";
-import img1 from "../assets/Areal/highback.png";
-import img2 from "../assets/Areal/plusback.jpg";
-import img3 from "../assets/Areal/plus1.jpg";
+import img1 from "@/assets/Areal/IM.jpg";
+import img2 from "@/assets/Areal/high/h44.JPG";
+import img3 from "@/assets/Areal/SM1.jpg";
+import img4 from "@/assets/Areal/plus1.jpg"
 
 const AFMain = () => {
   const [hovered, setHovered] = useState(null);
@@ -10,8 +11,8 @@ const AFMain = () => {
   const data = [
     { img: img1, name: "IM", text: "새한 아이엠", link: "/im" },
     { img: img2, name: "HIGH", text: "새한 하이테크", link: "/hightech" },
-    { img: img3, name: "PLUS", text: "새한 플러스", link: "/plus" },
-    { img: img3, name: "GLOBAL", text: "새한 글로벌", link: "/global" }
+    { img: img4, name: "PLUS", text: "새한 플러스", link: "/plus" },
+    { img: img3, name: "GLOBAL", text: "SM 케미칼", link: "/global" }
   ];
 
   const handleClick = (link) => {

@@ -5,7 +5,7 @@ import AffDropdownMenu from "../dropDownComponent/AffDropdownMenu";
 import IntroDropdownMenu from "../dropDownComponent/IntroDropdownMenu";
 import BizDropdownMenu from "../dropDownComponent/BizDropdownMenu";
 import DataDropdownMenu from "../dropDownComponent/DataDropdownMenu";
-import logo from "../assets/temp_logo.png";
+import logo from "@/assets/temp_logo.png";
 
 const Header = () => {
   const location = useLocation();

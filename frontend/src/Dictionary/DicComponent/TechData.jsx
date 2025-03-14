@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../DicCssFile/TechData.css"
-import img1 from "../../assets/docu/tech01.png"
+import img1 from "@/assets/docu/tech01.png"
 
 const techDataList = [
   {

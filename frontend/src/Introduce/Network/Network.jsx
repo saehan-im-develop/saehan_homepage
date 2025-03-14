@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import networkData from "./NetworkData";
 import "../Network/Network.css";
-import backgroundImage from "../../assets/010.jpg"; // ✅ 추가된 배경 이미지
+import backgroundImage from "@/assets/010.jpg"; // ✅ 추가된 배경 이미지
 
 const Network = () => {
   const [visible, setVisible] = useState(false);

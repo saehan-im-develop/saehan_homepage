@@ -1,10 +1,10 @@
 import styles from "../CommonCSS/HoverEffect.module.scss"; //  SCSS 파일 import
 import React from "react";
-import img1 from "../../assets/Areal/plus/p1.jpg";
-import img2 from "../../assets/Areal/plus/p2.JPG";
-import img3 from "../../assets/Areal/plus/p3.JPG";
-import img4 from "../../assets/Areal/plus/p4.JPG";
-import img5 from "../../assets/Areal/plus/safe.JPG";
+import img1 from "@/assets/Areal/plus/p1.jpg";
+import img2 from "@/assets/Areal/plus/p2.JPG";
+import img3 from "@/assets/Areal/plus/p3.JPG";
+import img4 from "@/assets/Areal/plus/p4.JPG";
+import img5 from "@/assets/Areal/plus/safe.JPG";
 
 function HoverEffect() {
   return (

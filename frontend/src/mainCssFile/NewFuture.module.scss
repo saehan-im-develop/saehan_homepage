@@ -38,16 +38,15 @@
   white-space: nowrap;
   padding-bottom: 10px;
   max-width: 90vw;
-  // background-color: white;
   border-radius: 10px;
 }
 
 .textBox {
   position: absolute;
   bottom: 20px; /* 기존 bottom 위치에서 위로 올림 */
-  left: 20%;
+  left: 22%;
   transform: translateX(-50%);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #ffffff;
 }

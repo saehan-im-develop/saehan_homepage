@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../CommonCSS/CommonProduct.css";
-import img1 from "../../assets/Areal/global/gl1.jpg";
-import img2 from "../../assets/Areal/global/gl2.jpg";
-import img3 from "../../assets/Areal/global/gl3.jpg";
+import img1 from "@/assets/Areal/global/gl1.jpg";
+import img2 from "@/assets/Areal/global/gl2.jpg";
+import img3 from "@/assets/Areal/global/gl3.jpg";
 
 function GlobalProduct() {
   const products = [

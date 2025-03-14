@@ -1,9 +1,9 @@
 import styles from "../CommonCSS/HoverEffect.module.scss"; //  SCSS 파일 import
 import React from "react";
-import img1 from "../../assets/Areal/global/sm1.jpg";
-import img2 from "../../assets/Areal/global/sm2.jpg";
-import img3 from "../../assets/Areal/global/sm3.JPG";
-import img4 from "../../assets/Areal/global/sm4.jpg";
+import img1 from "@/assets/Areal/global/sm1.jpg";
+import img2 from "@/assets/Areal/global/sm2.jpg";
+import img3 from "@/assets/Areal/global/sm3.JPG";
+import img4 from "@/assets/Areal/global/sm4.jpg";
 
 function HoverEffect() {
   return (

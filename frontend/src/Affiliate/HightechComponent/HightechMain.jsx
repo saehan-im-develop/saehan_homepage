@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../CommonCSS/CommonMain.css";
-import bgImage from "../../assets/Areal/highback.png"; //  하이테크 페이지 배경
+import bgImage from "@/assets/Areal/highback1.jpg"; //  하이테크 페이지 배경
 
 function HightechMain() {
   const [isLoaded, setIsLoaded] = useState(false);

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../CommonCSS/CommonProduct.css"
-import img1 from "../../assets/aff/temp1.png"
-import img2 from "../../assets/aff/temp2.png"
-import img3 from "../../assets/aff/temp3.png"
+import img1 from "@/assets/aff/temp1.png"
+import img2 from "@/assets/aff/temp2.png"
+import img3 from "@/assets/aff/temp3.png"
 
 function GoProduct() {
   const products = [

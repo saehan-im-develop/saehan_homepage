@@ -1,9 +1,9 @@
 // src/Business/Solutions/SolutionsIntro.jsx
 import React from "react";
 import "./Solutions.css";
-import factoryIcon from "../../assets/solutions/solution1.png"
-import customerIcon from "../../assets/solutions/solution2.png"
-import consultingIcon from "../../assets/solutions/solution3.png"
+import factoryIcon from "@/assets/solutions/solution1.png"
+import customerIcon from "@/assets/solutions/solution2.png"
+import consultingIcon from "@/assets/solutions/solution3.png"
 const SolutionsIntro = () => {
   return (
     <div className="solutions-intro">
