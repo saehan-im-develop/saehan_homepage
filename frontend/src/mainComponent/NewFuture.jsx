@@ -1,4 +1,4 @@
-import { useRouter } from "next/router"; // ✅ Next.js 라우터 사용
+import { useNavigate } from "react-router-dom"; // ✅ React Router 사용
 import React, { useState } from "react";
 import styles from "../mainCssFile/NewFuture.module.scss";
 import img1 from "@/assets/Areal/highback.png";
@@ -7,7 +7,7 @@ import img3 from "@/assets/Areal/plus1.jpg";
 
 const NewFuture = () => {
   const [hovered, setHovered] = useState(null);
-  const router = useRouter(); // ✅ Next.js useRouter 사용
+  const navigate = useNavigate(); // ✅ React Router로 변경
 
   const data = [
     { img: img1, name: "Max Conversion", text: "비전 및 이념", link: "/vision" },
@@ -17,7 +17,7 @@ const NewFuture = () => {
   ];
 
   const handleClick = (link) => {
-    router.push(link); // ✅ Next.js에서는 push() 사용
+    navigate(link); // ✅ React Router 방식으로 변경
   };
 
   return (
