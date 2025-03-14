@@ -12,17 +12,18 @@ const networkData = [
     ]
   },
   {
+    name: "새한글로벌",
+    locations: [
+      { type: "제조센터", address: "A 전남 장성군 동화면 가정길 8", email: [] }
+    ]
+  },
+  {
     name: "새한플러스",
     locations: [
       { type: "제조센터", address: "A 광주 광산구 우산천변길 63", email: ["shdudrms741017@saehangroup.com"] }
     ]
   },
-  {
-    name: "새한글로벌",
-    locations: [
-      { type: "제조센터", address: "A 전남 장성군 동화면 가정길 8", email: [] }
-    ]
-  }
+
 ];
 
 export default networkData;
