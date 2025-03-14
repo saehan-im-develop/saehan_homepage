@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"; // ✅ Next.js 라우터 사용
 import React, { useState } from "react";
 import styles from "../mainCssFile/NewFuture.module.scss";
 import img1 from "@/assets/Areal/highback.png";
@@ -6,6 +7,7 @@ import img3 from "@/assets/Areal/plus1.jpg";
 
 const NewFuture = () => {
   const [hovered, setHovered] = useState(null);
+  const router = useRouter(); // ✅ Next.js useRouter 사용
 
   const data = [
     { img: img1, name: "Max Conversion", text: "비전 및 이념", link: "/vision" },
@@ -15,7 +17,7 @@ const NewFuture = () => {
   ];
 
   const handleClick = (link) => {
-    window.location.href = link; // ✅ 클릭 시 해당 링크로 이동
+    router.push(link); // ✅ Next.js에서는 push() 사용
   };
 
   return (
@@ -30,8 +32,8 @@ const NewFuture = () => {
             className={`${styles.snip1368} ${hovered === index ? styles.hover : ""}`}
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(null)}
-            onClick={() => handleClick(item.link)} // ✅ 클릭 이벤트 추가
-            style={{ cursor: "pointer" }} // ✅ 클릭 가능한 요소처럼 보이도록 설정
+            onClick={() => handleClick(item.link)} // ✅ 클릭 이벤트 수정
+            style={{ cursor: "pointer" }}
           >
             <img src={item.img} alt={item.name} />
             <figcaption>
