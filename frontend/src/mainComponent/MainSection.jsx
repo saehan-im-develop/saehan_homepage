@@ -10,7 +10,7 @@ import mainImage3 from "@/assets/back3.jpg";
 import mainImage4 from "@/assets/back4.jpg";
 import AFMain from "./AFMain";
 
-const images = [mainImage1, mainImage2, mainImage3, mainImage4];
+const images = [mainImage3, mainImage2, mainImage1, mainImage4];
 
 const MainSection = () => {
   const scrollRef = useRef(null);
@@ -71,15 +71,20 @@ const MainSection = () => {
 
       <section className="sub-section">
         <div className="content-container">
+          {/* 이미지 컨테이너 */}
           <div className="image-container">
-            <img src={section2Image} alt="제조 산업" className="section1-image" />
-            <div className="text-overlay-sub">
+            <img src={section2Image} alt="제조 산업" className="section2-image" />
+          </div>
+
+          {/* 텍스트 컨테이너 */}
+          <div className="text-container">
+            <h2 className="large-text">
               <p>제조산업의 미래를</p> 
-              <p>선도하는 리더</p>
-            </div>
+            <p>선도하는 리더</p></h2>
           </div>
         </div>
       </section>
+
       <NewFuture />
       <AFMain />
       <ContactSection />

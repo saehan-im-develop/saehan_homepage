@@ -18,7 +18,7 @@ const NewFuture = () => {
   ];
 
   const handleClick = (link) => {
-    navigate(link); // ✅ React Router 방식으로 변경
+    navigate(link); 
   };
 
   return (
@@ -33,7 +33,7 @@ const NewFuture = () => {
             className={`${styles.snip1368} ${hovered === index ? styles.hover : ""}`}
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(null)}
-            onClick={() => handleClick(item.link)} // ✅ 클릭 이벤트 수정
+            onClick={() => handleClick(item.link)}
             style={{ cursor: "pointer" }}
           >
             <img src={item.img} alt={item.name} />

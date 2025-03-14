@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ React Router 사용
 import styles from "../mainCssFile/NewFuture.module.scss";
 import img1 from "@/assets/Areal/IM.jpg";
 import img2 from "@/assets/Areal/high/h44.JPG";
@@ -7,6 +8,7 @@ import img4 from "@/assets/Areal/plus1.jpg"
 
 const AFMain = () => {
   const [hovered, setHovered] = useState(null);
+  const navigate = useNavigate(); // ✅ React Router로 변경
 
   const data = [
     { img: img1, name: "Jason Response", text: "새한 아이엠", link: "/im" },
@@ -16,7 +18,7 @@ const AFMain = () => {
   ];
 
   const handleClick = (link) => {
-    window.location.href = link; //  클릭 시 해당 링크로 이동
+    navigate(link); 
   };
 
   return (

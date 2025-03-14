@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 96vh;
 }
 
 /* 세련된 배치를 위한 추가적인 조정 */
@@ -17,37 +17,32 @@
 
 /* 제조 산업 섹션 내부 컨테이너 */
 .content-container {
-  position: relative;
   display: flex;
-  justify-content: center;
-  /* 가로 방향 중앙 정렬 */
+  flex-direction: row; /* 가로 정렬 */
   align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  /* 컨테이너를 가운데 정렬 */
-  text-align: center;
-  /* 내부 텍스트 중앙 정렬 */
+  width: 100vw;
+  max-width: 1900px;
+  margin-top: 4%;
 }
-
 /* 텍스트 컨테이너 스타일 */
 .text-container {
-  flex: 1;
+  flex: 1; /* 오른쪽에 큰 글씨 배치 */
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  height: 100%;
-  position: relative;
+  padding-left: 40px; /* 이미지와 간격 추가 */
+}
+
+.large-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000 !important;
+  line-height: 1.3;
 }
 
 /* 이미지 컨테이너 */
 .image-container {
-  position: relative !important;
-  width: 100%;
+  flex: 1; /* 이미지가 왼쪽에 배치 */
   display: flex;
-  justify-content: center;
-  align-items: flex-start; /* 중앙 정렬 대신 위쪽 정렬 */
+  justify-content: center; /* 왼쪽 정렬 */
 }
 
 
@@ -114,6 +109,7 @@
   height: 100vh;
   object-fit: cover;
   filter: brightness(70%);
+  margin-top: 1%;
 }
 
 .overlay {
@@ -192,27 +188,22 @@
 }
 
 
-/* 제조 산업 섹션 이미지 */
-.section1-image {
-  position: relative;
+.section2-image {
   width: 100vw;
-  max-height: 100vh;
+  height: 80vh;
+  max-width: 800px; /* 이미지 크기 제한 */
   object-fit: cover;
 }
 
 /* 제조 산업 섹션 조정 */
+/* 🔹 전체 레이아웃 설정 */
 .sub-section {
-  position: relative;
-  width: 100%;
-  /* min-height: 40vh; */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  width: 100%;
+  padding: 50px 0;
   background-color: #ffffff;
-  padding: 20px 0;
-  margin-top: 5%;
 }
 
 
