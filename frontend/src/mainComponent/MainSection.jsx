@@ -48,7 +48,7 @@ const MainSection = () => {
         {/* 🔹 버튼 & 네비게이션을 아래쪽에 배치하는 컨테이너 */}
         <div className="controls-container">
           {/* 🔹 좌우 버튼 */}
-          <button className="slider-button" onClick={goToPrevSlide}>◀ 이전</button>
+          <button className="slider-button" onClick={goToPrevSlide}>≺</button>
           <div className="slider-nav">
             {images.map((_, index) => (
               <span
@@ -58,7 +58,7 @@ const MainSection = () => {
               ></span>
             ))}
           </div>
-          <button className="slider-button" onClick={goToNextSlide}>다음 ▶</button>
+          <button className="slider-button" onClick={goToNextSlide}>≻</button>
         </div>
 
         {/* 🔹 텍스트 오버레이 */}

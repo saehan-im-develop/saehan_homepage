@@ -20,9 +20,11 @@
   display: flex;
   flex-direction: row; /* 가로 정렬 */
   align-items: center;
-  width: 100vw;
-  max-width: 1900px;
+  /* width: 100vw; */
+  max-width: 2000px;
   margin-top: 4%;
+  margin-left: 3%;
+  gap: 40px;
 }
 /* 텍스트 컨테이너 스타일 */
 .text-container {
@@ -63,11 +65,11 @@
 
 /* 🔹 좌우 버튼 스타일 */
 .slider-button {
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
   border: none;
   padding: 10px 15px;
-  font-size: 16px;
+  font-size: 30px;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -76,7 +78,7 @@
 .slider-button.right { right: 10px; }
 
 .slider-button:hover {
-  background: rgba(0, 0, 0, 1);
+  background: rgb(140, 171, 189);
 }
 
 
@@ -189,9 +191,10 @@
 
 
 .section2-image {
-  width: 100vw;
+
+  width: 100%;
   height: 80vh;
-  max-width: 800px; /* 이미지 크기 제한 */
+  max-width: 1000px; /* 이미지 크기 제한 */
   object-fit: cover;
 }
 
@@ -201,7 +204,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   padding: 50px 0;
   background-color: #ffffff;
 }
