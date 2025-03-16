@@ -4,6 +4,7 @@ import img1 from "@/assets/Areal/high/h1.jpg"; // 김치냉장고 부품
 import img2 from "@/assets/Areal/high/h2.jpg"; // 냉장고 선반류
 import img3 from "@/assets/Areal/high/h3.jpg"; // 산업용 플라스틱 부품
 import img4 from "@/assets/Areal/high/h4.jpg"; // 세탁기 부품
+import img5 from "@/assets/Areal/high/h5.jpg"; // 세탁기 부품
 
 function HightechProduct() {
   const products = [
@@ -45,6 +46,16 @@ function HightechProduct() {
       category: ">HIPS< A4EE 1X1X1",
       give : "",
       image: img4,
+    },
+    {
+      name: "CASE ICE ROOM OUTER",
+      codeNO: "DA61-08171",
+      description:
+        "HOOHEOL CHO, 2020",
+      code: "RF9000A",
+      category: ">HIPS< A4EE 1X1X1",
+      give : "",
+      image: img5,
     }
   ];
 

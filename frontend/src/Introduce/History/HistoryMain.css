@@ -45,12 +45,15 @@
   margin-top: 20px;
 }
 
+
+
 /* 🔹 연혁 이미지 스타일 */
 .history-image {
   width: 100%;
   max-width: 1200px;
   height: auto;
   object-fit: contain;
+  margin-top: 5%;
 }
 
 /* 콘텐츠 박스 */

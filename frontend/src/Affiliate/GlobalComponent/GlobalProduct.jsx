@@ -1,40 +1,39 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../CommonCSS/CommonProduct.css";
-import img1 from "@/assets/Areal/global/gl1.jpg";
-import img2 from "@/assets/Areal/global/gl2.jpg";
-import img3 from "@/assets/Areal/global/gl3.jpg";
+import img1 from "@/assets/Areal/global/ng1.jpg"
+import img2 from "@/assets/Areal/global/ng2.jpg"
+import img3 from "@/assets/Areal/global/ng3.jpg"
+import img4 from "@/assets/Areal/global/ng4.jpg"
 
 function GlobalProduct() {
   const products = [
     {
-      name: "",
-      codeNO: "",
-      description:
-        "",
-      code: "",
-      category: "",
-      give : "",
+      name: "CASE DETERGENT",
+      codeNO: "DC61-05908AX002",
+      model: "WD8000D",
+      category: ">PP+TD30%< A4DU 1X2X1-1",
       image: img1,
     },
     {
-      name: "",
-      codeNO: "",
-      description:
-        "",
-      code: "",
-      category: "",
-      give : "",
+      name: "CASE PUMP",
+      codeNO: "DC61-05323X001",
+      model: "WF8000AK",
+      category: ">PP< DJ98 1X1X1",
       image: img2,
     },
     {
-      name: "",
-      codeNO: "",
-      description:
-        "",
-      code: "",
-      category: "",
-      give : "",
+      name: "CASE RINSE",
+      codeNO: "DC61-05907AX001",
+      model: "WD8000D",
+      category: ">PP+TD30%< A4DU 1X2X1-1",
       image: img3,
+    },
+    {
+      name: "GUARD FAN",
+      codeNO: "DB63-04307X001",
+      model: "AC9100A-PJT",
+      category: ">PP< A45T 1X1X1-1",
+      image: img4,
     },
   ];
 
@@ -56,11 +55,10 @@ function GlobalProduct() {
           <img src={product.image} alt={product.name} className="product-image" />
           <div className="product-info">
             <h3>{product.name}</h3>
-            {/* <p><strong>납품 업체:</strong> {product.give}</p>
-            <p className="product-eng-name">{product.code}</p>
+            {/* <p><strong>납품 업체:</strong> {product.give}</p> */}
+            <p className="product-eng-name">{product.model}</p>
             <p>{product.codeNO}</p>
-            <p>{product.description}</p>
-            <p>{product.category}</p> */}
+            <p>{product.category}</p>
           </div>
         </div>
       ))}
