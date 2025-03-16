@@ -30,7 +30,7 @@ const GlobalEquip = () => {
     return (
         <div className="equip-slider-container">
             <div className="section-title">
-                <h2>Equipment of SM CHEMICAL</h2>
+                <h2>Equipments of SM CHEMICAL</h2>
             </div>
             <Swiper
                 modules={[Pagination, Mousewheel]}

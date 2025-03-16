@@ -15,7 +15,6 @@ function SaehanGlobal() {
     <div>
       <GlobalMain />
       <GlobalEquip />
-      {/* <GlobalAffiliate /> */}
       <GlobalProduct />
     </div>
   );

@@ -13,7 +13,6 @@ const Footer = () => {
       <div className="footer-content">
         <p>© 2024 SAEHAN GROUP. All rights reserved.</p>
         <p>대표 : 김원만</p>
-        <hr />
 
         {/* 🔽 클릭하면 목록이 펼쳐짐 */}
         <p className="business-toggle" onClick={toggleBusinessInfo}>

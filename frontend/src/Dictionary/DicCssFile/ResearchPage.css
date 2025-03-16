@@ -1,13 +1,15 @@
 html {
     scroll-behavior: smooth;
-  }
+}
 
 /* 🟦 배경 이미지 고정 */
-.hero-section-re {
+.hero-section-docu {
     position: relative;
     width: 100vw;
-    height: 60vh; /* 배경 높이 */
-    background-image: url("../../assets/ai00.jpg"); /* 배경 이미지 */
+    height: 60vh;
+    /* 배경 높이 */
+    background-image: url("../../assets/Areal/devDocu/main.jpg");
+    /* 배경 이미지 */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -19,30 +21,85 @@ html {
     font-weight: bold;
 }
 
-.hero-title {
-    top: 20px;   /* 상단 여백 */
-    left: 30px;  /* 왼쪽 여백 */
-    background: none;  /* 배경 없애기 */
-    font-size: 4.5rem;  /* 글씨 크기 */
+.info-container {
+    flex: 1; /* ✅ 왼쪽 높이만큼 자동 확장 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+.certify-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #093064;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 80%;
+    margin: 40px auto;
+    border: none;
+    border-top: 2px solid #093064;
+}
+
+
+
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.hero-title-docu {
+    top: 20px;
+    /* 상단 여백 */
+    left: 30px;
+    /* 왼쪽 여백 */
+    background: none;
+    /* 배경 없애기 */
+    font-size: 4.5rem;
+    /* 글씨 크기 */
     font-weight: bold;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* 🟦 설명 섹션 */
-.content-section {
+.content-section-certify {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 50px 10%;
+    align-items: stretch;
+    /* ✅ 높이를 동일하게 맞춤 */
+    width: 60%;
+    margin: auto;
+    padding: 20px 0;
     background: #f9f9f9;
     gap: 20px;
 }
 
-.text-container {
+.left-container {
     flex: 1;
-    font-size: 1rem;
-    font-weight: bold;
-    
+    /* 왼쪽 영역 자동 확장 */
+    display: flex;
+    flex-direction: column;
+    /* ✅ 텍스트 + 이미지를 세로 배치 */
+}
+
+.text-container {
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .info-container {
@@ -81,17 +138,23 @@ html {
     }
 }
 
-@media (max-width: 1024px) { /* 패드(태블릿) 사이즈 대응 */
+@media (max-width: 1024px) {
+
+    /* 패드(태블릿) 사이즈 대응 */
     .content-section {
         flex-direction: column;
-        align-items: center; /* 내부 요소들을 가운데 정렬 */
+        align-items: center;
+        /* 내부 요소들을 가운데 정렬 */
         text-align: center;
     }
 
     .info-container {
-        width: 80%; /* 적절한 너비 설정 */
-        max-width: 600px; /* 최대 너비 설정 */
-        margin: 0 auto; /* 좌우 중앙 정렬 */
+        width: 80%;
+        /* 적절한 너비 설정 */
+        max-width: 600px;
+        /* 최대 너비 설정 */
+        margin: 0 auto;
+        /* 좌우 중앙 정렬 */
         border-left: none;
         border-top: 5px solid #093064;
     }
@@ -102,4 +165,3 @@ html {
         margin: 0 auto;
     }
 }
-

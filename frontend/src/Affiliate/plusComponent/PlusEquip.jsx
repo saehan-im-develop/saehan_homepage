@@ -1,20 +1,23 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
-import img1 from "@/assets/Areal/high/nh1.jpg";
-import img2 from "@/assets/Areal/high/nh2.png";
-import img3 from "@/assets/Areal/high/nh3.png";
-import img4 from "@/assets/Areal/high/nh4.jpg";
-import img5 from "@/assets/Areal/high/nh5.jpg";
-import img6 from "@/assets/Areal/high/nh6.jpg";
-import img7 from "@/assets/Areal/high/nh7.png";
-import img8 from "@/assets/Areal/high/nh8.png";
-import img9 from "@/assets/Areal/high/nh9.png";
+import img1 from "@/assets/Areal/plus/np1.jpg";
+import img2 from "@/assets/Areal/plus/np2.jpg";
+import img3 from "@/assets/Areal/plus/np3.jpg";
+import img4 from "@/assets/Areal/plus/np4.JPG";
+import img5 from "@/assets/Areal/plus/np5.jpg";
+import img6 from "@/assets/Areal/plus/np6.png";
+import img7 from "@/assets/Areal/plus/np7.jpg";
+import img8 from "@/assets/Areal/plus/np8.jpg";
+import img9 from "@/assets/Areal/plus/np9.png";
+import img10 from "@/assets/Areal/plus/np10.jpg";
+import img11 from "@/assets/Areal/plus/np11.jpg";
+import img12 from "@/assets/Areal/plus/np12.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../CommonCSS/CommonEquip.css";
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
 
 // const SlideContent = ({ index }) => (
 //     <div className="equip-slide-content">
@@ -34,7 +37,7 @@ const PlusEquip = () => {
     return (
         <div className="equip-slider-container">
             <div className="section-title">
-                <h2>Equipment of Plus</h2>
+                <h2>Equipments of Plus</h2>
             </div>
             <Swiper
                 modules={[Pagination, Mousewheel]}

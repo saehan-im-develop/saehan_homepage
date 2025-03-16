@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PlusMain from "./PlusMain";
 import PlusProduct from "./PlusProduct";
+import PlusEquip from "./PlusEquip";
 
 
 function SaehanPlus() {
@@ -14,6 +15,7 @@ function SaehanPlus() {
   return (
     <div>
       <PlusMain />
+      <PlusEquip />
       <PlusProduct />
     </div>
   );

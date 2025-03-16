@@ -9,7 +9,7 @@
 
 .equip-slider-container {
     max-width: 1800px;
-    margin: 10% auto 0 auto; /* 변경: 좌우 중앙정렬을 위해 auto 설정 */
+    margin: 5% auto 0 auto; /* 변경: 좌우 중앙정렬을 위해 auto 설정 */
     width: 100%;
   }
   

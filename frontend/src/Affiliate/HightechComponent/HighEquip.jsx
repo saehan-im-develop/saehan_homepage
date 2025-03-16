@@ -34,7 +34,7 @@ const HighEquip = () => {
     return (
         <div className="equip-slider-container">
             <div className="section-title">
-                <h2>Equipment of Hightech</h2>
+                <h2>Equipments of Hightech</h2>
             </div>
             <Swiper
                 modules={[Pagination, Mousewheel]}
