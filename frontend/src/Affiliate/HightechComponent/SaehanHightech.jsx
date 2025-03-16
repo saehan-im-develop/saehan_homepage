@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HightechMain from "./HightechMain";
 import HightechProduct from "./HightechProduct";
-import HightechAffiliates from "./HightechAffiliates";
+import HighEquip from "./HighEquip";
 
 function SaehanHightech() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -14,7 +14,7 @@ function SaehanHightech() {
   return (
     <div>
       <HightechMain />
-      <HightechAffiliates />
+      <HighEquip />
       <HightechProduct />
     </div>
   );

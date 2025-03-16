@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GlobalMain from "./GlobalMain";
 import GlobalProduct from "./GlobalProduct";
-import GlobalAffiliate from "./GlobalAffiliates"  ;
+import GlobalEquip from "./GlobalEquip";
 
 function SaehanGlobal() {
   const [fadeIn, setFadeIn] = useState(false);
@@ -14,7 +14,8 @@ function SaehanGlobal() {
   return (
     <div>
       <GlobalMain />
-      <GlobalAffiliate />
+      <GlobalEquip />
+      {/* <GlobalAffiliate /> */}
       <GlobalProduct />
     </div>
   );

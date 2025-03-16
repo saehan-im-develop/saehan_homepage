@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom"; // ✅ React Router 사용
 import React, { useState } from "react";
 import styles from "../mainCssFile/NewFuture.module.scss";
-import img1 from "@/assets/Areal/highback1.jpg";
-import img2 from "@/assets/Areal/plusback.png";
-import img3 from "@/assets/Areal/tree.JPG";
-import img4 from "@/assets/Areal/cont.jpg"
+import img1 from "@/assets/Areal/vision.png";
+import img2 from "@/assets/Areal/CEOPhoto.png";
+import img3 from "@/assets/Areal/history.jpg";
+import img4 from "@/assets/Areal/network.png"
 
 const NewFuture = () => {
   const [hovered, setHovered] = useState(null);
-  const navigate = useNavigate(); // ✅ React Router로 변경
+  const navigate = useNavigate();
 
   const data = [
     { img: img2, name: "Jason Response", text: "CEO 인사말", link: "/ceo" },

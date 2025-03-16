@@ -1,0 +1,129 @@
+.equip-body {
+    background-color: #f6f7fb;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.equip-slider-container {
+    max-width: 1800px;
+    margin: 10% auto 0 auto; /* 변경: 좌우 중앙정렬을 위해 auto 설정 */
+    width: 100%;
+  }
+  
+
+.equip-swiper-container {
+    height: 400px;
+    width: 100%;
+    padding-bottom: 85px;
+}
+
+.equip-swiper-slide {
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.equip-slide-image {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scale3d(1.3, 1.3, 1);
+    transition: transform 1400ms ease;
+}
+
+.equip-swiper-slide-active .equip-slide-image {
+    transform: scale3d(1, 1, 1);
+}
+
+.equip-slide-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.equip-slide-content h4 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.equip-slide-content p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.equip-slide-content footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #c2c0e0;
+}
+
+.equip-slide-content a {
+    color: tomato;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 3px solid currentColor;
+    padding-bottom: 3px;
+}
+
+.equip-swiper-pagination {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+}
+
+.equip-swiper-pagination-bullet {
+    background: tomato;
+    width: 22px;
+    height: 4px;
+    border-radius: 0;
+    transition: opacity 1s ease;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center !important;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section-title h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .section-title .underline {
+    width: 150px;
+    height: 4px;
+    background-color: #1a3d7c;
+  }
+  
+
+
+
+@media (min-width: 768px) {
+    .equip-swiper-slide {
+        width: 33.3333%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .equip-swiper-slide {
+        width: 25%;
+    }
+}
