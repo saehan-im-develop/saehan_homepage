@@ -11,7 +11,7 @@ const BizDropdownMenu = () => {
 
   return (
     <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <a onClick={() => navigate("/biz-area")} style={{ cursor: "pointer" }}>비즈니스</a>  
+      <a onClick={() => navigate("/biz-area")} style={{ cursor: "pointer" }}>사업영역</a>  
 
       {/* ✅ <ul>을 추가하여 올바른 구조 유지 */}
       {/* {isDropdownOpen && ( */}
