@@ -61,11 +61,12 @@
 
 /* 네트워크 정보 */
 .network-info {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 100px auto 300px;
   align-items: center;
   font-size: 15px;
   padding: 10px 0;
+  gap: 100px;
 }
 
 /* 연락처 정보 */
