@@ -8,13 +8,13 @@ const networkData = [
   {
     name: "새한하이테크",
     locations: [
-      { type: "제조센터", address: "A 광주 광산구 사암로 827-47", email: [] }
+      { type: "제조센터", address: "A 광주 광산구 사암로 827-47", email: ["pyh8461@saehangroup.com" ] }
     ]
   },
   {
     name: "새한글로벌",
     locations: [
-      { type: "제조센터", address: "A 전남 장성군 동화면 가정길 8", email: [] }
+      { type: "제조센터", address: "A 전남 장성군 동화면 가정길 8", email: ["pyh8461@saehangroup.com" ] }
     ]
   },
   {
