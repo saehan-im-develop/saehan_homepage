@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // ✅ React Router 사용
 import styles from "../mainCssFile/NewFuture.module.scss";
 import img1 from "@/assets/Areal/immain.png";
-import img2 from "@/assets/Areal/high/h44.JPG";
+import img2 from "@/assets/Areal/high/h55.JPG";
 import img3 from "@/assets/Areal/SM1.jpg";
-import img4 from "@/assets/Areal/plus1.jpg"
+import img4 from "@/assets/Areal/plus2.jpg"
 
 const AFMain = () => {
   const [hovered, setHovered] = useState(null);

@@ -7,9 +7,7 @@ html {
     position: relative;
     width: 100vw;
     height: 60vh;
-    /* 배경 높이 */
     background-image: url("../../assets/Areal/devDocu/main.jpg");
-    /* 배경 이미지 */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -38,13 +36,16 @@ html {
     border-radius: 10px;
 }
 
+/* ✅ 섹션별 배경 스타일 */
 .section-title {
     text-align: center;
-    font-size: 26px;
+    font-size: 28px; /* ✅ 글자 크기 증가 */
     font-weight: bold;
-    color: #093064;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    color: white;
+    background-color: #093064; /* ✅ 배경 색 추가 */
+    padding: 15px 0; /* ✅ 상하 여백 추가 */
+    margin-bottom: 30px; /* ✅ 섹션 간격 조정 */
+    border-radius: 10px; /* ✅ 둥근 모서리 */
 }
 
 hr {
@@ -78,16 +79,29 @@ hr {
 }
 
 .content-section-certify {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* ✅ 2개씩 정렬 */
+    gap: 40px; /* ✅ 간격 조정 */
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 40px 0; /* ✅ 상하 여백 추가 */
+}
+
+/* ✅ 개별 인증서 카드 */
+.certify-card {
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    /* ✅ 높이를 동일하게 맞춤 */
-    width: 60%;
-    margin: auto;
-    padding: 20px 0;
-    background: #f9f9f9;
-    gap: 20px;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
+
+
 
 .left-container {
     flex: 1;
@@ -124,6 +138,10 @@ hr {
     font-size: 1rem;
     margin-bottom: 5px;
 }
+
+
+
+
 
 /* 🟢 반응형 */
 @media (max-width: 768px) {
@@ -163,5 +181,50 @@ hr {
         width: 80%;
         max-width: 600px;
         margin: 0 auto;
+    }
+}
+
+/* ✅ 반응형 */
+@media (max-width: 1024px) {
+    .content-section-certify {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ✅ 태블릿에서 조정 */
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-section-certify {
+        grid-template-columns: 1fr; /* ✅ 모바일에서는 한 줄 */
+        width: 90%;
+    }
+}
+
+/* 🟢 반응형 */
+@media (max-width: 1024px) {
+    .content-section-certify.root {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ✅ 태블릿에서 조정 */
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-section-certify.root {
+        grid-template-columns: 1fr; /* ✅ 모바일에서는 한 줄 */
+        width: 90%;
+    }
+}
+
+/* 🟢 반응형 */
+@media (max-width: 1024px) {
+    .content-section-certify.qm {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ✅ 태블릿에서 조정 */
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-section-certify.qm {
+        grid-template-columns: 1fr; /* ✅ 모바일에서는 한 줄 */
+        width: 90%;
     }
 }

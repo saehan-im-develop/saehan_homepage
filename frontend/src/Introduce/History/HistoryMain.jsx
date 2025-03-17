@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "../History/HistoryMain.css";
-import historyImage2 from "@/assets/Areal/Int/history.png"
+import historyImage2 from "@/assets/Areal/Int/history7.png"
 import img2 from "@/assets/PlusMainImage.png";
 
 const historyData = [
   {
-    period: "새한의 역사",
+    period: "회사 연혁",
     image: historyImage2,
     mainImage: img2, // 추가된 기존 이미지
-  },
+  }, 
 ];
 
 function HistoryMain() {
