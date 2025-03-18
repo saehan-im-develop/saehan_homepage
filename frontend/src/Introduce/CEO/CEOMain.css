@@ -8,6 +8,10 @@
   color: #000;
 }
 
+p {
+  white-space: pre;
+}
+
 /* 검은 배경 전체 영역 */
 .ceo-section {
   background: #000;
@@ -15,28 +19,31 @@
   min-height: 600px;
   padding: 50px 0;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end; /* 텍스트 박스를 오른쪽으로 붙이기 */
+  align-items: center;
   margin-bottom: 60px;
+  width: 100%;
 }
 
 /* 콘텐츠 박스 (텍스트 + 이미지) */
 .ceo-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  max-width: 1050px;
-  margin-left: 0; /* 왼쪽에 붙이기 */
   background: #fff;
   color: #000;
   padding: 50px;
+  width: 58%; /* ✅ 화면 크기에 맞게 자동 조절 */
+  min-width: 600px; /* ✅ 박스 크기가 너무 작아지지 않도록 설정 */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  word-wrap: break-word; /* ✅ 텍스트 자동 줄바꿈 */
   position: relative;
-  top: 50px;
+  right: 20px; /* ✅ 오른쪽 벽면에 붙이기 */
+  top: 111px;
 }
 
 /* 왼쪽 텍스트 */
 .ceo-text {
   flex: 1;
-  padding-right: 40px;
 }
 
 .ceo-title {
@@ -45,14 +52,12 @@
   margin-bottom: 20px;
 }
 
-.highlight {
-  color: #000000;
-}
 
 .ceo-message {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
+  word-break: break-word; /* 긴 단어 줄바꿈 */
 }
 
 .ceo-name {
@@ -63,12 +68,15 @@
 
 /* 오른쪽 CEO 사진 (박스 밖으로 빼기) */
 .ceo-image {
-  position: relative;
-  margin-right: 60px; /* 하얀 박스에서 이미지가 빠져나오게 설정 */
+  position: absolute;
+  left: 5%; /* ✅ 왼쪽 여백 확보 */
+  top: 543px; /* ✅ 하단에 맞추기 */
 }
 
+
 .ceo-image img {
-  width: 400px;
+  width: 450px;
   height: auto;
+  max-width: 100%;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }

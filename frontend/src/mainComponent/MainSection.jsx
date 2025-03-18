@@ -23,8 +23,9 @@ const MainSection = () => {
         {/* 🔹 텍스트 오버레이 */}
         <div className="text-overlay">
           <p>확실한 기술력과</p>
-          <p>철저한 품질관리로</p>
-          <p>앞서가는 새한그룹</p>
+          <p>철저한 품질관리</p>
+          <p>시대를 앞서가는</p>
+          <p>새   한   그   룹</p>
         </div>
       </section>
 
