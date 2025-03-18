@@ -15,7 +15,7 @@ const DataDropdownMenu = () => {
       {isDropdownOpen && (
         <div className="dropdown-container">
           <ul className="dropdown-menu">
-            <li><a onClick={() => navigate("/research")} style={{ cursor: "pointer" }}>증명자료</a></li> 
+            {/* <li><a onClick={() => navigate("/research")} style={{ cursor: "pointer" }}>증명자료</a></li>  */}
             <li><a onClick={() => navigate("/news")} style={{ cursor: "pointer" }}>보도자료</a></li> 
           </ul>
         </div>

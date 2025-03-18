@@ -11,7 +11,7 @@ const BizDropdownMenu = () => {
 
   return (
     <li className="dropdown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <a onClick={() => navigate("/biz-area")} style={{ cursor: "pointer" }}>인증문서</a>  
+      <a onClick={() => navigate("/research")} style={{ cursor: "pointer" }}>인증문서</a>  
     </li>
   );
 };
