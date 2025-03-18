@@ -37,8 +37,8 @@ p-ceo {
   text-align: left;
   word-wrap: break-word; /* ✅ 텍스트 자동 줄바꿈 */
   position: relative;
-  right: 20px; /* ✅ 오른쪽 벽면에 붙이기 */
-  top: 111px;
+  right: 15px; /* ✅ 오른쪽 벽면에 붙이기 */
+  top: 121px;
 }
 
 /* 왼쪽 텍스트 */
@@ -69,7 +69,7 @@ p-ceo {
 /* 오른쪽 CEO 사진 (박스 밖으로 빼기) */
 .ceo-image {
   position: absolute;
-  left: 5%; /* ✅ 왼쪽 여백 확보 */
+  left: 0%; /* ✅ 왼쪽 여백 확보 */
   top: 543px; /* ✅ 하단에 맞추기 */
 }
 
