@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "../mainCssFile/NewFuture.module.scss";
 import img1 from "@/assets/Areal/vision.png";
 import img2 from "@/assets/Areal/CEOPhoto.png";
-import img3 from "@/assets/Areal/history.jpg";
+import img3 from "@/assets/Areal/tree.jpg";
 import img4 from "@/assets/Areal/network.png"
 
 const NewFuture = () => {
