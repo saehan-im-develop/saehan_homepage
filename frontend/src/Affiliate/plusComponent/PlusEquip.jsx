@@ -12,11 +12,13 @@ import img9 from "@/assets/Areal/plus/np9.png";
 import img10 from "@/assets/Areal/plus/np10.jpg";
 import img11 from "@/assets/Areal/plus/np11.jpg";
 import img12 from "@/assets/Areal/plus/np12.png";
+import img13 from "@/assets/Areal/plus/np13.png";
+import img14 from "@/assets/Areal/plus/np14.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../CommonCSS/CommonEquip.css";
 
-const images = [img1, img2, img3, img4, img6, img7, img8, img9, img10, img11, img12];
+const images = [img1, img2, img3, img4, img6, img7, img8, img9, img10, img11, img12, img13, img14];
 
 
 const PlusEquip = () => {
