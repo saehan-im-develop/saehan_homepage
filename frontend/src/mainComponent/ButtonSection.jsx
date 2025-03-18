@@ -5,7 +5,7 @@ import { faTwitter, faFacebookF, faInstagram, faThreads } from "@fortawesome/fre
 
 function ButtonSection() {
   return (
-    <section className="btn-section icon-main">1012
+    <section className="btn-section icon-main">
       {/* ✅ 티스토리 */}
       <a href="https://copygloo.tistory.com/" target="_blank" rel="noopener noreferrer">
         <button className="btn-ts">
