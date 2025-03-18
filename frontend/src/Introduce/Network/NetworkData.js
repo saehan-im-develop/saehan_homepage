@@ -28,7 +28,7 @@ const networkData = [
         type: "제조센터",
         address: "A 전남 장성군 동화면 가정길 8",
         names: ["이두열(대표)"],
-        email: " "
+        email: ["kwm666@naver.com"]
       }
     ]
   },
@@ -38,8 +38,8 @@ const networkData = [
       {
         type: "제조센터",
         address: "A 광주 광산구 우산천변길 63",
-        names: ["노영근(부장)"],
-        email: ["shdudrms741017@saehangroup.com"]
+        names: ["박신영(과장)"],
+        email: ["saehanplus@naver.com"]
       }
     ]
   }
