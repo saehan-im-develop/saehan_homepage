@@ -2,28 +2,47 @@ const networkData = [
   {
     name: "새한아이엠",
     locations: [
-      { type: "금남로 지사", address: "A 광주 동구 금남로 193-12", names : ["박영호(연구원), 송유란(연구원)"], email: ["pyh8461@saehangroup.com" , "syr@saehangroup.com"] }
+      {
+        type: "금남로 지사",
+        address: "A 광주 동구 금남로 193-12",
+        names: ["박영호(연구원)", "송유란(연구원)"],
+        email: ["pyh8461@saehangroup.com", "syr@saehangroup.com"]
+      }
     ]
   },
   {
     name: "새한하이테크",
     locations: [
-      { type: "제조센터", address: "A 광주 광산구 사암로 827-47", names : "정혜정(부장)",email: ["hyej0215@naver.com" ] }
+      {
+        type: "제조센터",
+        address: "A 광주 광산구 사암로 827-47",
+        names: ["정혜정(부장)"],
+        email: ["hyej0215@naver.com"]
+      }
     ]
   },
   {
-    name: "새한글로벌",
+    name: "SM 캐미칼",
     locations: [
-      { type: "제조센터", address: "A 전남 장성군 동화면 가정길 8", email: ["010-3307-2296" ] }
+      {
+        type: "제조센터",
+        address: "A 전남 장성군 동화면 가정길 8",
+        names: ["김철수(매니저)"],
+        email: ["010-3307-2296"]
+      }
     ]
   },
   {
     name: "새한플러스",
     locations: [
-      { type: "제조센터", address: "A 광주 광산구 우산천변길 63", email: ["shdudrms741017@saehangroup.com"] }
+      {
+        type: "제조센터",
+        address: "A 광주 광산구 우산천변길 63",
+        names: ["이영희(팀장)"],
+        email: ["shdudrms741017@saehangroup.com"]
+      }
     ]
-  },
-
+  }
 ];
 
 export default networkData;

@@ -5,7 +5,6 @@ import AffDropdownMenu from "../dropDownComponent/AffDropdownMenu";
 import IntroDropdownMenu from "../dropDownComponent/IntroDropdownMenu";
 import BizDropdownMenu from "../dropDownComponent/BizDropdownMenu";
 import DataDropdownMenu from "../dropDownComponent/DataDropdownMenu";
-import CertificationMenu from "../dropDownComponent/CertificationMenu"
 import logo from "@/assets/temp_logo.png";
 
 const Header = () => {
@@ -42,8 +41,7 @@ const Header = () => {
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <IntroDropdownMenu />
             <AffDropdownMenu />
-            <CertificationMenu />
-            {/* <BizDropdownMenu /> */}
+            <BizDropdownMenu />
             <DataDropdownMenu />
           </ul>
         </nav>

@@ -46,7 +46,7 @@ const ResearchPage = () => {
   return (
     <div>
       <div className="hero-section-docu">
-        <h1 className="hero-title-docu">증명 자료</h1>
+        <h1 className="hero-title-docu">인증 문서</h1>
       </div>
 
       {/* 연구개발 인증서 */}

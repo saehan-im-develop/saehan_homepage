@@ -3,34 +3,65 @@
   position: relative;
   width: 70%;
   max-width: 900px;
-  margin: 50px auto; /* ✅ 기존 300px → 50px으로 변경 */
+  margin: 50px auto;
+  /* ✅ 기존 300px → 50px으로 변경 */
   padding-top: 20px;
+}
+
+.network-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 🔹 간격 추가 */
+  text-align: right;
+}
+
+.network-person {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 🔹 이름과 이메일 간격 추가 */
+  font-weight: bold;
+  color: #333;
+}
+
+.email-icon {
+  color: #0056b3; /* 🔹 파란색 */
+  font-size: 14px;
 }
 
 /* ✅ 네트워크 타이틀 스타일 */
 .network-title {
-  text-align: center; /* ✅ 부모 요소 기준으로 중앙 정렬 */
+  text-align: center;
+  /* ✅ 부모 요소 기준으로 중앙 정렬 */
   font-size: 2rem;
   font-weight: bold;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  margin-top: -30px; /* ✅ 기존 간격 줄이기 */
-  padding-bottom: 8px; /* ✅ 밑줄과 텍스트 간격 */
-  position: relative; /* ✅ 밑줄 위치 조정 */
-  display: flex; /* ✅ flex 사용으로 중앙 정렬 유지 */
+  margin-top: -30px;
+  /* ✅ 기존 간격 줄이기 */
+  padding-bottom: 8px;
+  /* ✅ 밑줄과 텍스트 간격 */
+  position: relative;
+  /* ✅ 밑줄 위치 조정 */
+  display: flex;
+  /* ✅ flex 사용으로 중앙 정렬 유지 */
   flex-direction: column;
-  align-items: center; /* ✅ 중앙 정렬 */
+  align-items: center;
+  /* ✅ 중앙 정렬 */
   justify-content: center;
 }
+
 /* ✅ 가상 요소로 밑줄 추가 */
 .network-title::after {
   content: "";
   display: block;
-  width: 30%; /* ✅ 제목 길이에 비례한 밑줄 */
+  width: 30%;
+  /* ✅ 제목 길이에 비례한 밑줄 */
   height: 3px;
-  background-color: #0056b3; /* ✅ 파란색 밑줄 */
-  margin-top: 5px; /* ✅ 위쪽 여백 조정 */
+  background-color: #0056b3;
+  /* ✅ 파란색 밑줄 */
+  margin-top: 5px;
+  /* ✅ 위쪽 여백 조정 */
 }
 
 
@@ -85,6 +116,13 @@
   color: #999;
 }
 
+
+.email-icon {
+  color: #0056b3;
+  font-size: 16px;
+  padding-right: 4px; /* 🔹 아이콘과 텍스트 사이 여백 */
+}
+
 /* 🔹 반응형 스타일 적용 */
 
 /* (1) 태블릿 (768px~1024px) */
@@ -114,6 +152,12 @@
     padding-top: 20px;
   }
 
+  .network-contact {
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+
   .network-title {
     font-size: 1.5rem;
   }
@@ -142,7 +186,8 @@
 .network-header-bg {
   position: relative;
   width: 100vw;
-  height: 250px; /* ✅ 기존 400px → 250px으로 축소 */
+  height: 250px;
+  /* ✅ 기존 400px → 250px으로 축소 */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -150,15 +195,18 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  margin-top: 10px; /* ✅ 기존 20px → 10px으로 조정 */
+  margin-top: 10px;
+  /* ✅ 기존 20px → 10px으로 조정 */
 }
 
 /* ✅ 배경 이미지 수정 */
 .network-header-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 전체를 채우면서 비율 유지 */
-  object-position: bottom center; /* 하단 부분을 중심으로 표시 */
+  object-fit: cover;
+  /* 전체를 채우면서 비율 유지 */
+  object-position: bottom center;
+  /* 하단 부분을 중심으로 표시 */
 }
 
 

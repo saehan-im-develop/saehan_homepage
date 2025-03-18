@@ -1,0 +1,212 @@
+:root {
+    /* Font Color */
+    --icon-light-theme: #f3feff;
+  
+    /* Font Family */
+    --icon-fonts-style-x: "neuzeit-grotesk", sans-serif;
+    --icon-fonts-style-y: "neuzeit-grotesk", sans-serif;
+  
+    /* Font Weight */
+    --icon-light: 300;
+    --icon-regular: 400;
+    --icon-bold: 700;
+    --icon-black: 900;
+  }
+  
+  /* ------------- */
+  /* 아이콘 버튼 전용 스타일 */
+  /* ------------- */
+  
+  .icon-html,
+  .icon-body {
+    box-sizing: border-box;
+    font-family: var(--icon-fonts-style-x);
+    font-weight: var(--icon-light);
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ffffffee;
+    scroll-behavior: smooth;
+  }
+  
+  .icon-main {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .icon-selection {
+    color: #fff;
+    background-color: var(--icon-light-theme);
+  }
+  
+  /* ------------- */
+  /* 아이콘 버튼 컨테이너 */
+  /* ------------- */
+  
+ /* ✅ 버튼 컨테이너 스타일 */
+.btn-section {
+    display: flex;
+    padding: 20px;
+  }
+  
+  /* ✅ 버튼 기본 스타일 */
+  .btn-section button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 400ms;
+    animation: zoom 500ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* ✅ 아이콘 스타일 */
+  .btn-section button span {
+    position: absolute;
+    font-size: 1.5em;
+    transition: 400ms;
+  }
+  
+  /* ✅ 소셜미디어 버튼 스타일 */
+  .btn-section .btn-ts {
+    background-color: #ffffff;
+    color: rgb(255, 123, 15);
+  }
+  
+  .btn-section .btn-tw {
+    background-color: #ffffff;
+    color: #1da1f2;
+  }
+  
+  .btn-section .btn-fb {
+    background-color: #ffffff;
+    color: #3b5998;
+  }
+  
+  .btn-section .btn-ig {
+    background-color: #ffffff;
+    color: #833ab4;
+  }
+  
+  .btn-section .btn-th {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+
+  .btn-section .btn-X {
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* ✅ 애니메이션 */
+  .btn-section .first-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .btn-section .second-logo {
+    position: absolute;
+    top: calc(50% + 30px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .btn-section button:hover .first-logo {
+    top: -30px;
+    opacity: 0;
+  }
+  
+  .btn-section button:hover .second-logo {
+    top: 50%;
+    opacity: 1;
+  }
+  
+  /* ✅ 버튼 클릭 효과 */
+  .btn-section button:active {
+    background-color: #ffffff00;
+  }
+
+  .divider {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+  }
+
+  .internal-network {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .network-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .btn-mail {
+    background-color: #0056b3;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 400ms;
+  }
+
+  .btn-mail:hover {
+    background-color: #003d80;
+  }
+  
+  .btn-mail .first-logo,
+  .btn-mail .second-logo {
+    font-size: 1.5em;
+  }
+  
+  /* ✅ 줌 애니메이션 */
+  @keyframes zoom {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* ✅ 반응형 조정 */
+  @media (max-width: 768px) {
+    .btn-section {
+      justify-content: center;
+    }
+  
+    .btn-section button {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .btn-section button span {
+      font-size: 1.3em;
+    }
+  }
+  

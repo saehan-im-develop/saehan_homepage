@@ -1,5 +1,6 @@
 /* ✅ 기본 설정 */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -19,72 +20,128 @@ html, body {
 /* ✅ 푸터 스타일 */
 .footer {
   width: 100%;
+  max-width: 100vw;
   background-color: #222;
   color: white;
-  text-align: left;
-  padding: 20px;
+  padding: 15px 20px;
   position: relative;
   bottom: 0;
   flex-shrink: 0;
-  min-height: 100px;
+  min-height: auto;
   margin-top: 30px;
+  overflow: hidden;
 }
 
-/*  푸터 내부 콘텐츠 */
+/* ✅ 푸터 내부를 한 줄로 정렬하면서, 세로 정렬 유지 */
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* ✅ 양쪽 정렬 유지 */
+  align-items: center;
+  max-width: 1600px; /* ✅ 푸터 내부 최대 크기 제한 */
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap; /* ✅ 반응형에서 줄바꿈 가능하도록 설정 */
+  overflow: hidden; /* ✅ 내부 컨텐츠가 푸터를 넘어가지 않도록 제한 */
+}
+
+/* ✅ 왼쪽 정렬 그룹 */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 왼쪽 정렬 유지 */
+}
+
+
+/* ✅ "© 2024 SAEHAN GROUP. All rights reserved." 정렬 */
 .footer-content {
-  max-width: 1200px; /* 기존 `max-width` 주석 해제 */
-  margin: auto;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 13px;
+  text-align: left;
 }
 
+/* ✅ 사업자등록번호, 대표, 저작권 표시를 세로 정렬 유지 */
+.footer-left p {
+  margin: 3px 0;
+}
+
+/* ✅ 사업자등록번호 토글과 사업자 정보 정렬 */
+.business-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ✅ 왼쪽 정렬 유지 */
+  width: 100%;
+}
+
+/* ✅ 사업자 정보 토글 디자인 */
+.business-toggle {
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* ✅ 사업자 정보가 "사업자등록번호" 바로 아래에서 나타나도록 조정 */
 .business-info {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0;
+  text-align: left; /* ✅ 왼쪽 정렬 유지 */
+  width: 100%; /* ✅ 컨테이너 너비에 맞춤 */
 }
 
-/* ✅ 펼쳐진 상태 */
+.business-info p {
+  margin: 5px 0;
+  text-align: left; /* ✅ 왼쪽 정렬 유지 */
+}
 .business-info.open {
-  max-height: 500px; /* 충분한 높이 설정 */
+  max-height: 500px;
   opacity: 1;
 }
 
-/* ✅ "사업자등록번호" 제목 클릭 가능하게 설정 */
-.business-toggle {
-  font-weight: bold;
-  cursor: pointer;
+
+/* ✅ 오른쪽 아이콘 버튼 정렬 */
+.footer-buttons {
   display: flex;
+  gap: 10px;
   align-items: center;
-  gap: 5px;
 }
 
-/* 🔽 화살표 스타일 */
-.toggle-icon {
-  transition: transform 0.3s ease;
+/* ✅ 아이콘들이 푸터 텍스트와 같은 선상에 위치 */
+.footer-buttons .btn-section {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin-bottom: 100%;
 }
 
-/* 🔽 펼쳐졌을 때 화살표 회전 */
-.business-info.open + .toggle-icon {
-  transform: rotate(180deg);
+.footer-buttons .btn-section button {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 5px;
 }
 
-/*  반응형 스타일 적용 */
-
-/* (1) 태블릿 (768px~1024px) */
+/* ✅ 반응형 스타일 적용 */
+/* ✅ 반응형 스타일 적용 */
 @media (max-width: 1024px) {
   .footer {
     padding: 15px;
   }
 
-  .footer-content {
-    font-size: 13px;
-    max-width: 90%;
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-left {
+    align-items: flex-start;
+  }
+
+  .footer-buttons {
+    justify-content: flex-end;
   }
 }
 
-/* (2) 모바일 (최대 768px) */
 @media (max-width: 768px) {
   .footer {
     text-align: center;
@@ -92,10 +149,16 @@ html, body {
     min-height: auto;
   }
 
-  .footer-content {
-    font-size: 12px;
-    max-width: 90%;
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    align-items: center;
     text-align: center;
-    margin: auto;
+  }
+
+  .footer-buttons {
+    justify-content: center;
   }
 }

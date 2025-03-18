@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import networkData from "./NetworkData";
 import "../Network/Network.css";
-import backgroundImage from "@/assets/010.jpg"; // ✅ 추가된 배경 이미지
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import backgroundImage from "@/assets/010.jpg"; // ✅ 배경 이미지 추가
 
 const Network = () => {
   const [visible, setVisible] = useState(false);
@@ -37,7 +39,6 @@ const Network = () => {
       </div>
 
       <div ref={ref} className="network-container">
-        {/* ✅ 제목에도 fade-in 클래스 추가 */}
         <h2 className={`network-title ${visible ? "fade-in" : ""}`}>새한 그룹 네트워크</h2>
 
         {networkData.map((company, index) => (
@@ -48,26 +49,52 @@ const Network = () => {
                 <div key={locIndex} className="network-info">
                   <span className="network-type">{location.type || "정보 없음"}</span>
                   <span className="network-address">{location.address || "주소 없음"}</span>
-                  <div className="network-email">
-                    {Array.isArray(location.email) && location.email.length > 0 ? (
-                      location.email.map((mail, i) => <p key={i}>📧 {mail}</p>)
+
+                  {/* ✅ 이름 & 이메일을 두 줄로 배치 */}
+                  <div className="network-contact">
+                    {Array.isArray(location.names) &&
+                      Array.isArray(location.email) &&
+                      location.names.length > 0 ? (
+                      location.names.map((name, i) => (
+                        <div key={i} className="network-contact-item">
+                          <div className="contact-name">{name}</div>
+                          <div className="contact-email">
+                            <FontAwesomeIcon icon={faEnvelope} className="email-icon" />
+                            <span className="email-text">{location.email[i] || "이메일 없음"}</span>
+                          </div>
+                        </div>
+                      ))
                     ) : (
-                      <p className="empty">이메일 정보 없음</p>
+                      <p className="empty">연락처 정보 없음</p>
                     )}
                   </div>
+
                 </div>
               ))
             ) : (
               <div className="network-info">
                 <span className="network-type">{company.type || "정보 없음"}</span>
                 <span className="network-address">{company.address || "주소 없음"}</span>
-                <div className="network-email">
-                  {Array.isArray(company.email) && company.email.length > 0 ? (
-                    company.email.map((mail, i) => <p key={i}>📧 {mail}</p>)
+
+                {/* ✅ 이름 & 이메일 추가 */}
+                <div className="network-contact">
+                  {Array.isArray(location.names) &&
+                    Array.isArray(location.email) &&
+                    location.names.length > 0 ? (
+                    location.names.map((name, i) => (
+                      <div key={i} className="network-contact-item">
+                        <div className="contact-name">{name}</div>
+                        <div className="contact-email">
+                          <FontAwesomeIcon icon={faEnvelope} className="email-icon" />
+                          <span className="email-text"> {location.email[i] || "이메일 없음"}</span> {/* 🔹 띄어쓰기 추가 */}
+                        </div>
+                      </div>
+                    ))
                   ) : (
-                    <p className="empty">이메일 정보 없음</p>
+                    <p className="empty">연락처 정보 없음</p>
                   )}
                 </div>
+
               </div>
             )}
           </div>
