@@ -8,10 +8,10 @@ html {
     width: 100vw;
     height: 60vh;
     /* 배경 높이 */
-    background-image: url("../../assets/Areal/news2.jpg");
+    background-image: url("../../assets/Areal/news/n5.jpg");
     /* 배경 이미지 */
     background-size: cover;
-    background-position: center;
+    background-position: center top 1100px;
     background-attachment: fixed;
     display: flex;
     align-items: center;
