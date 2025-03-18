@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
 import img1 from "@/assets/Areal/global/sm1.png";
 import img2 from "@/assets/Areal/global/sm2.png";
-import img3 from "@/assets/Areal/global/sm3.JPG";
+import img3 from "@/assets/Areal/global/sm3.png";
 import img4 from "@/assets/Areal/global/sm4.jpg";
 import img5 from "@/assets/Areal/global/sm5.jpg";
 import "swiper/css";
