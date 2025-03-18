@@ -36,7 +36,7 @@
     padding: 40px;
     border-radius: 12px;
     border: 1px solid #ccc; /* ✅ 테두리 색 더 진하게 */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* ✅ 그림자 추가 */
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px inset, rgba(34, 34, 34, 0.445) 10px -10px 0px -3px, rgb(126, 126, 126) 10px -10px;
     text-align: left; /* ✅ 텍스트 왼쪽 정렬 */
     max-width: 850px; /* ✅ 너비 조정 */
     margin: 20px auto;
@@ -107,7 +107,7 @@
     padding: 20px;
     border-radius: 12px;
     border: 1px solid #ddd;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: rgb(56, 56, 56) 0px 20px 30px -10px;
     width: 750px; /* ✅ 고정 크기 유지 */
     font-size: 18px;
     text-align: left;
