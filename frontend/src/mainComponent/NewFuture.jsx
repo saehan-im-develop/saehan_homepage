@@ -11,7 +11,7 @@ const NewFuture = () => {
   const navigate = useNavigate();
 
   const data = [
-    // { img: img2, name: "Jason Response", text: "CEO 인사말", link: "/ceo" },
+    { img: img2, name: "Jason Response", text: "CEO 인사말", link: "/ceo" },
     { img: img1, name: "Max Conversion", text: "비전 및 가치관", link: "/vision" },
     { img: img3, name: "Parsley Montana", text: "회사 연혁", link: "/history" },
     { img: img4, name: "plus", text: "네트워크", link: "/network" }
