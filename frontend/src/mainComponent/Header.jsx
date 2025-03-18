@@ -3,7 +3,7 @@ import { useState } from "react"; // ✅ 상태 관리 추가
 import "../mainCssFile/Header.css";
 import AffDropdownMenu from "../dropDownComponent/AffDropdownMenu";
 import IntroDropdownMenu from "../dropDownComponent/IntroDropdownMenu";
-import BizDropdownMenu from "../dropDownComponent/BizDropdownMenu";
+import CertificationMenu from "../dropDownComponent/CertificationMenu"
 import DataDropdownMenu from "../dropDownComponent/DataDropdownMenu";
 import logo from "@/assets/temp_logo.png";
 
@@ -41,7 +41,7 @@ const Header = () => {
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <IntroDropdownMenu />
             <AffDropdownMenu />
-            <BizDropdownMenu />
+            <CertificationMenu />
             <DataDropdownMenu />
           </ul>
         </nav>
