@@ -2,9 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper/modules";
 import img1 from "@/assets/Areal/high/nh1.jpg";
-import img2 from "@/assets/Areal/high/nh2.png";
 import img3 from "@/assets/Areal/high/nh3.png";
-import img4 from "@/assets/Areal/high/nh4.jpg";
+import img4 from "@/assets/Areal/high/nh4.png";
 import img5 from "@/assets/Areal/high/nh5.jpg";
 import img6 from "@/assets/Areal/high/nh6.jpg";
 import img7 from "@/assets/Areal/high/nh7.png";
@@ -14,21 +13,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../CommonCSS/CommonEquip.css";
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
-
-// const SlideContent = ({ index }) => (
-//     <div className="equip-slide-content">
-//         <h4>Lorem Ipsum</h4>
-//         <p>
-//             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore molestias itaque
-//             reiciendis et excepturi odit eligendi cum eaque ad culpa.
-//         </p>
-//         <footer>
-//             <div>{index}/02</div>
-//             <a href="#">READ MORE</a>
-//         </footer>
-//     </div>
-// );
+const images = [img1, img3, img4, img5, img6, img7, img8, img9];
 
 const HighEquip = () => {
     return (

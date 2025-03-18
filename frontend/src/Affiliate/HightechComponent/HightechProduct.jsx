@@ -44,7 +44,7 @@ function HightechProduct() {
         "HOOHEOL CHO, 2020",
       code: "RF9000A",
       category: ">HIPS< A4EE 1X1X1",
-      give : "",
+      give : "[주] 대창",
       image: img4,
     },
     {
@@ -54,7 +54,7 @@ function HightechProduct() {
         "HOOHEOL CHO, 2020",
       code: "RF9000A",
       category: ">HIPS< A4EE 1X1X1",
-      give : "",
+      give : "[주] 대창",
       image: img5,
     }
   ];

@@ -78,6 +78,20 @@
     color: #555;
 }
 
+/* 드롭다운 컨테이너 스타일 */
+.filter-container {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-bottom: 10px;
+    margin-left: 90%;
+  }
+
+  .filter-container select {
+    font-size: 18px;  /* 글씨 크기 증가 */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
 /* 🔹 반응형 스타일 적용 */
 
 /* (1) 태블릿 (768px~1024px) */
