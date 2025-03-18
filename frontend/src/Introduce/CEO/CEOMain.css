@@ -8,6 +8,10 @@
   color: #000;
 }
 
+p {
+  white-space: pre;
+}
+
 /* 검은 배경 전체 영역 */
 .ceo-section {
   background: #000;
@@ -15,22 +19,24 @@
   min-height: 600px;
   padding: 50px 0;
   display: flex;
-  justify-content: right;
+  justify-content: right; /* 텍스트를 오른쪽으로 붙임 */
   margin-bottom: 60px;
 }
 
 /* 콘텐츠 박스 (텍스트 + 이미지) */
 .ceo-container {
   display: flex;
+  flex-direction: row-reverse; /* 텍스트 오른쪽, 이미지 왼쪽 */
   align-items: center;
-  justify-content: flex-start;
-  max-width: 1050px;
-  margin-left: 0; /* 왼쪽에 붙이기 */
+  width: 100%; /* 최대 너비 제한 해제 */
+  margin-left: auto; /* 오른쪽 벽에 완전히 붙이기 */
   background: #fff;
   color: #000;
   padding: 50px;
   position: relative;
-  top: 50px;
+  top: 202px;
+  justify-content: space-between; /* 텍스트와 이미지 간격 자동 조정 */
+  left:29%
 }
 
 /* 왼쪽 텍스트 */
@@ -44,7 +50,6 @@
   font-weight: 700;
   margin-bottom: 20px;
 }
-
 .highlight {
   color: #000000;
 }
@@ -64,7 +69,9 @@
 /* 오른쪽 CEO 사진 (박스 밖으로 빼기) */
 .ceo-image {
   position: relative;
-  margin-right: 60px; /* 하얀 박스에서 이미지가 빠져나오게 설정 */
+  margin-left: 60px; /* 텍스트에서 이미지가 떨어지도록 설정 */
+  right: 74%;
+  align-self: flex-end;
 }
 
 .ceo-image img {

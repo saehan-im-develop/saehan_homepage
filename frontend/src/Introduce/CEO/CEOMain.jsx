@@ -1,6 +1,6 @@
 import React from "react";
 import "../CEO/CEOMain.css";
-import ceo from "@/assets/Areal/CEOPhoto.png";
+import ceo from "@/assets/Areal/ceomain.png";
 
 const CEOMain = () => {
   return (
@@ -28,9 +28,9 @@ const CEOMain = () => {
         </div>
 
         {/* CEO 이미지 (검은 배경 위에 배치) */}
-        {/* <div className="ceo-image">
+        <div className="ceo-image">
           <img src={ceo} alt="CEO 김원만" />
-        </div> */}
+        </div>
       </div>
     </section>
   );

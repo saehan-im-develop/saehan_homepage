@@ -8,7 +8,7 @@ const PrinciplesCircle = () => {
         <span className="top-left">품질</span>
         <span className="top-right">혁신</span>
         <span className="bottom-left">만족</span>
-        <span className="bottom-right">개혁</span>
+        <span className="bottom-right">신뢰</span>
       </div>
     </div>
   );
