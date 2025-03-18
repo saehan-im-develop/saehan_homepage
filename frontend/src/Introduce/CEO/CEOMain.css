@@ -4,6 +4,7 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 100px;
   color: #000;
 }
 
@@ -11,20 +12,25 @@
 .ceo-section {
   background: #000;
   color: #ffffff;
+  min-height: 600px;
   padding: 50px 0;
   text-align: center;
+  display: flex;
+  justify-content: left;
 }
 
 /* 콘텐츠 박스 (텍스트 + 이미지) */
 .ceo-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
+  justify-content: flex-start;
+  max-width: 900px;
+  margin-left: 0; /* 왼쪽에 붙이기 */
   background: #fff;
   color: #000;
   padding: 50px;
+  position: relative;
+  top: 50px;
 }
 
 /* 왼쪽 텍스트 */
@@ -40,7 +46,7 @@
 }
 
 .highlight {
-  color: #ffcc00;
+  color: #000000;
 }
 
 .ceo-message {
@@ -55,7 +61,12 @@
   margin-top: 20px;
 }
 
-/* 오른쪽 CEO 사진 */
+/* 오른쪽 CEO 사진 (박스 밖으로 빼기) */
+.ceo-image {
+  position: relative;
+  margin-right: 60px; /* 하얀 박스에서 이미지가 빠져나오게 설정 */
+}
+
 .ceo-image img {
   width: 400px;
   height: auto;

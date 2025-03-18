@@ -27,8 +27,8 @@ const networkData = [
       {
         type: "제조센터",
         address: "A 전남 장성군 동화면 가정길 8",
-        names: ["김철수(매니저)"],
-        email: ["010-3307-2296"]
+        names: ["이두열(대표)"],
+        email: " "
       }
     ]
   },
@@ -38,7 +38,7 @@ const networkData = [
       {
         type: "제조센터",
         address: "A 광주 광산구 우산천변길 63",
-        names: ["이영희(팀장)"],
+        names: ["노영근(부장)"],
         email: ["shdudrms741017@saehangroup.com"]
       }
     ]
