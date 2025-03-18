@@ -14,9 +14,9 @@
   color: #ffffff;
   min-height: 600px;
   padding: 50px 0;
-  text-align: center;
   display: flex;
-  justify-content: left;
+  justify-content: right;
+  margin-bottom: 60px;
 }
 
 /* 콘텐츠 박스 (텍스트 + 이미지) */
