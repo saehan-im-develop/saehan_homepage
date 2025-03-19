@@ -32,10 +32,10 @@ const CommonEquip = ({ title, images }) => {
                     <SwiperSlide
                         key={index}
                         className="equip-swiper-slide"
-                        onClick={() => setSelectedEquipment({ title, src: img })}
+                        onClick={() => setSelectedEquipment(img)} // ✅ 클릭한 이미지의 title, description 전달
                         style={{ cursor: "pointer" }}
                     >
-                        <div className="equip-slide-image" style={{ backgroundImage: `url(${img})` }}></div>
+                        <div className="equip-slide-image" style={{ backgroundImage: `url(${img.src})` }}></div>
                     </SwiperSlide>
                 ))}
             </Swiper>
