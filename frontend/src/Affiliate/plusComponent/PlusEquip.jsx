@@ -30,9 +30,24 @@ const images = [
     { src: img14, title: "고속 드릴링 머신", englishtitle: "High-Speed Drilling Machine", description: "대량 생산을 위한 정밀 드릴링 머신" }
 ];
 
+// ✅ `equipments` 배열을 `images` 배열에서 변환
+const equipments = images.map((img) => ({
+    mainImage: img.src,
+    title: img.title,
+    englishtitle: img.englishtitle,
+    description: img.description,
+    relatedImages: [
+        img.src, // ✅ 해당 장비의 대표 이미지 포함
+        "https://picsum.photos/id/2/640/480",
+        "https://picsum.photos/id/24/640/480",
+        "https://picsum.photos/id/19/640/480"
+    ]
+}));
 
 const PlusEquip = () => {
-    return <CommonEquip title="Equipments of Plus" images={images} />;
+    
+
+    return <CommonEquip title="Plus Equipment" equipments={equipments} />;
 };
 
 export default PlusEquip;
