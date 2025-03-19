@@ -46,8 +46,8 @@ const MainSection = () => {
         </div>
       </section>
 
-      <NewFuture />
       <AFMain />
+      <NewFuture />
       <ContactSection />
       <div id="main-contact"></div>
     </div>

@@ -24,7 +24,7 @@ const NewFuture = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>새한그룹</h1>
-      <h2 className={styles.subtitle}>우리는 미래를 만들어갑니다.</h2>
+      <h2 className={styles.subtitle}>함께하는 성장, 미래를 향한 도전</h2>
 
       <div className={styles.imageWrapper}>
         {data.map((item, index) => (

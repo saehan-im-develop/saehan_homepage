@@ -23,8 +23,8 @@ const AFMain = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>그룹 계열사</h1>
-      <h2 className={styles.subtitle}></h2>
+      <h1 className={styles.title}>새 한 그 룹</h1>
+      <h2 className={styles.subtitle}>우리는 미래를 만들어갑니다.</h2>
 
       <div className={styles.imageWrapper}>
         {data.map((item, index) => (
