@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../CommonCSS/CommonMain.css";
+import "../Common/CommonMain.css";
 import bgImage from "@/assets/Areal/plus2.jpg"; // ✅ Plus 페이지 배경
 
 function PlusMain() {

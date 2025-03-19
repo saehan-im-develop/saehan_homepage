@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../CommonCSS/CommonProduct.css";
+import "../Common/CommonProduct.css";
 import img1 from "@/assets/Areal/high/h1.jpg"; // 김치냉장고 부품
 import img2 from "@/assets/Areal/high/h2.jpg"; // 냉장고 선반류
 import img3 from "@/assets/Areal/high/h3.jpg"; // 산업용 플라스틱 부품

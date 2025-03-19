@@ -1,52 +1,15 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Mousewheel } from "swiper/modules";
+import CommonEquip from "../Common/CommonEquip.jsx";
 import img1 from "@/assets/Areal/high/nh1.jpg";
 import img3 from "@/assets/Areal/high/nh3.png";
 import img7 from "@/assets/Areal/high/nh7.png";
 import img8 from "@/assets/Areal/high/nh8.png";
 import img9 from "@/assets/Areal/high/nh9.png";
-import "swiper/css";
-import "swiper/css/pagination";
-import "../CommonCSS/CommonEquip.css";
 
 const images = [img1, img3, img7, img8, img9];
 
 const HighEquip = () => {
-    return (
-        <div className="equip-slider-container">
-            <div className="section-title">
-                <h2>Equipments of Hightech</h2>
-            </div>
-            <Swiper
-                modules={[Pagination]}
-                slidesPerView="auto"
-                initialSlide={2}
-                speed={1000}
-                spaceBetween={32}
-                loop={true}
-                centeredSlides={true}
-                roundLengths={true}
-                mousewheel={true}
-                grabCursor={true}
-                pagination={{ clickable: true }}
-                className="equip-swiper-container"
-            >
-                {images.map((img, index) => (
-                    <SwiperSlide key={index} className="equip-swiper-slide">
-                        <div className="equip-slide-image" style={{ backgroundImage: `url(${img})` }}></div>
-                    </SwiperSlide>
-                ))}
-                {/* 텍스트 슬라이더 따로 나중에 적용 가능할듯 */}
-                {/* <SwiperSlide className="equip-swiper-slide">
-                    <SlideContent index="01" />
-                </SwiperSlide>
-                <SwiperSlide className="equip-swiper-slide">
-                    <SlideContent index="02" />
-                </SwiperSlide> */}
-            </Swiper>
-        </div>
-    );
+    return <CommonEquip title="Equipments of Hightech" images={images} />;
 };
 
 export default HighEquip;

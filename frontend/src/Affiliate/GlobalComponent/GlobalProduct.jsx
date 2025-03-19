@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../CommonCSS/CommonProduct.css";
+import "../Common/CommonProduct.css";
 import img1 from "@/assets/Areal/global/ng1.jpg"
 import img2 from "@/assets/Areal/global/ng2.jpg"
 import img3 from "@/assets/Areal/global/ng3.jpg"
