@@ -17,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "framer-motion": "^12.4.7",
     "fullpage.js": "^4.0.34",
+    "gsap": "^3.12.7",
     "locomotive-scroll": "^4.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -24,6 +25,7 @@
     "react-router-dom": "^7.2.0",
     "react-scroll": "^1.9.3",
     "react-scroller": "^0.0.3",
+    "require": "^2.4.20",
     "sass": "^1.85.1",
     "swiper": "^11.2.5"
   },

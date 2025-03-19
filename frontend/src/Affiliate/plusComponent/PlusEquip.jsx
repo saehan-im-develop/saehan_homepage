@@ -28,7 +28,7 @@ const PlusEquip = () => {
                 <h2>Equipments of Plus</h2>
             </div>
             <Swiper
-                modules={[Pagination, Mousewheel]}
+                modules={[Pagination]}
                 slidesPerView="auto"
                 initialSlide={2}
                 speed={1000}

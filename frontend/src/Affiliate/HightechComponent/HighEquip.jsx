@@ -19,7 +19,7 @@ const HighEquip = () => {
                 <h2>Equipments of Hightech</h2>
             </div>
             <Swiper
-                modules={[Pagination, Mousewheel]}
+                modules={[Pagination]}
                 slidesPerView="auto"
                 initialSlide={2}
                 speed={1000}

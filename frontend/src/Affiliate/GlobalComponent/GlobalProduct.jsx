@@ -28,13 +28,6 @@ function GlobalProduct() {
       category: ">PP+TD30%< A4DU 1X2X1-1",
       image: img3,
     },
-    {
-      name: "GUARD FAN",
-      codeNO: "DB63-04307X001",
-      model: "AC9100A-PJT",
-      category: ">PP< A45T 1X1X1-1",
-      image: img4,
-    },
   ];
 
   const [isVisible, setIsVisible] = useState(false);
