@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../CommonCSS/CommonMain.css";
+import "../Common/CommonMain.css";
 import bgImage from "@/assets/Areal/hh11.png"; //  하이테크 페이지 배경
 
 function HightechMain() {

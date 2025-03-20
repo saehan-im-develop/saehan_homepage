@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../CommonCSS/CommonProduct.css";
+import "../Common/CommonProduct.css";
 import img1 from "@/assets/Areal/global/ng1.jpg"
 import img2 from "@/assets/Areal/global/ng2.jpg"
 import img3 from "@/assets/Areal/global/ng3.jpg"
@@ -27,13 +27,6 @@ function GlobalProduct() {
       model: "WD8000D",
       category: ">PP+TD30%< A4DU 1X2X1-1",
       image: img3,
-    },
-    {
-      name: "GUARD FAN",
-      codeNO: "DB63-04307X001",
-      model: "AC9100A-PJT",
-      category: ">PP< A45T 1X1X1-1",
-      image: img4,
     },
   ];
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../CommonCSS/CommonMain.css";
+import "../Common/CommonMain.css";
 import bgImage from "@/assets/aff/ai6.jpg"; // ✅ AI IT 기업으로 개편된 페이지 배경
 
 function IMMain() {

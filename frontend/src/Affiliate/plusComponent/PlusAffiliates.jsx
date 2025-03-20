@@ -1,4 +1,4 @@
-import styles from "../CommonCSS/HoverEffect.module.scss"; //  SCSS 파일 import
+import styles from "../Common/HoverEffect.module.scss"; //  SCSS 파일 import
 import React from "react";
 import img1 from "@/assets/Areal/plus/p1.jpg";
 import img2 from "@/assets/Areal/plus/p2.JPG";
