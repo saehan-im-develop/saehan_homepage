@@ -32,7 +32,7 @@ const images = [
 
 
 const PlusEquip = () => {
-    return <CommonEquip title="Equipments of Plus" images={images} />;
+    return <CommonEquip title="새한플러스 기계설비" images={images} />;
 };
 
 export default PlusEquip;

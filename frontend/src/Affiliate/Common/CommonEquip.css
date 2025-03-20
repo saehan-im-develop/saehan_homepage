@@ -27,18 +27,24 @@
 }
 
 .equip-slide-image {
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
-    transform: scale3d(1.1, 1.1, 1);
+    background-size: cover;
+    border-radius: 15px !important; /* 라운드 적용 */
+    object-fit: cover; /* 이미지 크기를 div에 맞게 채우기 */
     transition: transform 1400ms ease;
 }
 
-.equip-swiper-slide-active .equip-slide-image {
-    transform: scale3d(1, 1, 1);
+.equip-slide-image:hover {
+    transform: scale(1.15); /* 마우스를 올리면 확대되도록 트랜지션 효과 */
 }
+
+.equip-swiper-slide-active .equip-slide-image {
+    transform: scale(1);
+}
+
 
 .equip-slide-content {
     padding: 2rem;
@@ -112,6 +118,7 @@
     height: 4px;
     background-color: #1a3d7c;
   }
+  
   
 
 

@@ -3,7 +3,10 @@ import "../Common/CommonProduct.css";
 import img1 from "@/assets/Areal/global/ng1.jpg"
 import img2 from "@/assets/Areal/global/ng2.jpg"
 import img3 from "@/assets/Areal/global/ng3.jpg"
-import img4 from "@/assets/Areal/global/ng4.jpg"
+import img5 from "@/assets/Areal/global/ng5.png"
+import img6 from "@/assets/Areal/global/ng6.png"
+import img7 from "@/assets/Areal/global/ng7.png"
+import img8 from "@/assets/Areal/global/ng8.png"
 
 function GlobalProduct() {
   const products = [
@@ -27,6 +30,34 @@ function GlobalProduct() {
       model: "WD8000D",
       category: ">PP+TD30%< A4DU 1X2X1-1",
       image: img3,
+    },
+    {
+      name: "GUIDE LEFT",
+      // codeNO: "DC61-05908AX002",
+      // model: "WD8000D",
+      // category: ">PP+TD30%< A4DU 1X2X1-1",
+      image: img5 ,
+    },
+    {
+      name: "CAP DOOR",
+      // codeNO: "DC61-05908AX002",
+      // model: "WD8000D",
+      // category: ">PP+TD30%< A4DU 1X2X1-1",
+      image: img6,
+    },
+    {
+      name: "GUARD FAN",
+      // codeNO: "DC61-05908AX002",
+      // model: "WD8000D",
+      // category: ">PP+TD30%< A4DU 1X2X1-1",
+      image: img7,
+    },
+    {
+      name: "ASSY CASE KIMCHI-MIDDLE(10.8L)",
+      // codeNO: "DC61-05908AX002",
+      // model: "WD8000D",
+      // category: ">PP+TD30%< A4DU 1X2X1-1",
+      image: img8,
     },
   ];
 

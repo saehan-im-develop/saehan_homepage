@@ -140,7 +140,7 @@ function PlusProduct() {
           <img src={product.image} alt={product.name} className="product-image" />
           <div className="product-info">
             <h3>{product.name}</h3>
-            <p><strong>납품 업체:</strong> {product.give}</p>
+            {/* <p><strong>납품 업체:</strong> {product.give}</p> */}
             <p className="product-eng-name">{product.model}</p>
             <p>{product.codeNO}</p>
             <p>{product.category}</p>
