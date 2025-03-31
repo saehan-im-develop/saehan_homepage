@@ -20,9 +20,9 @@ const CommonPopupViewer = {
 
           <div class="slider-container-affPop">
             <div class="slider-track-affPop" id="sliderTrack">
-              ${processes.map((p, i) => `
+              ${processes.map(p => `
                 <div class="slide-affPop">
-                  <img src="${p.src}" alt="${p.title}" class="gallery-image-affPop" onclick="openImageModal('${p.src}')" />
+                  <img src="${p.src}" alt="${p.title}" class="gallery-image-affPop" />
                   <h4 class="image-title-affPop">${p.title}</h4>
                   <p class="image-desc-affPop">${p.desc}</p>
                 </div>
@@ -31,72 +31,63 @@ const CommonPopupViewer = {
           </div>
 
           <div class="nav-buttons-wrapper-affPop">
+            <button class="nav-button-affPop" onclick="goToStart()">&#171;</button>
             <button class="nav-button-affPop" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="nav-button-affPop" onclick="toggleAutoplay()" id="toggleAutoplayBtn">⏸</button>
             <button class="nav-button-affPop" onclick="moveSlide(1)">&#10095;</button>
           </div>
 
           <p class="popup-description-affPop">${description}</p>
 
-          <!-- 🖼 모달 이미지 뷰어 -->
-          <div id="imageModal" class="image-modal-affPop" style="display:none" onclick="this.style.display='none'">
-            <img id="modalImage" class="modal-content-affPop" />
-          </div>
-
           <script>
             let index = 0;
             const visibleCount = 4;
-            const track = document.getElementById('sliderTrack');
             const slides = document.querySelectorAll('.slide-affPop');
+            const maxIndex = slides.length - visibleCount;
+
+            let autoplayActive = true;
+            let autoplay = setInterval(autoAdvance, 3000);
 
             function updateSlider() {
               const offset = -(index * (100 / visibleCount));
-              track.style.transform = 'translateX(' + offset + '%)';
+              document.getElementById('sliderTrack').style.transform = 'translateX(' + offset + '%)';
             }
 
             function moveSlide(direction) {
-              const maxIndex = slides.length - visibleCount;
               index = Math.max(0, Math.min(index + direction, maxIndex));
               updateSlider();
             }
 
-            function openImageModal(src) {
-              const modal = document.getElementById('imageModal');
-              const modalImg = document.getElementById('modalImage');
-              modalImg.src = src;
-              modal.style.display = 'block';
+            function goToStart() {
+              index = 0;
+              updateSlider();
+            }
+
+            function autoAdvance() {
+              if (index < maxIndex) {
+                index++;
+                updateSlider();
+              } else {
+                clearInterval(autoplay);
+                autoplayActive = false;
+                document.getElementById('toggleAutoplayBtn').innerText = '▶';
+              }
+            }
+
+            function toggleAutoplay() {
+              const btn = document.getElementById('toggleAutoplayBtn');
+              if (autoplayActive) {
+                clearInterval(autoplay);
+                btn.innerText = '▶';
+              } else {
+                autoplay = setInterval(autoAdvance, 3000);
+                btn.innerText = '⏸';
+              }
+              autoplayActive = !autoplayActive;
             }
 
             document.addEventListener('keydown', (e) => {
-              if (e.key === 'Escape') {
-                const modal = document.getElementById('imageModal');
-                if (modal.style.display === 'block') {
-                  modal.style.display = 'none';
-                } else {
-                  window.close();
-                }
-              }
-            });
-
-            // 🟢 Swipe 기능 추가
-            let startX = 0;
-            let endX = 0;
-
-            track.addEventListener('mousedown', (e) => {
-              startX = e.clientX;
-            });
-            track.addEventListener('mouseup', (e) => {
-              endX = e.clientX;
-              if (startX - endX > 50) moveSlide(1);
-              else if (endX - startX > 50) moveSlide(-1);
-            });
-
-            track.addEventListener('touchstart', (e) => {
-              startX = e.touches[0].clientX;
-            });
-            track.addEventListener('touchend', (e) => {
-              endX = e.changedTouches[0].clientX;
-              if (startX - endX > 50) moveSlide(1);
-              else if (endX - startX > 50) moveSlide(-1);
+              if (e.key === 'Escape') window.close();
             });
 
             updateSlider();

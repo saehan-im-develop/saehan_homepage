@@ -67,7 +67,7 @@ const images = [
 
 
 const GlobalEquip = () => {
-    return <CommonEquip title="SM캐미칼 기계설비" images={images} />;
+    return <CommonEquip title="Equipments of SM Chemical" images={images} />;
 };
 
 export default GlobalEquip;

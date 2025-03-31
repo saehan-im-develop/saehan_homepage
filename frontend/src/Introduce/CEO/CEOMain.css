@@ -37,7 +37,6 @@ p-ceo {
   text-align: left;
   word-wrap: break-word; /* ✅ 텍스트 자동 줄바꿈 */
   position: relative;
-  right: 15px; /* ✅ 오른쪽 벽면에 붙이기 */
   top: 121px;
 }
 

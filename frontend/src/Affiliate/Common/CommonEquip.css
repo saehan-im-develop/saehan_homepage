@@ -14,21 +14,20 @@
 /* 상단 제목 */
 .section-title-equip {
     margin-top: 4%;
-    width: 100%;
-    text-align: center !important;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #00417e;
+    text-align: center;
+    font-size: 28px; /* ✅ 글자 크기 증가 */
+    font-weight: bold;
+    color: white;
+    background-color: #093064; /* ✅ 배경 색 추가 */
+    padding: 15px 0; /* ✅ 상하 여백 추가 */
+    margin-bottom: 30px; /* ✅ 섹션 간격 조정 */
+    border-radius: 10px; /* ✅ 둥근 모서리 */
 }
 
 .section-title-equip h2 {
     font-size: 30px;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 8px;
     align-items: center;
 }
 

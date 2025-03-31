@@ -16,14 +16,15 @@
 }
 
 /*  섹션 제목 스타일 */
-.section-title {
-  display: block;
-  font-size: 24px;
+.section-title-contact {
+  text-align: center;
+  font-size: 28px; /* ✅ 글자 크기 증가 */
   font-weight: bold;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 3px solid #3056d3;
-  display: inline-block;
+  color: white;
+  background-color: #093064; /* ✅ 배경 색 추가 */
+  padding: 15px 0; /* ✅ 상하 여백 추가 */
+  margin-bottom: 30px; /* ✅ 섹션 간격 조정 */
+  border-radius: 10px; /* ✅ 둥근 모서리 */
 }
 
 /*  컨테이너 스타일 */
