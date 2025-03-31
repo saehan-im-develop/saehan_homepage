@@ -8,7 +8,7 @@ const CommonEquip = ({ title, images }) => {
             <div className="equip-slider-container">
                 <div className="section-title-equip">
                     <h2>{title}</h2>
-                    <div className="underline"></div>
+                    
                 </div>
                 <div className="equip-grid">
                     {images.map((img, index) => (
