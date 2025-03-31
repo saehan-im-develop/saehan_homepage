@@ -1,52 +1,29 @@
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+import React from "react";
 import "../Common/CommonEquip.css";
-import CommonModal from "../Common/CommonModal.jsx"; // ✅ 공통 모달
+import CommonPopupViewer from "../Common/CommonPopupViewer"; // ✅ 새 창 열기용
 
 const CommonEquip = ({ title, images }) => {
-    const [selectedEquipment, setSelectedEquipment] = useState(null);
-
     return (
-        <div className="equip-slider-container">
-            <div className="section-title">
-                <h2>{title}</h2>
+        <div className="equip-wrapper">
+            <div className="equip-slider-container">
+                <div className="section-title-equip">
+                    <h2>{title}</h2>
+                    <div className="underline"></div>
+                </div>
+                <div className="equip-grid">
+                    {images.map((img, index) => (
+                        <div
+                            key={index}
+                            className="equip-card"
+                            onClick={() => CommonPopupViewer.open(img)}
+                        >
+                            <img src={img.src} alt={img.title} className="equip-image" />
+                            <div className="equip-card-title">{img.title}</div>
+                            <div className="equip-card-desc">{img.description}</div>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <Swiper
-                modules={[Pagination]}
-                slidesPerView="auto"
-                initialSlide={2}
-                speed={1000}
-                spaceBetween={32}
-                loop={true}
-                centeredSlides={true}
-                roundLengths={true}
-                mousewheel={true}
-                grabCursor={true}
-                pagination={{ clickable: true }}
-                className="equip-swiper-container"
-            >
-                {images.map((img, index) => (
-                    <SwiperSlide
-                        key={index}
-                        className="equip-swiper-slide"
-                        onClick={() => setSelectedEquipment(img)} // ✅ 클릭한 이미지의 title, description 전달
-                        style={{ cursor: "pointer" }}
-                    >
-                        <div className="equip-slide-image" style={{ backgroundImage: `url(${img.src})` }}></div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-
-            {/* ✅ 공통 모달 사용 */}
-            {selectedEquipment && (
-                <CommonModal
-                    equipment={selectedEquipment}
-                    onClose={() => setSelectedEquipment(null)}
-                />
-            )}
         </div>
     );
 };

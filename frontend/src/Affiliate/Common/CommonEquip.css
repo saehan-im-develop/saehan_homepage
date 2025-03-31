@@ -1,102 +1,19 @@
+/* 전체 배경 및 중앙 정렬 */
 .equip-body {
     background-color: #f6f7fb;
     font-family: "Montserrat", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.equip-slider-container {
-    max-width: 1800px;
-    margin: 5% auto 0 auto; /* 변경: 좌우 중앙정렬을 위해 auto 설정 */
+.equip-wrapper {
+    display: flex;
+    justify-content: center;
     width: 100%;
+    overflow-x: auto;
   }
-  
 
-.equip-swiper-container {
-    height: 400px;
-    width: 100%;
-    padding-bottom: 85px;
-}
-
-.equip-swiper-slide {
-    width: 100%;
-    background-color: white;
-    overflow: hidden;
-}
-
-.equip-slide-image {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 15px !important; /* 라운드 적용 */
-    object-fit: cover; /* 이미지 크기를 div에 맞게 채우기 */
-    transition: transform 1400ms ease;
-}
-
-.equip-slide-image:hover {
-    transform: scale(1.15); /* 마우스를 올리면 확대되도록 트랜지션 효과 */
-}
-
-.equip-swiper-slide-active .equip-slide-image {
-    transform: scale(1);
-}
-
-
-.equip-slide-content {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.equip-slide-content h4 {
-    font-size: 25px;
-    font-weight: 400;
-}
-
-.equip-slide-content p {
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.equip-slide-content footer {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    color: #c2c0e0;
-}
-
-.equip-slide-content a {
-    color: tomato;
-    font-size: 12px;
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 3px solid currentColor;
-    padding-bottom: 3px;
-}
-
-.equip-swiper-pagination {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 85px;
-}
-
-.equip-swiper-pagination-bullet {
-    background: tomato;
-    width: 22px;
-    height: 4px;
-    border-radius: 0;
-    transition: opacity 1s ease;
-}
-
-.section-title {
+/* 상단 제목 */
+.section-title-equip {
+    margin-top: 4%;
     width: 100%;
     text-align: center !important;
     margin-bottom: 30px;
@@ -104,33 +21,73 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
-  .section-title h2 {
+    background-color: #00417e;
+}
+
+.section-title-equip h2 {
     font-size: 30px;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 8px;
-  }
-  
-  .section-title .underline {
+    align-items: center;
+}
+
+.section-title-equip .underline {
     width: 150px;
     height: 4px;
     background-color: #1a3d7c;
+}
+
+
+
+.equip-slider-container {
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    white-space: nowrap; /* 줄 바꿈 방지 */
   }
-  
-  
 
+/* 카드형 설비 그리드 */
+.equip-grid {
+    display: inline-flex;
+    gap: 24px;
+  }
 
+/* 개별 설비 카드 */
+.equip-card {
+    flex: 0 0 auto;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
 
-@media (min-width: 768px) {
-    .equip-swiper-slide {
-        width: 33.3333%;
-    }
+.equip-card:hover {
+    transform: scale(1.03);
 }
 
-@media (min-width: 1024px) {
-    .equip-swiper-slide {
-        width: 25%;
-    }
+/* 설비 이미지 */
+.equip-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
 }
+
+/* 카드 내부 제목/설명 */
+.equip-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.equip-card-desc {
+    font-size: 14px;
+    color: #666;
+    padding: 0 16px 16px;
+}
+
+

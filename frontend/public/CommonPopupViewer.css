@@ -1,0 +1,110 @@
+.popup-body-affPop {
+    font-family: "Arial", sans-serif;
+    padding: 40px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.popup-title-affPop {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.popup-subtitle-affPop {
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.popup-image-affPop {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.popup-description-affPop {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.slider-container-affPop {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider-affPop {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 400%;
+}
+
+.slide-affPop {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide-affPop img {
+    width: 50%;
+    max-height: 50vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.slider-nav-affPop {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.nav-dot-affPop {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.nav-dot-affPop.active {
+    background-color: #333;
+}
+
+.image-gallery-affPop {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.image-box-affPop {
+    width: 24%;
+    text-align: center;
+}
+
+.gallery-image-affPop {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-title-affPop {
+    margin: 8px 0 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.image-desc-affPop {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
