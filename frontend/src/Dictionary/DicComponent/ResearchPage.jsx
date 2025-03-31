@@ -50,7 +50,7 @@ const ResearchPage = () => {
       </div>
 
       {/* 연구개발 인증서 */}
-      <h2 className="section-title">연구개발 인증서</h2>
+      <h2 className="section-title-re">연구개발 인증서</h2>
       <div className="content-section-certify">
         {devCertifications.map((item, index) => (
           <div key={index} className="certify-card">
@@ -60,7 +60,7 @@ const ResearchPage = () => {
       </div>
 
       {/* 전문기업 확인서 */}
-      <h2 className="section-title">전문기업 확인서</h2>
+      <h2 className="section-title-re">전문기업 확인서</h2>
       <div className="content-section-certify expert">
         {expertCertifications.map((item, index) => (
           <div key={index} className="certify-card">
@@ -70,7 +70,7 @@ const ResearchPage = () => {
       </div>
 
       {/* 뿌리기업 확인서 */}
-      <h2 className="section-title">뿌리기업 확인서</h2>
+      <h2 className="section-title-re">뿌리기업 확인서</h2>
       <div className="content-section-certify root">
         {rootCertifications.map((item, index) => (
           <div key={index} className="certify-card">
@@ -80,7 +80,7 @@ const ResearchPage = () => {
       </div>
 
       {/* QM 최초인증서 */}
-      <h2 className="section-title">QM 최초인증서</h2>
+      <h2 className="section-title-re">QM 최초인증서</h2>
       <div className="content-section-certify qm">
         {qmCertifications.map((item, index) => (
           <div key={index} className="certify-card">
