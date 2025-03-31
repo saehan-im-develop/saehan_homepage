@@ -20,9 +20,9 @@ const CommonPopupViewer = {
 
           <div class="slider-container-affPop">
             <div class="slider-track-affPop" id="sliderTrack">
-              ${processes.map(p => `
+              ${processes.map((p, i) => `
                 <div class="slide-affPop">
-                  <img src="${p.src}" alt="${p.title}" class="gallery-image-affPop" />
+                  <img src="${p.src}" alt="${p.title}" class="gallery-image-affPop" onclick="openImageModal('${p.src}')" />
                   <h4 class="image-title-affPop">${p.title}</h4>
                   <p class="image-desc-affPop">${p.desc}</p>
                 </div>
@@ -37,35 +37,67 @@ const CommonPopupViewer = {
 
           <p class="popup-description-affPop">${description}</p>
 
+          <!-- 🖼 모달 이미지 뷰어 -->
+          <div id="imageModal" class="image-modal-affPop" style="display:none" onclick="this.style.display='none'">
+            <img id="modalImage" class="modal-content-affPop" />
+          </div>
+
           <script>
             let index = 0;
             const visibleCount = 4;
+            const track = document.getElementById('sliderTrack');
             const slides = document.querySelectorAll('.slide-affPop');
-            const maxIndex = slides.length - visibleCount;
 
             function updateSlider() {
               const offset = -(index * (100 / visibleCount));
-              document.getElementById('sliderTrack').style.transform = 'translateX(' + offset + '%)';
+              track.style.transform = 'translateX(' + offset + '%)';
             }
 
             function moveSlide(direction) {
+              const maxIndex = slides.length - visibleCount;
               index = Math.max(0, Math.min(index + direction, maxIndex));
               updateSlider();
             }
 
+            function openImageModal(src) {
+              const modal = document.getElementById('imageModal');
+              const modalImg = document.getElementById('modalImage');
+              modalImg.src = src;
+              modal.style.display = 'block';
+            }
+
             document.addEventListener('keydown', (e) => {
-              if (e.key === 'Escape') window.close();
+              if (e.key === 'Escape') {
+                const modal = document.getElementById('imageModal');
+                if (modal.style.display === 'block') {
+                  modal.style.display = 'none';
+                } else {
+                  window.close();
+                }
+              }
             });
 
-            // ✅ 자동 슬라이드 (처음 → 끝까지만, 되감기 없음)
-            const autoplay = setInterval(() => {
-              if (index < maxIndex) {
-                index++;
-                updateSlider();
-              } else {
-                clearInterval(autoplay); // 끝까지 가면 멈춤
-              }
-            }, 3000); //3초마다
+            // 🟢 Swipe 기능 추가
+            let startX = 0;
+            let endX = 0;
+
+            track.addEventListener('mousedown', (e) => {
+              startX = e.clientX;
+            });
+            track.addEventListener('mouseup', (e) => {
+              endX = e.clientX;
+              if (startX - endX > 50) moveSlide(1);
+              else if (endX - startX > 50) moveSlide(-1);
+            });
+
+            track.addEventListener('touchstart', (e) => {
+              startX = e.touches[0].clientX;
+            });
+            track.addEventListener('touchend', (e) => {
+              endX = e.changedTouches[0].clientX;
+              if (startX - endX > 50) moveSlide(1);
+              else if (endX - startX > 50) moveSlide(-1);
+            });
 
             updateSlider();
           </script>

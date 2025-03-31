@@ -22,7 +22,10 @@ const images = [
       { src: img1_2, title: "공정 2", desc: "금형 성형 공정입니다." },
       { src: img1_3, title: "공정 3", desc: "표면을 정리하고 검사합니다." },
       { src: img1_4, title: "공정 4", desc: "포장 및 출하 단계입니다." },
-      { src: img1_4, title: "공정 5", desc: "포장 및 출하 단계입니다." }
+      { src: img1_4, title: "공정 5", desc: "포장 및 출하 단계입니다." },
+      { src: img1_4, title: "공정 6", desc: "포장 및 출하 단계입니다." },
+      { src: img1_4, title: "공정 7", desc: "포장 및 출하 단계입니다." },
+      { src: img1_4, title: "공정 8", desc: "포장 및 출하 단계입니다." },
     ]
   },
   {
