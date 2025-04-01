@@ -17,7 +17,7 @@ import img1_8 from "@/assets/equips/sm/eq1/8.png";
 
 import img2_2 from "@/assets/equips/sm/eq2/22.jpg";
 import img2_3 from "@/assets/equips/sm/eq2/23.jpg";
-import img2_4 from "@/assets/equips/sm/eq2/24.jpg";
+// import img2_4 from "@/assets/equips/sm/eq2/24.jpg";
 import img2_5 from "@/assets/equips/sm/eq2/25.jpg"
 import img2_6 from "@/assets/equips/sm/eq2/26.jpg";
 import img2_7 from "@/assets/equips/sm/eq2/27.jpg";
@@ -28,9 +28,9 @@ import img2_9 from "@/assets/equips/sm/eq2/29.png";
 const images = [
   {
     src: img1,
-    title: "장비 1",
-    englishtitle: "김치냉장고 전용 용기(.8L) 생산 공정",
-    description: "설비 설명 1",
+    title: "김치냉장고 전용 용기(19.8L) 생산 설비",
+    englishtitle: "김치냉장고 전용 용기(19.8L) 생산 공정",
+    // description: "설비 설명 1",
     processes: [
       { src: img1_1, title: "사출 생산", desc: "" },
       { src: img1_2, title: "1단계 제품 운송", desc: "" },
@@ -38,26 +38,23 @@ const images = [
       { src: img1_4, title: "김치통 조립(assy)", desc: "" },
       { src: img1_5, title: "1단계 김치통 포장", desc: "" },
       { src: img1_6, title: "2단계 김치통 포장", desc: "" },
-      { src: img1_7, title: "완료 후 출고 대기 ", desc: "출고 대기 양품" },
-      { src: img1_8, title: "김치통 포장", desc: "포장 및 출하 단계" },
+      { src: img1_8, title: "포장 완료 후 출고 대기", desc: "포장 및 출하 단계" },
     ]
   },
 
   
   {
     src: img2,
-    title: "장비 2",
+    title: "김치냉장고 전용 용기(10.5L) 생산 설비",
     englishtitle: "김치냉장고 전용 용기(10.5L) 생산 공정",
-    description: "설비 설명 2",
+    // description: "설비 설명 2",
     processes: [
       { src: img2_2, title: "사출 생산", desc: "" },
       { src: img2_3, title: "1단계 제품 운송", desc: "" },
-      { src: img2_4, title: "2단계 제품 운송", desc: "" },
       { src: img2_5, title: "김치통 조립(assy)", desc: "" },
       { src: img2_6, title: "김치통 포장", desc: "" },
       { src: img2_7, title: "김치통 적재", desc: "" },
-      { src: img2_8, title: "완료 후 출고 대기 ", desc: "출고 대기 양품" },
-      { src: img2_9, title: "김치통 포장", desc: "포장 및 출하 단계" },
+      { src: img2_9, title: "완료 후 출고 대기", desc: "포장 및 출하 단계" },
     ]
   },
 
@@ -65,7 +62,13 @@ const images = [
 
 
 const GlobalEquip = () => {
-    return <CommonEquip title="Equipments of SM Chemical" images={images} />;
+  return (
+      <CommonEquip
+          title="Equipments of SM Chemical"
+          images={images}
+          pageType="sm" // ✅ 이걸로 구분!
+      />
+  );
 };
 
 export default GlobalEquip;

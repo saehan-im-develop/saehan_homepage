@@ -34,10 +34,10 @@ const images = [
     englishtitle: "FAN 제품에 회전 동작을 실험하여 회전 값이 SPEC 내에 들어오는지 측정하여 양품 생산",
     // description: "FAN 제품의 회전 값을 측정하는 기구",
     processes: [
-      { src: img1_1, title: "SHAFT에 제품 삽입", desc: "FAN BALANCING  측정기에 제품을 안착시키는 공정" },
+      { src: img1_1, title: "SHAFT에 제품 삽입", desc: "FAN BALANCING  측정기에 제품 안착 공정" },
       { src: img1_2, title: "고정", desc: "회전 측정시 유격을 최소화 하기 위한  공정" },
       { src: img1_3, title: "측정 시작", desc: "측정 시작 버튼을 눌러 유격 측정 시작" },
-      { src: img1_4, title: "가동 중", desc: "측정기 회전 측정 공정" },
+      { src: img1_4, title: "측정 중", desc: "측정기 회전 측정 공정" },
       { src: img1_5, title: "측정 완료", desc: "측정기에서 OK 메시지가 뜨면 측정완료 공정" },
       { src: img1_6, title: "완료 후 출고대기", desc: "출고 대기 양품" },
     ]
@@ -51,7 +51,7 @@ const images = [
           { src: img2_1, title: "제품 삽입", desc: "FAN BALANCING  측정기에 제품을 안착시키는 공정" },
           { src: img2_2, title: "제품 고정 및 기계 조정", desc: "회전 측정 공정" },
           { src: img2_3, title: "제품 검사 가동 중", desc: "" },
-          { src: img2_4, title: "완료 후 출고대기", desc: "출고 대기 양품" },
+          { src: img2_4, title: "완료 후 출고 대기", desc: "출고 대기 양품" },
     ]
   },
   {
@@ -63,7 +63,7 @@ const images = [
           { src: img3_1, title: "제품 삽입", desc: "FAN BALANCING  측정기에 제품을 안착시키는 공정" },
           { src: img3_2, title: "제품 측정 시작", desc: "측정을 시작하기 위한 기계 가동" },
           { src: img3_3, title: "제품 검사 진행", desc: "" },
-          { src: img3_4, title: "완료 후 출고대기", desc: "출고 대기 양품" },
+          { src: img3_4, title: "완료 후 출고 대기", desc: "출고 대기 양품" },
     ]
   },
 ];
