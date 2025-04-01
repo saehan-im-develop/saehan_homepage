@@ -18,13 +18,19 @@ const AFMain = () => {
   ];
 
   const handleClick = (link) => {
-    navigate(link); 
+    navigate(link);
   };
+
+  const spacedText = ["새", "한", "그", "룹"].join("\u00A0\u00A0"); // &nbsp; 2개와 동일
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>새 한 그 룹</h1>
-      <h2 className={styles.subtitle}>우리는 미래를 만들어갑니다.</h2>
+
+
+      <h1 className={styles.title} data-aos="fade">
+        {spacedText}
+      </h1>
+      <h2 className={styles.subtitle} data-aos="fade">우리는 미래를 만들어갑니다.</h2>
 
       <div className={styles.imageWrapper}>
         {data.map((item, index) => (

@@ -92,19 +92,28 @@ const CommonPopupViewer = {
               gap: 16px;
             }
 
-            .nav-button-affPop {
+          .nav-button-affPop {
               background-color: rgba(0, 0, 0, 0.4);
               color: white;
               border: none;
-              font-size: 20px;
-              padding: 6px 10px;
+              font-size: 25px;
               cursor: pointer;
+            
+              /* 👇 원형 모양 핵심 설정 */
+              width: 48px !important;
+              height: 48px !important;
               border-radius: 50%;
-              z-index: 2;
-              display: inline-flex;
+            
+              /* 👇 가운데 정렬 */
+              display: flex;
               align-items: center;
               justify-content: center;
+            
+              /* 기타 유지 */
+              z-index: 2;
+              transition: background-color 0.3s ease;
             }
+  
 
             .image-modal-affPop {
               position: fixed;
@@ -166,7 +175,6 @@ const CommonPopupViewer = {
             <img id="modalImage" class="modal-content-affPop" />
           </div>
 
-          <p class="popup-description-affPop">${description}</p>
 
           <script>
             let index = 0;

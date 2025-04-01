@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import NewFuture from "./NewFuture";
 import "../mainCssFile/MainSection.css";
@@ -6,10 +6,23 @@ import ContactSection from "./ContactSection";
 import section2Image from "@/assets/ai00.jpg";
 import mainImage4 from "@/assets/back4.jpg";
 import AFMain from "./AFMain";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MainSection = () => {
   const scrollRef = useRef(null);
   const navigate = useNavigate();
+  const spacedText = ["새", "한", "그", "룹"].join("\u00A0\u00A0");
+
+  // ✅ AOS 초기화
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+    setTimeout(() => AOS.refresh(), 500); // 요소 재감지
+  }, []);
 
   return (
     <div ref={scrollRef}>
@@ -22,30 +35,45 @@ const MainSection = () => {
 
         {/* 🔹 텍스트 오버레이 */}
         <div className="text-overlay">
-          <p>확실한 기술력과</p>
-          <p>철저한 품질관리</p>
-          <p>시대를 앞서가는</p>
-          <p>새   한   그   룹</p>
+          <p data-aos="fade-up" data-aos-delay="0">확실한 기술력과</p>
+          <p data-aos="fade-up" data-aos-delay="100">철저한 품질관리</p>
+          <p data-aos="fade-up" data-aos-delay="200">시대를 앞서가는</p>
+          <p data-aos="fade-up" data-aos-delay="300" className="spaced-text">
+              <span>새</span>
+              <span>한</span>
+              <span>그</span>
+              <span>룹</span>
+            </p>
         </div>
       </section>
 
+      {/* 🔹 제조 산업 소개 섹션 */}
       <section className="sub-section">
         <div className="content-container">
           {/* 이미지 컨테이너 */}
-          <div className="image-container">
-            <img src={section2Image} alt="제조 산업" className="section2-image" />
+          <div
+            className="image-container"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src={section2Image}
+              alt="제조 산업"
+              className="section2-image"
+            />
           </div>
 
           {/* 텍스트 컨테이너 */}
           <div className="text-container">
             <h2 className="large-text">
-              <p>IT 산업의 미래를</p> 
-              <p>선도하는 리더</p>
+              <p data-aos="fade-left" data-aos-delay="200">IT 산업의 미래를</p>
+              <p data-aos="fade-left" data-aos-delay="300">선도하는 리더</p>
             </h2>
           </div>
         </div>
       </section>
 
+      {/* 🔹 하위 컴포넌트들 */}
       <AFMain />
       <NewFuture />
       <ContactSection />

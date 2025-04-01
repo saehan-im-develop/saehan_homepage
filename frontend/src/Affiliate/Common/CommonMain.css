@@ -3,7 +3,7 @@
   text-align: center;
   position: relative;
   width: 100%;
-  height: 70vh; /* 뷰포트 높이 기준 */
+  height: 75vh; /* 뷰포트 높이 기준 */
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -11,7 +11,7 @@
   box-sizing: border-box;
   /*  배경 관련 설정 */
   background-size: cover;
-  background-position: center;
+  background-position: center top 55%;
   background-attachment: fixed;
 }
 

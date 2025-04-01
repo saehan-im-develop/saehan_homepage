@@ -15,6 +15,16 @@
   font-weight: 100;
 }
 
+
+.spaced-text span {
+  margin-right: 5.0rem; /* 원하는 간격만큼 조절 */
+}
+
+.spaced-text span:last-child {
+  margin-right: 0; /* 마지막은 공백 제거 */
+}
+
+
 /* 제조 산업 섹션 내부 컨테이너 */
 .content-container {
   display: flex;
@@ -160,13 +170,6 @@
   background-color: #ffffff;
 }
 
-
-/* .section-image {
-  width: 80%;
-  max-width: 1100px;
-  height: auto;
-  object-fit: cover;
-} */
 
 
 

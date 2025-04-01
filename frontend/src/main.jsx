@@ -1,13 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import "@fortawesome/fontawesome-free/css/all.css"; // ✅ 확장자 `.min.css` 제거
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+const Root = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    setTimeout(() => AOS.refresh(), 500); // 재감지
+  }, []);
 
+  return <App />;
+};
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(<Root />);

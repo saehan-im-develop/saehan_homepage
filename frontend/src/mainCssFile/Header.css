@@ -1,6 +1,6 @@
 /* ✅ 모든 텍스트에 폰트 적용 */
 * {
-  font-family: "Noto Sans KR", sans-serif !important;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /* ✅ 헤더 스타일 */
@@ -23,6 +23,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
 }
 
 /* ✅ 헤더 내부 정렬 수정 */
@@ -46,6 +47,7 @@
   display: flex;
   align-items: center;
   text-shadow: none;
+  text-decoration: none;
 }
 
 /* ✅ 로고 크기 */
