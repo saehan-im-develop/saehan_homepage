@@ -1,28 +1,62 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Common/CommonProduct.css";
-// import img1 from "@/assets/Areal/plus/npp1.jpg";
-import img2 from "@/assets/Areal/plus/npp2.jpg";
-// import img3 from "@/assets/Areal/plus/npp3.jpg";
-import img4 from "@/assets/Areal/plus/npp4.jpg";
-import img5 from "@/assets/Areal/plus/npp5.jpg";
-import img6 from "@/assets/Areal/plus/npp6.jpg";
-import img7 from "@/assets/Areal/plus/npp7.jpg";
-import img8 from "@/assets/Areal/plus/npp8.jpg";
-import img9 from "@/assets/Areal/plus/npp9.jpg";
-// import img10 from "@/assets/Areal/plus/npp10.jpg";
-import img11 from "@/assets/Areal/plus/npp11.jpg";
+// import img1 from "@/assets/Areal/plus/npp1.png";
+import img2 from "@/assets/Areal/plus/npp2.png";
+// import img3 from "@/assets/Areal/plus/npp3.png";
+import img4 from "@/assets/Areal/plus/npp4.png";
+import img5 from "@/assets/Areal/plus/npp5.png";
+import img6 from "@/assets/Areal/plus/npp6.png";
+// import img7 from "@/assets/Areal/plus/npp7.png";
+import img8 from "@/assets/Areal/plus/npp8.png";
+import img9 from "@/assets/Areal/plus/npp9.png";
+// import img10 from "@/assets/Areal/plus/npp10.png";
+import img11 from "@/assets/Areal/plus/npp11.png";
 import img12 from "@/assets/Areal/plus/pp1.jpg";
+import img13 from "@/assets/Areal/plus/pp2.png";
+import img14 from "@/assets/Areal/plus/pp3.png";
 
 function PlusProduct() {
   const products = [
     {
-      name: "BRKT-FR UPR TRIM JOINT",
-      codeNO: "81191-6D000",
-      model: "QV",
-      category: ">PC+ASA<",
+      name: "ASSY LEVER MAGNET",
+      codeNO: "DC-95-0238",
+      // model: "QV",
+      // category: ">PC+ASA<",
       give: "서연인테크(정연내장)",
       image: img12,
     },
+    {
+      name: "GEAR CAM",
+      codeNO: "3211-0044",
+      // model: "QV",
+      // category: ">PC+ASA<",
+      give: "서연인테크(정연내장)",
+      image: img13,
+    },
+    {
+      name: "CASE ICE MAKER R #1",
+      codeNO: "3211-0042",
+      model: "DI-P2",
+      category: "1X1X2-2 ABS",
+      give: "[주] 대창",
+      image: img5,
+    },
+    {
+      name: "COVER ICE MAKER R #3",
+      codeNO: "3211-0043",
+      model: "DI-P2",
+      category: "1X1X4-2 ABS",
+      give: "[주] 대창",
+      image: img14,
+    },
+    // {
+    //   name: "GEAR CAM #1",
+    //   codeNO: "3211-0044",
+    //   model: "DI-P2",
+    //   category: "POM 1X1X4-4",
+    //   // give: "[주] 대창",
+    //   image: img7,
+    // },
     {
       name: "BRKT-FR UPR TRIM JOINT",
       codeNO: "81191-6D000",
@@ -71,6 +105,7 @@ function PlusProduct() {
       give: "서연인테크(정연내장)",
       image: img11,
     },
+
     // {
     //   name: "BODY DRAWER",
     //   codeNO: "DC61-05922A",
@@ -95,22 +130,7 @@ function PlusProduct() {
     //   give: "[주] 대창",
     //   image: img3,
     // },
-    {
-      name: "CASE ICE MAKER R #1",
-      codeNO: "3211-0042",
-      model: "DI-P2",
-      category: "1X1X2-2 ABS",
-      give: "[주] 대창",
-      image: img5,
-    },
-    {
-      name: "GEAR CAM #1",
-      codeNO: "3211-0044",
-      model: "DI-P2",
-      category: "POM 1X1X4-4",
-      give: "[주] 대창",
-      image: img7,
-    },
+
   ];
 
   const [category, setCategory] = useState("전체");
