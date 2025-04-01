@@ -92,4 +92,18 @@
     padding: 0 16px 16px;
 }
 
+/* ✅ 특정 페이지 카드 사이즈 키우기 */
+.equip-card.large-card {
+    width: 420px;
+    height: auto;
+    margin: 0 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .equip-card.large-card {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
 

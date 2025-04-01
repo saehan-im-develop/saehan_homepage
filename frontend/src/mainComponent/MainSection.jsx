@@ -67,7 +67,7 @@ const MainSection = () => {
           <div className="text-container">
             <h2 className="large-text">
               <p data-aos="fade-left" data-aos-delay="200">IT 산업의 미래를</p>
-              <p data-aos="fade-left" data-aos-delay="300">선도하는 리더</p>
+              <p data-aos="fade-left" data-aos-delay="250">선도하는 리더</p>
             </h2>
           </div>
         </div>

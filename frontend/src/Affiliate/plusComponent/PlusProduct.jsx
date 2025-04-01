@@ -1,15 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Common/CommonProduct.css";
-// import img1 from "@/assets/Areal/plus/npp1.png";
 import img2 from "@/assets/Areal/plus/npp2.png";
-// import img3 from "@/assets/Areal/plus/npp3.png";
 import img4 from "@/assets/Areal/plus/npp4.png";
 import img5 from "@/assets/Areal/plus/npp5.png";
 import img6 from "@/assets/Areal/plus/npp6.png";
-// import img7 from "@/assets/Areal/plus/npp7.png";
 import img8 from "@/assets/Areal/plus/npp8.png";
 import img9 from "@/assets/Areal/plus/npp9.png";
-// import img10 from "@/assets/Areal/plus/npp10.png";
 import img11 from "@/assets/Areal/plus/npp11.png";
 import img12 from "@/assets/Areal/plus/pp1.jpg";
 import img13 from "@/assets/Areal/plus/pp2.png";

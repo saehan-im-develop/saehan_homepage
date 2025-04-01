@@ -11,14 +11,14 @@ import img2 from "@/assets/Areal/global/ng2.png"
 function GlobalProduct() {
   const products = [
     {
-      name: "ASSY CASE KIMCHI LOW(19.5L)",
+      name: "ASSY CASE KIMCHI LOW(19.8L)",
       codeNO: "DA97-18854D",
       // model: "WD8000D",
       // category: ">PP+TD30%< A4DU 1X2X1-1",
       image: img1,
     },
     {
-      name: "ASSY CASE KIMCHI-MIDDLE(10.8L)",
+      name: "ASSY CASE KIMCHI-MIDDLE(10.5L)",
       codeNO: "DA97-10818H",
       // model: "WF8000AK",
       // category: ">PP< DJ98 1X1X1",

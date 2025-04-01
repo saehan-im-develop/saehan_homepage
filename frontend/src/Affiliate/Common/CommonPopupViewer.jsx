@@ -43,7 +43,7 @@ const CommonPopupViewer = {
             .slider-container-affPop {
               position: relative;
               width: 90%;
-              max-width: 1400px;
+              max-width: 1600px;
               margin: 0 auto;
               overflow: hidden;
             }
@@ -54,7 +54,7 @@ const CommonPopupViewer = {
             }
 
             .slide-affPop {
-              flex: 0 0 25%;
+              flex: 0 0 50%;
               box-sizing: border-box;
               text-align: center;
               padding: 10px;
@@ -62,7 +62,7 @@ const CommonPopupViewer = {
 
             .gallery-image-affPop {
               width: 100%;
-              height: 400px;
+              height: 550px;
               object-fit: cover;
               border-radius: 8px;
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -178,12 +178,19 @@ const CommonPopupViewer = {
 
           <script>
             let index = 0;
-            const visibleCount = 4;
+            const visibleCount = 2;
             const slides = document.querySelectorAll('.slide-affPop');
             const maxIndex = slides.length - visibleCount;
 
             let autoplayActive = true;
             let autoplay = setInterval(autoAdvance, 3000);
+
+            const track = document.getElementById('sliderTrack');
+              if (slides.length <= visibleCount) {
+                track.style.justifyContent = 'center'; // ✅ 4개 이하일 경우 가운데 정렬
+              } else {
+                track.style.justifyContent = 'flex-start'; // 기본값
+              }
 
             function updateSlider() {
               const offset = -(index * (100 / visibleCount));
