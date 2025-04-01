@@ -46,8 +46,8 @@ const images = [
     englishtitle: "Machine 1",
     //description: "설비 설명 1",
     processes: [
-      { src: img1_1, title: "공정 1", desc: "" },
-      { src: img1_2, title: "공정 2", desc: "" },
+      { src: img1_1, title: "정렬 공정", desc: "" },
+      { src: img1_2, title: "MAGNET 미삽입 확인 공정", desc: "" },
     ]
   },
   {
