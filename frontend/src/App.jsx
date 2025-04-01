@@ -37,7 +37,7 @@ function App() {
         <Route path="/history" element={<HistoryContainer />} />
         <Route path="/network" element={<Network />} />
         <Route path="/vision" element={<VisionMain />} />
-        <Route path="/biz-area" element={<BusinessSection />} />
+        {/* <Route path="/biz-area" element={<BusinessSection />} /> */}
         <Route path="/tech" element={<TechMain />} />
         <Route path="/solutions" element={<SolutionsMain />} />
         <Route path="/tech-data" element={<TechData />} />
