@@ -1,64 +1,64 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Common/CommonProduct.css";
-import img1 from "@/assets/Areal/global/ng1.jpg"
-import img2 from "@/assets/Areal/global/ng2.jpg"
-import img3 from "@/assets/Areal/global/ng3.jpg"
-import img5 from "@/assets/Areal/global/ng5.png"
-import img6 from "@/assets/Areal/global/ng6.png"
-import img7 from "@/assets/Areal/global/ng7.png"
-import img8 from "@/assets/Areal/global/ng8.png"
+import img1 from "@/assets/Areal/global/ng1.png"
+import img2 from "@/assets/Areal/global/ng2.png"
+// import img3 from "@/assets/Areal/global/ng3.jpg"
+// import img5 from "@/assets/Areal/global/ng5.png"
+// import img6 from "@/assets/Areal/global/ng6.png"
+// import img7 from "@/assets/Areal/global/ng7.png"
+// import img8 from "@/assets/Areal/global/ng8.png"
 
 function GlobalProduct() {
   const products = [
     {
-      name: "CASE DETERGENT",
-      codeNO: "DC61-05908AX002",
-      model: "WD8000D",
-      category: ">PP+TD30%< A4DU 1X2X1-1",
+      name: "ASSY CASE KIMCHI LOW(19.5L)",
+      codeNO: "DA97-18854D",
+      // model: "WD8000D",
+      // category: ">PP+TD30%< A4DU 1X2X1-1",
       image: img1,
     },
     {
-      name: "CASE PUMP",
-      codeNO: "DC61-05323X001",
-      model: "WF8000AK",
-      category: ">PP< DJ98 1X1X1",
+      name: "ASSY CASE KIMCHI-MIDDLE(10.8L)",
+      codeNO: "DA97-10818H",
+      // model: "WF8000AK",
+      // category: ">PP< DJ98 1X1X1",
       image: img2,
     },
-    {
-      name: "CASE RINSE",
-      codeNO: "DC61-05907AX001",
-      model: "WD8000D",
-      category: ">PP+TD30%< A4DU 1X2X1-1",
-      image: img3,
-    },
-    {
-      name: "GUIDE LEFT",
-      // codeNO: "DC61-05908AX002",
-      // model: "WD8000D",
-      // category: ">PP+TD30%< A4DU 1X2X1-1",
-      image: img5 ,
-    },
-    {
-      name: "CAP DOOR",
-      // codeNO: "DC61-05908AX002",
-      // model: "WD8000D",
-      // category: ">PP+TD30%< A4DU 1X2X1-1",
-      image: img6,
-    },
-    {
-      name: "GUARD FAN",
-      // codeNO: "DC61-05908AX002",
-      // model: "WD8000D",
-      // category: ">PP+TD30%< A4DU 1X2X1-1",
-      image: img7,
-    },
-    {
-      name: "ASSY CASE KIMCHI-MIDDLE(10.8L)",
-      // codeNO: "DC61-05908AX002",
-      // model: "WD8000D",
-      // category: ">PP+TD30%< A4DU 1X2X1-1",
-      image: img8,
-    },
+    // {
+    //   name: "CASE RINSE",
+    //   codeNO: "DC61-05907AX001",
+    //   model: "WD8000D",
+    //   category: ">PP+TD30%< A4DU 1X2X1-1",
+    //   image: img3,
+    // },
+    // {
+    //   name: "GUIDE LEFT",
+    //   // codeNO: "DC61-05908AX002",
+    //   // model: "WD8000D",
+    //   // category: ">PP+TD30%< A4DU 1X2X1-1",
+    //   image: img5 ,
+    // },
+    // {
+    //   name: "CAP DOOR",
+    //   // codeNO: "DC61-05908AX002",
+    //   // model: "WD8000D",
+    //   // category: ">PP+TD30%< A4DU 1X2X1-1",
+    //   image: img6,
+    // },
+    // {
+    //   name: "GUARD FAN",
+    //   // codeNO: "DC61-05908AX002",
+    //   // model: "WD8000D",
+    //   // category: ">PP+TD30%< A4DU 1X2X1-1",
+    //   image: img7,
+    // },
+    // {
+    //   name: "ASSY CASE KIMCHI-MIDDLE(10.8L)",
+    //   // codeNO: "DC61-05908AX002",
+    //   // model: "WD8000D",
+    //   // category: ">PP+TD30%< A4DU 1X2X1-1",
+    //   image: img8,
+    // },
   ];
 
   const [isVisible, setIsVisible] = useState(false);

@@ -1,19 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Common/CommonProduct.css";
-import img1 from "@/assets/Areal/plus/npp1.jpg";
+// import img1 from "@/assets/Areal/plus/npp1.jpg";
 import img2 from "@/assets/Areal/plus/npp2.jpg";
-import img3 from "@/assets/Areal/plus/npp3.jpg";
+// import img3 from "@/assets/Areal/plus/npp3.jpg";
 import img4 from "@/assets/Areal/plus/npp4.jpg";
 import img5 from "@/assets/Areal/plus/npp5.jpg";
 import img6 from "@/assets/Areal/plus/npp6.jpg";
 import img7 from "@/assets/Areal/plus/npp7.jpg";
 import img8 from "@/assets/Areal/plus/npp8.jpg";
 import img9 from "@/assets/Areal/plus/npp9.jpg";
-import img10 from "@/assets/Areal/plus/npp10.jpg";
+// import img10 from "@/assets/Areal/plus/npp10.jpg";
 import img11 from "@/assets/Areal/plus/npp11.jpg";
+import img12 from "@/assets/Areal/plus/pp1.jpg";
 
 function PlusProduct() {
   const products = [
+    {
+      name: "BRKT-FR UPR TRIM JOINT",
+      codeNO: "81191-6D000",
+      model: "QV",
+      category: ">PC+ASA<",
+      give: "서연인테크(정연내장)",
+      image: img12,
+    },
     {
       name: "BRKT-FR UPR TRIM JOINT",
       codeNO: "81191-6D000",
@@ -62,30 +71,30 @@ function PlusProduct() {
       give: "서연인테크(정연내장)",
       image: img11,
     },
-    {
-      name: "BODY DRAWER",
-      codeNO: "DC61-05922A",
-      model: "WD8000D",
-      category: ">PP< A4WW 1X1X1-1",
-      give: "[주] 디케이",
-      image: img1,
-    },
-    {
-      name: "PANEL-REF",
-      codeNO: "DA64-07491A",
-      model: "RF9000C",
-      category: ">ABS< A4DU 1X1X1-1",
-      give: "[주] 한영 PNS",
-      image: img10,
-    },
-    {
-      name: "CASE WATER TANK #3",
-      codeNO: "DA61-4174A",
-      model: "RF9900T",
-      category: "",
-      give: "[주] 대창",
-      image: img3,
-    },
+    // {
+    //   name: "BODY DRAWER",
+    //   codeNO: "DC61-05922A",
+    //   model: "WD8000D",
+    //   category: ">PP< A4WW 1X1X1-1",
+    //   give: "[주] 디케이",
+    //   image: img1,
+    // },
+    // {
+    //   name: "PANEL-REF",
+    //   codeNO: "DA64-07491A",
+    //   model: "RF9000C",
+    //   category: ">ABS< A4DU 1X1X1-1",
+    //   give: "[주] 한영 PNS",
+    //   image: img10,
+    // },
+    // {
+    //   name: "CASE WATER TANK #3",
+    //   codeNO: "DA61-4174A",
+    //   model: "RF9900T",
+    //   category: "",
+    //   give: "[주] 대창",
+    //   image: img3,
+    // },
     {
       name: "CASE ICE MAKER R #1",
       codeNO: "3211-0042",
