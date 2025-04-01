@@ -106,30 +106,6 @@ function PlusProduct() {
       image: img11,
     },
 
-    // {
-    //   name: "BODY DRAWER",
-    //   codeNO: "DC61-05922A",
-    //   model: "WD8000D",
-    //   category: ">PP< A4WW 1X1X1-1",
-    //   give: "[주] 디케이",
-    //   image: img1,
-    // },
-    // {
-    //   name: "PANEL-REF",
-    //   codeNO: "DA64-07491A",
-    //   model: "RF9000C",
-    //   category: ">ABS< A4DU 1X1X1-1",
-    //   give: "[주] 한영 PNS",
-    //   image: img10,
-    // },
-    // {
-    //   name: "CASE WATER TANK #3",
-    //   codeNO: "DA61-4174A",
-    //   model: "RF9900T",
-    //   category: "",
-    //   give: "[주] 대창",
-    //   image: img3,
-    // },
 
   ];
 
