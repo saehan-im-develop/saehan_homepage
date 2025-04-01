@@ -17,7 +17,7 @@ import img1_6 from "@/assets/equips/high/eq1/6.png";
 
 import img2_1 from "@/assets/equips/high/eq2/22.png";
 import img2_2 from "@/assets/equips/high/eq2/23.png";
-import img2_3 from "@/assets/equips/high/eq2/24.jpg";
+import img2_3 from "@/assets/equips/high/eq2/24.png";
 import img2_4 from "@/assets/equips/high/eq2/20.png";
 
 // 3번째

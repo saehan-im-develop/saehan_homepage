@@ -7,14 +7,14 @@ import img4 from "@/assets/equips/plus/eq4/save1.png";
 import img5 from "@/assets/equips/plus/eq5/1.png"
 
 // 1번
-import img1_1 from "@/assets/equips/plus/eq1/2.jpg";
-import img1_2 from "@/assets/equips/plus/eq1/3.jpg";
+import img1_1 from "@/assets/equips/plus/eq1/2.png";
+import img1_2 from "@/assets/equips/plus/eq1/3.png";
 
 // 2번
 import img2_1 from "@/assets/equips/plus/eq2/2.jpg";
-import img2_2 from "@/assets/equips/plus/eq2/3.jpg";
-import img2_3 from "@/assets/equips/plus/eq2/4.jpg";
-import img2_4 from "@/assets/equips/plus/eq2/5.jpg";
+import img2_2 from "@/assets/equips/plus/eq2/3.png";
+import img2_3 from "@/assets/equips/plus/eq2/4.png";
+import img2_4 from "@/assets/equips/plus/eq2/5.png";
 import img2_4_4 from "@/assets/equips/plus/eq2/1.png";
 import img2_5 from "@/assets/equips/plus/eq2/6.jpg";
 import img2_6 from "@/assets/equips/plus/eq2/7.jpg";
@@ -27,8 +27,8 @@ import img3_1 from "@/assets/equips/plus/eq3/2.jpg";
 import img3_2 from "@/assets/equips/plus/eq3/3.jpg";
 import img3_3 from "@/assets/equips/plus/eq3/4.jpg";
 import img3_4 from "@/assets/equips/plus/eq3/5.jpg";
-import img3_5 from "@/assets/equips/plus/eq3/6.jpg";
-import img3_6 from "@/assets/equips/plus/eq3/7.jpg";
+import img3_5 from "@/assets/equips/plus/eq3/6.png";
+import img3_6 from "@/assets/equips/plus/eq3/7.png";
 import img3_7 from "@/assets/equips/plus/eq3/8.jpg";
 import img3_8 from "@/assets/equips/plus/eq3/pro.png";
 

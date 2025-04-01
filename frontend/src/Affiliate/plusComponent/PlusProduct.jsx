@@ -14,6 +14,7 @@ import img11 from "@/assets/Areal/plus/npp11.png";
 import img12 from "@/assets/Areal/plus/pp1.jpg";
 import img13 from "@/assets/Areal/plus/pp2.png";
 import img14 from "@/assets/Areal/plus/pp3.png";
+import img15 from "@/assets/Areal/plus/pp4.png";
 
 function PlusProduct() {
   const products = [
@@ -57,6 +58,14 @@ function PlusProduct() {
     //   // give: "[주] 대창",
     //   image: img7,
     // },
+    {
+      name: "MOLDING-RR BPR FASCIA",
+      codeNO: "42926227",
+      model: "QV",
+      category: ">PC+ASA<",
+      give: "서연인테크(정연내장)",
+      image: img15,
+    },
     {
       name: "BRKT-FR UPR TRIM JOINT",
       codeNO: "81191-6D000",
