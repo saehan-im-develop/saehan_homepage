@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // ✅ React Router 사용
 import styles from "../mainCssFile/NewFuture.module.scss";
 import img1 from "@/assets/Areal/panel.png";
-import img2 from "@/assets/Areal/high/h55.jpg";
+import img2 from "@/assets/Areal/hh11.png";
 import img3 from "@/assets/Areal/SM1.jpg";
 import img4 from "@/assets/Areal/plus2.jpg"
 
-const AFMain = () => {
+const AFMain = () => { 
   const [hovered, setHovered] = useState(null);
   const navigate = useNavigate(); // ✅ React Router로 변경
 
