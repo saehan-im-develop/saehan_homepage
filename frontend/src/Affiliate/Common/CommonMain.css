@@ -244,3 +244,93 @@
     font-size: 2.5rem;
   }
 }
+
+.plus-text-layer-container {
+  z-index: 2;
+}
+
+.plus-text-layer {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  max-width: 1200px;
+  color: white;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  font-weight: bold;
+  text-align: left;
+}
+
+.plus-text-layer.active {
+  opacity: 1;
+}
+
+/* ✅ 제목 및 본문 스타일 */
+.plus-text-layer h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.plus-text-layer p {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: white;
+  font-weight: bold;
+  white-space: pre-line;
+}
+
+/* ✅ 배경 전환용 */
+.plus-main-container {
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.plus-bg-fade-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.plus-bg-fade {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 55%;
+  opacity: 0;
+  transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.plus-bg-fade.active {
+  opacity: 1;
+}
+
+/* 📱 반응형 */
+@media (max-width: 1024px) {
+  .plus-text-layer {
+    top: 15%;
+    left: 5%;
+    max-width: 90%;
+  }
+  .plus-text-layer h1 {
+    font-size: 3rem;
+  }
+  .plus-text-layer p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .plus-text-layer h1 {
+    font-size: 2.5rem;
+  }
+  .plus-text-layer p {
+    font-size: 1.4rem;
+  }
+}
