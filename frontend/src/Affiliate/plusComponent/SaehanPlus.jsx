@@ -14,7 +14,7 @@ function SaehanPlus() {
   }, []);
 
   return (
-    <div className={`plus-container ${fadeIn ? "fade-in" : ""}`}>
+    <div className="plus-container">
       <PlusMain />
       <PlusEquip />
 
