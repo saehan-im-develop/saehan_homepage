@@ -16,7 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "aos": "^2.3.4",
-    "framer-motion": "^12.4.7",
+    "framer-motion": "^12.6.3",
     "fullpage.js": "^4.0.34",
     "gsap": "^3.12.7",
     "locomotive-scroll": "^4.1.4",

@@ -134,7 +134,7 @@ function PlusProduct() {
 
   return (
     <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
-      <h2 className="product-title">주요 생산 제품</h2>
+      {/* <h2 className="product-title">주요 생산 제품</h2> */}
       
       {/* 드롭다운 추가 */}
       <div className="filter-container">

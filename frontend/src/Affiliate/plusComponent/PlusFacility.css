@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .facility-layout {
+    display: flex;
+    justify-content: center;         /* ✅ 가운데 정렬 핵심 */
+    align-items: flex-start;
+    gap: 60px;                        /* 탭과 콘텐츠 사이 넓게 */
+    padding: 40px 80px;
+    max-width: 1400px;                /* ✅ 폭을 더 넉넉히 */
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+.facility-tabs {
+    flex: 0 0 35%;
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    border-left: 3px solid #ccc;
+    min-width: 300px;
+    min-height: 400px;
+}
+
+.facility-content-wrapper {
+    flex: 1;
+    max-width: 700px;
+    position: relative;
+  }
+
+.tab-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 0;
+    padding-left: 16px;
+    position: relative;
+    gap: 8px;
+    cursor: pointer;
+    line-height: 4;
+}
+
+.tab-indicator {
+    width: 3px;
+    height: 100%;
+    background-color: transparent;
+    margin-left: -3px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-text {
+    font-size: 18px;
+    color: #aaa;
+    line-height: 3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab-item.active .tab-indicator {
+    background-color: #77c043;
+  }
+  
+  .tab-item.active .tab-text {
+    font-weight: bold;
+    color: #000;
+  }
+
+  .tab-item.active {
+    color: #000;
+    font-weight: bold;
+    padding-right: 2px;
+    border-left: 3px solid #77c043;
+  }
+  
+
+.facility-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.facility-image {
+    width: 100%;
+    height: 420px;          /* ✅ 조금 키워서 더 시원하게 */
+    object-fit: cover;      /* ✅ 너무 작지 않게 꽉 채우기 */
+    border-radius: 8px;
+    margin-bottom: 24px;    /* ✅ 아래 텍스트와 간격 확보 */
+  }
+
+.facility-description {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin-left: 5%;
+}
+
+/* 💡 반응형 대응 */
+@media (max-width: 900px) {
+    .facility-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .facility-tabs,
+    .facility-content {
+        width: 100%;
+    }
+}
