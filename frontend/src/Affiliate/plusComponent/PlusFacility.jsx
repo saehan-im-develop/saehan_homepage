@@ -6,24 +6,24 @@ import temp2 from "@/assets/Areal/plus/p3.JPG";
 
 const facilityData = [
   {
-    title: "Energy-saving production of large components",
+    title: "주제1",
     image: temp,
-    description: "Efficient energy use in mass production of large-scale molded parts."
+    description: "설명1"
   },
   {
-    title: "Compact size & flexible machine layout",
+    title: "주제2",
     image: temp2,
-    description: "Modular frame allows flexible layouts in narrow spaces."
+    description: "설명2"
   },
   {
-    title: "Increase productivity with digital solutions",
+    title: "주제3",
     image: temp,
-    description: "IoT monitoring systems improve real-time decision making."
+    description: "설명3"
   },
   {
-    title: "Less downtime due to modular injection unit",
+    title: "주제4",
     image: temp,
-    description: "Injection unit is easily replaceable, reducing downtime."
+    description: "설명4"
   }
 ];
 
