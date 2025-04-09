@@ -11,17 +11,17 @@ import img2 from "@/assets/Areal/global/ng2.png"
 function GlobalProduct() {
   const products = [
     {
-      name: "ASSY CASE KIMCHI LOW(19.8L)",
-      codeNO: "DA97-18854D",
+      name: "CASE KIMCHI LOW(19.5L)",
+      // codeNO: "DA61-02970A-003",
       // model: "WD8000D",
-      // category: ">PP+TD30%< A4DU 1X2X1-1",
+      category: "재질 : PP(폴리프로필렌)",
       image: img1,
     },
     {
-      name: "ASSY CASE KIMCHI-MIDDLE(10.5L)",
-      codeNO: "DA97-10818H",
+      name: "CASE MIMCHI LOW(10.8L)",
+      // codeNO: "두껑 재질 : POM (폴리옥시메틸렌)",
       // model: "WF8000AK",
-      // category: ">PP< DJ98 1X1X1",
+      category: "본체 재질 : PP (폴리프로필렌)",
       image: img2,
     },
     // {
