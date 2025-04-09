@@ -1,30 +1,44 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import "./PlusFacility.css";
-import temp from "@/assets/Areal/plus/np4.JPG";
-import temp2 from "@/assets/Areal/plus/p3.JPG";
+import temp1 from "@/assets/Areal/plus/120.png";
+import temp2 from "@/assets/Areal/plus/150.png";
+import temp3 from "@/assets/Areal/plus/400.png";
+import temp4 from "@/assets/Areal/plus/650.png";
+import temp5 from "@/assets/Areal/plus/900.png";
+import temp6 from "@/assets/Areal/plus/1100.png";
 
 const facilityData = [
   {
-    title: "주제1",
-    image: temp,
-    description: "설명1"
+    title: "엔겔 사출기 120TON",
+    image: temp1,
+    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
   },
   {
-    title: "주제2",
+    title: "엔겔 사출기 150TON",
     image: temp2,
-    description: "설명2"
+    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
   },
   {
-    title: "주제3",
-    image: temp,
-    description: "설명3"
+    title: "엔겔 사출기 400TON",
+    image: temp3,
+    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
   },
   {
-    title: "주제4",
-    image: temp,
-    description: "설명4"
-  }
+    title: "엔겔 사출기 650TON",
+    image: temp4,
+    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
+  },
+  {
+    title: "엔겔 사출기 900TON",
+    image: temp5,
+    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
+  },
+  {
+    title: "엔겔 사출기 1100TON",
+    image: temp6,
+    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
+  },
 ];
 
 function PlusFacility() {
@@ -51,10 +65,10 @@ function PlusFacility() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
-            initial={{ y: 100, opacity: 0 }}
+            initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -100, opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            exit={{ y: -30, opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="facility-content"
           >
             <img

@@ -8,7 +8,7 @@ const bgImages = [bg1, bg2, bg3];
 const textSet = [
   {
     title: "SAEHAN PLUS",
-    description: `(유)새한플러스는 독일제 엥겔 ENGEL 설비를 기반으로\n정밀한 사출 기술을 바탕으로 글로벌 가전 및 자동차 부품을 생산하는\n전문 제조 기업입니다.`,
+    description: `(유)새한플러스는 오스트리아 엥겔 ENGEL 설비를 기반으로\n정밀한 사출 기술을 바탕으로 글로벌 가전 및 자동차 부품을 생산하는\n전문 제조 기업입니다.`,
   },
   {
     title: "정밀 사출 솔루션",
