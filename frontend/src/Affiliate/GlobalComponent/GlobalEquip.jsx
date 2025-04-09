@@ -28,8 +28,8 @@ import img2_9 from "@/assets/equips/sm/eq2/29.png";
 const images = [
   {
     src: img1,
-    title: "김치냉장고 전용 용기(19.8L) 생산 설비",
-    englishtitle: "김치냉장고 전용 용기(19.8L) 생산 공정",
+    title: "김치냉장고 전용 용기(19.5L) 생산 설비",
+    englishtitle: "김치냉장고 전용 용기(19.5L) 생산 공정",
     // description: "설비 설명 1",
     processes: [
       { src: img1_1, title: "사출 생산", desc: "" },
@@ -45,8 +45,8 @@ const images = [
   
   {
     src: img2,
-    title: "김치냉장고 전용 용기(10.5L) 생산 설비",
-    englishtitle: "김치냉장고 전용 용기(10.5L) 생산 공정",
+    title: "김치냉장고 전용 용기(10.8L) 생산 설비",
+    englishtitle: "김치냉장고 전용 용기(10.8L) 생산 공정",
     // description: "설비 설명 2",
     processes: [
       { src: img2_2, title: "사출 생산", desc: "" },
