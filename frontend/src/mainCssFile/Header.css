@@ -1,9 +1,10 @@
-/* ✅ 모든 텍스트에 폰트 적용 */
+/* ✅ 기본 텍스트 설정 */
 * {
   font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
 }
 
-/* ✅ 헤더 스타일 */
+/* ✅ 헤더 영역 */
 .header {
   background-color: white;
   padding: 5px 30px;
@@ -18,15 +19,7 @@
   margin: 0 auto;
 }
 
-/* ✅ 로고 + 텍스트 감싸는 div */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-
-/* ✅ 헤더 내부 정렬 수정 */
+/* ✅ 내부 컨테이너 정렬 */
 .header .container {
   display: flex;
   align-items: center;
@@ -37,7 +30,18 @@
   padding: 0 10px;
 }
 
-/* ✅ 새한그룹 텍스트 스타일 */
+/* ✅ 로고 + 텍스트 */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo {
+  height: 50px;
+}
+
 #saehan-group {
   font-size: 24px;
   font-weight: 200;
@@ -50,22 +54,14 @@
   text-decoration: none;
 }
 
-/* ✅ 로고 크기 */
-.logo {
-  height: 50px;
-}
-
-/* ✅ 사내 연락망 컨테이너 스타일 (이미지 + 텍스트) */
+/* ✅ 사내 연락망 (PC) */
 .profile-container {
   display: flex;
   align-items: center;
   gap: 8px;
-  /* 이미지와 텍스트 사이 간격 */
   cursor: pointer;
   text-decoration: none;
-  /* 링크 밑줄 제거 */
   color: inherit;
-  /* 기본 텍스트 색상 유지 */
 }
 
 .profile-icon {
@@ -79,14 +75,13 @@
   transform: scale(1.1);
 }
 
-/* ✅ 텍스트 스타일 */
 .profile-text {
   font-size: 14px;
   font-weight: bold;
   color: #222;
 }
 
-/* ✅ 네비게이션 리스트 */
+/* ✅ 네비게이션 */
 .nav-links {
   list-style: none;
   display: flex;
@@ -98,7 +93,6 @@
   overflow: visible;
 }
 
-/* ✅ 네비게이션 항목 & 드롭다운 항목 스타일 공통 적용 */
 .nav-links li,
 .nav-links li a,
 .dropdown-menu li a {
@@ -113,9 +107,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-
-
-/* ✅ 드롭다운 공통 스타일 */
+/* ✅ 드롭다운 메뉴 */
 .dropdown {
   position: relative;
   list-style: none;
@@ -123,7 +115,6 @@
   cursor: pointer;
 }
 
-/* ✅ 네비게이션 활성(active) 상태 */
 .nav-links li a.active,
 .nav-links li.active a {
   color: #0056b3;
@@ -131,15 +122,11 @@
   padding-bottom: 5px;
 }
 
-
-/* ✅ 드롭다운 메뉴 스타일 수정 */
 .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 50%;
-  /* 🔹 기본적으로 가운데 정렬 */
   transform: translateX(-50%);
-  /* 🔹 중앙 정렬 유지 */
   background: white;
   border: 1px solid #ddd;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -153,32 +140,25 @@
   white-space: nowrap;
 }
 
-/* ✅ 특정 드롭다운이 오른쪽 끝에 위치할 경우 조정 */
 .nav-links .dropdown:last-child .dropdown-menu {
   left: auto;
   right: 0;
   transform: none;
-  /* 🔹 우측 끝에서는 정렬 유지 */
 }
 
-
-/* ✅ 드롭다운 내부 링크 스타일 */
 .dropdown-menu li a {
   font-size: 16px;
 }
 
-/* ✅ 드롭다운 항목 hover 효과 */
 .dropdown-menu li a:hover {
   color: rgb(52, 52, 255);
 }
 
-/* ✅ 드롭다운 메뉴 항목 hover 시 배경색 효과 */
 .dropdown-menu li:hover {
   background-color: #f0f0f0;
 }
 
-/* 🔹 반응형 스타일 적용 */
-
+/* ✅ 햄버거 버튼 (PC에서는 숨김) */
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -186,64 +166,106 @@
   padding: 10px;
 }
 
-/* (1) 태블릿 (768px~1024px) */
-@media (max-width: 1024px) {
-  .header {
-    padding: 5px 20px;
-  }
-
-  .profile-icon {
-    margin-left: 10px;
-    /* 작은 화면에서는 간격 줄이기 */
-  }
-
-  .nav-links {
-    gap: 20px;
-  }
-
-  .nav-links li a {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
+/* ✅ 표시 제어 클래스 */
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: flex;
 }
 
-/* (2) 모바일 (최대 768px) */
+
 @media (max-width: 768px) {
+  /* ✅ 전체 헤더 스타일 */
   .header {
-    padding: 5px 15px;
-    height: 70px;
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
 
-  /* ✅ 햄버거 메뉴 버튼 추가 */
-  .menu-toggle {
-    display: block;
-    /* 화면 작아지면 보이게 */
+  /* ✅ 내부 컨테이너: 위아래 세로 정렬 */
+  .header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  /* ✅ 상단 정렬: 좌측(로고+사내연락망) + 우측 햄버거 */
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* ✅ 로고 + 사내 연락망 아이콘 묶기 */
+  .logo-profile-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ✅ 로고 영역 */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  #saehan-group {
+    font-size: 20px;
+    font-weight: 500;
+    color: #224488;
+    margin: 0;
+  }
+
+  /* ✅ 사내 연락망 아이콘 (모바일 전용) */
+  .mobile-only {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #222;
+  }
+
+  .mobile-only .profile-text {
+    display: none;
   }
 
   .profile-icon {
-    font-size: 22px;
-    /* 모바일에서는 조금 작게 */
-    margin-left: 5px;
-  }
-
-  /* ✅ 프로필 아이콘 스타일 */
-  .profile-icon img {
-    width: 40px !important;
-    /* 크기 강제 적용 */
-    height: 40px !important;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
-    /* 이미지 비율 유지하면서 축소 */
+  }
+
+  /* ✅ PC 전용 요소 숨김 */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* ✅ 햄버거 메뉴 */
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    padding: 8px;
     cursor: pointer;
-    margin-left: 20px;
-    transition: transform 0.2s;
+    z-index: 1001;
   }
 
-  .profile-icon img:hover {
-    transform: scale(1.1);
-    /* 마우스 오버 효과 */
-  }
-
-  /* ✅ 기본 네비게이션 숨김 */
+  /* ✅ 네비게이션 메뉴 (처음엔 숨김) */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -256,7 +278,7 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* ✅ 햄버거 버튼 클릭 시 메뉴 표시 */
+  /* ✅ 햄버거 클릭 시 보이도록 */
   .nav-links.active {
     display: flex;
   }

@@ -1,7 +1,8 @@
 /* 🔹 슬라이더 전체를 감싸는 컨테이너 */
 .main-section {
   display: flex;
-  flex-direction: column; /* 세로 정렬 */
+  flex-direction: column;
+  /* 세로 정렬 */
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -17,18 +18,21 @@
 
 
 .spaced-text span {
-  margin-right: 5.0rem; /* 원하는 간격만큼 조절 */
+  margin-right: 5.0rem;
+  /* 원하는 간격만큼 조절 */
 }
 
 .spaced-text span:last-child {
-  margin-right: 0; /* 마지막은 공백 제거 */
+  margin-right: 0;
+  /* 마지막은 공백 제거 */
 }
 
 
 /* 제조 산업 섹션 내부 컨테이너 */
 .content-container {
   display: flex;
-  flex-direction: row; /* 가로 정렬 */
+  flex-direction: row;
+  /* 가로 정렬 */
   align-items: center;
   /* width: 100vw; */
   max-width: 2000px;
@@ -36,11 +40,14 @@
   margin-left: 3%;
   gap: 40px;
 }
+
 /* 텍스트 컨테이너 스타일 */
 .text-container {
-  flex: 1; /* 오른쪽에 큰 글씨 배치 */
+  flex: 1;
+  /* 오른쪽에 큰 글씨 배치 */
   text-align: left;
-  padding-left: 40px; /* 이미지와 간격 추가 */
+  padding-left: 40px;
+  /* 이미지와 간격 추가 */
 }
 
 .large-text {
@@ -52,14 +59,17 @@
 
 /* 이미지 컨테이너 */
 .image-container {
-  flex: 1; /* 이미지가 왼쪽에 배치 */
+  flex: 1;
+  /* 이미지가 왼쪽에 배치 */
   display: flex;
-  justify-content: center; /* 왼쪽 정렬 */
+  justify-content: center;
+  /* 왼쪽 정렬 */
 }
 
 .fixed-image-container {
   width: 100vw;
-  height: 90vh; /* 화면 꽉 채우기 */
+  height: 90vh;
+  /* 화면 꽉 채우기 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,14 +114,16 @@
 /* 텍스트 오버레이 */
 .text-overlay {
   position: absolute;
-  top: 18%; /* 기본적으로 20% 위쪽 배치 */
+  top: 18%;
+  /* 기본적으로 20% 위쪽 배치 */
   left: 5%;
   text-align: left;
   font-size: 4.5rem;
   font-weight: 700;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  white-space: pre-wrap; /* ✅ 연속된 띄어쓰기 유지 */
+  white-space: pre-wrap;
+  /* ✅ 연속된 띄어쓰기 유지 */
   transition: opacity 1s ease-in-out;
   z-index: 2;
 }
@@ -120,14 +132,16 @@
   position: absolute;
   top: 15%;
   left: 5%;
-  text-align: left !important; /* 강제 왼쪽 정렬 */
+  text-align: left !important;
+  /* 강제 왼쪽 정렬 */
   font-size: 4.5rem;
   font-weight: 700;
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   transition: opacity 1s ease-in-out;
   z-index: 2;
-  display: block; /* 혹시 flex 영향을 받을 경우 대비 */
+  display: block;
+  /* 혹시 flex 영향을 받을 경우 대비 */
 }
 
 
@@ -155,7 +169,8 @@
 
   width: 100%;
   height: 80vh;
-  max-width: 1000px; /* 이미지 크기 제한 */
+  max-width: 1000px;
+  /* 이미지 크기 제한 */
   object-fit: cover;
 }
 
@@ -220,6 +235,7 @@
   font-weight: bold;
   z-index: 2;
 }
+
 /* 이미지 그리드 (가로 배열 유지) */
 .image-grid {
   display: flex;
@@ -271,109 +287,171 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 15px; /* 버튼과 이미지 사이 여백 추가 */
+  margin-top: 15px;
+  /* 버튼과 이미지 사이 여백 추가 */
   gap: 20px;
 }
 
-/*  기본 스타일 유지 (여기서 반응형 추가) */
-@media (max-width: 1024px) {
 
-  /* 🔹 전체적인 컨테이너 조정 */
-  .content-container {
-    flex-direction: column;
-    /* 모바일에서는 세로 정렬 */
-    text-align: center;
-    /* 텍스트 중앙 정렬 */
-    align-items: center;
-  }
 
-  /* 🔹 이미지 컨테이너 (너비 제한) */
-  .image-container {
-    max-width: 100%;
-    width: 80%;
-  }
 
-  .slide-image {
-    height: 95vh;
-  }
 
-  .section1-image {
+
+
+@media (max-width: 768px) {
+  .main-section {
+    height: auto;
+    position: relative; /* ✅ 이미지 기준으로 오버레이 배치 */
     width: 100%;
-    height: 100vh;
-    max-height: 80vh; /* 너무 길게 늘어나지 않도록 */
+  }
+  
+  .main-section,
+  .fixed-image-container,
+  .sub-section {
+    width: 100%; /* ✅ 100vw → 100% 로 변경 */
+  }
+
+  html, body {
+    overflow-x: hidden; /* ✅ 강제 가로 스크롤 방지 */
+  }
+
+  .fixed-image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .fixed-image {
+    width: 100%;
+    height: auto;
     object-fit: cover;
   }
 
-  /* 🔹 오버레이 텍스트 크기 축소 */
   .text-overlay {
-    font-size: 3rem;  /* 태블릿에서 글씨 크기 줄이기 */
-    top: 50%;  /* 화면 중앙 정렬 */
-    left: 50%;
-    transform: translate(-50%, -50%); /* 가운데 정렬 */
-    width: 80%; /* 텍스트 줄바꿈 방지 */
-    text-align: left; /* 중앙 정렬 */
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   }
 
   .text-overlay-sub {
-    font-size: 3rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
+    font-size: 1.5rem;
+    top: 10%;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .spaced-text span {
+    margin-right: 0.5rem; /* ✅ 줄여줌 */
+    font-size: 1.2rem;
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 5% 0;
+    gap: 20px;
+  }
+
+  .text-container {
+    padding: 0;
     text-align: center;
   }
 
-
-  /* 🔹 이미지 그리드 (스크롤 가능하게 변경) */
-  .image-grid {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  .spaced-text {
+    margin-top: 12px;
+    display: flex;
+    gap: 0.8rem;
+    font-size: 1.6rem;
   }
-}
+  
+  .large-text {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
 
-/*  모바일 화면 (768px 이하) */
-@media (max-width: 768px) {
+  .image-container {
+    width: 100%;
+  }
 
-  /* 🔹 제목 크기 축소 */
-  h1,
-  h2 {
+  .section2-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .sub-section {
+    flex-direction: column;
+    padding: 30px 10px;
+    width: 100%;
+  }
+
+  .sub-section h2,
+  #business-intro {
     font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
-  /* 🔹 텍스트 크기 조정 */
-  .text-overlay {
-    font-size: 2.5rem; /* 텍스트 크기 줄이기 */
-    top: 10%; /* 더 위로 올려서 화면 차지 줄이기 */
-    left: 5%;
+  .vertical-text {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .image-wrapper {
+    width: 90%;
+    max-width: 320px;
+    min-width: unset;
+    margin: 0 auto;
+  }
+  
+
+  .image-text {
+    font-size: 1rem;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .image-grid {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .controls-container {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .section {
+    padding: 24px 12px;
+    gap: 20px;
+  }
+
+  .title-shadow {
+    text-shadow: none;
+    color: #000;
   }
 
   .slide-image {
-    height: 90vh; /* 이미지가 너무 크지 않도록 */
-  }
-
-  /* 🔹 설명 섹션 */
-  .sub-section {
-    min-height: 60vh;
-    padding: 30px 10px;
+    height: 90vh;
   }
 
 
-  /* 🔹 사업 부문 소개 텍스트 크기 조정 */
-  #business-intro {
-    font-size: 2rem;
-  }
 
-  /* 🔹 이미지 크기 제한 */
-  .image-wrapper {
-    width: 90%;
-    max-width: 250px;
-  }
 
-  .image-grid {
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
+
+  
 }
-

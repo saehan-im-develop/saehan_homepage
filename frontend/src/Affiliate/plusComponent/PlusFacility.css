@@ -98,15 +98,74 @@
     margin-left: 5%;
 }
 
-/* 💡 반응형 대응 */
-@media (max-width: 900px) {
-    .facility-layout {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .facility-tabs,
-    .facility-content {
-        width: 100%;
-    }
+
+
+@media (max-width: 768px) {
+  .facility-layout {
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px 16px;
+    max-width: 100%;
+  }
+
+  .facility-tabs {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    border-left: none;
+    border-top: 2px solid #ccc;
+    padding-top: 8px;
+    min-width: auto;
+    min-height: auto;
+  }
+
+  .tab-item {
+    flex-direction: row;
+    padding: 10px 12px;
+    border-left: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .tab-text {
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .tab-item.active {
+    border-left: none;
+    border-bottom: 2px solid #2563eb;
+    background-color: #f5faff;
+  }
+
+  .tab-indicator {
+    display: none; /* 모바일에서는 숨김 */
+  }
+
+  .facility-content-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .facility-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .facility-image {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .facility-description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-left: 0;
+    padding: 0 12px;
+  }
 }

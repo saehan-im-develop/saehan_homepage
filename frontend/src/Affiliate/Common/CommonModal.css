@@ -75,3 +75,40 @@
     font-size: 16px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .modal-content {
+      width: 90%;
+      height: auto; /* ✅ 높이 고정 대신 콘텐츠에 따라 자동 조정 */
+      max-height: 90vh;
+      padding: 16px;
+      border-radius: 8px;
+    }
+  
+    .modal-image {
+      max-height: 240px; /* ✅ 이미지 높이 축소 */
+      border-radius: 6px;
+    }
+  
+    .modal-description {
+      font-size: 14px; /* ✅ 텍스트 살짝 작게 */
+      line-height: 1.5;
+      padding: 0 4px;
+    }
+  
+    .modal-englishtitle {
+      font-size: 12px;
+      margin-top: -2px;
+    }
+  
+    .close-button {
+      font-size: 18px;
+      top: 8px;
+      right: 8px;
+    }
+  
+    .modal-title-container {
+      margin-bottom: 6px;
+    }
+  }
+  

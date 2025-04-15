@@ -110,41 +110,48 @@ html {
 
 /* 🟢 반응형 */
 @media (max-width: 768px) {
-    .content-section {
+    .hero-title {
+        font-size: 2rem; /* 🔽 글자 크기 축소 */
+        padding: 0 16px;
+        text-align: center;
+      }
+
+      .hero-section {
+        height: 35vh; /* 🔽 높이 줄이기 */
+        background-position: center top 500px; /* 필요시 위치도 조정 */
+      }
+
+    
+      .content-section {
         flex-direction: column;
         text-align: center;
-    }
-
-    .info-container {
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+      }
+    
+      .text-container {
+        width: 90%;
+        margin: 0 auto 10px;
+        padding: 0 8px;
+      }
+    
+      .news-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    
+      .info-container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 16px;
         border-left: none;
         border-top: 5px solid #093064;
+        box-sizing: border-box;
+      }
+    
+      .image-container {
+        justify-content: center;
+      }
     }
-}
-
-@media (max-width: 1024px) {
-
-    /* 패드(태블릿) 사이즈 대응 */
-    .content-section {
-        flex-direction: column;
-        align-items: center;
-        /* 내부 요소들을 가운데 정렬 */
-        text-align: center;
-    }
-
-    .info-container {
-        width: 80%;
-        /* 적절한 너비 설정 */
-        max-width: 600px;
-        /* 최대 너비 설정 */
-        margin: 0 auto;
-        /* 좌우 중앙 정렬 */
-        border-left: none;
-        border-top: 5px solid #093064;
-    }
-
-    .text-container {
-        width: 80%;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}

@@ -92,54 +92,48 @@
     border-radius: 5px;
     border: 1px solid #ccc;
   }
-/* 🔹 반응형 스타일 적용 */
 
-/* (1) 태블릿 (768px~1024px) */
-@media (max-width: 1024px) {
-    .product {
-        max-width: 90%;
-    }
 
-    .product-card {
-        padding: 15px;
-        max-width: 90%;
-        gap: 15px;
-    }
-
-    .product-title {
-        font-size: 22px;
-    }
-
-    .product-image {
-        max-width: 250px;
-    }
-}
 
 /* (2) 모바일 (최대 768px) */
 @media (max-width: 768px) {
     .product {
-        padding: 20px;
-        max-width: 95%;
+      padding: 20px;
+      max-width: 95%;
+      margin: 0 auto;
     }
-
+  
     .product-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-        gap: 10px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      gap: 12px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 선택 */
+      background-color: #fff; /* 선택: 카드 강조 */
     }
-
+  
     .product-title {
-        font-size: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
-
+  
     .product-image {
-        max-width: 200px;
-        margin-right: 0;
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      border-radius: 8px;
+      object-fit: contain;
     }
-
+  
     .product-info {
-        text-align: center;
+      text-align: center;
+      padding: 0 8px;
+      font-size: 14px;
+      line-height: 1.5;
     }
-}
+  }

@@ -147,86 +147,55 @@ hr {
 
 /* 🟢 반응형 */
 @media (max-width: 768px) {
-    .content-section {
-        flex-direction: column;
-        text-align: center;
+    /* 🔹 상단 배경 줄이기 */
+    .hero-section-docu {
+      height: 30vh;
+      background-position: center top;
     }
-
-    .info-container {
-        border-left: none;
-        border-top: 5px solid #093064;
+  
+    .hero-title-docu {
+      font-size: 2rem;
+      text-align: center;
+      padding: 0 16px;
     }
-}
-
-@media (max-width: 1024px) {
-
-    /* 패드(태블릿) 사이즈 대응 */
-    .content-section {
-        flex-direction: column;
-        align-items: center;
-        /* 내부 요소들을 가운데 정렬 */
-        text-align: center;
+  
+    /* 🔹 섹션 타이틀 간결하게 */
+    .section-title-re {
+      font-size: 20px;
+      padding: 10px 0;
+      margin-left: 5%;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
-
-    .info-container {
-        width: 80%;
-        /* 적절한 너비 설정 */
-        max-width: 600px;
-        /* 최대 너비 설정 */
-        margin: 0 auto;
-        /* 좌우 중앙 정렬 */
-        border-left: none;
-        border-top: 5px solid #093064;
-    }
-
-    .text-container {
-        width: 80%;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
-
-/* ✅ 반응형 */
-@media (max-width: 1024px) {
+  
+    /* 🔹 그리드 → 수직 정렬 (한 줄 1개) */
     .content-section-certify {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ✅ 태블릿에서 조정 */
-        width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 95%;
+      margin: 0 auto;
+      padding: 20px 0;
     }
-}
-
-@media (max-width: 768px) {
-    .content-section-certify {
-        grid-template-columns: 1fr; /* ✅ 모바일에서는 한 줄 */
-        width: 90%;
+  
+    /* 🔹 카드 간소화 */
+    .certify-card {
+      padding: 12px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
     }
-}
-
-/* 🟢 반응형 */
-@media (max-width: 1024px) {
-    .content-section-certify.root {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ✅ 태블릿에서 조정 */
-        width: 90%;
+  
+    /* 🔹 이미지 반응형 */
+    .certify-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
-}
-
-@media (max-width: 768px) {
-    .content-section-certify.root {
-        grid-template-columns: 1fr; /* ✅ 모바일에서는 한 줄 */
-        width: 90%;
+  
+    /* 🔹 중복 방지용 보조 스타일 */
+    .info-container {
+      border-left: none;
+      border-top: 5px solid #093064;
+      padding: 16px;
     }
-}
-
-/* 🟢 반응형 */
-@media (max-width: 1024px) {
-    .content-section-certify.qm {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ✅ 태블릿에서 조정 */
-        width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    .content-section-certify.qm {
-        grid-template-columns: 1fr; /* ✅ 모바일에서는 한 줄 */
-        width: 90%;
-    }
-}
+  }
+  
