@@ -228,3 +228,72 @@
   left: -30px;
 }
 
+@media (max-width: 768px) {
+  .history-timeline {
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .history-timeline::before {
+    left: 16px; /* ✅ 중앙선 → 왼쪽으로 이동 */
+    transform: none;
+    width: 3px;
+    background-color: #ccc;
+  }
+
+  .history-image-container {
+    height: auto; /* ✅ 고정 높이 제거 */
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+  }
+
+  .history-image-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto; /* ✅ 비율 유지하며 확대 */
+    object-fit: cover; /* ✅ 이미지 꽉 차게*/
+    border-radius: 12px;
+  }
+  
+  .history-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .history-item.left,
+  .history-item.right {
+    left: 0;
+    text-align: left;
+    flex-direction: column;
+  }
+
+  .history-line {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 12px;
+    height: 12px;
+    background-color: #2563eb;
+    border-radius: 50%;
+  }
+
+  .history-content-box {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 16px;
+  }
+
+  .history-year {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+}

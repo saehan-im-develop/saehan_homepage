@@ -215,3 +215,63 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .network-container {
+    width: 95%;
+    padding-top: 20px;
+  }
+
+  .network-title {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    padding-bottom: 6px;
+
+    &::after {
+      width: 40%;
+    }
+  }
+
+  .network-card {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .network-info {
+    display: flex; /* ✅ 그리드 제거하고 한 줄 정렬*/
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .network-contact {
+    text-align: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .network-phone {
+    text-align: center;
+    font-size: 14px;
+
+    p {
+      margin: 2px 0;
+    }
+  }
+
+  .email-icon {
+    font-size: 14px;
+  }
+
+  .network-header-bg {
+    height: 180px; /* ✅ 모바일에서 헤더 이미지 영역 축소*/
+    margin-top: 5px;
+  }
+
+  .network-header-img {
+    object-fit: cover;
+    object-position: center center;
+  }
+}

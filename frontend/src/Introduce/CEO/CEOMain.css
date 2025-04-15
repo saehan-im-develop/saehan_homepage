@@ -82,3 +82,62 @@ p-ceo {
   left: 50px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
+@media (max-width: 768px) {
+  .ceo-section {
+    flex-direction: column; /* ✅ 세로 정렬로 변경*/
+    padding: 40px 16px;
+    align-items: center;
+  }
+
+  .ceo-container {
+    width: 90%;
+    min-width: unset; /* ✅ 최소 너비 해제 */
+    padding: 24px;
+    top: 0; /* ✅ 위치 보정 */
+    background: #ffffff; /* ✅ 흰 배경 */
+    color: #000000; /* ✅ 글씨는 검정*/
+  }
+
+  .ceo-header {
+    font-size: 2rem;
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .ceo-title {
+    font-size: 1.5rem;
+  }
+
+  .ceo-message {
+    white-space: pre-wrap;  /* ✅ 줄바꿈 유지하면서 자동 줄바꿈 허용 */
+    word-break: keep-all;   /* ✅ 단어 단위로 줄바꿈 (한국어에 적합) */
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .ceo-name {
+    font-size: 1.2rem;
+  }
+
+  .ceo-image {
+    position: static; /* ✅ absolute 해제 */
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .ceo-image img {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    position: static;
+    box-shadow: none;
+  }
+
+  .ceo-title,
+  .ceo-message,
+  .ceo-name {
+    color: #111 !important; /* ✅ 명확하게 지정*/
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.05); /* ✅ 아주 약한 테두리 */
+  }
+
+}

@@ -125,3 +125,38 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .imageWrapper {
+    display: grid; // ✅ flex → grid로 전환
+    grid-template-columns: repeat(2, 1fr); // ✅ 2x2 그리드
+    gap: 16px;
+    padding: 0 16px;
+    max-width: 100%;
+    overflow-x: hidden; // ✅ 가로 스크롤 제거
+    justify-items: center;
+  }
+
+  .snip1368 {
+    width: 100%;
+    max-width: 160px; // ✅ 2개씩 들어갈 수 있는 너비로 제한
+    min-width: unset;
+
+    img {
+      height: auto; // ✅ 높이 자동
+      aspect-ratio: 1 / 1; // ✅ 정사각형 비율 유지
+    }
+
+    figcaption::before {
+      display: none; // ✅ 모바일에서는 잘리는 삼각형 제거
+    }
+  }
+
+  .textBox {
+    left: 50%; // ✅ 중앙 정렬
+    bottom: 12px;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+  }
+}
