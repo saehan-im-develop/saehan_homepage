@@ -12,7 +12,7 @@ const facilityData = [
   {
     title: "엔겔 사출기 120TON",
     image: temp1,
-    // description: "주요 생산 품목 ㅇ ㅇㅇㅇ"
+    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
   },
   {
     title: "엔겔 사출기 150TON",
