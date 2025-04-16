@@ -20,11 +20,11 @@ jobs:
 
     - name: Deploy to Lightsail
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+        ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << EOF
           cd ~/saehaniam_2025_homepage/frontend
           git pull origin main
           npm install
           npm run build
           sudo rm -rf /var/www/html/*
           sudo cp -r dist/* /var/www/html/
-        EOF
+EOF
