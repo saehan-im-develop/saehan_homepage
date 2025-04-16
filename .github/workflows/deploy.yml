@@ -1,4 +1,14 @@
-- name: Test connectivity to Lightsail
-  run: |
-    echo "🔍 Pinging ${{ secrets.EC2_HOST }}..."
-    ping -c 3 ${{ secrets.EC2_HOST }} || echo "❌ Ping failed"
+name: Test connectivity to Lightsail
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ping-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: PING 테스트
+        run: |
+          echo "🔍 Pinging ${{ secrets.EC2_HOST }}..."
+          ping -c 3 ${{ secrets.EC2_HOST }} || echo "❌ Ping failed"
