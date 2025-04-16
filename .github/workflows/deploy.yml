@@ -1,7 +1,11 @@
-name: Test SSH connectivity
+name: Test connectivity to Lightsail
 
 on:
-  workflow_dispatch:
+  push:           # ✅ push 트리거 추가
+    branches:
+      - main
+
+  workflow_dispatch:  # 👈 기존 수동 실행도 유지
 
 jobs:
   ping-test:
