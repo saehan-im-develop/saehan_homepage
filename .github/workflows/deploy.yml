@@ -1,14 +1,18 @@
-name: Test connectivity to Lightsail
+name: Test SSH to Lightsail
 
 on:
-  workflow_dispatch:  # 수동 실행용ㅇㅇd
+  workflow_dispatch:
 
 jobs:
-  ping-test:
+  ssh-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: PING 테스트
+      - name: Set up SSH key
         run: |
-          echo "🔍 Pinging ${{ secrets.EC2_HOST }}..."
-          ping -c 3 ${{ secrets.EC2_HOST }} || echo "❌ Ping failed"
+          echo "${{ secrets.EC2_KEY }}" > key.pem
+          chmod 600 key.pem
+
+      - name: SSH 접속 테스트
+        run: |
+          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} "echo '✅ SSH 연결 성공'"
