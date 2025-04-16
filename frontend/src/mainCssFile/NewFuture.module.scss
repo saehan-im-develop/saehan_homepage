@@ -3,13 +3,13 @@
 
 .container {
   display: flex;
-  flex-direction: column; /* ✅ 세로 정렬 유지 */
-  align-items: center; /* ✅ 제목 중앙 정렬 */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 40px;
-  background: linear-gradient(to bottom, #426899 , #0C1623);
+  background: linear-gradient(to bottom, #426899, #0C1623);
   color: white;
-  flex-wrap: wrap; /* ✅ 제목은 줄 바꿈 가능 */
+  flex-wrap: wrap;
   margin-top: 5%;
 }
 
@@ -20,6 +20,9 @@
   width: 100%;
   margin-bottom: 10px;
   white-space: pre;
+  position: relative;
+  z-index: 10;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .subtitle {
@@ -28,32 +31,35 @@
   text-align: center;
   width: 100%;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .imageWrapper {
   display: flex;
+  position: relative;
   justify-content: center;
-  gap: 00px;
-  flex-wrap: nowrap; /* ✅ 여기에서만 nowrap 적용 */
-  overflow-x: auto; /* 가로 스크롤 추가 */
+  flex-wrap: nowrap;
+  overflow-x: auto;
   white-space: nowrap;
   padding-bottom: 10px;
   max-width: 90vw;
   border-radius: 10px;
+  gap: 0;
+  z-index: 1;
 }
 
 .textBox {
   position: absolute;
-  bottom: 20px; /* 기존 bottom 위치에서 위로 올림 */
+  bottom: 20px;
   left: 22%;
   transform: translateX(-50%);
   font-size: 1.1rem;
   font-weight: bold;
   color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
-
-
-
 
 .snip1368 {
   font-family: "Roboto", Arial, sans-serif;
@@ -67,9 +73,10 @@
   transition: all 0.4s ease;
 
   img {
+    display: block;
     width: 100%;
-    height: 350px; // 이미지 높이 조정
-    object-fit: cover; // 비율 유지하며 크롭
+    height: 350px;
+    object-fit: cover;
     opacity: 1;
     vertical-align: top;
     border-radius: 6px;
@@ -118,45 +125,82 @@
 
   &:hover,
   &.hover {
-
-
     figcaption {
-      transform: translateY(0%);
+      transform: translateY(0%) !important;
     }
   }
 }
 
-
 @media (max-width: 768px) {
+  .container {
+    padding: 40px 16px 20px;
+    margin-top: 0 !important;
+    position: relative;
+    z-index: 0;
+  }
+
   .imageWrapper {
-    display: grid; // ✅ flex → grid로 전환
-    grid-template-columns: repeat(2, 1fr); // ✅ 2x2 그리드
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     padding: 0 16px;
     max-width: 100%;
-    overflow-x: hidden; // ✅ 가로 스크롤 제거
+    overflow-x: hidden;
     justify-items: center;
+    z-index: 1;
+    position: relative;
   }
 
   .snip1368 {
     width: 100%;
-    max-width: 160px; // ✅ 2개씩 들어갈 수 있는 너비로 제한
+    max-width: 160px;
     min-width: unset;
 
     img {
-      height: auto; // ✅ 높이 자동
-      aspect-ratio: 1 / 1; // ✅ 정사각형 비율 유지
+      height: auto;
+      aspect-ratio: 1 / 1;
     }
 
     figcaption::before {
-      display: none; // ✅ 모바일에서는 잘리는 삼각형 제거
+      display: none;
     }
   }
 
   .textBox {
-    left: 50%; // ✅ 중앙 정렬
-    bottom: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
     transform: translateX(-50%);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 6px 12px;
+    background: rgba(0, 0, 0, 0.5); // ✅ 반투명 배경
+    border-radius: 4px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); // ✅ 그림자
   }
+
+  .title {
+    font-size: 1.8rem; // 👈 적당한 크기로 다운
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .subtitle {
+    font-size: 1rem; // 👈 subtitle도 약간 줄이기
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 24px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .snip1368 {
+    figcaption {
+      transform: translateY(0%) !important;
+      background-color: #141414;
+    }
+  }
+
 }
