@@ -37,10 +37,10 @@ jobs:
             sudo cp -r dist/* /var/www/html/
             echo "[GITHUB-ACTIONS] ✅ 파일 복사 완료"
             exit 0
-          EOF
-              if [ $? -eq 0 ]; then
-                break
-              else
-                sleep 5
-              fi
-            done
+        EOF
+            if [ $? -eq 0 ]; then
+              break
+            else
+              sleep 5
+            fi
+          done
