@@ -1,7 +1,7 @@
 name: Test connectivity to Lightsail
 
 on:
-  workflow_dispatch:  # 수동 실행 이라고
+  workflow_dispatch:  # 수동 실행용
 
 jobs:
   ping-test:
