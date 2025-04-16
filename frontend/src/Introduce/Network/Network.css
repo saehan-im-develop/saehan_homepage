@@ -11,20 +11,23 @@
 .network-contact {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* 🔹 간격 추가 */
+  gap: 8px;
+  /* 🔹 간격 추가 */
   text-align: right;
 }
 
 .network-person {
   display: flex;
   align-items: center;
-  gap: 10px; /* 🔹 이름과 이메일 간격 추가 */
+  gap: 10px;
+  /* 🔹 이름과 이메일 간격 추가 */
   font-weight: bold;
   color: #333;
 }
 
 .email-icon {
-  color: #0056b3; /* 🔹 파란색 */
+  color: #0056b3;
+  /* 🔹 파란색 */
   font-size: 14px;
 }
 
@@ -78,7 +81,7 @@
   margin-bottom: 30px;
   border-radius: 10px;
   border: 2px solid #ddd;
-  box-shadow: #4d4d4d 5px 5px,#868686 10px 10px, #c9c9c9 15px 15px, #e4e4e4 20px 20px, #ffffff 25px 25px;
+  box-shadow: #4d4d4d 5px 5px, #868686 10px 10px, #c9c9c9 15px 15px, #e4e4e4 20px 20px, #ffffff 25px 25px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -120,66 +123,8 @@
 .email-icon {
   color: #0056b3;
   font-size: 16px;
-  padding-right: 4px; /* 🔹 아이콘과 텍스트 사이 여백 */
-}
-
-/* 🔹 반응형 스타일 적용 */
-
-/* (1) 태블릿 (768px~1024px) */
-@media (max-width: 1024px) {
-  .network-container {
-    width: 85%;
-    padding-top: 30px;
-  }
-
-  .network-title {
-    font-size: 1.8rem;
-  }
-
-  .network-card {
-    padding: 20px;
-  }
-
-  .network-info {
-    font-size: 14px;
-  }
-}
-
-/* (2) 모바일 (최대 768px) */
-@media (max-width: 768px) {
-  .network-container {
-    width: 95%;
-    padding-top: 20px;
-  }
-
-  .network-contact {
-    text-align: center;
-    flex-wrap: wrap;
-  }
-
-
-  .network-title {
-    font-size: 1.5rem;
-  }
-
-  .network-card {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-
-  .network-info {
-    flex-direction: column;
-    text-align: center;
-    gap: 5px;
-  }
-
-  .network-phone {
-    text-align: center;
-  }
-
-  .network-phone p {
-    font-size: 14px;
-  }
+  padding-right: 4px;
+  /* 🔹 아이콘과 텍스트 사이 여백 */
 }
 
 /* ✅ 상단 배경 이미지 컨테이너 */
@@ -216,62 +161,120 @@
   transform: translateY(0);
 }
 
+/* 🔹 반응형 스타일 적용 */
+/* (2) 모바일 (최대 768px) */
 @media (max-width: 768px) {
+
+  /* 전체 컨테이너 */
   .network-container {
     width: 95%;
     padding-top: 20px;
+    margin: 0 auto;
   }
 
-  .network-title {
-    font-size: 1.4rem;
-    margin-top: 10px;
-    padding-bottom: 6px;
-
-    &::after {
-      width: 40%;
-    }
-  }
-
-  .network-card {
-    padding: 16px;
-    margin-bottom: 20px;
-  }
-
-  .network-info {
-    display: flex; /* ✅ 그리드 제거하고 한 줄 정렬*/
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .network-contact {
-    text-align: center;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .network-phone {
-    text-align: center;
-    font-size: 14px;
-
-    p {
-      margin: 2px 0;
-    }
-  }
-
-  .email-icon {
-    font-size: 14px;
-  }
-
+  /* 헤더 영역 */
   .network-header-bg {
-    height: 180px; /* ✅ 모바일에서 헤더 이미지 영역 축소*/
+    height: 180px;
+    /* ✅ 이미지 높이 축소 */
     margin-top: 5px;
   }
 
   .network-header-img {
     object-fit: cover;
     object-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 제목 스타일 */
+  .network-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    padding-bottom: 6px;
+    text-align: center;
+    position: relative;
+  }
+
+  .network-title::after {
+    content: "";
+    display: block;
+    margin: 6px auto 0;
+    width: 40%;
+    height: 2px;
+    background-color: #1a3d7c;
+  }
+
+  /* 카드 스타일 */
+  .network-card {
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  /* 이름, 주소 등 기본 정보 */
+  .network-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  /* 전화 및 이메일 */
+  .network-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    /* ✅ 이름-이메일 묶음 간격 */
+    padding-top: 8px;
+  }
+
+  .network-contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    line-height: 1.6;
+  }
+
+  .contact-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    word-break: keep-all;
+    text-align: center;
+  }
+
+  .contact-email {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    gap: 4px;
+    word-break: break-all;
+    text-align: center;
+  }
+
+  .network-phone {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .network-phone p {
+    margin: 2px 0;
+  }
+
+  .email-icon {
+    font-size: 13px;
+    color: #2563eb;
+  }
+
+  .email-text {
+    font-size: 14px;
   }
 }

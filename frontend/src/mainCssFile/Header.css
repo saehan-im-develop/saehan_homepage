@@ -179,7 +179,8 @@
   /* ✅ 전체 헤더 스타일 */
   .header {
     background-color: white;
-    padding: 10px 20px;
+    padding: 8px 16px;
+    height: auto;
     position: fixed;
     width: 100%;
     top: 0;
@@ -192,10 +193,10 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 8px;
+    gap: 4px;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 px;
   }
 
   /* ✅ 상단 정렬: 좌측(로고+사내연락망) + 우측 햄버거 */
@@ -222,11 +223,11 @@
   }
 
   .logo {
-    height: 45px;
+    height: 36px;
   }
 
   #saehan-group {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     color: #224488;
     margin: 0;

@@ -5,7 +5,8 @@
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     text-align: center;
-    max-width: 900px; /* ✅ 전체 크기 맞춤 */
+    max-width: 900px;
+    /* ✅ 전체 크기 맞춤 */
     width: 80%;
     margin: 50px auto;
     display: flex;
@@ -32,13 +33,17 @@
 
 /* 소개 섹션 */
 .vision-intro {
-    background: rgba(255, 255, 255, 0.95); /* ✅ 배경 투명도 조정 */
+    background: rgba(255, 255, 255, 0.95);
+    /* ✅ 배경 투명도 조정 */
     padding: 40px;
     border-radius: 12px;
-    border: 1px solid #ccc; /* ✅ 테두리 색 더 진하게 */
+    border: 1px solid #ccc;
+    /* ✅ 테두리 색 더 진하게 */
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px inset, rgba(34, 34, 34, 0.445) 10px -10px 0px -3px, rgb(126, 126, 126) 10px -10px;
-    text-align: left; /* ✅ 텍스트 왼쪽 정렬 */
-    max-width: 850px; /* ✅ 너비 조정 */
+    text-align: left;
+    /* ✅ 텍스트 왼쪽 정렬 */
+    max-width: 850px;
+    /* ✅ 너비 조정 */
     margin: 20px auto;
     font-size: 18px;
     line-height: 1.8;
@@ -108,7 +113,8 @@
     border-radius: 12px;
     border: 1px solid #ddd;
     box-shadow: rgb(56, 56, 56) 0px 20px 30px -10px;
-    width: 750px; /* ✅ 고정 크기 유지 */
+    width: 750px;
+    /* ✅ 고정 크기 유지 */
     font-size: 18px;
     text-align: left;
     line-height: 1.8;
@@ -169,79 +175,90 @@
 /* 🔵 상단 배경 이미지 컨테이너 */
 .vision-header-bg {
     position: relative;
-    width: 100vw; /* ✅ 전체 너비 */
-    height: 300px; /* ✅ 높이 설정 */
+    width: 100vw;
+    /* ✅ 전체 너비 */
+    height: 300px;
+    /* ✅ 높이 설정 */
     overflow: hidden;
 }
 
 /* 🔵 상단 배경 이미지 */
 .vision-header-bg img {
-    width: 100vw; /* ✅ 너비를 화면 전체로 확장 */
+    width: 100vw;
+    /* ✅ 너비를 화면 전체로 확장 */
     height: 160%;
-    object-fit: cover; /* ✅ 비율 유지하며 확대 */
+    object-fit: cover;
+    /* ✅ 비율 유지하며 확대 */
     transform-origin: center;
 }
 
-/* 🔹 반응형 스타일 적용 */
 
-/* (1) 태블릿 (768px~1024px) */
-@media (max-width: 1024px) {
-    .vision-container {
-        max-width: 90%;
-        padding: 40px 15px;
-    }
-
-    .section-title {
-        font-size: 22px;
-    }
-
-    .vision-intro {
-        padding: 30px;
-        font-size: 18px;
-    }
-
-    .principles-circle {
-        width: 250px;
-        height: 250px;
-    }
-
-    .center-circle {
-        width: 180px;
-        height: 180px;
-        font-size: 16px;
-    }
-
-    .vision-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .vision-box {
-        width: 80%;
-        text-align: center;
-    }
-
-    .vision-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    .vision-logo {
-        width: 200px;
-    }
+/* 내부 십자선 스타일 추가 */
+.center-circle::before,
+.center-circle::after {
+    content: "";
+    position: absolute;
+    background: #ccc;
+    /* 연한 회색 */
 }
 
+/* 가로선 */
+.center-circle::before {
+    width: 90%;
+    height: 1.5px;
+    /* 선을 더 뚜렷하게 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 세로선 */
+.center-circle::after {
+    width: 1.5px;
+    height: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 품질, 속도 → 파란색 */
+.top-left {
+    color: #2d66d6;
+}
+
+.bottom-right {
+    color: #2d66d6;
+}
+
+
+/* 🔹 반응형 스타일 적용 */
 /* (2) 모바일 (최대 768px) */
 @media (max-width: 768px) {
-    .vision-container {
-        max-width: 95%;
-        padding: 30px 10px;
+    .vision-header-bg {
+        height: 140px !important; 
     }
 
+    .vision-header-bg img {
+        width: 100vw;
+        height: 100%;
+        min-height: 180px; /* ✅ 추가 */
+        object-fit: cover;
+    }
+
+    .vision-container {
+        opacity: 1;
+        min-height: 200px; /* ✅ 최소 높이 지정 */
+        transform: translateY(1S); /* ✅ 살짝만 이동 */
+        margin-top: 10px !important;
+    }
+    .vision-container.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.6s ease-out;
+      }
+
     .section-title {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .vision-intro {
@@ -273,10 +290,10 @@
     }
 
     .vision-box {
-        width: 90%;
-        text-align: center;
-        font-size: 14px;
-        padding: 15px;
+        width: 100%;
+        font-size: 15px;
+        padding: 16px;
+        text-align: left;
     }
 
     .vision-box-number {
@@ -296,35 +313,3 @@
         width: 180px;
     }
 }
-
-
-/* 내부 십자선 스타일 추가 */
-.center-circle::before,
-.center-circle::after {
-    content: "";
-    position: absolute;
-    background: #ccc;  /* 연한 회색 */
-}
-
-/* 가로선 */
-.center-circle::before {
-    width: 90%;
-    height: 1.5px; /* 선을 더 뚜렷하게 */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* 세로선 */
-.center-circle::after {
-    width: 1.5px;
-    height: 90%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* 품질, 속도 → 파란색 */
-.top-left { color: #2d66d6; }
-.bottom-right { color: #2d66d6; }
-

@@ -1,13 +1,18 @@
 /* 🔹 기본 스타일 */
 .history-container {
-  width: calc(100% - 2px); /* ✅ 100%에서 테두리 너비를 보정 */
-  max-width: 1300px; /* ✅ 크기 증가 */
+  width: calc(100% - 2px);
+  /* ✅ 100%에서 테두리 너비를 보정 */
+  max-width: 1300px;
+  /* ✅ 크기 증가 */
   margin: 40px auto;
-  padding: 60px 40px; /* ✅ 여백 증가 */
+  padding: 60px 40px;
+  /* ✅ 여백 증가 */
   background: linear-gradient(to bottom, #ffffff, #ffffff);
-  border-radius: 0 0 15px 15px; /* ✅ 상단 라운드 제거, 하단만 둥글게 */
+  border-radius: 0 0 15px 15px;
+  /* ✅ 상단 라운드 제거, 하단만 둥글게 */
   position: relative;
-  box-sizing: border-box; /* ✅ 패딩 포함한 전체 크기 유지 */
+  box-sizing: border-box;
+  /* ✅ 패딩 포함한 전체 크기 유지 */
 }
 
 /* 섹션별 등장 애니메이션 */
@@ -26,7 +31,8 @@
 
 /* ✅ history-header는 기존 라운드 유지 */
 .history-header {
-  width: calc(100% - 2px); /* ✅ 테두리 보정 */
+  width: calc(100% - 2px);
+  /* ✅ 테두리 보정 */
   height: 180px;
   display: flex;
   align-items: center;
@@ -36,15 +42,19 @@
   color: white;
   background: linear-gradient(135deg, #1E3A8A, #2563EB);
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 0; /* ✅ 상단 라운드 완전히 제거 */
-  box-sizing: border-box; /* ✅ 패딩 포함 */
-  margin-right: auto; /* ✅ 강제 정렬 */
+  border-radius: 0;
+  /* ✅ 상단 라운드 완전히 제거 */
+  box-sizing: border-box;
+  /* ✅ 패딩 포함 */
+  margin-right: auto;
+  /* ✅ 강제 정렬 */
 }
 
 /* 🔹 연혁 이미지 컨테이너 */
 .history-image-container {
   position: relative;
-  width: calc(100% - 2px); /* ✅ 테두리 보정 */
+  width: calc(100% - 2px);
+  /* ✅ 테두리 보정 */
   height: 700px;
   display: flex;
   align-items: center;
@@ -55,9 +65,12 @@
   margin: 0;
   border-radius: 0 0 15px 15px;
   border: 2px solid rgba(37, 99, 235, 0.4);
-  box-sizing: border-box; /* ✅ 패딩 포함 */
-  margin-right: auto; /* ✅ 강제 정렬 */
+  box-sizing: border-box;
+  /* ✅ 패딩 포함 */
+  margin-right: auto;
+  /* ✅ 강제 정렬 */
 }
+
 .history-image-container img {
   width: 100%;
   height: auto;
@@ -75,7 +88,8 @@
 /* 콘텐츠 박스 */
 .history-content {
   position: absolute;
-  top: 50%; /* 이미지 중앙 정렬 */
+  top: 50%;
+  /* 이미지 중앙 정렬 */
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -88,7 +102,8 @@
 .history-item {
   position: relative;
   width: 50%;
-  padding: 25px 40px; /* ✅ 여백 증가 */
+  padding: 25px 40px;
+  /* ✅ 여백 증가 */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -101,6 +116,7 @@
   color: #1E3A8A;
   font-size: 22px;
 }
+
 /* 🔹 반응형 스타일 적용 */
 
 /* (1) 태블릿 (768px~1024px) */
@@ -111,8 +127,10 @@
   }
 
   .history-header {
-    font-size: 28px;
-    height: 150px;
+    font-size: 20px;
+    height: 40px; 
+    padding: 8px 10px;
+    text-align: center;
   }
 
   .history-content {
@@ -129,13 +147,6 @@
 @media (max-width: 768px) {
   .history-container {
     padding: 20px 10px;
-  }
-
-  .history-header {
-    font-size: 24px;
-    height: 120px;
-    padding: 10px;
-    text-align: center;
   }
 
   .history-content {
@@ -161,7 +172,8 @@
   position: relative;
   width: 90%;
   margin: 0 auto;
-  padding-top: 50px; /* 이미지와 연혁 사이 여백 추가 */
+  padding-top: 50px;
+  /* 이미지와 연혁 사이 여백 추가 */
 }
 
 /* 연혁 내용 박스 */
@@ -169,7 +181,8 @@
   background: white;
   padding: 20px;
   border-radius: 12px;
-  border: 2px solid #2563EB; /* ✅ 파란색 테두리 */
+  border: 2px solid #2563EB;
+  /* ✅ 파란색 테두리 */
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
   font-size: 18px;
   font-weight: 500;
@@ -196,6 +209,7 @@
   text-align: left;
   flex-direction: row;
 }
+
 /* 타임라인 중앙 라인 */
 .history-timeline::before {
   content: "";
@@ -204,7 +218,8 @@
   left: 50%;
   width: 6px;
   height: 100%;
-  background-color: #2563EB; /* ✅ 파란 계열로 변경 */
+  background-color: #2563EB;
+  /* ✅ 파란 계열로 변경 */
   transform: translateX(-50%);
   border-radius: 3px;
 }
@@ -235,14 +250,16 @@
   }
 
   .history-timeline::before {
-    left: 16px; /* ✅ 중앙선 → 왼쪽으로 이동 */
+    left: 16px;
+    /* ✅ 중앙선 → 왼쪽으로 이동 */
     transform: none;
     width: 3px;
     background-color: #ccc;
   }
 
   .history-image-container {
-    height: auto; /* ✅ 고정 높이 제거 */
+    height: auto;
+    /* ✅ 고정 높이 제거 */
     padding: 0;
     margin: 0 auto;
     border: none;
@@ -251,11 +268,13 @@
   .history-image-container img {
     width: 100%;
     max-width: 100%;
-    height: auto; /* ✅ 비율 유지하며 확대 */
-    object-fit: cover; /* ✅ 이미지 꽉 차게*/
+    height: auto;
+    /* ✅ 비율 유지하며 확대 */
+    object-fit: cover;
+    /* ✅ 이미지 꽉 차게*/
     border-radius: 12px;
   }
-  
+
   .history-item {
     width: 100%;
     padding-left: 40px;

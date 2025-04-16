@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
-import "../mainCssFile/ScrollToTopButton.css"
+import "../mainCssFile/ScrollToTopButton.css";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setIsVisible(true);
+      // ✅ 300px 이상 내려갔을 때만 표시
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -33,7 +38,7 @@ const ScrollToTopButton = () => {
         cursor: "pointer",
         fontSize: "14px",
         fontWeight: "bold",
-        display: isVisible ? "flex" : "none",
+        display: isVisible ? "flex" : "none", // ✅ 조건부 렌더링
         alignItems: "center",
         justifyContent: "center",
         boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",

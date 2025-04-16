@@ -26,7 +26,7 @@ const VisionIntro = () => {
               {text}
             </div>
           ))}
-        </div>
+        </div> 
       </div>
     </div>
   );

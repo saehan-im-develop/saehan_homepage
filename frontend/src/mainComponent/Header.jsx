@@ -23,6 +23,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -64,10 +68,10 @@ const Header = () => {
 
         <nav>
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            <IntroDropdownMenu />
-            <AffDropdownMenu />
-            <CertificationMenu />
-            <DataDropdownMenu />
+            <IntroDropdownMenu closeMenu={closeMenu} />
+            <AffDropdownMenu closeMenu={closeMenu} />
+            <CertificationMenu closeMenu={closeMenu} />
+            <DataDropdownMenu closeMenu={closeMenu} />
           </ul>
         </nav>
       </div>
