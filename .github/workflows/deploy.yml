@@ -1,17 +1,32 @@
-name: Test connectivity to Lightsail
+name: Deploy Vite React App to Lightsail
 
 on:
-  push:           # ✅ push 트리거 추가
+  push:
     branches:
       - main
 
-  workflow_dispatch:  # 👈 기존 수동 실행도 유지
-
 jobs:
-  ping-test:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Test SSH
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up SSH key
         run: |
-          echo "🔁 Trying to connect to ${{ secrets.EC2_HOST }}"
-          timeout 10s bash -c "</dev/tcp/${{ secrets.EC2_HOST }}/22" && echo "✅ Port 22 open" || echo "❌ Port 22 closed"
+          echo "${{ secrets.EC2_KEY }}" > key.pem
+          chmod 600 key.pem
+
+      - name: Deploy to Lightsail
+        run: |
+          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+            echo "[GITHUB-ACTIONS] ✅ Connected to server"
+            cd ~/saehaniam_2025_homepage/frontend
+            git pull origin main
+            npm install
+            npm run build
+            sudo rm -rf /var/www/html/*
+            sudo cp -r dist/* /var/www/html/
+            echo "[GITHUB-ACTIONS] ✅ 배포 완료"
+          EOF
