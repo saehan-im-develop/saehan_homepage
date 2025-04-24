@@ -4,11 +4,11 @@ import img1 from "@/assets/aff/ai8.png"; // copygloo 이미지
 
 function IMProduct() {
   const product = {
-    name: "AI 기반 문서 자동화 플랫폼 (Copygloo)",
-    engName: "AI-Powered Document Automation (Copygloo)",
+    name: "AI 기반 문서 자동화 플랫폼 (Zelkova)",
+    engName: "AI-Powered Document Automation (Zelkova)",
     description: (
       <>
-        Copygloo는 LLM 기반 문서 자동화 솔루션으로, <br />
+        Zelkova는 LLM 기반 문서 자동화 솔루션으로, <br />
         누구나 전문적인 문서를 쉽고 빠르게 생성하고 최적화할 수 있도록 지원합니다.
       </>
     ),
@@ -37,7 +37,7 @@ function IMProduct() {
           <p>{product.description}</p>
           <p><strong>카테고리:</strong> {product.category}</p>
           <a href={product.link} target="_blank" className="cta-button">
-            copygloo 더 알아보기 →
+            Zelkova 더 알아보기 →
           </a>
         </div>
       </div>
