@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../IMComponent/IMProduct.css";
-import img1 from "@/assets/aff/ai8.png"; // copygloo 이미지
+import img1 from "@/assets/aff/ai9.png"; // copygloo 이미지
 
 function IMProduct() {
   const product = {
