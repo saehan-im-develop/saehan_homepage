@@ -1,10 +1,10 @@
 import React from "react";
 import CommonEquip from "../Common/CommonEquip.jsx";
-import img1 from "@/assets/equips/plus/eq1/1.jpg";
+import img1 from "@/assets/equips/plus/eq1/1.png";
 import img2 from "@/assets/equips/plus/eq2/main.png";
 import img3 from "@/assets/equips/plus/eq3/1.jpg"
 import img4 from "@/assets/equips/plus/eq4/save1.png";
-import img5 from "@/assets/equips/plus/eq5/1.png"
+import img5 from "@/assets/Areal/plus/400.png";
 
 // 1번
 import img1_1 from "@/assets/equips/plus/eq1/2.png";

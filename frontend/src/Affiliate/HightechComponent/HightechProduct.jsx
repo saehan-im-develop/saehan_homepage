@@ -13,17 +13,17 @@ function HightechProduct() {
   const products = [
     {
       name: "BORA-PJT FAN MIXED FLOW",
-      // codeNO: "DB67-01523A X 005",
+      codeNO: "품목코드 : DB67-01523A X 005",
       // description:
       //   "KIM JIN-BAEK 2017",
-      // code: "RF9000C",
+      // code: "품목코드 : RF9000C",
       category: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
       // give : "[주] 한영 PNS",
       image: img6,
     },
     {
       name: "DE8000MK-PJT BLADE-BLOWER",
-      // codeNO: "DC66-00980A",
+      codeNO: "품목코드 : DC66-00980A",
       // description:
         // "KIM JIN-BAEK 2017",
       // code: "RF9000C",
@@ -33,7 +33,7 @@ function HightechProduct() {
     },
     {
       name: "BLOWER",
-      // codeNO: "DB67-01367AX005",
+      codeNO: "품목코드 : DB67-01367AX005",
       // description:
       //   "CHO MIN-GI 2018",
       // code: "RF9000C",
@@ -43,7 +43,7 @@ function HightechProduct() {
     },
     {
       name: "CAP DOOR-REF UP LEFT , CAP DOOR-REF UP RIGHT",
-      // codeNO: "DA67-05574A X 001",
+      codeNO: "품목코드 : DA67-05574A X 001",
       // description:
       //   "SEOUNWOO KIM 2022",
       // code: "RF9000C",
@@ -62,7 +62,7 @@ function HightechProduct() {
     // },
     {
       name: "SEME GUIDE FILTER",
-      // codeNO: "DC97-20718A",
+      codeNO: "품목코드 : DC97-20718A",
       description:
         "",
       code: "",
@@ -72,7 +72,7 @@ function HightechProduct() {
     },
     {
       name: "SUPPORT ICE MAKER",
-      // codeNO: "DA67-05574A X 001",
+      codeNO: "품목코드 : DA67-05574A X 001",
       // description:
       //   "HOOHEOL CHO, 2020",
       // code: "RF9000A",
@@ -82,7 +82,7 @@ function HightechProduct() {
     },
     {
       name: "CASE ICE ROOM OUTER",
-      // codeNO: "DA61-08171",
+      codeNO: "품목코드 : DA61-08171",
       // description:
       //   "HOOHEOL CHO, 2020",
       // code: "RF9000A",
