@@ -11,17 +11,17 @@ import img2 from "@/assets/Areal/global/ng2.png"
 function GlobalProduct() {
   const products = [
     {
-      name: "CASE KIMCHI LOW(19.5L)",
-      // codeNO: "DA61-02970A-003",
+      name: "CASE KIMCHI LOW(19.5L)" ,
+      codeNO: "품목코드 : DA61-02970A-003",
       // model: "WD8000D",
-      category: "재질 : PP(폴리프로필렌)",
+      category: "재질 : PP (폴리프로필렌)",
       image: img1,
     },
     {
       name: "CASE MIMCHI LOW(10.8L)",
-      // codeNO: "두껑 재질 : POM (폴리옥시메틸렌)",
+      codeNO: "품목코드 : DA61-04591 X 002",
       // model: "WF8000AK",
-      category: "본체 재질 : PP (폴리프로필렌)",
+      category: "재질 : PP (폴리프로필렌)",
       image: img2,
     },
     // {

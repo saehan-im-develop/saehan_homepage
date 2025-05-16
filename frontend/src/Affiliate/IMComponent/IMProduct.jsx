@@ -4,8 +4,8 @@ import img1 from "@/assets/aff/ai9.png"; // copygloo 이미지
 
 function IMProduct() {
   const product = {
-    name: "AI 기반 문서 자동화 플랫폼 (ZelKovai)",
-    engName: "AI-Powered Document Automation (ZelKovai)",
+    name: "AI 기반 자동 문서 생성 플랫폼 (제품명 : ZelKovai)",
+    engName: "AI-Based Automatic Document Generation Platform (Product Name: ZelKovai)",
     description: (
       <>
         ZelKovai는 LLM 기반 문서 자동화 솔루션으로, <br />

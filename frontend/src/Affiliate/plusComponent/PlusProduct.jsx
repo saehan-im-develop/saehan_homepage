@@ -17,7 +17,7 @@ function PlusProduct() {
     {
       name: "ASSY LEVER MAGNET",
       codeNO: "재질 : POM (폴리옥시메틸렌)",
-      // model: "QV",
+      model: "품목코드 : DC-95-0238",
       // category: "생산 기계 : 100TON",
       give: "서연인테크(정연내장)",
       image: img12,
@@ -25,7 +25,7 @@ function PlusProduct() {
     {
       name: "GEAR CAM",
       codeNO: "재질 : POM (폴리옥시메틸렌)",
-      // model: "QV",
+      model: "품목코드 : 3211-0044",
       // category: "생산 기계 : 120TON",
       give: "서연인테크(정연내장)",
       image: img13,
@@ -33,7 +33,7 @@ function PlusProduct() {
     {
       name: "CASE ICE MAKER R #1",
       codeNO: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
-      // model: "DI-P2",
+      model: "품목코드 : 3211-0042",
       // category: "1X1X2-2 ABS",
       give: "[주] 대창",
       image: img5,
@@ -41,7 +41,7 @@ function PlusProduct() {
     {
       name: "COVER ICE MAKER R #3",
       codeNO: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
-      // model: "DI-P2",
+      model: "품목코드 : 3211-0043",
       // category: "1X1X4-2 ABS",
       give: "[주] 대창",
       image: img14,
@@ -57,7 +57,7 @@ function PlusProduct() {
     {
       name: "MOLDING-RR BPR FASCIA",
       codeNO: "재질 : ASA (아크릴로니트릴 스티렌 아크릴레이트)",
-      // model: "QV",
+      model: "품목코드 : 42926227",
       // category: ">PC+ASA<",
       give: "서연인테크(정연내장)",
       image: img15,
