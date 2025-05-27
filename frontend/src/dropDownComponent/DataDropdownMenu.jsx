@@ -40,14 +40,14 @@ const DataDropdownMenu = ({ closeMenu }) => {
               </a>
             </li>
             {/* ✅ [테스트] 방 추가 */}
-            <li>
+            {/* <li>
               <a
                 onClick={() => handleNavigate("/test")}
                 style={{ cursor: "pointer" }}
               >
                 테스트
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       )}
