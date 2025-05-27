@@ -7,7 +7,7 @@ html {
   position: relative;
   width: 100vw;
   height: 60vh; /* 배경 높이 */
-  background-image: url("../../assets/docu/tech02.jpg"); /* 배경 이미지 */
+  background-image: url("/assets/docu/tech02.jpg"); /* 배경 이미지 */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
