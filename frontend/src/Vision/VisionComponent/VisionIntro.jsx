@@ -1,17 +1,35 @@
+// VisionIntro.jsx
 import React from "react";
-import "../VisionCSSFile/VisionMain.css";
-import logo from "../../assets/upimage.jpg";  // ✅ 상단 배경 이미지
+import "../VisionCSSFile/VisionIntro.css"; // 새로 추가할 CSS (권장: VisionIntro.css)
+import logo from "../../assets/upimage.jpg";  // 상단 배경 이미지
+import vision1 from "../../assets/vision_Image/vision1.png"; // 대체할 이미지
 
 const VisionIntro = () => {
   return (
     <div>
-      {/* ✅ 상단 배경 이미지 */}
+      {/* ✅ 상단 배경 이미지는 기존대로 유지 */}
       <div className="vision-main-header-bg">
         <img src={logo} alt="배경 이미지" />
       </div>
 
-      {/* ✅ 비전 및 이념 섹션 */}
-      <div className="vision-main-container vision-main-fade-in">
+      {/* ✅ "비전 및 이념" 텍스트 영역은 이미지로 교체 */}
+      <div className="vision-main-image-container">
+        <img
+          src={vision1}
+          alt="비전 및 이념"
+          className="vision-main-content-image"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default VisionIntro;
+
+
+
+{/* ✅ 비전 및 이념 섹션 */}
+      {/* <div className="vision-main-container vision-main-fade-in">
         <h2 className="vision-main-section-title">비전 및 이념</h2>
         <div className="vision-main-list">
           {[
@@ -27,9 +45,4 @@ const VisionIntro = () => {
             </div>
           ))}
         </div> 
-      </div>
-    </div>
-  );
-};
-
-export default VisionIntro;
+      </div> */}
