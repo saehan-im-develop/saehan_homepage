@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Common/CommonProduct.css";
-import img2 from "@/assets/Areal/plus/npp2.png";
-import img4 from "@/assets/Areal/plus/npp4.png";
-import img5 from "@/assets/Areal/plus/npp5.png";
-import img6 from "@/assets/Areal/plus/npp6.png";
-import img8 from "@/assets/Areal/plus/npp8.png";
-import img9 from "@/assets/Areal/plus/npp9.png";
-import img11 from "@/assets/Areal/plus/npp11.png";
-import img12 from "@/assets/Areal/plus/pp1.jpg";
-import img13 from "@/assets/Areal/plus/pp2.png";
-import img14 from "@/assets/Areal/plus/pp3.png";
-import img15 from "@/assets/Areal/plus/pp4.png";
+// img2: npp2.png
+// img4: npp4.png
+// img5: npp5.png
+// img6: npp6.png
+// img8: npp8.png
+// img9: npp9.png
+// img11: npp11.png
+// img12: pp1.jpg
+// img13: pp2.png
+// img14: pp3.png
+// img15: pp4.png
 
 function PlusProduct() {
   const products = [
@@ -20,7 +20,7 @@ function PlusProduct() {
       model: "품목코드 : DC-95-0238",
       // category: "생산 기계 : 100TON",
       give: "서연인테크(정연내장)",
-      image: img12,
+      image: "/assets/Areal/plus/pp1.jpg", // img12
     },
     {
       name: "GEAR CAM",
@@ -28,7 +28,7 @@ function PlusProduct() {
       model: "품목코드 : 3211-0044",
       // category: "생산 기계 : 120TON",
       give: "서연인테크(정연내장)",
-      image: img13,
+      image: "/assets/Areal/plus/pp2.png", // img13
     },
     {
       name: "CASE ICE MAKER R #1",
@@ -36,7 +36,7 @@ function PlusProduct() {
       model: "품목코드 : 3211-0042",
       // category: "1X1X2-2 ABS",
       give: "[주] 대창",
-      image: img5,
+      image: "/assets/Areal/plus/npp5.png", // img5
     },
     {
       name: "COVER ICE MAKER R #3",
@@ -44,74 +44,16 @@ function PlusProduct() {
       model: "품목코드 : 3211-0043",
       // category: "1X1X4-2 ABS",
       give: "[주] 대창",
-      image: img14,
+      image: "/assets/Areal/plus/pp3.png", // img14
     },
-    // {
-    //   name: "GEAR CAM #1",
-    //   codeNO: "3211-0044",
-    //   model: "DI-P2",
-    //   category: "POM 1X1X4-4",
-    //   // give: "[주] 대창",
-    //   image: img7,
-    // },
     {
       name: "MOLDING-RR BPR FASCIA",
       codeNO: "재질 : ASA (아크릴로니트릴 스티렌 아크릴레이트)",
       model: "품목코드 : 42926227",
       // category: ">PC+ASA<",
       give: "서연인테크(정연내장)",
-      image: img15,
+      image: "/assets/Areal/plus/pp4.png", // img15
     },
-    // {
-    //   name: "BRKT-FR UPR TRIM JOINT",
-    //   // codeNO: "81191-6D000",
-    //   // model: "QV",
-    //   category: "재질 : ASA (아크릴로니트릴 스티렌 아크릴레이트)",
-    //   give: "서연인테크(정연내장)",
-    //   image: img2,
-    // },
-    // {
-    //   name: "CORE-FR DR INR CVR,LH / CORE-FR DR INR CVR,RH",
-    //   // codeNO: "81250-6D000 , 81260-6D000",
-    //   // model: "QV",
-    //   category: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
-    //   give: "서연인테크(정연내장)",
-    //   image: img4,
-    // },
-    // {
-    //   name: "DR FRT HDL C/PULL LH(자동)",
-    //   // codeNO: "81210-5H001",
-    //   // model: "VT-CAR",
-    //   category: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
-    //   give: "서연인테크(정연내장)",
-    //   image: img6,
-    // },
-    // {
-    //   name: "GRILL-SPEAKER RR",
-    //   codeNO: "재질1 : PP (폴리프로필렌)",
-    //   // model: "EG-CAR",
-    //   category: "재질2 : E/P (에틸렌-프로필렌 고무) ",
-    //   give: "서연인테크(정연내장)",
-    //   image: img8,
-    // },
-    // {
-    //   name: "LWR-FR DR GRIP HDL LH",
-    //   codeNO: "재질1 : PP (폴리프로필렌)",
-    //   // model: "QV-CAR",
-    //   category: "재질2 : E/P (에틸렌-프로필렌 고무)",
-    //   give: "서연인테크(정연내장)",
-    //   image: img9,
-    // },
-    // {
-    //   name: "UPR-FR- DR GRIP HDL, LH / UPR-FR- DR GRIP HDL, RH",
-    //   codeNO: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
-    //   // model: "QV",
-    //   // category: ">ABS<",
-    //   give: "서연인테크(정연내장)",
-    //   image: img11,
-    // },
-
-
   ];
 
   const [category, setCategory] = useState("전체");
@@ -135,7 +77,7 @@ function PlusProduct() {
   return (
     <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
       {/* <h2 className="product-title">주요 생산 제품</h2> */}
-      
+
       {/* 드롭다운 추가 */}
       <div className="filter-container">
         <select id="category" value={category} onChange={(e) => setCategory(e.target.value)}>

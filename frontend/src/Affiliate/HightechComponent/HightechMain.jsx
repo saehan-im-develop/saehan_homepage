@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../Common/CommonMain.css";
-import bgImage from "@/assets/Areal/hh11.png"; //  하이테크 페이지 배경
+import "../Common/CommonMain.css"; // 스타일
 
 function HightechMain() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,11 +13,9 @@ function HightechMain() {
   return (
     <div
       className="common-main"
-      style={{ backgroundImage: `url(${bgImage})` }} //  개별 배경 이미지 적용
+      style={{ backgroundImage: `url("/assets/Areal/hh11.png")` }} // ✅ public 기준 경로
     >
-
-      <div className="common-overlay"></div> {/*  배경 위 오버레이 추가 */}
-      
+      <div className="common-overlay"></div>
       <div className={`common-description ${isLoaded ? "show" : ""}`}>
         <div className={`common-text ${isLoaded ? "show" : ""}`}>
           <h1 id="main-h1">SAEHAN HIGHTECH</h1>

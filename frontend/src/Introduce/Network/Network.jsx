@@ -3,7 +3,7 @@ import networkData from "./NetworkData";
 import "../Network/Network.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import backgroundImage from "@/assets/010.jpg"; // ✅ 배경 이미지 추가
+ // ✅ 배경 이미지 추가
 
 const Network = () => {
   const [visible, setVisible] = useState(false);
@@ -35,7 +35,7 @@ const Network = () => {
     <div>
       {/* ✅ 상단 배경 이미지 */}
       <div ref={bgRef} className={`network-header-bg ${visible ? "fade-in" : ""}`}>
-        <img src={backgroundImage} alt="네트워크 페이지 배경" className="network-header-img" />
+        <img src="/assets/010.jpg" alt="네트워크 페이지 배경" className="network-header-img" />
       </div>
 
       <div ref={ref} className="network-container">

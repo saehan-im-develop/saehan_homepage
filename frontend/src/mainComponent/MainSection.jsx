@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import NewFuture from "./NewFuture";
 import "../mainCssFile/MainSection.css";
 import ContactSection from "./ContactSection";
-import section2Image from "@/assets/ai00.jpg";
-import mainImage4 from "@/assets/back6.jpg";
+
+
 import AFMain from "./AFMain";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -28,7 +28,7 @@ const MainSection = () => {
       {/* 🔹 메인 섹션 */}
       <section className="main-section">
         <div className="fixed-image-container">
-          <img src={mainImage4} alt="메인 이미지" className="fixed-image" />
+          <img src="/assets/back6.jpg" alt="메인 이미지" className="fixed-image" />
         </div>
 
         <div className="text-overlay">
@@ -48,7 +48,7 @@ const MainSection = () => {
       <section className="sub-section">
         <div className="content-container">
           <div className="image-container" data-aos="fade-up" data-aos-delay="100">
-            <img src={section2Image} alt="제조 산업" className="section2-image" />
+            <img src="/assets/ai00.jpg" alt="제조 산업" className="section2-image" />
           </div>
 
           <div className="text-container">

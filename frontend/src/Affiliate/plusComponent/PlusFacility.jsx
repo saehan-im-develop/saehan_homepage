@@ -1,43 +1,32 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import "./PlusFacility.css";
-import temp1 from "@/assets/Areal/plus/120.png";
-import temp2 from "@/assets/Areal/plus/150.png";
-import temp3 from "@/assets/Areal/plus/400.png";
-import temp4 from "@/assets/Areal/plus/650.png";
-import temp5 from "@/assets/Areal/plus/900.png";
-import temp6 from "@/assets/Areal/plus/1100.png";
 
+// ✅ 문자열 경로 사용
 const facilityData = [
   {
     title: "엔겔 사출기 120TON",
-    image: temp1,
-    // description: "주요 생산 품목 ㅇ ㅇㅇㅇ"
+    image: "/assets/Areal/plus/120.png",
   },
   {
     title: "엔겔 사출기 150TON",
-    image: temp2,
-    // description: "주요 생산 품목 ㅇ ㅇㅇㅇ"
+    image: "/assets/Areal/plus/150.png",
   },
   {
     title: "엔겔 사출기 400TON",
-    image: temp3,
-    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
+    image: "/assets/Areal/plus/400.png",
   },
   {
     title: "엔겔 사출기 650TON",
-    image: temp4,
-    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
+    image: "/assets/Areal/plus/650.png",
   },
   {
     title: "엔겔 사출기 900TON",
-    image: temp5,
-    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
+    image: "/assets/Areal/plus/900.png",
   },
   {
     title: "엔겔 사출기 1100TON",
-    image: temp6,
-    // description: "주요 생산 품목 ㅇㅇㅇㅇ"
+    image: "/assets/Areal/plus/1100.png",
   },
 ];
 
@@ -75,8 +64,11 @@ function PlusFacility() {
               src={facilityData[activeIndex].image}
               alt="facility"
               className="facility-image"
+              loading="lazy"
             />
-            <p className="facility-description">{facilityData[activeIndex].description}</p>
+            <p className="facility-description">
+              {facilityData[activeIndex].description ?? ""}
+            </p>
           </motion.div>
         </AnimatePresence>
       </div>

@@ -5,8 +5,8 @@ import AffDropdownMenu from "../dropDownComponent/AffDropdownMenu";
 import IntroDropdownMenu from "../dropDownComponent/IntroDropdownMenu";
 import CertificationMenu from "../dropDownComponent/CertificationMenu";
 import DataDropdownMenu from "../dropDownComponent/DataDropdownMenu";
-import logo from "@/assets/temp_logo.png";
-import profileIcon from "@/assets/Areal/mail.png";
+
+
 
 const Header = () => {
   const location = useLocation();
@@ -35,7 +35,7 @@ const Header = () => {
         <div className="top-row">
           <div className="logo-profile-wrapper">
             <Link to="/" className="logo-container" onClick={handleLogoClick}>
-              <img src={logo} alt="SAEHAN GROUP" className="logo" />
+              <img src="/assets/temp_logo.png" alt="SAEHAN GROUP" className="logo" />
               <h1 id="saehan-group">SAEHAN GROUP</h1>
             </Link>
 
@@ -46,7 +46,7 @@ const Header = () => {
               rel="noopener noreferrer"
               className="profile-container mobile-only"
             >
-              <img src={profileIcon} alt="사내 연락망" className="profile-icon" />
+              <img src="/assets/Areal/mail.png" alt="사내 연락망" className="profile-icon" />
               {/* 모바일에서는 텍스트 숨김 (아이콘만) */}
               <strong className="profile-text">사내 연락망</strong>
             </a>
@@ -63,7 +63,7 @@ const Header = () => {
           rel="noopener noreferrer"
           className="profile-container desktop-only"
         >
-          <img src={profileIcon} alt="사내 연락망" className="profile-icon" />
+          <img src="/assets/Areal/mail.png" alt="사내 연락망" className="profile-icon" />
           <strong className="profile-text">사내 연락망</strong>
         </a>
 

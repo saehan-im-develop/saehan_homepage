@@ -1,10 +1,10 @@
 import styles from "../Common/HoverEffect.module.scss"; //  SCSS 파일 import
 import React from "react";
-import img1 from "@/assets/Areal/plus/p1.jpg";
-import img2 from "@/assets/Areal/plus/p2.JPG";
-import img3 from "@/assets/Areal/plus/p3.JPG";
-import img4 from "@/assets/Areal/plus/p4.JPG";
-import img5 from "@/assets/Areal/plus/safe.JPG";
+
+
+
+
+
 
 function HoverEffect() {
   return (
@@ -17,19 +17,19 @@ function HoverEffect() {
       {/* ✅ 이미지 리스트 */}
       <div className={styles.container}>
         <div className={styles.box}>
-          <img src={img1} alt="Image 1" />
+          <img src="/assets/Areal/plus/p1.jpg" alt="Image 1" />
         </div>
         <div className={styles.box}>
-          <img src={img2} alt="Image 2" />
+          <img src="/assets/Areal/plus/p2.JPG" alt="Image 2" />
         </div>
         <div className={styles.box}>
-          <img src={img3} alt="Image 3" />
+          <img src="/assets/Areal/plus/p3.JPG" alt="Image 3" />
         </div>
         <div className={styles.box}>
-          <img src={img4} alt="Image 4" />
+          <img src="/assets/Areal/plus/p4.JPG" alt="Image 4" />
         </div>
         <div className={styles.box}>
-          <img src={img5} alt="Image 5" />
+          <img src="/assets/Areal/plus/safe.JPG" alt="Image 5" />
         </div>
       </div>
     </div>

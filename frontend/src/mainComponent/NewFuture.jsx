@@ -1,10 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import styles from "../mainCssFile/NewFuture.module.scss";
-import img1 from "@/assets/Areal/vision.jpg";
-import img2 from "@/assets/Areal/CEOPhoto.png";
-import img3 from "@/assets/Areal/tree.jpg";
-import img4 from "@/assets/Areal/network.png";
 
 const NewFuture = () => {
   const [hovered, setHovered] = useState(null);
@@ -21,10 +17,10 @@ const NewFuture = () => {
   }, []);
 
   const data = [
-    { img: img2, name: "Jason Response", text: "CEO 인사말", link: "/ceo" },
-    { img: img1, name: "Max Conversion", text: "비전 및 가치관", link: "/vision" },
-    { img: img3, name: "Parsley Montana", text: "회사 연혁", link: "/history" },
-    { img: img4, name: "plus", text: "네트워크", link: "/network" }
+    { img: "/assets/Areal/CEOPhoto.png", name: "Jason Response", text: "CEO 인사말", link: "/ceo" },
+    { img: "/assets/Areal/vision.jpg", name: "Max Conversion", text: "비전 및 가치관", link: "/vision" },
+    { img: "/assets/Areal/tree.jpg", name: "Parsley Montana", text: "회사 연혁", link: "/history" },
+    { img: "/assets/Areal/network.png", name: "plus", text: "네트워크", link: "/network" }
   ];
 
   const handleClick = (link) => {

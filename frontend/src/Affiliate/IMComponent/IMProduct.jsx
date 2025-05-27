@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../IMComponent/IMProduct.css";
-import img1 from "@/assets/aff/ai9.png"; // 임시 이미지
-import img2 from "@/assets/aff/a13.jpg"; // 웹 페에지 제작
-import img3 from "@/assets/aff/a14.jpg"; // 헬스 케어 이미지
-import img4 from "@/assets/aff/a15.jpg"; // 헬스 케어 이미지
+// 임시 이미지
+// 웹 페에지 제작
+// 헬스 케어 이미지
+// 헬스 케어 이미지
 
 const products = [
   {
@@ -16,9 +16,9 @@ const products = [
       </>
     ),
     category: "문서 자동화 / AI 업무 지원",
-    image: img1,
+    image: "/assets/aff/ai9.png",
     link: "https://zelkovai.com",
-    status: "ready",      // <-- 이미 오픈
+    status: "ready",
   },
   {
     name: "웹 페이지 제작 서비스",
@@ -30,9 +30,9 @@ const products = [
       </>
     ),
     category: "IT 서비스 / 웹개발",
-    image: img2,
+    image: "/assets/aff/a13.jpg",
     link: "",
-    status: "upcoming",   // <-- 진행 예정
+    status: "upcoming",
   },
   {
     name: "헬스케어 IT 솔루션",
@@ -44,9 +44,9 @@ const products = [
       </>
     ),
     category: "헬스케어 / 데이터 분석",
-    image: img3,
+    image: "/assets/aff/a14.jpg",
     link: "",
-    status: "upcoming",   // <-- 진행 예정
+    status: "upcoming",
   },
   {
     name: "스마트 드론 사업",
@@ -58,11 +58,12 @@ const products = [
       </>
     ),
     category: "드론 / 영상 분석",
-    image: img4,
+    image: "/assets/aff/a15.jpg",
     link: "",
-    status: "upcoming",   // <-- 진행 예정
+    status: "upcoming",
   },
 ];
+
 
 function IMProduct() {
   const [isVisible, setIsVisible] = useState(false);
