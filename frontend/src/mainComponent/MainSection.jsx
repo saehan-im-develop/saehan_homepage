@@ -4,7 +4,7 @@ import NewFuture from "./NewFuture";
 import "../mainCssFile/MainSection.css";
 import ContactSection from "./ContactSection";
 import section2Image from "@/assets/ai00.jpg";
-import mainImage4 from "@/assets/back4.jpg";
+import mainImage4 from "@/assets/back6.jpg";
 import AFMain from "./AFMain";
 import AOS from "aos";
 import "aos/dist/aos.css";

@@ -25,15 +25,15 @@
 
 .vision-main-content-image {
   width: 80vw;
-  max-width: 950px;
+  max-width: 1000px;
   min-width: 280px;
   height: auto;
-  border-radius: 18px;
+  /* border-radius: 18px; */
   /* box-shadow: 0 8px 28px 0 rgba(40,80,150,0.10); */
   background: #fff;
   object-fit: contain;
   /* border: 1.5px solid #eaf1fa; */
-  transition: box-shadow 0.18s;
+  /* transition: box-shadow 0.18s; */
 }
 
 @media (max-width: 900px) {
