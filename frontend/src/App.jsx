@@ -48,7 +48,7 @@ function AppContent() {
             <Route path="/tech-data" element={<TechData />} />
             <Route path="/research" element={<ResearchPage />} />
             <Route path="/news" element={<News />} />
-            <Route path="/test" element={<MainLanding />} />
+            {/* <Route path="/test" element={<MainLanding />} /> */}
           </Routes>
         </main>
         {!hideHeaderFooter && <ScrollToTopButton />}

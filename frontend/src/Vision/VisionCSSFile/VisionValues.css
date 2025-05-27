@@ -1,31 +1,28 @@
-/* 🔹 기본 스타일 */
-.vision-values {
+.vision-values-main-list {
   display: flex;
   justify-content: center;
   gap: 30px;
-  max-width: 1200px; /*  최대 너비 제한 */
+  max-width: 1200px;
   flex-wrap: wrap;
 }
 
-/*  개별 박스 스타일 */
-.value-box {
+.vision-values-main-box {
   flex: 1;
   background: white;
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 	#828ab1 0px 22px 30px 4px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: #828ab1 0px 22px 30px 4px;
+  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
-  border: 1px solid #1a3d7c; /* ✅ 테두리 추가 */
+  border: 1px solid #1a3d7c;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 0.8s ease-out forwards;
-  max-width: 350px; /*  박스 크기 제한 */
+  animation: vision-values-main-fadeInUp 0.8s ease-out forwards;
+  max-width: 350px;
   min-height: 200px;
 }
 
-/*  제목 스타일 */
-.value-box h3 {
+.vision-values-main-box h3 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -37,82 +34,72 @@
   gap: 10px;
 }
 
-/*  본문 스타일 */
-.value-box p {
+.vision-values-main-box p {
   font-size: 16px;
   color: #333;
   line-height: 1.8;
   font-weight: 600;
 }
 
-/* 🔹 반응형 스타일 적용 */
-
-/* (1) 태블릿 (768px~1024px) */
-@media (max-width: 1024px) {
-  .vision-values {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .value-box {
-    width: 45%;
-    padding: 20px;
-  }
-
-  .value-box h3 {
-    font-size: 18px;
-  }
-
-  .value-box p {
-    font-size: 15px;
-  }
-}
-
-/* (2) 모바일 (최대 768px) */
-@media (max-width: 768px) {
-  .vision-values {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .value-box {
-    width: 90%;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .value-box h3 {
-    font-size: 16px;
-  }
-
-  .value-box p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-}
-
-/*  등장 애니메이션 */
-@keyframes fadeInUp {
+/* 등장 애니메이션 */
+@keyframes vision-values-main-fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/*  비전 박스를 감싸는 컨테이너 */
-.vision-values-container {
-  width: 100vw; /*  전체 너비로 확장 */
-  background: #e9f2ff ; /*  올바른 배경 색상 형식 */
+/* 컨테이너 */
+.vision-values-main-container {
+  width: 100vw;
+  background: #e9f2ff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px; /*  불필요한 'sss' 삭제 */
+  padding: 60px 20px;
 }
 
-/*  아이콘 스타일 */
-.value-box .icon {
+/* 아이콘 스타일 */
+.vision-values-main-icon {
   font-size: 24px;
-  color: #28a745; /*  녹색 체크 아이콘 */
+  color: #28a745;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .vision-values-main-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .vision-values-main-box {
+    width: 45%;
+    padding: 20px;
+  }
+  .vision-values-main-box h3 {
+    font-size: 18px;
+  }
+  .vision-values-main-box p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-values-main-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .vision-values-main-box {
+    width: 90%;
+    text-align: center;
+    padding: 15px;
+  }
+  .vision-values-main-box h3 {
+    font-size: 16px;
+  }
+  .vision-values-main-box p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }

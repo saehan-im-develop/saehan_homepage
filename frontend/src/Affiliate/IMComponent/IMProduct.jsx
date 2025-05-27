@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../IMComponent/IMProduct.css";
 import img1 from "@/assets/aff/ai9.png"; // 임시 이미지
+import img2 from "@/assets/aff/a13.jpg"; // 웹 페에지 제작
+import img3 from "@/assets/aff/a14.jpg"; // 헬스 케어 이미지
+import img4 from "@/assets/aff/a15.jpg"; // 헬스 케어 이미지
 
 const products = [
   {
@@ -15,6 +18,7 @@ const products = [
     category: "문서 자동화 / AI 업무 지원",
     image: img1,
     link: "https://zelkovai.com",
+    status: "ready",      // <-- 이미 오픈
   },
   {
     name: "웹 페이지 제작 서비스",
@@ -26,8 +30,9 @@ const products = [
       </>
     ),
     category: "IT 서비스 / 웹개발",
-    image: img1,
-    link: "https://saehan-web.com",
+    image: img2,
+    link: "",
+    status: "upcoming",   // <-- 진행 예정
   },
   {
     name: "헬스케어 IT 솔루션",
@@ -39,8 +44,9 @@ const products = [
       </>
     ),
     category: "헬스케어 / 데이터 분석",
-    image: img1,
-    link: "https://saehan-healthcare.com",
+    image: img3,
+    link: "",
+    status: "upcoming",   // <-- 진행 예정
   },
   {
     name: "스마트 드론 사업",
@@ -52,8 +58,9 @@ const products = [
       </>
     ),
     category: "드론 / 영상 분석",
-    image: img1,
-    link: "https://saehan-drone.com",
+    image: img4,
+    link: "",
+    status: "upcoming",   // <-- 진행 예정
   },
 ];
 
@@ -73,6 +80,10 @@ function IMProduct() {
       <div className="im-product-list">
         {products.map((product, idx) => (
           <div key={idx} className="im-product-card">
+            {/* 상태 뱃지 */}
+            {product.status === "upcoming" && (
+              <span className="im-badge-upcoming">진행 예정</span>
+            )}
             {/* 이미지 */}
             <div className="im-card-image-wrap">
               <img src={product.image} alt={product.name} className="im-product-image" />
@@ -82,7 +93,7 @@ function IMProduct() {
               <h3 className="im-product-name">{product.name}</h3>
               <div className="im-product-eng-name">{product.engName}</div>
             </div>
-            {/* 설명: 표 한 칸(한 줄) */}
+            {/* 설명 */}
             <div className="im-card-desc-wrap">
               <table className="im-info-table">
                 <tbody>
@@ -97,23 +108,28 @@ function IMProduct() {
               <div className="im-product-category">
                 <strong>카테고리:</strong> {product.category}
               </div>
-              <a
-                href={product.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="im-cta-button"
-                tabIndex={0}
-                aria-label={`${product.name} 더 알아보기`}
-              >
-                더 알아보기
-                <span className="cta-arrow" aria-hidden="true">
-                  {/* SVG 아이콘 (미래지향 느낌) */}
-                  <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                    <path d="M5 12h14"></path>
-                    <path d="M13 6l6 6-6 6"></path>
-                  </svg>
-                </span>
-              </a>
+              {product.status === "ready" ? (
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="im-cta-button"
+                  tabIndex={0}
+                  aria-label={`${product.name} 더 알아보기`}
+                >
+                  더 알아보기
+                  <span className="cta-arrow" aria-hidden="true">
+                    <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                      <path d="M5 12h14"></path>
+                      <path d="M13 6l6 6-6 6"></path>
+                    </svg>
+                  </span>
+                </a>
+              ) : (
+                <button className="im-cta-button im-cta-disabled" disabled tabIndex={-1}>
+                  준비 중입니다
+                </button>
+              )}
             </div>
           </div>
         ))}
