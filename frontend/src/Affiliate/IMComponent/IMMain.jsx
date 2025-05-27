@@ -13,7 +13,7 @@ function IMMain() {
   return (
     <div
       className="common-main"
-      style={{ backgroundImage: `url("/assets/aff/ai6.jpg")` }} // ✅ 문자열 경로 직접 지정
+      style={{ backgroundImage: `url("/assets/aff/ai6.webp")` }} // ✅ 문자열 경로 직접 지정
     >
       <div className="common-overlay"></div> {/* ✅ 배경 위 오버레이 추가 */}
       <div className={`common-description ${isLoaded ? "show" : ""}`}>

@@ -17,19 +17,19 @@ function HoverEffect() {
       {/* ✅ 이미지 리스트 */}
       <div className={styles.container}>
         <div className={styles.box}>
-          <img src="/assets/Areal/plus/p1.jpg" alt="Image 1" />
+          <img src="/assets/Areal/plus/p1.webp" alt="Image 1" />
         </div>
         <div className={styles.box}>
-          <img src="/assets/Areal/plus/p2.JPG" alt="Image 2" />
+          <img src="/assets/Areal/plus/p2.webp" alt="Image 2" />
         </div>
         <div className={styles.box}>
-          <img src="/assets/Areal/plus/p3.JPG" alt="Image 3" />
+          <img src="/assets/Areal/plus/p3.webp" alt="Image 3" />
         </div>
         <div className={styles.box}>
-          <img src="/assets/Areal/plus/p4.JPG" alt="Image 4" />
+          <img src="/assets/Areal/plus/p4.webp" alt="Image 4" />
         </div>
         <div className={styles.box}>
-          <img src="/assets/Areal/plus/safe.JPG" alt="Image 5" />
+          <img src="/assets/Areal/plus/safe.webp" alt="Image 5" />
         </div>
       </div>
     </div>

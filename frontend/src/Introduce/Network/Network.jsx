@@ -35,7 +35,7 @@ const Network = () => {
     <div>
       {/* ✅ 상단 배경 이미지 */}
       <div ref={bgRef} className={`network-header-bg ${visible ? "fade-in" : ""}`}>
-        <img src="/assets/010.jpg" alt="네트워크 페이지 배경" className="network-header-img" />
+        <img src="/assets/010.webp" alt="네트워크 페이지 배경" className="network-header-img" />
       </div>
 
       <div ref={ref} className="network-container">

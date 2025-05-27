@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "../Common/CommonMain.css";
 
 const bgImages = [
-  "/assets/Areal/plus1.jpg",
-  "/assets/Areal/plus/back1.png",
-  "/assets/Areal/plus/back2.png"
+  "/assets/Areal/plus1.webp",
+  "/assets/Areal/plus/back1.webp",
+  "/assets/Areal/plus/back2.webp"
 ];
 
 const textSet = [

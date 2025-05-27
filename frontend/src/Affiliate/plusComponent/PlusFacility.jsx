@@ -6,27 +6,27 @@ import "./PlusFacility.css";
 const facilityData = [
   {
     title: "엔겔 사출기 120TON",
-    image: "/assets/Areal/plus/120.png",
+    image: "/assets/Areal/plus/120.webp",
   },
   {
     title: "엔겔 사출기 150TON",
-    image: "/assets/Areal/plus/150.png",
+    image: "/assets/Areal/plus/150.webp",
   },
   {
     title: "엔겔 사출기 400TON",
-    image: "/assets/Areal/plus/400.png",
+    image: "/assets/Areal/plus/400.webp",
   },
   {
     title: "엔겔 사출기 650TON",
-    image: "/assets/Areal/plus/650.png",
+    image: "/assets/Areal/plus/650.webp",
   },
   {
     title: "엔겔 사출기 900TON",
-    image: "/assets/Areal/plus/900.png",
+    image: "/assets/Areal/plus/900.webp",
   },
   {
     title: "엔겔 사출기 1100TON",
-    image: "/assets/Areal/plus/1100.png",
+    image: "/assets/Areal/plus/1100.webp",
   },
 ];
 

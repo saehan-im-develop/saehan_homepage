@@ -13,7 +13,7 @@ function HightechMain() {
   return (
     <div
       className="common-main"
-      style={{ backgroundImage: `url("/assets/Areal/hh11.png")` }} // ✅ public 기준 경로
+      style={{ backgroundImage: `url("/assets/Areal/hh11.webp")` }} // ✅ public 기준 경로
     >
       <div className="common-overlay"></div>
       <div className={`common-description ${isLoaded ? "show" : ""}`}>

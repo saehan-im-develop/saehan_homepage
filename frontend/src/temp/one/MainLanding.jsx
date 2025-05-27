@@ -5,25 +5,25 @@ const sections = [
     title: "새한 플러스",
     desc: "첨단 소재와 화학 산업을 선도하는 새한 플러스입니다.",
     className: "mainlanding-section-web",
-    bg: "/assets/temp/temp0.jpg",  // ✅ 문자열 경로
+    bg: "/assets/temp/temp0..webp",  // ✅ 문자열 경로
   },
   {
     title: "새한 아이엠",
     desc: "스마트 기술 및 IT 솔루션을 제공하는 새한 아이엠입니다.",
     className: "mainlanding-section-design",
-    bg: "/assets/temp/temp1.png",
+    bg: "/assets/temp/temp1..webp",
   },
   {
     title: "새한 하이테크",
     desc: "혁신적인 고기능성 소재와 친환경 솔루션의 새한 하이테크입니다.",
     className: "mainlanding-section-ai",
-    bg: "/assets/temp/temp2.png",
+    bg: "/assets/temp/temp2..webp",
   },
   {
     title: "SM 케미칼",
     desc: "정밀화학과 친환경 화학소재의 미래를 여는 SM 케미칼입니다.",
     className: "mainlanding-section-biz",
-    bg: "/assets/temp/temp3.jpg",
+    bg: "/assets/temp/temp3..webp",
   },
 ];
 

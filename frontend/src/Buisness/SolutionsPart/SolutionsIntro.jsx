@@ -10,7 +10,7 @@
 //       <h2>고객 맞춤형 솔루션</h2>
 //       <div className="intro-circles">
 //         <div className="circle_sol">
-//           <img src="/assets/solutions/solution1.png" alt="새한" />
+//           <img src="/assets/solutions/solution1.webp" alt="새한" />
 //           <h3>새한</h3>
 //           <ul>
 //             <li>고객 맞춤형 사출 성형 기술</li>
@@ -19,7 +19,7 @@
 //           </ul>
 //         </div>
 //         <div className="circle_sol">
-//           <img src="/assets/solutions/solution2.png" alt="고객" />
+//           <img src="/assets/solutions/solution2.webp" alt="고객" />
 //           <h3>고객</h3>
 //           <ul>
 //             <li>맞춤형 제품 요청</li>
@@ -28,7 +28,7 @@
 //           </ul>
 //         </div>
 //         <div className="circle_sol">
-//           <img src="/assets/solutions/solution3.png" alt="컨설팅" />
+//           <img src="/assets/solutions/solution3.webp" alt="컨설팅" />
 //           <h3>컨설팅</h3>
 //           <ul>
 //             <li>최적 소재 & 공정 선택 가이드</li>

@@ -9,13 +9,13 @@ const VisionIntro = () => {
     <div>
       {/* ✅ 상단 배경 이미지는 기존대로 유지 */}
       <div className="vision-main-header-bg">
-        <img src="/assets/upimage.jpg" alt="배경 이미지" />
+        <img src="/assets/upimage.webp" alt="배경 이미지" />
       </div>
 
       {/* ✅ "비전 및 이념" 텍스트 영역은 이미지로 교체 */}
       <div className="vision-main-image-container">
         <img
-          src="/assets/vision_Image/vision1.png"
+          src="/assets/vision_Image/vision1.webp"
           alt="비전 및 이념"
           className="vision-main-content-image"
         />

@@ -17,7 +17,7 @@ const CEOMain = () => {
       <div className="ceo-section">
         {/* 왼쪽 CEO 이미지 */}
         <div className="ceo-image" data-aos="fade-right" data-aos-delay="100">
-          <img src="/assets/Areal/ceomain2.jpg" alt="CEO 김원만" />
+          <img src="/assets/Areal/ceomain2.webp" alt="CEO 김원만" />
         </div>
 
         {/* 오른쪽 텍스트 박스 */}

@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Common/CommonProduct.css";
-// img2: npp2.png
-// img4: npp4.png
-// img5: npp5.png
-// img6: npp6.png
-// img8: npp8.png
-// img9: npp9.png
-// img11: npp11.png
-// img12: pp1.jpg
-// img13: pp2.png
-// img14: pp3.png
-// img15: pp4.png
+// img2: npp2.webp
+// img4: npp4.webp
+// img5: npp5.webp
+// img6: npp6.webp
+// img8: npp8.webp
+// img9: npp9.webp
+// img11: npp11.webp
+// img12: pp1.webp
+// img13: pp2.webp
+// img14: pp3.webp
+// img15: pp4.webp
 
 function PlusProduct() {
   const products = [
@@ -20,7 +20,7 @@ function PlusProduct() {
       model: "품목코드 : DC-95-0238",
       // category: "생산 기계 : 100TON",
       give: "서연인테크(정연내장)",
-      image: "/assets/Areal/plus/pp1.jpg", // img12
+      image: "/assets/Areal/plus/pp1.webp", // img12
     },
     {
       name: "GEAR CAM",
@@ -28,7 +28,7 @@ function PlusProduct() {
       model: "품목코드 : 3211-0044",
       // category: "생산 기계 : 120TON",
       give: "서연인테크(정연내장)",
-      image: "/assets/Areal/plus/pp2.png", // img13
+      image: "/assets/Areal/plus/pp2.webp", // img13
     },
     {
       name: "CASE ICE MAKER R #1",
@@ -36,7 +36,7 @@ function PlusProduct() {
       model: "품목코드 : 3211-0042",
       // category: "1X1X2-2 ABS",
       give: "[주] 대창",
-      image: "/assets/Areal/plus/npp5.png", // img5
+      image: "/assets/Areal/plus/npp5.webp", // img5
     },
     {
       name: "COVER ICE MAKER R #3",
@@ -44,7 +44,7 @@ function PlusProduct() {
       model: "품목코드 : 3211-0043",
       // category: "1X1X4-2 ABS",
       give: "[주] 대창",
-      image: "/assets/Areal/plus/pp3.png", // img14
+      image: "/assets/Areal/plus/pp3.webp", // img14
     },
     {
       name: "MOLDING-RR BPR FASCIA",
@@ -52,7 +52,7 @@ function PlusProduct() {
       model: "품목코드 : 42926227",
       // category: ">PC+ASA<",
       give: "서연인테크(정연내장)",
-      image: "/assets/Areal/plus/pp4.png", // img15
+      image: "/assets/Areal/plus/pp4.webp", // img15
     },
   ];
 

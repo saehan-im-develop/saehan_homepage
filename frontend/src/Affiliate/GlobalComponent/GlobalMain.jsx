@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Common/CommonMain.css";
-// import bgImage from "@/assets/aff/global1.jpg"; // 제거됨
+// import bgImage from "@/assets/aff/global1.webp"; // 제거됨
 
 function GlobalMain() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,7 +14,7 @@ function GlobalMain() {
   return (
     <div
       className="common-main"
-      style={{ backgroundImage: `url("/assets/aff/global1.jpg")` }} // 경로 직접 지정
+      style={{ backgroundImage: `url("/assets/aff/global1.webp")` }} // 경로 직접 지정
     >
       <div className="common-overlay"></div> {/* 배경 위 오버레이 추가 */}
       <div className={`common-description ${isLoaded ? "show" : ""}`}>

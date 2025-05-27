@@ -16,7 +16,7 @@ const products = [
       </>
     ),
     category: "문서 자동화 / AI 업무 지원",
-    image: "/assets/aff/ai9.png",
+    image: "/assets/aff/ai9.webp",
     link: "https://zelkovai.com",
     status: "ready",
   },
@@ -30,7 +30,7 @@ const products = [
       </>
     ),
     category: "IT 서비스 / 웹개발",
-    image: "/assets/aff/a13.jpg",
+    image: "/assets/aff/a13.webp",
     link: "",
     status: "upcoming",
   },
@@ -44,7 +44,7 @@ const products = [
       </>
     ),
     category: "헬스케어 / 데이터 분석",
-    image: "/assets/aff/a14.jpg",
+    image: "/assets/aff/a14.webp",
     link: "",
     status: "upcoming",
   },
@@ -58,7 +58,7 @@ const products = [
       </>
     ),
     category: "드론 / 영상 분석",
-    image: "/assets/aff/a15.jpg",
+    image: "/assets/aff/a15.webp",
     link: "",
     status: "upcoming",
   },

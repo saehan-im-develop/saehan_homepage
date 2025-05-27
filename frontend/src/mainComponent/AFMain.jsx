@@ -17,10 +17,10 @@ const AFMain = () => {
   }, []);
 
   const data = [
-    { img: "/assets/Areal/panel.png", name: "Jason Response", text: "새한 아이엠", link: "/im" },
-    { img: "/assets/Areal/hh11.png", name: "Max Conversion", text: "새한 하이테크", link: "/hightech" },
-    { img: "/assets/Areal/plus2.jpg", name: "Parsley Montana", text: "새한 플러스", link: "/plus" },
-    { img: "/assets/Areal/SM1.jpg", name: "plus", text: "SM 케미칼", link: "/global" }
+    { img: "/assets/Areal/panel.webp", name: "Jason Response", text: "새한 아이엠", link: "/im" },
+    { img: "/assets/Areal/hh11.webp", name: "Max Conversion", text: "새한 하이테크", link: "/hightech" },
+    { img: "/assets/Areal/plus2.webp", name: "Parsley Montana", text: "새한 플러스", link: "/plus" },
+    { img: "/assets/Areal/SM1.webp", name: "plus", text: "SM 케미칼", link: "/global" }
   ];
 
   const handleClick = (link) => {

@@ -3,23 +3,23 @@ import "../DicCssFile/ResearchPage.css"; // 스타일 분리
 
 // 인증서 데이터 배열
 const DocuData = [
-  { details: { img: "/assets/Areal/devDocu/globalDoc.png", date: "2024/12/17 TUE" } },
-  { details: { img: "/assets/Areal/devDocu/highdev.png", date: "2024/11/05 TUE" } },
-  { details: { img: "/assets/Areal/devDocu/highDoc.png", date: "2025/03/06 THU" } },
-  { details: { img: "/assets/Areal/devDocu/plusdev.png", date: "2025/03/06 THU" } },
-  { details: { img: "/assets/Areal/devDocu/plusDoc.png", date: "2025/03/06 THU" } },
+  { details: { img: "/assets/Areal/devDocu/globalDoc.webp", date: "2024/12/17 TUE" } },
+  { details: { img: "/assets/Areal/devDocu/highdev.webp", date: "2024/11/05 TUE" } },
+  { details: { img: "/assets/Areal/devDocu/highDoc.webp", date: "2025/03/06 THU" } },
+  { details: { img: "/assets/Areal/devDocu/plusdev.webp", date: "2025/03/06 THU" } },
+  { details: { img: "/assets/Areal/devDocu/plusDoc.webp", date: "2025/03/06 THU" } },
 ];
 
 const RootData = [
-  { details: { img: "/assets/Areal/devDocu/plusroot.png", date: "2025/04/10 MON" } },
-  { details: { img: "/assets/Areal/devDocu/globalroot.png", date: "2025/04/15 FRI" } },
-  { details: { img: "/assets/Areal/devDocu/highroot.png", date: "2025/04/20 WED" } },
+  { details: { img: "/assets/Areal/devDocu/plusroot.webp", date: "2025/04/10 MON" } },
+  { details: { img: "/assets/Areal/devDocu/globalroot.webp", date: "2025/04/15 FRI" } },
+  { details: { img: "/assets/Areal/devDocu/highroot.webp", date: "2025/04/20 WED" } },
 ];
 
 const QMData = [
-  { details: { img: "/assets/Areal/devDocu/plusKS.png", date: "2025/05/01 WED" } },
-  { details: { img: "/assets/Areal/devDocu/globalKS.png", date: "2025/05/10 SAT" } },
-  { details: { img: "/assets/Areal/devDocu/highKS.png", date: "2025/05/15 TUE" } },
+  { details: { img: "/assets/Areal/devDocu/plusKS.webp", date: "2025/05/01 WED" } },
+  { details: { img: "/assets/Areal/devDocu/globalKS.webp", date: "2025/05/10 SAT" } },
+  { details: { img: "/assets/Areal/devDocu/highKS.webp", date: "2025/05/15 TUE" } },
 ];
 
 const ResearchPage = () => {

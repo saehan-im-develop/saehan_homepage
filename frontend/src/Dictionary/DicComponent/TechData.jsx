@@ -11,7 +11,7 @@ const techDataList = [
       "생산성 증대 및 불량률 30% 감소",
       "특수소재 적용 및 복합 제조 가능",
     ],
-    image: "/assets/docu/tech01.png",
+    image: "/assets/docu/tech01.webp",
   },
   {
     title: "AI 기반 스마트 공장 최적화 시스템 (AI-Powered Smart Factory Optimization System)",
@@ -22,7 +22,7 @@ const techDataList = [
       "생산 공정에서의 에너지 효율 극대화",
       "예측 유지보수 및 장애 예방 시스템 적용",
     ],
-    image: "/assets/docu/tech01.png",
+    image: "/assets/docu/tech01.webp",
   },
   {
     title: "초정밀 사출 기술 (Ultra-Precision Injection Molding Technology)",
@@ -33,7 +33,7 @@ const techDataList = [
       "생산성 증대 및 불량률 30% 감소",
       "특수소재 적용 및 복합 제조 가능",
     ],
-    image: "/assets/docu/tech01.png",
+    image: "/assets/docu/tech01.webp",
   },
   {
     title: "초정밀 사출 기술 (Ultra-Precision Injection Molding Technology)",
@@ -44,7 +44,7 @@ const techDataList = [
       "생산성 증대 및 불량률 30% 감소",
       "특수소재 적용 및 복합 제조 가능",
     ],
-    image: "/assets/docu/tech01.png",
+    image: "/assets/docu/tech01.webp",
   },
 ];
 

@@ -17,10 +17,10 @@ const NewFuture = () => {
   }, []);
 
   const data = [
-    { img: "/assets/Areal/CEOPhoto.png", name: "Jason Response", text: "CEO 인사말", link: "/ceo" },
-    { img: "/assets/Areal/vision.jpg", name: "Max Conversion", text: "비전 및 가치관", link: "/vision" },
-    { img: "/assets/Areal/tree.jpg", name: "Parsley Montana", text: "회사 연혁", link: "/history" },
-    { img: "/assets/Areal/network.png", name: "plus", text: "네트워크", link: "/network" }
+    { img: "/assets/Areal/CEOPhoto.webp", name: "Jason Response", text: "CEO 인사말", link: "/ceo" },
+    { img: "/assets/Areal/vision.webp", name: "Max Conversion", text: "비전 및 가치관", link: "/vision" },
+    { img: "/assets/Areal/tree.webp", name: "Parsley Montana", text: "회사 연혁", link: "/history" },
+    { img: "/assets/Areal/network.webp", name: "plus", text: "네트워크", link: "/network" }
   ];
 
   const handleClick = (link) => {
