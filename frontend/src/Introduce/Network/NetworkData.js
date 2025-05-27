@@ -5,8 +5,8 @@ const networkData = [
       {
         type: "금남로 지사",
         address: "A 광주 동구 금남로 193-12",
-        names: ["박영호(연구원)", "송유란(연구원)"],
-        email: ["pyh8461@saehangroup.com", "syr@saehangroup.com"]
+        names: ["노영근(총괄)", "송유란(연구원)"],
+        email: ["shdudrms741017@saehangroup.com", "pyh8461@saehangroup.com"]
       }
     ]
   },

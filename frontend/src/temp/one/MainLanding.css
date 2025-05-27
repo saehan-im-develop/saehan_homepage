@@ -1,0 +1,131 @@
+.mainlanding-root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  background: #161e2e;
+}
+
+.mainlanding-aside {
+  background: #18314f;
+  width: 320px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 2px 0 18px 0 rgba(0,0,0,0.07);
+}
+
+.mainlanding-title {
+  color: #fff;
+  text-align: center;
+}
+.mainlanding-ko-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: -2px;
+  margin-bottom: 8px;
+}
+.mainlanding-en-title {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* 가로 4분할 */
+.mainlanding-main {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 100vh;
+  padding: 0;
+}
+
+.mainlanding-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  overflow: hidden;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  position: relative;
+  transition: filter 0.3s;
+}
+
+/* 그라데이션 컬러 */
+.mainlanding-section-web {
+  background: linear-gradient(160deg, #202944 60%, #23315b 100%);
+}
+.mainlanding-section-design {
+  background: linear-gradient(160deg, #364257 60%, #536273 100%);
+}
+.mainlanding-section-ai {
+  background: linear-gradient(160deg, #455060 60%, #5a7180 100%);
+}
+.mainlanding-section-biz {
+  background: linear-gradient(160deg, #5a6570 60%, #787e8a 100%);
+}
+
+/* 🔥 오버레이 이미지(hover 효과 포함) */
+.mainlanding-bgimg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.36;
+  transition: opacity 0.45s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+  z-index: 1;
+}
+.mainlanding-section:hover .mainlanding-bgimg {
+  opacity: 0.93;
+}
+
+.mainlanding-section-content {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  max-width: 340px;
+  width: 100%;
+  margin: auto;
+}
+.mainlanding-section h2 {
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+.mainlanding-section p {
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+/* 플로팅 버튼 */
+.mainlanding-float {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 10;
+}
+.mainlanding-float-btn {
+  padding: 14px 18px;
+  border-radius: 24px;
+  background: #3cd3ef;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.05rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(60,211,239,0.18);
+  transition: background 0.2s;
+  white-space: pre-line;
+}
+.mainlanding-float-btn.design-btn {
+  background: #45b5d5;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import CommonEquip from "../Common/CommonEquip"; // ✅ 공통 컴포넌트 사용
-import img1 from "@/assets/equips/high/eq1/0.png";
-import img2 from "@/assets/equips/high/eq2/21.png";
-import img3 from "@/assets/equips/high/eq3/31.png";
+import img1 from "@/assets/equips/high/eq1/T0.png";
+import img2 from "@/assets/equips/high/eq2/T21.png";
+import img3 from "@/assets/equips/high/eq3/T31.png";
 
 // 1번째 
 import img1_1 from "@/assets/equips/high/eq1/1.png";
@@ -30,7 +30,7 @@ import img3_4 from "@/assets/equips/high/eq3/30.png";
 const images = [
   {
     src: img1,
-    title: "FAN BALANCING MACHINE 1",
+    title: "Fan Balancing Machine 1",
     englishtitle: "FAN 제품에 회전 동작을 실험하여 회전 값이 SPEC 내에 들어오는지 측정하여 양품 생산",
     // description: "FAN 제품의 회전 값을 측정하는 기구",
     processes: [
@@ -44,7 +44,7 @@ const images = [
   },
   {
     src: img2,
-    title: "FAN BALANCING MACHINE 2",
+    title: "Fan Balancing Machine 2",
     englishtitle: "FAN 제품에 회전 동작을 실험하여 회전 값이 SPEC 내에 들어오는지 측정하여 양품 생산",
     // description: "FAN 제품의 회전 값을 측정하는 기구",
         processes: [
@@ -56,7 +56,7 @@ const images = [
   },
   {
     src: img3,
-    title: "FAN BALANCING MACHINE 3",
+    title: "Fan Balancing Machine 3",
     englishtitle: "FAN 제품에 회전 동작을 실험하여 회전 값이 SPEC 내에 들어오는지 측정하여 양품 생산",
     // description: "FAN 제품의 회전 값을 측정하는 기구",
         processes: [

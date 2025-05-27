@@ -2,8 +2,8 @@ import React from "react";
 import CommonEquip from "../Common/CommonEquip.jsx";
 
 // ✅ 메인 이미지
-import img1 from "@/assets/equips/sm/eq1/1.jpg";
-import img2 from "@/assets/equips/sm/eq2/21.jpg";
+import img1 from "@/assets/equips/sm/eq1/T1.jpg";
+import img2 from "@/assets/equips/sm/eq2/T21.jpg";
 
 // ✅ 1번째 공정 (19.5L 용기)
 import img1_1 from "@/assets/equips/sm/eq1/2.jpg";

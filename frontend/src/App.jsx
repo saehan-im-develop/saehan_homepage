@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "./mainComponent/ScrollToTop"; // ✅ 정확한 경로명
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import ScrollToTop from "./mainComponent/ScrollToTop";
 import Header from "./mainComponent/Header";
 import MainSection from "./mainComponent/MainSection";
 import Footer from "./mainComponent/Footer";
@@ -18,13 +18,18 @@ import ScrollToTopButton from "./mainComponent/ScrollToTopButton";
 import TechData from "./Dictionary/DicComponent/TechData";
 import ResearchPage from "./Dictionary/DicComponent/ResearchPage";
 import News from "./Dictionary/DicComponent/News";
+import MainLanding from "./temp/one/MainLanding";
 import "./App.css";
 
-function App() {
+// ⭐ Router 내부에서 useLocation 사용
+function AppContent() {
+  const location = useLocation();
+  const hideHeaderFooter = location.pathname.startsWith("/test");
+
   return (
-    <Router>
-      <ScrollToTop /> {/* ✅ 페이지 전환 시 스크롤 상단 이동 */}
-      <Header />
+    <>
+      <ScrollToTop />
+      {!hideHeaderFooter && <Header />}
       <div className="app-container">
         <main>
           <Routes>
@@ -43,11 +48,20 @@ function App() {
             <Route path="/tech-data" element={<TechData />} />
             <Route path="/research" element={<ResearchPage />} />
             <Route path="/news" element={<News />} />
+            <Route path="/test" element={<MainLanding />} />
           </Routes>
         </main>
-        <ScrollToTopButton />
-        <Footer />
+        {!hideHeaderFooter && <ScrollToTopButton />}
+        {!hideHeaderFooter && <Footer />}
       </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }

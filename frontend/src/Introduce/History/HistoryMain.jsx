@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../History/HistoryMain.css";
-import historyImage2 from "@/assets/Areal/Int/history1.png"
+import historyImage2 from "@/assets/Areal/Int/history2.png"
 import img2 from "@/assets/PlusMainImage.png";
 
 const historyData = [

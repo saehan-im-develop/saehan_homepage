@@ -78,9 +78,9 @@ p-ceo {
   height: auto;
   max-width: 100%;
   position: relative;
-  bottom:105px;
-  left: 50px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  bottom: 282px;
+  left: 200px;
+
 }
 @media (max-width: 768px) {
   .ceo-section {
