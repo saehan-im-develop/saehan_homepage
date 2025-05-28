@@ -1,0 +1,161 @@
+/* 신문 전체 배경과 폰트 */
+.storypaper-container {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem;
+    padding: 3rem;
+    font-family: 'Georgia', serif;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section-story {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    background-image: url("/assets/Areal/news/n4.webp");
+    background-size: cover;
+    background-position: center top 1100px;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-title-story {
+    top: 20px;
+    /* 상단 여백 */
+    left: 30px;
+    /* 왼쪽 여백 */
+    background: none;
+    /* 배경 없애기 */
+    font-size: 4.5rem;
+    /* 글씨 크기 */
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* 기사 제목 */
+.story-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 12px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 날짜 */
+.story-date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.story-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+/* 본문 */
+.story-content {
+    flex: 0.5;
+    line-height: 1.6;
+    font-size: large;
+    white-space: pre-line;
+}
+
+.story-img {
+    width: 25vw;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* 목록 (제목 + 날짜만 나열) */
+
+.story-list-text {
+    text-align: center;
+    padding: 1rem;
+}
+
+.story-list {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.story-list-wrapper {
+    padding: 2rem;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+.story-list li:first-of-type {
+    color: #2b5ecc;
+}
+
+.story-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 35rem;
+    padding-left: 0;
+    list-style: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px dashed #777;
+}
+
+.story-list li:hover {
+    color: #2b5ecc;
+}
+
+.story-list-date {
+    color: #777;
+}
+
+.story-list-back {
+    display: flex;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    color: #2b5ecc;
+    font-weight: 700;
+    font-size: medium;
+    padding: 0.2rem;
+}
+
+.story-list-back:hover {
+    color: #004cff;
+    cursor: pointer;
+}
+
+/* 페이지네이션 */
+.story-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 12px;
+}
+
+.story-pagination button {
+    padding: 6px 12px;
+    border: 1px solid #aaa;
+    background: #fff;
+    cursor: pointer;
+}
+
+.story-pagination button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}

@@ -18,6 +18,7 @@ import ScrollToTopButton from "./mainComponent/ScrollToTopButton";
 import TechData from "./Dictionary/DicComponent/TechData";
 import ResearchPage from "./Dictionary/DicComponent/ResearchPage";
 import News from "./Dictionary/DicComponent/News";
+import Story from "./Dictionary/DicComponent/Story";
 import MainLanding from "./temp/one/MainLanding";
 import "./App.css";
 
@@ -48,6 +49,7 @@ function AppContent() {
             <Route path="/tech-data" element={<TechData />} />
             <Route path="/research" element={<ResearchPage />} />
             <Route path="/news" element={<News />} />
+            <Route path="/story" element={<Story />} />
             {/* <Route path="/test" element={<MainLanding />} /> */}
           </Routes>
         </main>

@@ -39,6 +39,16 @@ const DataDropdownMenu = ({ closeMenu }) => {
                 보도자료
               </a>
             </li>
+
+            <li>
+              <a
+                onClick={() => handleNavigate("/story")}
+                style={{ cursor: "pointer" }}
+              >
+                새한 이야기
+              </a>
+            </li>
+
             {/* ✅ [테스트] 방 추가 */}
             {/* <li>
               <a
