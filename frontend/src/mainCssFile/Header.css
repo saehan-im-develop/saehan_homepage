@@ -53,30 +53,6 @@
   text-decoration: none;
 }
 
-/* ✅ 사내 연락망 (PC only) */
-.profile-container {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-}
-.profile-icon {
-  width: 35px;
-  height: 35px;
-  object-fit: contain;
-  transition: transform 0.2s;
-}
-.profile-container:hover .profile-icon {
-  transform: scale(1.1);
-}
-.profile-text {
-  font-size: 14px;
-  font-weight: bold;
-  color: #222;
-}
-
 /* ✅ 네비게이션 */
 .nav-links {
   list-style: none;
@@ -101,43 +77,75 @@
   color: #222;
   transition: color 0.3s ease-in-out;
 }
+
+/* ✅ 드롭다운 메뉴 트리거(li) 스타일 */
 .dropdown {
   position: relative;
-  list-style: none;
-  padding: 10px 20px;
-  cursor: pointer;
+  width: auto !important;
+  min-width: unset !important;
+  max-width: unset !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
+
+/* ✅ 드롭다운 메뉴 */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 220px;
+  max-width: 340px;
+  width: max-content;
+  background: #fff;
+  border: 1.5px solid #e5eaf2;
+  box-shadow: 0 6px 24px 0 rgba(50, 80, 130, 0.10), 0 2px 6px rgba(52,120,220,0.07);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0;
+  z-index: 100;
+  white-space: nowrap;
+  animation: dropdownShow 0.16s;
+  box-sizing: border-box;
+  text-align: center;
+}
+.dropdown-menu li, .dropdown-menu li a {
+  justify-content: center !important;
+  text-align: center !important;
+}
+@keyframes dropdownShow {
+  0% { opacity: 0; transform: translateY(16px) scale(0.98);}
+  100% { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+/* 메뉴 항목(li, a) */
+.dropdown-menu li {
+  width: 100%;
+}
+.dropdown-menu li a { font-size: 16px; }
+.dropdown-menu li a:hover { color: rgb(52, 52, 255); }
+.dropdown-menu li:hover { background-color: #f0f0f0; }
+
+/* ✅ 메뉴 active 표시 */
 .nav-links li a.active,
 .nav-links li.active a {
   color: #0056b3;
   border-bottom: 3px solid #0056b3;
   padding-bottom: 5px;
 }
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border: 1px solid #ddd;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-  width: max-content;
-  min-width: 200px;
-  max-width: 300px;
-  z-index: 100;
-  white-space: nowrap;
-}
+
+/* ✅ 우측 끝에 뜨는 드롭다운 예외처리 (필요 시만 사용) */
+/* 
 .nav-links .dropdown:last-child .dropdown-menu {
   left: auto;
   right: 0;
   transform: none;
 }
-.dropdown-menu li a { font-size: 16px; }
-.dropdown-menu li a:hover { color: rgb(52, 52, 255); }
-.dropdown-menu li:hover { background-color: #f0f0f0; }
+*/
 
 /* ✅ 햄버거 버튼 (PC에서는 숨김) */
 .menu-toggle {
@@ -260,5 +268,13 @@
     padding: 10px 0;
     width: 100%;
     display: block;
+  }
+  /* 모바일 드롭다운도 중앙에 뜨게 */
+  .dropdown-menu {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    min-width: 180px;
+    width: max-content;
+    box-sizing: border-box;
   }
 }

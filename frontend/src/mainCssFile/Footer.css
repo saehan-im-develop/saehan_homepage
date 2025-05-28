@@ -35,23 +35,22 @@ body {
 /*  푸터 내부를 한 줄로 정렬하면서, 세로 정렬 유지 */
 .footer-container {
   display: flex;
-  justify-content: space-between; /*  양쪽 정렬 유지 */
+  justify-content: space-between;
   align-items: center;
-  max-width: 1600px; /*  푸터 내부 최대 크기 제한 */
+  max-width: 1600px;
   margin: 0 auto;
   width: 100%;
-  flex-wrap: wrap; /*  반응형에서 줄바꿈 가능하도록 설정 */
-  overflow: hidden; /*  내부 컨텐츠가 푸터를 넘어가지 않도록 제한 */
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 /*  왼쪽 정렬 그룹 */
 .footer-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 왼쪽 정렬 유지 */
+  align-items: flex-start;
   margin-left: 20px;
 }
-
 
 /*  "© 2024 SAEHAN GROUP. All rights reserved." 정렬 */
 .footer-content {
@@ -68,7 +67,7 @@ body {
 .business-info-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /*  왼쪽 정렬 유지 */
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -85,44 +84,65 @@ body {
   overflow: hidden;
   transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0;
-  text-align: left; /*  왼쪽 정렬 유지 */
-  width: 100%; /*  컨테이너 너비에 맞춤 */
+  text-align: left;
+  width: 100%;
 }
-
 .business-info p {
   margin: 5px 0;
-  text-align: left; /*  왼쪽 정렬 유지 */
+  text-align: left;
 }
 .business-info.open {
   max-height: 500px;
   opacity: 1;
 }
 
-
 /*  오른쪽 아이콘 버튼 정렬 */
 .footer-buttons {
   display: flex;
-  gap: 10px;
+  gap: 18px;         /* 버튼 사이 여백 증가 */
   align-items: center;
+  justify-content: flex-end;
 }
 
-/*  아이콘들이 푸터 텍스트와 같은 선상에 위치 */
-.footer-buttons .btn-section {
-  display: flex;
-  gap: 10px;
-  padding: 0;
-  margin-bottom: 100%;
+/* === 사내 연락망 버튼 (디자인 개선) === */
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 18px 8px 14px;
+  border-radius: 24px;
+  background: linear-gradient(90deg, #23375c 0%, #4872d7 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15.2px;
+  box-shadow: 0 2px 12px rgba(30,64,180,0.09);
+  text-decoration: none;
+  border: none;
+  transition: background 0.18s, box-shadow 0.18s, color 0.15s, opacity 0.18s;
+  border: 1.5px solid #2b4271;
+}
+.footer-contact-link:hover {
+  background: linear-gradient(90deg, #1a3d7c 0%, #37a5f7 100%);
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(51,124,255,0.14);
+  opacity: 0.89;
 }
 
-.footer-buttons .btn-section button {
-  width: 40px;
-  height: 40px;
-  margin: 0;
-  padding: 5px;
+.footer-contact-icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  filter: grayscale(0.12) brightness(1.13);
 }
 
-/*  반응형 스타일 적용 */
-/*  반응형 스타일 적용 */
+.footer-contact-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
 @media (max-width: 1024px) {
   .footer {
     padding: 15px;
@@ -152,14 +172,48 @@ body {
 
   .footer-container {
     flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
 
   .footer-left {
     align-items: center;
     text-align: center;
+    margin-left: 0;
   }
 
   .footer-buttons {
     justify-content: center;
+    gap: 9px;
+    width: 100%;
   }
+
+  .footer-contact-link {
+    font-size: 13px;
+    padding: 7px 14px 7px 9px;
+    border-radius: 18px;
+    gap: 7px;
+  }
+  .footer-contact-icon {
+    width: 19px;
+    height: 19px;
+  }
+  .footer-contact-text {
+    font-size: 12.5px;
+  }
+}
+
+/*  아이콘들이 푸터 텍스트와 같은 선상에 위치 */
+.footer-buttons .btn-section {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.footer-buttons .btn-section button {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 5px;
 }
