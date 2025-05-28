@@ -1,61 +1,34 @@
 import React from "react";
 import CommonEquip from "../Common/CommonEquip.jsx";
 
-// ✅ 메인 이미지
-import img1 from "@/assets/equips/sm/eq1/1.jpg";
-import img2 from "@/assets/equips/sm/eq2/21.jpg";
-
-// ✅ 1번째 공정 (19.5L 용기)
-import img1_1 from "@/assets/equips/sm/eq1/2.jpg";
-import img1_2 from "@/assets/equips/sm/eq1/3.jpg";
-import img1_3 from "@/assets/equips/sm/eq1/4.jpg";
-// import img1_9 from "@/assets/equips/sm/eq1/9.png"; // ❌ 파일이 없으면 주석 처리
-import img1_4 from "@/assets/equips/sm/eq1/5.jpg";
-import img1_5 from "@/assets/equips/sm/eq1/6.jpg";
-import img1_6 from "@/assets/equips/sm/eq1/7.jpg";
-import img1_7 from "@/assets/equips/sm/eq1/pro.png";
-import img1_8 from "@/assets/equips/sm/eq1/8.png";
-import img1_9 from "@/assets/equips/sm/eq1/10.png";
-
-// ✅ 2번째 공정 (10.8L 용기)
-import img2_2 from "@/assets/equips/sm/eq2/22.jpg";
-import img2_3 from "@/assets/equips/sm/eq2/23.jpg";
-// import img2_4 from "@/assets/equips/sm/eq2/24.jpg"; // ❌ 주석 처리
-import img2_5 from "@/assets/equips/sm/eq2/25.jpg";
-import img2_6 from "@/assets/equips/sm/eq2/26.jpg";
-import img2_7 from "@/assets/equips/sm/eq2/27.jpg";
-import img2_8 from "@/assets/equips/sm/eq2/28pro.png";
-import img2_9 from "@/assets/equips/sm/eq2/29.png";
-import img2_10 from "@/assets/equips/sm/eq2/30.png";
-
 const images = [
   {
-    src: img1,
+    src: "/assets/equips/sm/eq1/T1.webp",
     title: "김치냉장고 전용 용기(19.5L) 생산 설비",
     englishtitle: "김치냉장고 전용 용기(19.5L) 생산 공정",
     processes: [
-      { src: img1_1, title: "사출 생산", desc: "" },
-      { src: img1_2, title: "1단계 제품 운송", desc: "" },
-      { src: img1_3, title: "2단계 제품 운송", desc: "" },
-      { src: img1_4, title: "김치통 조립(assy)", desc: "" },
-      { src: img1_9, title: "김치통 누수 검사", desc: "" },
-      { src: img1_5, title: "1단계 김치통 포장", desc: "" },
-      { src: img1_6, title: "2단계 김치통 포장", desc: "" },
-      { src: img1_8, title: "포장 완료 후 출고 대기", desc: "포장 및 출하 단계" },
+      { src: "/assets/equips/sm/eq1/2.webp", title: "사출 생산", desc: "" },
+      { src: "/assets/equips/sm/eq1/3.webp", title: "1단계 제품 운송", desc: "" },
+      { src: "/assets/equips/sm/eq1/4.webp", title: "2단계 제품 운송", desc: "" },
+      { src: "/assets/equips/sm/eq1/5.webp", title: "김치통 조립(assy)", desc: "" },
+      { src: "/assets/equips/sm/eq1/10.webp", title: "김치통 누수 검사", desc: "" },
+      { src: "/assets/equips/sm/eq1/6.webp", title: "1단계 김치통 포장", desc: "" },
+      { src: "/assets/equips/sm/eq1/7.webp", title: "2단계 김치통 포장", desc: "" },
+      { src: "/assets/equips/sm/eq1/8.webp", title: "포장 완료 후 출고 대기", desc: "포장 및 출하 단계" },
     ]
   },
   {
-    src: img2,
+    src: "/assets/equips/sm/eq2/T21.webp",
     title: "김치냉장고 전용 용기(10.8L) 생산 설비",
     englishtitle: "김치냉장고 전용 용기(10.8L) 생산 공정",
     processes: [
-      { src: img2_2, title: "사출 생산", desc: "" },
-      { src: img2_3, title: "1단계 제품 운송", desc: "" }, 
-      { src: img2_5, title: "김치통 조립(assy)", desc: "" },
-      { src: img2_10, title: "김치통 누수 검사", desc: "" },
-      { src: img2_6, title: "김치통 포장", desc: "" },
-      { src: img2_7, title: "김치통 적재", desc: "" },
-      { src: img2_9, title: "완료 후 출고 대기", desc: "포장 및 출하 단계" },
+      { src: "/assets/equips/sm/eq2/22.webp", title: "사출 생산", desc: "" },
+      { src: "/assets/equips/sm/eq2/23.webp", title: "1단계 제품 운송", desc: "" }, 
+      { src: "/assets/equips/sm/eq2/25.webp", title: "김치통 조립(assy)", desc: "" },
+      { src: "/assets/equips/sm/eq2/30.webp", title: "김치통 누수 검사", desc: "" },
+      { src: "/assets/equips/sm/eq2/26.webp", title: "김치통 포장", desc: "" },
+      { src: "/assets/equips/sm/eq2/27.webp", title: "김치통 적재", desc: "" },
+      { src: "/assets/equips/sm/eq2/29.webp", title: "완료 후 출고 대기", desc: "포장 및 출하 단계" },
     ]
   },
 ];
@@ -65,7 +38,7 @@ const GlobalEquip = () => {
     <CommonEquip
       title="Equipments of SM Chemical"
       images={images}
-      pageType="sm" // ✅ 페이지 타입 구분용
+      pageType="sm"
     />
   );
 };

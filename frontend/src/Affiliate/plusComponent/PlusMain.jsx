@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../Common/CommonMain.css";
-import bg1 from "@/assets/Areal/plus1.jpg";
-import bg2 from "@/assets/Areal/plus/back1.png";
-import bg3 from "@/assets/Areal/plus/back2.png";
 
-const bgImages = [bg1, bg2, bg3];
+const bgImages = [
+  "/assets/Areal/plus1.webp",
+  "/assets/Areal/plus/back1.webp",
+  "/assets/Areal/plus/back2.webp"
+];
+
 const textSet = [
   {
     title: "SAEHAN PLUS",

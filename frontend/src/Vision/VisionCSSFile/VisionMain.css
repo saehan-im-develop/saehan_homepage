@@ -1,12 +1,11 @@
-/* 🔹 기본 스타일 */
-.vision-container {
+/* VisionMain: 기본 스타일 */
+.vision-main-container {
     background-color: #ffffff;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     text-align: center;
     max-width: 900px;
-    /* ✅ 전체 크기 맞춤 */
     width: 80%;
     margin: 50px auto;
     display: flex;
@@ -16,13 +15,13 @@
 }
 
 /* 등장 효과 */
-.vision-container.fade-in {
+.vision-main-container.vision-main-fade-in {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* 제목 스타일 */
-.section-title {
+.vision-main-section-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -32,24 +31,20 @@
 }
 
 /* 소개 섹션 */
-.vision-intro {
+.vision-main-intro {
     background: rgba(255, 255, 255, 0.95);
-    /* ✅ 배경 투명도 조정 */
     padding: 40px;
     border-radius: 12px;
     border: 1px solid #ccc;
-    /* ✅ 테두리 색 더 진하게 */
-    box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px inset, rgba(34, 34, 34, 0.445) 10px -10px 0px -3px, rgb(126, 126, 126) 10px -10px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 2px inset, rgba(34, 34, 34, 0.445) 10px 10px 0px 3px, rgb(126, 126, 126) 10px 10px;
     text-align: left;
-    /* ✅ 텍스트 왼쪽 정렬 */
     max-width: 850px;
-    /* ✅ 너비 조정 */
     margin: 20px auto;
     font-size: 18px;
     line-height: 1.8;
 }
 
-.vision-intro p {
+.vision-main-intro p {
     max-width: 750px;
     margin: 0 auto 20px auto;
     text-align: left;
@@ -61,8 +56,8 @@
     color: #333;
 }
 
-/* 🔹 비전 원형 구조 */
-.principles-circle {
+/* 비전 원형 구조 */
+.vision-main-principles-circle {
     position: relative;
     width: 300px;
     height: 300px;
@@ -74,7 +69,7 @@
     justify-content: center;
 }
 
-.center-circle {
+.vision-main-center-circle {
     background: white;
     width: 220px;
     height: 220px;
@@ -89,16 +84,16 @@
     position: relative;
 }
 
-/* ✅ 비전 & 가치 요소 */
-.vision-content {
+/* 비전 & 가치 요소 */
+.vision-main-content {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
 }
 
-/* ✅ 리스트 스타일 */
-.vision-list {
+/* 리스트 스타일 */
+.vision-main-list {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -106,27 +101,28 @@
     width: 100%;
 }
 
-/* ✅ 개별 박스 스타일 */
-.vision-box {
-    background: rgba(255, 255, 255, 0.9);
+/* 개별 박스 스타일 */
+.vision-main-box {
+    background: rgba(255, 255, 255, 0.97);
     padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    box-shadow: rgb(56, 56, 56) 0px 20px 30px -10px;
+    border-radius: 14px;
+    border: 2px solid #e3e6ef;
+    box-shadow:
+      0 4px 24px 0 rgba(30,34,90,0.14),
+      0 1.5px 3px 0 rgba(60,80,120,0.11);
     width: 750px;
-    /* ✅ 고정 크기 유지 */
     font-size: 18px;
     text-align: left;
     line-height: 1.8;
-    transition: all 0.3s ease-in-out;
+    transition: box-shadow 0.22s cubic-bezier(.4,0,.2,1), transform 0.22s cubic-bezier(.4,0,.2,1);
     display: flex;
     align-items: center;
     gap: 15px;
     position: relative;
 }
 
-/* ✅ 숫자 스타일 */
-.vision-box-number {
+/* 숫자 스타일 */
+.vision-main-box-number {
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.9);
@@ -143,9 +139,8 @@
     position: relative;
 }
 
-
-/* ✅ 비전 제목과 로고를 감싸는 컨테이너 */
-.vision-header {
+/* 비전 제목과 로고를 감싸는 컨테이너 */
+.vision-main-header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,67 +148,60 @@
     margin-bottom: 20px;
 }
 
-/* ✅ 로고 스타일 (투명도 추가) */
-.vision-logo {
+/* 로고 스타일 */
+.vision-main-logo {
     width: 250px;
     height: auto;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
 
-/* ✅ 로고 컨테이너 */
-.vision-logo-container {
+/* 로고 컨테이너 */
+.vision-main-logo-container {
     flex-shrink: 0;
 }
 
-/* ✅ 텍스트 컨테이너 */
-.vision-text-container {
+/* 텍스트 컨테이너 */
+.vision-main-text-container {
     max-width: 700px;
     text-align: left;
 }
 
-/* 🔵 상단 배경 이미지 컨테이너 */
-.vision-header-bg {
+/* 상단 배경 이미지 컨테이너 */
+.vision-main-header-bg {
     position: relative;
     width: 100vw;
-    /* ✅ 전체 너비 */
     height: 300px;
-    /* ✅ 높이 설정 */
     overflow: hidden;
 }
 
-/* 🔵 상단 배경 이미지 */
-.vision-header-bg img {
+/* 상단 배경 이미지 */
+.vision-main-header-bg img {
     width: 100vw;
-    /* ✅ 너비를 화면 전체로 확장 */
     height: 160%;
     object-fit: cover;
-    /* ✅ 비율 유지하며 확대 */
     transform-origin: center;
 }
 
-
 /* 내부 십자선 스타일 추가 */
-.center-circle::before,
-.center-circle::after {
+.vision-main-center-circle::before,
+.vision-main-center-circle::after {
     content: "";
     position: absolute;
     background: #ccc;
-    /* 연한 회색 */
 }
 
 /* 가로선 */
-.center-circle::before {
+.vision-main-center-circle::before {
     width: 90%;
     height: 1.5px;
-    /* 선을 더 뚜렷하게 */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
 /* 세로선 */
-.center-circle::after {
+.vision-main-center-circle::after {
     width: 1.5px;
     height: 90%;
     left: 50%;
@@ -222,94 +210,79 @@
 }
 
 /* 품질, 속도 → 파란색 */
-.top-left {
+.vision-main-top-left {
+    color: #2d66d6;
+}
+.vision-main-bottom-right {
     color: #2d66d6;
 }
 
-.bottom-right {
-    color: #2d66d6;
-}
-
-
-/* 🔹 반응형 스타일 적용 */
-/* (2) 모바일 (최대 768px) */
+/* 반응형 스타일 적용 */
 @media (max-width: 768px) {
-    .vision-header-bg {
-        height: 140px !important; 
+    .vision-main-header-bg {
+        height: 140px !important;
     }
-
-    .vision-header-bg img {
+    .vision-main-header-bg img {
         width: 100vw;
         height: 100%;
-        min-height: 180px; /* ✅ 추가 */
+        min-height: 180px;
         object-fit: cover;
     }
-
-    .vision-container {
+    .vision-main-container {
         opacity: 1;
-        min-height: 200px; /* ✅ 최소 높이 지정 */
-        transform: translateY(1S); /* ✅ 살짝만 이동 */
+        min-height: 200px;
+        transform: translateY(1S);
         margin-top: 10px !important;
     }
-    .vision-container.fade-in {
+    .vision-main-container.vision-main-fade-in {
         opacity: 1;
         transform: translateY(0);
         transition: all 0.6s ease-out;
-      }
-
-    .section-title {
+    }
+    .vision-main-section-title {
         font-size: 18px;
     }
-
-    .vision-intro {
+    .vision-main-intro {
         padding: 20px;
         font-size: 16px;
         line-height: 1.6;
     }
-
-    .vision-intro p {
+    .vision-main-intro p {
         font-size: 14px;
         gap: 5px;
     }
-
-    .principles-circle {
+    .vision-main-principles-circle {
         width: 200px;
         height: 200px;
     }
-
-    .center-circle {
+    .vision-main-center-circle {
         width: 150px;
         height: 150px;
         font-size: 14px;
     }
-
-    .vision-content {
+    .vision-main-content {
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
-
-    .vision-box {
+    .vision-main-box {
         width: 100%;
         font-size: 15px;
         padding: 16px;
         text-align: left;
     }
-
-    .vision-box-number {
+    .vision-main-box-number {
         width: 30px;
         height: 30px;
         font-size: 14px;
         border-width: 2px;
     }
-
-    .vision-header {
+    .vision-main-header {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
-
-    .vision-logo {
+    .vision-main-logo {
         width: 180px;
     }
 }

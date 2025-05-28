@@ -80,7 +80,7 @@
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  margin-top: 12%;
+  /* margin-top: 12%; */
 }
 
 
@@ -324,6 +324,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    margin-top: 40px ;
   }
 
   .text-overlay {
@@ -352,7 +353,7 @@
 
   .spaced-text span {
     margin-right: 0.5rem; /* ✅ 줄여줌 */
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
   .content-container {
@@ -371,7 +372,7 @@
     margin-top: 12px;
     display: flex;
     gap: 0.8rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   
   .large-text {

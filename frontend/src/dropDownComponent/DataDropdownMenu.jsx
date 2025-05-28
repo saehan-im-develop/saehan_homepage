@@ -39,6 +39,15 @@ const DataDropdownMenu = ({ closeMenu }) => {
                 보도자료
               </a>
             </li>
+            {/* ✅ [테스트] 방 추가 */}
+            {/* <li>
+              <a
+                onClick={() => handleNavigate("/test")}
+                style={{ cursor: "pointer" }}
+              >
+                테스트
+              </a>
+            </li> */}
           </ul>
         </div>
       )}

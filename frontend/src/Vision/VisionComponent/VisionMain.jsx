@@ -30,7 +30,7 @@ const VisionMain = () => {
   }, []);
 
   return (
-    <div ref={ref} className={`vision-container ${isVisible ? "fade-in" : ""}`}>
+    <div ref={ref} className={`vision-main-container ${isVisible ? "vision-main-fade-in" : ""}`}>
       <VisionIntro />
       <VisionValues />
       <VisionPrinciples />

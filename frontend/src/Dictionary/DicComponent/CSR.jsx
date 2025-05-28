@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "../DicCssFile/CSR.module.scss"; //  SCSS 모듈 적용
-import img1 from "@/assets/t1.png"
+
 
 gsap.registerPlugin(ScrollTrigger);
 

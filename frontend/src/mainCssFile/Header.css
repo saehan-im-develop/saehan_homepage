@@ -9,7 +9,7 @@
   background-color: white;
   padding: 5px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   width: 100%;
@@ -17,6 +17,7 @@
   z-index: 1000;
   height: 85px;
   margin: 0 auto;
+  box-shadow: none;
 }
 
 /* ✅ 내부 컨테이너 정렬 */
@@ -37,11 +38,9 @@
   gap: 10px;
   text-decoration: none;
 }
-
 .logo {
   height: 50px;
 }
-
 #saehan-group {
   font-size: 24px;
   font-weight: 200;
@@ -54,7 +53,7 @@
   text-decoration: none;
 }
 
-/* ✅ 사내 연락망 (PC) */
+/* ✅ 사내 연락망 (PC only) */
 .profile-container {
   display: flex;
   align-items: center;
@@ -63,18 +62,15 @@
   text-decoration: none;
   color: inherit;
 }
-
 .profile-icon {
-  width: 35px !important;
-  height: 35px !important;
+  width: 35px;
+  height: 35px;
   object-fit: contain;
   transition: transform 0.2s;
 }
-
 .profile-container:hover .profile-icon {
   transform: scale(1.1);
 }
-
 .profile-text {
   font-size: 14px;
   font-weight: bold;
@@ -92,7 +88,6 @@
   max-width: 100%;
   overflow: visible;
 }
-
 .nav-links li,
 .nav-links li a,
 .dropdown-menu li a {
@@ -106,22 +101,18 @@
   color: #222;
   transition: color 0.3s ease-in-out;
 }
-
-/* ✅ 드롭다운 메뉴 */
 .dropdown {
   position: relative;
   list-style: none;
   padding: 10px 20px;
   cursor: pointer;
 }
-
 .nav-links li a.active,
 .nav-links li.active a {
   color: #0056b3;
   border-bottom: 3px solid #0056b3;
   padding-bottom: 5px;
 }
-
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -139,24 +130,14 @@
   z-index: 100;
   white-space: nowrap;
 }
-
 .nav-links .dropdown:last-child .dropdown-menu {
   left: auto;
   right: 0;
   transform: none;
 }
-
-.dropdown-menu li a {
-  font-size: 16px;
-}
-
-.dropdown-menu li a:hover {
-  color: rgb(52, 52, 255);
-}
-
-.dropdown-menu li:hover {
-  background-color: #f0f0f0;
-}
+.dropdown-menu li a { font-size: 16px; }
+.dropdown-menu li a:hover { color: rgb(52, 52, 255); }
+.dropdown-menu li:hover { background-color: #f0f0f0; }
 
 /* ✅ 햄버거 버튼 (PC에서는 숨김) */
 .menu-toggle {
@@ -166,129 +147,114 @@
   padding: 10px;
 }
 
-/* ✅ 표시 제어 클래스 */
-.mobile-only {
-  display: none;
-}
-.desktop-only {
-  display: flex;
-}
+/* ✅ PC/모바일 분리 클래스 */
+.mobile-only { display: none; }
+.desktop-only { display: flex; }
 
-
+/* ------------------------------------------
+    모바일 반응형 (max-width: 768px)
+--------------------------------------------- */
 @media (max-width: 768px) {
-  /* ✅ 전체 헤더 스타일 */
+  html, body {
+    overflow-x: hidden;
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
   .header {
     background-color: white;
-    padding: 8px 16px;
+    padding: 8px 0 8px 0;
     height: auto;
+    min-height: 60px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
-
-  /* ✅ 내부 컨테이너: 위아래 세로 정렬 */
   .header .container {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
-    max-width: 1600px;
+    max-width: 100vw;
     margin: 0 auto;
-    padding: 0 px;
+    padding: 0;
   }
-
-  /* ✅ 상단 정렬: 좌측(로고+사내연락망) + 우측 햄버거 */
   .top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    min-height: 48px;
   }
-
-  /* ✅ 로고 + 사내 연락망 아이콘 묶기 */
   .logo-profile-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-
-  /* ✅ 로고 영역 */
   .logo-container {
     display: flex;
     align-items: center;
     gap: 8px;
     text-decoration: none;
   }
-
   .logo {
-    height: 36px;
+    height: 32px;
   }
-
   #saehan-group {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     color: #224488;
     margin: 0;
   }
-
-  /* ✅ 사내 연락망 아이콘 (모바일 전용) */
+  /* ✅ 모바일 전용 */
   .mobile-only {
-    display: flex;
+    display: flex !important;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     text-decoration: none;
     color: #222;
+    padding-left: 2px;
   }
-
   .mobile-only .profile-text {
     display: none;
   }
-
-  .profile-icon {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-  }
-
-  /* ✅ PC 전용 요소 숨김 */
+  /* ✅ PC 전용 숨김 */
   .desktop-only {
     display: none !important;
   }
-
+  .profile-icon {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: contain;
+  }
   /* ✅ 햄버거 메뉴 */
   .menu-toggle {
     display: block;
-    font-size: 24px;
+    font-size: 25px;
     padding: 8px;
     cursor: pointer;
     z-index: 1001;
   }
-
-  /* ✅ 네비게이션 메뉴 (처음엔 숨김) */
+  /* ✅ 네비게이션 메뉴 (숨김) */
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 62px;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background: white;
     padding: 10px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
-
   /* ✅ 햄버거 클릭 시 보이도록 */
   .nav-links.active {
     display: flex;
   }
-
   .nav-links li {
     text-align: center;
     padding: 10px 0;
   }
-
   .nav-links li a {
     font-size: 16px;
     padding: 10px 0;

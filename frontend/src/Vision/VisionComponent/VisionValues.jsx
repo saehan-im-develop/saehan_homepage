@@ -21,12 +21,12 @@ const values = [
 
 const VisionValues = () => {
   return (
-    <div className="vision-values-container">
-      <div className="vision-values">
+    <div className="vision-values-main-container">
+      <div className="vision-values-main-list">
         {values.map((value, index) => (
-          <div key={index} className="value-box">
+          <div key={index} className="vision-values-main-box">
             <h3>
-              <span className="icon">✅</span>
+              <span className="vision-values-main-icon">✅</span>
               {value.title}
             </h3>
             <p>{value.description}</p>

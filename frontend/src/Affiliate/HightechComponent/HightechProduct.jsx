@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Common/CommonProduct.css";
-import img1 from "@/assets/Areal/high/h1.png"; // 김치냉장고 부품
-import img2 from "@/assets/Areal/high/h2.png"; // 냉장고 선반류
-import img3 from "@/assets/Areal/high/h3.png"; // 산업용 플라스틱 부품
-import img4 from "@/assets/Areal/high/h4.png"; // 세탁기 부품
-import img5 from "@/assets/Areal/high/h5.png"; // 세탁기 부품
-import img6 from "@/assets/Areal/high/p1.png"; // 김치냉장고 부품
-import img7 from "@/assets/Areal/high/p2.png"; // 김치냉장고 부품
-import img8 from "@/assets/Areal/high/p3.png"; // 김치냉장고 부품
+// 김치냉장고 부품
+// 냉장고 선반류
+// 산업용 플라스틱 부품
+// 세탁기 부품
+// 세탁기 부품
+// 김치냉장고 부품
+// 김치냉장고 부품
+// 김치냉장고 부품
 
 function HightechProduct() {
   const products = [
@@ -19,17 +19,17 @@ function HightechProduct() {
       // code: "품목코드 : RF9000C",
       category: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
       // give : "[주] 한영 PNS",
-      image: img6,
+      image: "/assets/Areal/high/p1.webp", // 김치냉장고 부품
     },
     {
       name: "DE8000MK-PJT BLADE-BLOWER",
       codeNO: "품목코드 : DC66-00980A",
       // description:
-        // "KIM JIN-BAEK 2017",
+      //   "KIM JIN-BAEK 2017",
       // code: "RF9000C",
       category: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
       // give : "[주] 한영 PNS",
-      image: img7,
+      image: "/assets/Areal/high/p2.webp", // 김치냉장고 부품
     },
     {
       name: "BLOWER",
@@ -39,7 +39,7 @@ function HightechProduct() {
       // code: "RF9000C",
       category: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
       // give : "[주] 한영 PNS",
-      image: img8,
+      image: "/assets/Areal/high/p3.webp", // 김치냉장고 부품
     },
     {
       name: "CAP DOOR-REF UP LEFT , CAP DOOR-REF UP RIGHT",
@@ -48,8 +48,8 @@ function HightechProduct() {
       //   "SEOUNWOO KIM 2022",
       // code: "RF9000C",
       category: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
-      give : "[주] 한영 PNS",
-      image: img1,
+      give: "[주] 한영 PNS",
+      image: "/assets/Areal/high/h1.webp", // 김치냉장고 부품
     },
     // {
     //   name: "HOUSING FAN REAR",
@@ -58,17 +58,16 @@ function HightechProduct() {
     //   code: "",
     //   category: "",
     //   give : "[주] 한맥전자",
-    //   image: img2
+    //   image: "/assets/Areal/high/h2.webp" // 냉장고 선반류
     // },
     {
       name: "SEME GUIDE FILTER",
       codeNO: "품목코드 : DC97-20718A",
-      description:
-        "",
+      description: "",
       code: "",
       category: "재질 : ABS (아크릴로니트릴 부타디엔 스티렌)",
-      give : "[주] 한맥전자",
-      image: img3,
+      give: "[주] 한맥전자",
+      image: "/assets/Areal/high/h3.webp", // 산업용 플라스틱 부품
     },
     {
       name: "SUPPORT ICE MAKER",
@@ -77,8 +76,8 @@ function HightechProduct() {
       //   "HOOHEOL CHO, 2020",
       // code: "RF9000A",
       category: "재질 : HIPS(하이 임팩트 폴리스티렌)",
-      give : "[주] 대창",
-      image: img4,
+      give: "[주] 대창",
+      image: "/assets/Areal/high/h4.webp", // 세탁기 부품
     },
     {
       name: "CASE ICE ROOM OUTER",
@@ -87,8 +86,8 @@ function HightechProduct() {
       //   "HOOHEOL CHO, 2020",
       // code: "RF9000A",
       category: "재질 : HIPS(하이 임팩트 폴리스티렌)",
-      give : "[주] 대창",
-      image: img5,
+      give: "[주] 대창",
+      image: "/assets/Areal/high/h5.webp", // 세탁기 부품
     }
   ];
 
@@ -96,10 +95,9 @@ function HightechProduct() {
   const ref = useRef(null);
 
   useEffect(() => {
-    // 페이지가 로드될 때 자동으로 fade-in 효과 적용
     setTimeout(() => {
       setIsVisible(true);
-    }, 100); // 0.1초 뒤 자동 페이드인
+    }, 100);
   }, []);
 
   return (

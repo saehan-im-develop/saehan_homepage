@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../mainCssFile/NewFuture.module.scss";
-import img1 from "@/assets/Areal/panel.png";
-import img2 from "@/assets/Areal/hh11.png";
-import img3 from "@/assets/Areal/SM1.jpg";
-import img4 from "@/assets/Areal/plus2.jpg";
 
 const AFMain = () => {
   const [hovered, setHovered] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
 
-  // ✅ 모바일 여부 감지
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -22,10 +17,10 @@ const AFMain = () => {
   }, []);
 
   const data = [
-    { img: img1, name: "Jason Response", text: "새한 아이엠", link: "/im" },
-    { img: img2, name: "Max Conversion", text: "새한 하이테크", link: "/hightech" },
-    { img: img4, name: "Parsley Montana", text: "새한 플러스", link: "/plus" },
-    { img: img3, name: "plus", text: "SM 케미칼", link: "/global" }
+    { img: "/assets/Areal/panel.webp", name: "Jason Response", text: "새한 아이엠", link: "/im" },
+    { img: "/assets/Areal/hh11.webp", name: "Max Conversion", text: "새한 하이테크", link: "/hightech" },
+    { img: "/assets/Areal/plus2.webp", name: "Parsley Montana", text: "새한 플러스", link: "/plus" },
+    { img: "/assets/Areal/SM1.webp", name: "plus", text: "SM 케미칼", link: "/global" }
   ];
 
   const handleClick = (link) => {
@@ -36,17 +31,10 @@ const AFMain = () => {
 
   return (
     <div className={styles.container}>
-      <h1
-        className={styles.title}
-        data-aos={!isMobile ? "fade-up" : undefined}
-      >
+      <h1 className={styles.title} data-aos={!isMobile ? "fade-up" : undefined}>
         {spacedText}
       </h1>
-      <h2
-        className={styles.subtitle}
-        data-aos={!isMobile ? "fade-up" : undefined}
-        data-aos-delay={!isMobile ? "100" : undefined}
-      >
+      <h2 className={styles.subtitle} data-aos={!isMobile ? "fade-up" : undefined} data-aos-delay={!isMobile ? "100" : undefined}>
         우리는 미래를 만들어갑니다.
       </h2>
 
