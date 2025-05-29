@@ -27,15 +27,15 @@ export default function App() {
         <StoryPaper story={selectedStory} onBack={handleBack} />
       ) : (
         <>
-          <h2 style={{color:'#2b5ecc'}}>NEW!</h2>
+          <h2 className='storypaper-text' style={{color:'#2b5ecc'}}>NEW!</h2>
           <StoryPaper story={StoryData[0]} />
-          <h2 className="story-list-text">다른 이야기</h2>
+          {/* <h2 className="story-list-text">다른 이야기</h2>
           <StoryList storys={pagedStorys} onSelect={handleSelect} />
           <Pagination
             currentPage={currentPage}
             totalPages={Math.ceil(StoryData.length / pageSize)}
             onPageChange={setCurrentPage}
-          />
+          /> */}
         </>
       )}
       </div>

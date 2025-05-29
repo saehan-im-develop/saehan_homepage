@@ -2,13 +2,8 @@
 .storypaper-container {
     display: flex;
     flex-direction: column;
-    margin: 6rem;
-    padding: 3rem;
+    margin: 2rem 10rem;
     font-family: 'Georgia', serif;
-    background-color: #fcfcfc;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero-section-story {
@@ -29,20 +24,16 @@
 
 .hero-title-story {
     top: 20px;
-    /* 상단 여백 */
     left: 30px;
-    /* 왼쪽 여백 */
     background: none;
-    /* 배경 없애기 */
     font-size: 4.5rem;
-    /* 글씨 크기 */
     font-weight: bold;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
 /* 기사 제목 */
 .story-title {
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 12px;
@@ -51,32 +42,43 @@
 
 /* 날짜 */
 .story-date {
-    font-size: 14px;
     color: #777;
-    margin-bottom: 20px;
+    margin-bottom: 3rem;
     text-align: right;
 }
 
 .story-wrapper {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 3rem;
 }
 
 /* 본문 */
 .story-content {
+    width: 40vw;
     flex: 0.5;
     line-height: 1.6;
     font-size: large;
     white-space: pre-line;
+    margin: 0;
+
+}
+
+.storypaper-text {
+    text-align: center;
 }
 
 .story-img {
-    width: 25vw;
+    width: 40vw;
     height: auto;
-    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+.story-description {
+    color: #777;
+    padding: 0;
+    margin: 0.2rem 0 1rem 0 ;
 }
 
 /* 목록 (제목 + 날짜만 나열) */
@@ -96,6 +98,8 @@
     padding: 2rem;
     background-color: #eeeeee;
     border-radius: 10px;
+    padding-bottom: 5rem;
+
 }
 
 .story-list li:first-of-type {
