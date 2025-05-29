@@ -24,14 +24,14 @@ jobs:
             set -e
             echo "[GITHUB-ACTIONS] ✅ Connected to server"
 
-            # 권한 문제 예방
             sudo chown -R ubuntu:ubuntu ~/saehaniam_2025_homepage
-
             cd ~/saehaniam_2025_homepage/frontend
             echo "[GITHUB-ACTIONS] 📁 Changed directory"
 
-            git pull origin main
-            echo "[GITHUB-ACTIONS] 📥 Pulled latest"
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd  # 추적되지 않은 파일까지 제거
+            echo "[GITHUB-ACTIONS] 📥 git 동기화 완료"
 
             npm install
             echo "[GITHUB-ACTIONS] 📦 npm install 완료"
@@ -43,3 +43,4 @@ jobs:
             sudo cp -r dist/* /var/www/html/
             echo "[GITHUB-ACTIONS] ✅ 배포 완료"
           EOF
+
