@@ -8,7 +8,7 @@ const ContactSection = () => {
       <div className="contact-container">
         <img src="/assets/contact.webp" alt="고객 상담" className="contact-image" />
         <div className="contact-info">
-          <p><strong>E-MAIL :</strong> pyh8461@saehangroup.com </p>
+          <p><strong>E-MAIL :</strong> admin@saehangroup.com </p>
         </div>
       </div>
     </section>

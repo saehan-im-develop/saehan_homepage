@@ -21,7 +21,7 @@ const products = [
     status: "ready",
   },
   {
-    name: "웹 페이지 제작 서비스",
+    name: "홈 / 웹 페이지 제작 서비스",
     engName: "Professional Web Development Service",
     description: (
       <>
@@ -49,19 +49,21 @@ const products = [
     status: "upcoming",
   },
   {
-    name: "스마트 드론 사업",
-    engName: "Smart Drone Business",
+    name: "교육용 AI 플랫폼",
+    engName: "Educational AI Platform",
     description: (
       <>
-        드론 기반 농업·산업 데이터 수집, 영상 촬영, 정밀 제어 솔루션 등<br />
-        다양한 드론 응용 서비스와 하드웨어·소프트웨어를 제공합니다.
+        인공지능을 활용한 맞춤형 학습, 지능형 문제 추천,<br />
+        학습 데이터 분석 등 다양한 교육 지원 서비스와<br />
+        소프트웨어를 제공합니다.
       </>
     ),
-    category: "드론 / 영상 분석",
-    image: "/assets/aff/a15.webp",
+    category: "교육 / 학습 지원",
+    image: "/assets/aff/a15.webp", // 실제 교육용 AI 이미지 경로로 교체q
     link: "",
     status: "upcoming",
-  },
+  }
+
 ];
 
 
