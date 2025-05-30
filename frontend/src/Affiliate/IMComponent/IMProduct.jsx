@@ -49,7 +49,7 @@ const products = [
     status: "upcoming",
   },
   {
-    name: "교육용 AI 플랫폼",
+    name: "금융 교육용 AI 플랫폼",
     engName: "Educational AI Platform",
     description: (
       <>
