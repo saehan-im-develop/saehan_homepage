@@ -55,7 +55,7 @@ const Network = () => {
                   <div className="network-contact-lines">
                     <div className="network-contact-line">
                       <div className="contact-info-left">
-                        <span className="contact-label manager-label">관리 담당</span>
+                        <span className="contact-label manager-label">대표</span>
                         <span className="contact-name">{location.manager?.name}{location.manager?.position && `(${location.manager.position})`}</span>
                       </div>
                       {location.manager?.email && (
@@ -67,7 +67,7 @@ const Network = () => {
                     </div>
                     <div className="network-contact-line">
                       <div className="contact-info-left">
-                        <span className="contact-label staff-label">실무 담당</span>
+                        <span className="contact-label staff-label">실무</span>
                         <span className="contact-name">{location.staff?.name}{location.staff?.position && `(${location.staff.position})`}</span>
                       </div>
                       {location.staff?.email && (

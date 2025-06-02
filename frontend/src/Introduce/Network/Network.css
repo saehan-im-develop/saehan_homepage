@@ -142,24 +142,23 @@
   gap: 7px;
 }
 .contact-label.manager-label {
-  background: #e9f2ff;
-  color: #2462d5;
+  background: #c7c7c7;
+  color: #000000;
   padding: 6px 10px;
   border-radius: 5px;
   min-width: 74px;
   display: inline-block;
-  text-align: left;
+  text-align: center;
   font-weight: bold;
-  margin-left: 10;
 }
 .contact-label.staff-label {
-  background: #e3faed;
-  color: #10b981;
+  background: #c7c7c7;
+  color: #000000;
   padding: 6px 10px;
   border-radius: 5px;
   min-width: 74px;
   display: inline-block;
-  text-align: left;
+  text-align: center;
   font-weight: bold;
 }
 .manager-label {

@@ -16,7 +16,7 @@ const networkData = [
       {
         type: "제조센터",
         address: " 광주 광산구 사암로 827-47",
-        manager: { name: "김원익", position: "이사", email: "" },
+        manager: { name: "김원익", position: "", email: "" },
         staff: { name: "정혜정", position: "부장", email: "hyej0215@naver.com" }
       }
     ]
@@ -27,8 +27,8 @@ const networkData = [
       {
         type: "제조센터",
         address: " 전남 장성군 동화면 가정길 8",
-        manager: { name: "이두열", position: "대표", email: "kwm666@naver.com" },
-        staff: { name: "송유란", position: "", email: "" }
+        manager: { name: "이두열", position: "", email: "" },
+        staff: { name: "이승경", position: "차장", email: "kwm666@naver.com" }
       }
     ]
   },
