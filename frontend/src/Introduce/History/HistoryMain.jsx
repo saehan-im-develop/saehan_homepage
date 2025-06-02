@@ -4,7 +4,7 @@ import "../History/HistoryMain.css";
 const historyData = [
   {
     period: "회사 연혁",
-    image: "/assets/Areal/Int/history2.webp",
+    image: "/assets/Areal/Int/history3.webp",
     mainImage: "/assets/PlusMainImage.webp", // 기존 img2도 문자열로 교체
   },
 ];

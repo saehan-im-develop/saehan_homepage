@@ -74,18 +74,24 @@ function GlobalProduct() {
   return (
     <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
       <h2 className="product-title">주요 생산 제품</h2>
-      {products.map((product, index) => (
-        <div key={index} className="product-card">
-          <img src={product.image} alt={product.name} className="product-image" />
-          <div className="product-info">
-            <h3>{product.name}</h3>
-            {/* <p><strong>납품 업체:</strong> {product.give}</p> */}
-            <p className="product-eng-name">{product.model}</p>
-            <p>{product.codeNO}</p>
-            <p>{product.category}</p>
+      <div className="product-list">
+        {products.map((product, index) => (
+          <div key={index} className="product-card">
+            <img src={product.image} alt={product.name} className="product-image" />
+            <div className="product-info">
+              <h3>{product.name}</h3>
+              {/* <p><strong>납품 업체:</strong> {product.give}</p> */}
+              <p className="product-eng-name">{product.model}</p>
+              <p>{product.codeNO}</p>
+              <p>{product.category}</p>
+            </div>
+            <div className="product-btn-group">
+              <button className="product-btn">자세히보기</button>
+              <button className="product-btn info">제조센터 정보</button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

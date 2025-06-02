@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Common/CommonProduct.css";
+import CommonProductModal from "../Common/CommonProductModal";
 // 김치냉장고 부품
 // 냉장고 선반류
 // 산업용 플라스틱 부품
@@ -93,6 +94,8 @@ function HightechProduct() {
 
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
 
   useEffect(() => {
     setTimeout(() => {
@@ -103,19 +106,25 @@ function HightechProduct() {
   return (
     <div ref={ref} className={`product ${isVisible ? "fade-in" : ""}`}>
       <h2 className="product-title">주요 생산 제품</h2>
-      {products.map((product, index) => (
-        <div key={index} className="product-card">
-          <img src={product.image} alt={product.name} className="product-image" />
-          <div className="product-info">
-            <h3>{product.name}</h3>
-            {/* <p><strong>납품 업체:</strong> {product.give}</p> */}
-            <p className="product-eng-name">{product.code}</p>
-            <p>{product.codeNO}</p>
-            <p>{product.description}</p>
-            <p>{product.category}</p>
+      <div className="product-list">
+        {products.map((product, index) => (
+          <div key={index} className="product-card">
+            <img src={product.image} alt={product.name} className="product-image" />
+            <div className="product-info">
+              <h3>{product.name}</h3>
+              <p className="product-eng-name">{product.code}</p>
+              <p>{product.codeNO}</p>
+              <p>{product.description}</p>
+              <p>{product.category}</p>
+            </div>
+            <div className="product-btn-group">
+              <button className="product-btn" onClick={() => { setModalImage(product.image); setModalOpen(true); }}>자세히보기</button>
+              <button className="product-btn info">제조센터 정보</button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <CommonProductModal open={modalOpen} imageUrl={modalImage} onClose={() => setModalOpen(false)} />
     </div>
   );
 }

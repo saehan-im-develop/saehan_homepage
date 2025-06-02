@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Common/CommonProduct.css";
+import CommonProductModal from "../Common/CommonProductModal";
 // img2: npp2.webp
 // img4: npp4.webp
 // img5: npp5.webp
@@ -59,6 +60,8 @@ function PlusProduct() {
   const [category, setCategory] = useState("전체");
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
 
   useEffect(() => {
     setTimeout(() => {
@@ -87,18 +90,25 @@ function PlusProduct() {
         </select>
       </div>
 
-      {filteredProducts.map((product, index) => (
-        <div key={index} className="product-card">
-          <img src={product.image} alt={product.name} className="product-image" />
-          <div className="product-info">
-            <h3>{product.name}</h3>
-            {/* <p><strong>납품 업체:</strong> {product.give}</p> */}
-            <p className="product-eng-name">{product.model}</p>
-            <p>{product.codeNO}</p>
-            <p>{product.category}</p>
+      <div className="product-list">
+        {filteredProducts.map((product, index) => (
+          <div key={index} className="product-card">
+            <img src={product.image} alt={product.name} className="product-image" />
+            <div className="product-info">
+              <h3>{product.name}</h3>
+              {/* <p><strong>납품 업체:</strong> {product.give}</p> */}
+              <p className="product-eng-name">{product.model}</p>
+              <p>{product.codeNO}</p>
+              <p>{product.category}</p>
+            </div>
+            <div className="product-btn-group">
+              <button className="product-btn" onClick={() => { setModalImage(product.image); setModalOpen(true); }}>자세히보기</button>
+              <button className="product-btn info">제조센터 정보</button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <CommonProductModal open={modalOpen} imageUrl={modalImage} onClose={() => setModalOpen(false)} />
     </div>
   );
 }
