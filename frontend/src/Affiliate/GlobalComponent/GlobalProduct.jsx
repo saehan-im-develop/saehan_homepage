@@ -19,7 +19,7 @@ function GlobalProduct() {
       image: "/assets/Areal/global/ng1.webp", // img1
     },
     {
-      name: "CASE MIMCHI LOW(10.8L)",
+      name: "CASE KIMCHI LOW(10.8L)",
       codeNO: "품목코드 : DA61-04591 X 002",
       // model: "WF8000AK",
       category: "재질 : PP (폴리프로필렌)",
